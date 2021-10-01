@@ -60,7 +60,8 @@ namespace Microsoft.Graph.PowerShell.Authentication.Utilities.Runtime.Cmdlets
             }
             catch (System.Exception ex)
             {
-                System.Console.WriteLine($"${ex.GetType().Name}/{ex.StackTrace}");
+                System.Console.Error.WriteLine($"{ex.GetType().Name}: {ex.Message}");
+                System.Console.Error.WriteLine(ex.StackTrace);
                 throw ex;
             }
         }
