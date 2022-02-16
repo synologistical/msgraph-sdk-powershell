@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Graph.Identity.SignIns-help.xml
 Module Name: Microsoft.Graph.Identity.SignIns
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.identity.signins/new-mgpolicyauthorizationpolicy
 schema: 2.0.0
@@ -14,18 +14,19 @@ The policy that controls Azure AD authorization settings.
 
 ### CreateExpanded (Default)
 ```
-New-MgPolicyAuthorizationPolicy [-AdditionalProperties <Hashtable>] [-AllowedToSignUpEmailBasedSubscriptions]
- [-AllowedToUseSspr] [-AllowEmailVerifiedUsersToJoinOrganization] [-AllowInvitesFrom <String>]
- [-BlockMsolPowerShell] [-DefaultUserRoleOverrides <IMicrosoftGraphDefaultUserRoleOverride[]>]
+New-MgPolicyAuthorizationPolicy [-AdditionalProperties <Hashtable>]
+ [-AllowEmailVerifiedUsersToJoinOrganization] [-AllowInvitesFrom <String>]
+ [-AllowedToSignUpEmailBasedSubscriptions] [-AllowedToUseSspr] [-BlockMsolPowerShell]
+ [-DefaultUserRoleOverrides <IMicrosoftGraphDefaultUserRoleOverride[]>]
  [-DefaultUserRolePermissions <IMicrosoftGraphDefaultUserRolePermissions>] [-DeletedDateTime <DateTime>]
  [-Description <String>] [-DisplayName <String>] [-EnabledPreviewFeatures <String[]>]
  [-GuestUserRoleId <String>] [-Id <String>] [-PermissionGrantPolicyIdsAssignedToDefaultUserRole <String[]>]
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Create
 ```
-New-MgPolicyAuthorizationPolicy -BodyParameter <IMicrosoftGraphAuthorizationPolicy> [-Confirm] [-WhatIf]
+New-MgPolicyAuthorizationPolicy -BodyParameter <IMicrosoftGraphAuthorizationPolicy> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -40,7 +41,7 @@ The policy that controls Azure AD authorization settings.
 Additional Parameters
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -55,7 +56,7 @@ Accept wildcard characters: False
 Indicates whether users can sign up for email based subscriptions.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -70,7 +71,7 @@ Accept wildcard characters: False
 Indicates whether the Self-Serve Password Reset feature can be used by users on the tenant.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -85,7 +86,7 @@ Accept wildcard characters: False
 Indicates whether a user can join the tenant by email validation.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -100,7 +101,7 @@ Accept wildcard characters: False
 allowInvitesFrom
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -117,7 +118,7 @@ This will also disable user-based access to the legacy service endpoint used by 
 This does not affect Azure AD Connect or Microsoft Graph.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -133,7 +134,7 @@ authorizationPolicy
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAuthorizationPolicy
+Type: IMicrosoftGraphAuthorizationPolicy
 Parameter Sets: Create
 Aliases:
 
@@ -149,7 +150,7 @@ Accept wildcard characters: False
 To construct, please use Get-Help -Online and see NOTES section for DEFAULTUSERROLEOVERRIDES properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphDefaultUserRoleOverride[]
+Type: IMicrosoftGraphDefaultUserRoleOverride[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -165,7 +166,7 @@ defaultUserRolePermissions
 To construct, please use Get-Help -Online and see NOTES section for DEFAULTUSERROLEPERMISSIONS properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphDefaultUserRolePermissions
+Type: IMicrosoftGraphDefaultUserRolePermissions
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -180,7 +181,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -196,7 +197,7 @@ Description for this policy.
 Required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -212,7 +213,7 @@ Display name for this policy.
 Required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -227,7 +228,7 @@ Accept wildcard characters: False
 List of features enabled for private preview on the tenant.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -243,7 +244,7 @@ Represents role templateId for the role that should be granted to guest user.
 Currently following roles are supported: User (a0b1b346-4d3e-4e8b-98f8-753987be4970), Guest User (10dae51f-b6af-4016-8d66-8c2a99b929b3), and Restricted Guest User (2af84b1e-32c8-42b7-82bc-daa82404023b).
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -258,7 +259,7 @@ Accept wildcard characters: False
 Read-only.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -275,7 +276,7 @@ Values should be in the format managePermissionGrantsForSelf.{id}, where {id} is
 An empty list indicates user consent to apps is disabled.
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: CreateExpanded
 Aliases:
 
@@ -290,7 +291,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -306,7 +307,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -323,11 +324,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAuthorizationPolicy
-
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAuthorizationPolicy
-
 ## NOTES
 
 ALIASES
@@ -379,4 +378,3 @@ DEFAULTUSERROLEPERMISSIONS <IMicrosoftGraphDefaultUserRolePermissions>: defaultU
   - `[AllowedToReadOtherUsers <Boolean?>]`: Indicates whether the default user role can read other users.
 
 ## RELATED LINKS
-

@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Graph.Identity.SignIns-help.xml
 Module Name: Microsoft.Graph.Identity.SignIns
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.identity.signins/update-mgpolicydefaultappmanagementpolicy
 schema: 2.0.0
@@ -17,14 +17,14 @@ The tenant-wide policy that enforces app management restrictions for all applica
 Update-MgPolicyDefaultAppManagementPolicy [-AdditionalProperties <Hashtable>]
  [-ApplicationRestrictions <IMicrosoftGraphAppManagementConfiguration>] [-DeletedDateTime <DateTime>]
  [-Description <String>] [-DisplayName <String>] [-Id <String>] [-IsEnabled]
- [-ServicePrincipalRestrictions <IMicrosoftGraphAppManagementConfiguration>] [-PassThru] [-Confirm] [-WhatIf]
+ [-ServicePrincipalRestrictions <IMicrosoftGraphAppManagementConfiguration>] [-PassThru] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### Update
 ```
-Update-MgPolicyDefaultAppManagementPolicy -BodyParameter <IMicrosoftGraphTenantAppManagementPolicy>
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+Update-MgPolicyDefaultAppManagementPolicy -BodyParameter <IMicrosoftGraphTenantAppManagementPolicy> [-PassThru]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ The tenant-wide policy that enforces app management restrictions for all applica
 Additional Parameters
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -54,7 +54,7 @@ appManagementConfiguration
 To construct, please use Get-Help -Online and see NOTES section for APPLICATIONRESTRICTIONS properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAppManagementConfiguration
+Type: IMicrosoftGraphAppManagementConfiguration
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -70,7 +70,7 @@ tenantAppManagementPolicy
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTenantAppManagementPolicy
+Type: IMicrosoftGraphTenantAppManagementPolicy
 Parameter Sets: Update
 Aliases:
 
@@ -85,7 +85,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -101,7 +101,7 @@ Description for this policy.
 Required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -117,7 +117,7 @@ Display name for this policy.
 Required.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -132,7 +132,7 @@ Accept wildcard characters: False
 Read-only.
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -148,7 +148,7 @@ Denotes whether the policy is enabled.
 Default value is false.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -163,7 +163,7 @@ Accept wildcard characters: False
 Returns true when the command succeeds
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -179,7 +179,7 @@ appManagementConfiguration
 To construct, please use Get-Help -Online and see NOTES section for SERVICEPRINCIPALRESTRICTIONS properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IMicrosoftGraphAppManagementConfiguration
+Type: IMicrosoftGraphAppManagementConfiguration
 Parameter Sets: UpdateExpanded
 Aliases:
 
@@ -194,7 +194,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -210,7 +210,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -227,11 +227,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphTenantAppManagementPolicy
-
 ## OUTPUTS
 
 ### System.Boolean
-
 ## NOTES
 
 ALIASES
@@ -283,4 +281,3 @@ SERVICEPRINCIPALRESTRICTIONS <IMicrosoftGraphAppManagementConfiguration>: appMan
     - `[RestrictionType <String>]`: appCredentialRestrictionType
 
 ## RELATED LINKS
-
