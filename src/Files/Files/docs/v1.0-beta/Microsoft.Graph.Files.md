@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.Files
-Module Guid: 18ec7039-b90f-4d8a-9fb9-e869081b3c69
+Module Guid: 122a6ffe-ba66-4e75-8964-3a5a706e4ba0
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.files
 Help Version: 1.0.0.0
 Locale: en-US
@@ -87,10 +87,10 @@ The recent activities that took place within this list.
 The collection of field definitions for this list.
 
 ### [Get-MgDriveListColumnSourceColumn](Get-MgDriveListColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgDriveListColumnSourceColumnByRef](Get-MgDriveListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgDriveListContentType](Get-MgDriveListContentType.md)
 The collection of content types present in this list.
@@ -114,7 +114,7 @@ Invoke function getCompatibleHubContentTypes
 The collection of column definitions for this contentType.
 
 ### [Get-MgDriveListContentTypeColumnLink](Get-MgDriveListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Get-MgDriveListContentTypeColumnPosition](Get-MgDriveListContentTypeColumnPosition.md)
 Column order information in a content type.
@@ -123,10 +123,10 @@ Column order information in a content type.
 Column order information in a content type.
 
 ### [Get-MgDriveListContentTypeColumnSourceColumn](Get-MgDriveListContentTypeColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgDriveListContentTypeColumnSourceColumnByRef](Get-MgDriveListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgDriveListContentTypeCompatibleHubContentType](Get-MgDriveListContentTypeCompatibleHubContentType.md)
 Invoke function getCompatibleHubContentTypes
@@ -146,6 +146,9 @@ Analytics about the view activities that took place on this item.
 
 ### [Get-MgDriveListItemAnalyticByRef](Get-MgDriveListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
+
+### [Get-MgDriveListItemDelta](Get-MgDriveListItemDelta.md)
+Invoke function delta
 
 ### [Get-MgDriveListItemDriveItem](Get-MgDriveListItemDriveItem.md)
 For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -210,10 +213,10 @@ The recent activities that took place within this list.
 The collection of field definitions for this list.
 
 ### [Get-MgShareListColumnSourceColumn](Get-MgShareListColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgShareListColumnSourceColumnByRef](Get-MgShareListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgShareListContentType](Get-MgShareListContentType.md)
 The collection of content types present in this list.
@@ -237,7 +240,7 @@ Invoke function getCompatibleHubContentTypes
 The collection of column definitions for this contentType.
 
 ### [Get-MgShareListContentTypeColumnLink](Get-MgShareListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Get-MgShareListContentTypeColumnPosition](Get-MgShareListContentTypeColumnPosition.md)
 Column order information in a content type.
@@ -246,10 +249,10 @@ Column order information in a content type.
 Column order information in a content type.
 
 ### [Get-MgShareListContentTypeColumnSourceColumn](Get-MgShareListContentTypeColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgShareListContentTypeColumnSourceColumnByRef](Get-MgShareListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgShareListContentTypeCompatibleHubContentType](Get-MgShareListContentTypeCompatibleHubContentType.md)
 Invoke function getCompatibleHubContentTypes
@@ -269,6 +272,9 @@ Analytics about the view activities that took place on this item.
 
 ### [Get-MgShareListItemAnalyticByRef](Get-MgShareListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
+
+### [Get-MgShareListItemDelta](Get-MgShareListItemDelta.md)
+Invoke function delta
 
 ### [Get-MgShareListItemDriveItem](Get-MgShareListItemDriveItem.md)
 For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
@@ -361,7 +367,7 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [New-MgDriveListContentTypeColumnLink](New-MgDriveListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [New-MgDriveListContentTypeColumnPositionByRef](New-MgDriveListContentTypeColumnPositionByRef.md)
 Column order information in a content type.
@@ -407,7 +413,7 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [New-MgShareListContentTypeColumnLink](New-MgShareListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [New-MgShareListContentTypeColumnPositionByRef](New-MgShareListContentTypeColumnPositionByRef.md)
 Column order information in a content type.
@@ -468,7 +474,7 @@ Nullable.
 The collection of field definitions for this list.
 
 ### [Remove-MgDriveListColumnSourceColumnByRef](Remove-MgDriveListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgDriveListContentType](Remove-MgDriveListContentType.md)
 The collection of content types present in this list.
@@ -480,10 +486,10 @@ Parent contentType from which this content type is derived.
 The collection of column definitions for this contentType.
 
 ### [Remove-MgDriveListContentTypeColumnLink](Remove-MgDriveListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Remove-MgDriveListContentTypeColumnSourceColumnByRef](Remove-MgDriveListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgDriveListDrive](Remove-MgDriveListDrive.md)
 Only present on document libraries.
@@ -540,7 +546,7 @@ Used to access the underlying list
 The collection of field definitions for this list.
 
 ### [Remove-MgShareListColumnSourceColumnByRef](Remove-MgShareListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgShareListContentType](Remove-MgShareListContentType.md)
 The collection of content types present in this list.
@@ -552,10 +558,10 @@ Parent contentType from which this content type is derived.
 The collection of column definitions for this contentType.
 
 ### [Remove-MgShareListContentTypeColumnLink](Remove-MgShareListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Remove-MgShareListContentTypeColumnSourceColumnByRef](Remove-MgShareListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgShareListDrive](Remove-MgShareListDrive.md)
 Only present on document libraries.
@@ -624,13 +630,13 @@ Update media content for the navigation property following in drives
 Update media content for the navigation property items in drives
 
 ### [Set-MgDriveListColumnSourceColumnByRef](Set-MgDriveListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgDriveListContentTypeBaseByRef](Set-MgDriveListContentTypeBaseByRef.md)
 Parent contentType from which this content type is derived.
 
 ### [Set-MgDriveListContentTypeColumnSourceColumnByRef](Set-MgDriveListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgDriveListItemAnalyticByRef](Set-MgDriveListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
@@ -651,13 +657,13 @@ Update media content for the navigation property driveItem in shares
 Update media content for the navigation property items in shares
 
 ### [Set-MgShareListColumnSourceColumnByRef](Set-MgShareListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgShareListContentTypeBaseByRef](Set-MgShareListContentTypeBaseByRef.md)
 Parent contentType from which this content type is derived.
 
 ### [Set-MgShareListContentTypeColumnSourceColumnByRef](Set-MgShareListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgShareListItemAnalyticByRef](Set-MgShareListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
@@ -723,7 +729,7 @@ The collection of content types present in this list.
 The collection of column definitions for this contentType.
 
 ### [Update-MgDriveListContentTypeColumnLink](Update-MgDriveListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Update-MgDriveListDrive](Update-MgDriveListDrive.md)
 Only present on document libraries.
@@ -783,7 +789,7 @@ The collection of content types present in this list.
 The collection of column definitions for this contentType.
 
 ### [Update-MgShareListContentTypeColumnLink](Update-MgShareListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Update-MgShareListDrive](Update-MgShareListDrive.md)
 Only present on document libraries.

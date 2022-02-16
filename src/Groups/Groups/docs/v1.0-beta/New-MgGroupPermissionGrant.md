@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-MgGroupPermissionGrant
 
 ## SYNOPSIS
-The permissions that have been granted for a group to a specific application.
+The permission that has been granted for a group to a specific application.
 Supports $expand.
 
 ## SYNTAX
@@ -41,7 +41,7 @@ New-MgGroupPermissionGrant -InputObject <IGroupsIdentity> [-AdditionalProperties
 ```
 
 ## DESCRIPTION
-The permissions that have been granted for a group to a specific application.
+The permission that has been granted for a group to a specific application.
 Supports $expand.
 
 ## EXAMPLES

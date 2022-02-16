@@ -10,7 +10,7 @@ schema: 2.0.0
 ## SYNOPSIS
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ## SYNTAX
 
@@ -36,7 +36,7 @@ Get-MgIdentityConditionalAccessPolicy -InputObject <IIdentitySignInsIdentity> [-
 ## DESCRIPTION
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ## EXAMPLES
 

@@ -12,11 +12,9 @@ The collection of the sub-sites under this site.
 
 ## SYNTAX
 
-### List (Default)
+### Get4 (Default)
 ```
-Get-MgSubSite [-SiteId <String>] [-ExpandProperty <String[]>] [-Filter <String>] [-Property <String[]>]
- [-Search <String>] [-Skip <Int32>] [-Sort <String[]>] [-Top <Int32>] [-All] [-CountVariable <String>]
- [-PageSize <Int32>] [<CommonParameters>]
+Get-MgSubSite [-SiteId <String>] [-ExpandProperty <String[]>] [-Property <String[]>] [<CommonParameters>]
 ```
 
 ### Get1
@@ -29,6 +27,19 @@ Get-MgSubSite -SiteId1 <String> [-SiteId <String>] [-ExpandProperty <String[]>] 
 ```
 Get-MgSubSite -InputObject <ISitesIdentity> [-ExpandProperty <String[]>] [-Property <String[]>]
  [<CommonParameters>]
+```
+
+### GetViaIdentity4
+```
+Get-MgSubSite -InputObject <ISitesIdentity> [-ExpandProperty <String[]>] [-Property <String[]>]
+ [<CommonParameters>]
+```
+
+### List
+```
+Get-MgSubSite [-SiteId <String>] [-ExpandProperty <String[]>] [-Filter <String>] [-Property <String[]>]
+ [-Search <String>] [-Skip <Int32>] [-Sort <String[]>] [-Top <Int32>] [-All] [-CountVariable <String>]
+ [-PageSize <Int32>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -105,7 +116,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.ISitesIdentity
-Parameter Sets: GetViaIdentity1
+Parameter Sets: GetViaIdentity1, GetViaIdentity4
 Aliases:
 
 Required: True
@@ -165,7 +176,7 @@ key: id of site
 
 ```yaml
 Type: System.String
-Parameter Sets: Get1, List
+Parameter Sets: Get1, Get4, List
 Aliases:
 
 Required: False
@@ -285,6 +296,7 @@ INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: key: id of subscription
   - `[TermId <String>]`: key: id of term
   - `[TermId1 <String>]`: key: id of term
+  - `[Token <String>]`: Usage: token={token}
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS

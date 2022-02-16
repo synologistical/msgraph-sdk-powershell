@@ -12,24 +12,24 @@ The default drive (document library) for this site.
 
 ## SYNTAX
 
-### Delete2 (Default)
+### Delete (Default)
 ```
 Remove-MgSiteDrive -SiteId <String> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
-### Delete3
+### Delete1
 ```
 Remove-MgSiteDrive -DriveId <String> -SiteId <String> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### DeleteViaIdentity2
+### DeleteViaIdentity
 ```
 Remove-MgSiteDrive -InputObject <ISitesIdentity> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
 ```
 
-### DeleteViaIdentity3
+### DeleteViaIdentity1
 ```
 Remove-MgSiteDrive -InputObject <ISitesIdentity> [-IfMatch <String>] [-PassThru] [-Confirm] [-WhatIf]
  [<CommonParameters>]
@@ -47,7 +47,7 @@ key: id of drive
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete3
+Parameter Sets: Delete1
 Aliases:
 
 Required: True
@@ -78,7 +78,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.ISitesIdentity
-Parameter Sets: DeleteViaIdentity2, DeleteViaIdentity3
+Parameter Sets: DeleteViaIdentity, DeleteViaIdentity1
 Aliases:
 
 Required: True
@@ -108,7 +108,7 @@ key: id of site
 
 ```yaml
 Type: System.String
-Parameter Sets: Delete2, Delete3
+Parameter Sets: Delete, Delete1
 Aliases:
 
 Required: True
@@ -199,6 +199,7 @@ INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: key: id of subscription
   - `[TermId <String>]`: key: id of term
   - `[TermId1 <String>]`: key: id of term
+  - `[Token <String>]`: Usage: token={token}
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS

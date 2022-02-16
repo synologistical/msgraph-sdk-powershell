@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.Compliance
-Module Guid: a1580ac8-f0ae-427b-9436-d28e18af7d7e
+Module Guid: b96dab0a-4998-4661-b5cc-e6884fe1b24c
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.compliance
 Help Version: 1.0.0.0
 Locale: en-US
@@ -11,11 +11,20 @@ Locale: en-US
 Microsoft Graph PowerShell Cmdlets
 
 ## Microsoft.Graph.Compliance Cmdlets
+### [Add-MgComplianceEdiscoveryCaseCustodianHold](Add-MgComplianceEdiscoveryCaseCustodianHold.md)
+Invoke action applyHold
+
+### [Add-MgComplianceEdiscoveryCaseNoncustodialDataSourceHold](Add-MgComplianceEdiscoveryCaseNoncustodialDataSourceHold.md)
+Invoke action applyHold
+
 ### [Add-MgComplianceEdiscoveryCaseReviewSetQueryTag](Add-MgComplianceEdiscoveryCaseReviewSetQueryTag.md)
 Invoke action applyTags
 
 ### [Add-MgComplianceEdiscoveryCaseReviewSetToReviewSet](Add-MgComplianceEdiscoveryCaseReviewSetToReviewSet.md)
 Invoke action addToReviewSet
+
+### [Add-MgComplianceEdiscoveryCaseSourceCollectionNoncustodialSourceHold](Add-MgComplianceEdiscoveryCaseSourceCollectionNoncustodialSourceHold.md)
+Invoke action applyHold
 
 ### [Close-MgComplianceEdiscoveryCase](Close-MgComplianceEdiscoveryCase.md)
 Invoke action close
@@ -249,6 +258,9 @@ Delete navigation property cases for compliance
 Returns a list of case custodian objects for this case.
 Nullable.
 
+### [Remove-MgComplianceEdiscoveryCaseCustodianHold](Remove-MgComplianceEdiscoveryCaseCustodianHold.md)
+Invoke action removeHold
+
 ### [Remove-MgComplianceEdiscoveryCaseCustodianSiteSource](Remove-MgComplianceEdiscoveryCaseCustodianSiteSource.md)
 Data source entity for SharePoint sites associated with the custodian.
 
@@ -289,6 +301,9 @@ This is the container for a mailbox and OneDrive for Business site.
 Returns a list of case noncustodialDataSource objects for this case.
 Nullable.
 
+### [Remove-MgComplianceEdiscoveryCaseNoncustodialDataSourceHold](Remove-MgComplianceEdiscoveryCaseNoncustodialDataSourceHold.md)
+Invoke action removeHold
+
 ### [Remove-MgComplianceEdiscoveryCaseOperation](Remove-MgComplianceEdiscoveryCaseOperation.md)
 Returns a list of case operation objects for this case.
 Nullable.
@@ -316,6 +331,9 @@ Adds the results of the sourceCollection to the specified reviewSet.
 
 ### [Remove-MgComplianceEdiscoveryCaseSourceCollectionLastEstimateStatisticsOperationByRef](Remove-MgComplianceEdiscoveryCaseSourceCollectionLastEstimateStatisticsOperationByRef.md)
 The last estimate operation associated with the sourceCollection.
+
+### [Remove-MgComplianceEdiscoveryCaseSourceCollectionNoncustodialSourceHold](Remove-MgComplianceEdiscoveryCaseSourceCollectionNoncustodialSourceHold.md)
+Invoke action removeHold
 
 ### [Remove-MgComplianceEdiscoveryCaseTag](Remove-MgComplianceEdiscoveryCaseTag.md)
 Returns a list of tag objects associated to this case.

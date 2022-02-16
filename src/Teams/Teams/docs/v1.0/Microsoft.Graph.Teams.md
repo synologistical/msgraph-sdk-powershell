@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.Teams
-Module Guid: 70816f2b-e7a1-4c6f-a0c2-96b3dd9f572b
+Module Guid: 5125d721-fef3-4d27-82f5-e5635bcbbf1b
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.teams
 Help Version: 1.0.0.0
 Locale: en-US
@@ -88,9 +88,11 @@ Get tabs from chats
 
 ### [Get-MgChatTabTeamApp](Get-MgChatTabTeamApp.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgChatTabTeamAppByRef](Get-MgChatTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgGroupTeam](Get-MgGroupTeam.md)
 Get team from groups
@@ -133,9 +135,11 @@ A navigation property.
 
 ### [Get-MgTeamChannelTabTeamApp](Get-MgTeamChannelTabTeamApp.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgTeamChannelTabTeamAppByRef](Get-MgTeamChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgTeamGroupByRef](Get-MgTeamGroupByRef.md)
 Get ref of group from teams
@@ -199,9 +203,11 @@ A navigation property.
 
 ### [Get-MgTeamPrimaryChannelTabTeamApp](Get-MgTeamPrimaryChannelTabTeamApp.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgTeamPrimaryChannelTabTeamAppByRef](Get-MgTeamPrimaryChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Get-MgTeamSchedule](Get-MgTeamSchedule.md)
 The schedule of shifts for this team.
@@ -245,7 +251,7 @@ See available templates.
 Get teamwork
 
 ### [Get-MgTeamworkWorkforceIntegration](Get-MgTeamworkWorkforceIntegration.md)
-Get workforceIntegrations from teamwork
+A workforce integration with shifts.
 
 ### [Get-MgUserChat](Get-MgUserChat.md)
 Get chats from users
@@ -393,7 +399,7 @@ The set of reasons for a time off in the schedule.
 Create new navigation property to timeOffRequests for teams
 
 ### [New-MgTeamworkWorkforceIntegration](New-MgTeamworkWorkforceIntegration.md)
-Create new navigation property to workforceIntegrations for teamwork
+A workforce integration with shifts.
 
 ### [New-MgUserChat](New-MgUserChat.md)
 Create new navigation property to chats for users
@@ -437,6 +443,7 @@ Delete navigation property tabs for chats
 
 ### [Remove-MgChatTabTeamAppByRef](Remove-MgChatTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Remove-MgGroupTeam](Remove-MgGroupTeam.md)
 Delete navigation property team for groups
@@ -462,6 +469,7 @@ A navigation property.
 
 ### [Remove-MgTeamChannelTabTeamAppByRef](Remove-MgTeamChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Remove-MgTeamGroupByRef](Remove-MgTeamGroupByRef.md)
 Delete ref of navigation property group for teams
@@ -499,6 +507,7 @@ A navigation property.
 
 ### [Remove-MgTeamPrimaryChannelTabTeamAppByRef](Remove-MgTeamPrimaryChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Remove-MgTeamSchedule](Remove-MgTeamSchedule.md)
 The schedule of shifts for this team.
@@ -535,7 +544,7 @@ The template this team was created from.
 See available templates.
 
 ### [Remove-MgTeamworkWorkforceIntegration](Remove-MgTeamworkWorkforceIntegration.md)
-Delete navigation property workforceIntegrations for teamwork
+A workforce integration with shifts.
 
 ### [Remove-MgUserChat](Remove-MgUserChat.md)
 Delete navigation property chats for users
@@ -570,12 +579,14 @@ The details of this version of the app.
 
 ### [Set-MgChatTabTeamAppByRef](Set-MgChatTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Set-MgTeamChannelFileFolderContent](Set-MgTeamChannelFileFolderContent.md)
 Update media content for the navigation property filesFolder in teams
 
 ### [Set-MgTeamChannelTabTeamAppByRef](Set-MgTeamChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Set-MgTeamGroupByRef](Set-MgTeamGroupByRef.md)
 Update the ref of navigation property group in teams
@@ -591,6 +602,7 @@ Update media content for the navigation property filesFolder in teams
 
 ### [Set-MgTeamPrimaryChannelTabTeamAppByRef](Set-MgTeamPrimaryChannelTabTeamAppByRef.md)
 The application that is linked to the tab.
+This cannot be changed after tab creation.
 
 ### [Set-MgTeamTemplateByRef](Set-MgTeamTemplateByRef.md)
 The template this team was created from.
@@ -720,7 +732,7 @@ Update the navigation property timeOffRequests in teams
 Update teamwork
 
 ### [Update-MgTeamworkWorkforceIntegration](Update-MgTeamworkWorkforceIntegration.md)
-Update the navigation property workforceIntegrations in teamwork
+A workforce integration with shifts.
 
 ### [Update-MgUserChat](Update-MgUserChat.md)
 Update the navigation property chats in users

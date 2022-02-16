@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MgSiteListContentTypeColumnLink
 
 ## SYNOPSIS
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ## SYNTAX
 
@@ -32,7 +32,7 @@ Get-MgSiteListContentTypeColumnLink -InputObject <ISitesIdentity> [-ExpandProper
 ```
 
 ## DESCRIPTION
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ## EXAMPLES
 
@@ -315,6 +315,7 @@ INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: key: id of subscription
   - `[TermId <String>]`: key: id of term
   - `[TermId1 <String>]`: key: id of term
+  - `[Token <String>]`: Usage: token={token}
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS

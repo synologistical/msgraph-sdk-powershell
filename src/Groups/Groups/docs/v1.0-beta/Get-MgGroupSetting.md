@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MgGroupSetting
 
 ## SYNOPSIS
-Settings that can govern this group's behavior, like whether members can invite guest users to the group.
+Read-only.
 Nullable.
 
 ## SYNTAX
@@ -33,7 +33,7 @@ Get-MgGroupSetting -InputObject <IGroupsIdentity> [-ExpandProperty <String[]>] [
 ```
 
 ## DESCRIPTION
-Settings that can govern this group's behavior, like whether members can invite guest users to the group.
+Read-only.
 Nullable.
 
 ## EXAMPLES

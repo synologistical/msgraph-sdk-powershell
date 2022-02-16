@@ -8,7 +8,7 @@ schema: 2.0.0
 # Get-MgSiteTermStore
 
 ## SYNOPSIS
-The termStore under this site.
+The default termStore under this site.
 
 ## SYNTAX
 
@@ -43,7 +43,7 @@ Get-MgSiteTermStore -SiteId <String> [-ExpandProperty <String[]>] [-Filter <Stri
 ```
 
 ## DESCRIPTION
-The termStore under this site.
+The default termStore under this site.
 
 ## EXAMPLES
 
@@ -296,6 +296,7 @@ INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: key: id of subscription
   - `[TermId <String>]`: key: id of term
   - `[TermId1 <String>]`: key: id of term
+  - `[Token <String>]`: Usage: token={token}
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS

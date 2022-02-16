@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.Sites
-Module Guid: c320fec7-f5ea-4f10-925c-cec8994df6be
+Module Guid: b01bcd40-90c7-4d4b-a24c-19a761f61542
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.sites
 Help Version: 1.0.0.0
 Locale: en-US
@@ -73,10 +73,10 @@ Invoke function getByPath
 The collection of column definitions reusable across lists under this site.
 
 ### [Get-MgSiteColumnSourceColumn](Get-MgSiteColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteColumnSourceColumnByRef](Get-MgSiteColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteContentType](Get-MgSiteContentType.md)
 The collection of content types defined for this site.
@@ -97,7 +97,7 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [Get-MgSiteContentTypeColumnLink](Get-MgSiteContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Get-MgSiteContentTypeColumnPosition](Get-MgSiteContentTypeColumnPosition.md)
 Column order information in a content type.
@@ -106,12 +106,15 @@ Column order information in a content type.
 Column order information in a content type.
 
 ### [Get-MgSiteContentTypeColumnSourceColumn](Get-MgSiteContentTypeColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteContentTypeColumnSourceColumnByRef](Get-MgSiteContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteDrive](Get-MgSiteDrive.md)
+The default drive (document library) for this site.
+
+### [Get-MgSiteDriveByRef](Get-MgSiteDriveByRef.md)
 The default drive (document library) for this site.
 
 ### [Get-MgSiteExternalColumn](Get-MgSiteExternalColumn.md)
@@ -127,10 +130,10 @@ The collection of lists under this site.
 The collection of field definitions for this list.
 
 ### [Get-MgSiteListColumnSourceColumn](Get-MgSiteListColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteListColumnSourceColumnByRef](Get-MgSiteListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteListContentType](Get-MgSiteListContentType.md)
 The collection of content types present in this list.
@@ -151,7 +154,7 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [Get-MgSiteListContentTypeColumnLink](Get-MgSiteListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Get-MgSiteListContentTypeColumnPosition](Get-MgSiteListContentTypeColumnPosition.md)
 Column order information in a content type.
@@ -160,12 +163,16 @@ Column order information in a content type.
 Column order information in a content type.
 
 ### [Get-MgSiteListContentTypeColumnSourceColumn](Get-MgSiteListContentTypeColumnSourceColumn.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteListContentTypeColumnSourceColumnByRef](Get-MgSiteListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Get-MgSiteListDrive](Get-MgSiteListDrive.md)
+Only present on document libraries.
+Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+
+### [Get-MgSiteListDriveByRef](Get-MgSiteListDriveByRef.md)
 Only present on document libraries.
 Allows access to the list as a [drive][] resource with [driveItems][driveItem].
 
@@ -184,8 +191,8 @@ Analytics about the view activities that took place on this item.
 ### [Get-MgSiteListItemDriveItem](Get-MgSiteListItemDriveItem.md)
 For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
 
-### [Get-MgSiteListItemDriveItemContent](Get-MgSiteListItemDriveItemContent.md)
-Get media content for the navigation property driveItem from sites
+### [Get-MgSiteListItemDriveItemByRef](Get-MgSiteListItemDriveItemByRef.md)
+For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
 
 ### [Get-MgSiteListItemField](Get-MgSiteListItemField.md)
 The values of the columns set on this list item.
@@ -209,8 +216,11 @@ Nullable.
 ### [Get-MgSiteRecentNotebook](Get-MgSiteRecentNotebook.md)
 Invoke function getRecentNotebooks
 
+### [Get-MgSiteSiteByRef](Get-MgSiteSiteByRef.md)
+The collection of the sub-sites under this site.
+
 ### [Get-MgSiteTermStore](Get-MgSiteTermStore.md)
-The termStore under this site.
+The default termStore under this site.
 
 ### [Get-MgSiteTermStoreGroup](Get-MgSiteTermStoreGroup.md)
 Collection of all groups available in the term store.
@@ -481,12 +491,12 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [New-MgSiteContentTypeColumnLink](New-MgSiteContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [New-MgSiteContentTypeColumnPositionByRef](New-MgSiteContentTypeColumnPositionByRef.md)
 Column order information in a content type.
 
-### [New-MgSiteDrive](New-MgSiteDrive.md)
+### [New-MgSiteDriveByRef](New-MgSiteDriveByRef.md)
 The collection of drives (document libraries) under this site.
 
 ### [New-MgSiteExternalColumnByRef](New-MgSiteExternalColumnByRef.md)
@@ -508,7 +518,7 @@ The collection of content types that are ancestors of this content type.
 The collection of column definitions for this contentType.
 
 ### [New-MgSiteListContentTypeColumnLink](New-MgSiteListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [New-MgSiteListContentTypeColumnPositionByRef](New-MgSiteListContentTypeColumnPositionByRef.md)
 Column order information in a content type.
@@ -525,6 +535,9 @@ The set of subscriptions on the list.
 ### [New-MgSitePermission](New-MgSitePermission.md)
 The permissions associated with the site.
 Nullable.
+
+### [New-MgSiteSiteByRef](New-MgSiteSiteByRef.md)
+The collection of the sub-sites under this site.
 
 ### [New-MgSiteTermStore](New-MgSiteTermStore.md)
 The collection of termStores under this site.
@@ -577,9 +590,6 @@ Children of current term.
 ### [New-MgSiteTermStoreSetTermRelation](New-MgSiteTermStoreSetTermRelation.md)
 To indicate which terms are related to the current term as either pinned or reused.
 
-### [New-MgSubSite](New-MgSubSite.md)
-The collection of the sub-sites under this site.
-
 ### [New-MgUserFollowedSiteByRef](New-MgUserFollowedSiteByRef.md)
 Create new navigation property ref to followedSites for users
 
@@ -606,7 +616,7 @@ Analytics about the view activities that took place in this site.
 The collection of column definitions reusable across lists under this site.
 
 ### [Remove-MgSiteColumnSourceColumnByRef](Remove-MgSiteColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgSiteContentType](Remove-MgSiteContentType.md)
 The collection of content types defined for this site.
@@ -618,12 +628,12 @@ Parent contentType from which this content type is derived.
 The collection of column definitions for this contentType.
 
 ### [Remove-MgSiteContentTypeColumnLink](Remove-MgSiteContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Remove-MgSiteContentTypeColumnSourceColumnByRef](Remove-MgSiteContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
-### [Remove-MgSiteDrive](Remove-MgSiteDrive.md)
+### [Remove-MgSiteDriveByRef](Remove-MgSiteDriveByRef.md)
 The default drive (document library) for this site.
 
 ### [Remove-MgSiteList](Remove-MgSiteList.md)
@@ -633,7 +643,7 @@ The collection of lists under this site.
 The collection of field definitions for this list.
 
 ### [Remove-MgSiteListColumnSourceColumnByRef](Remove-MgSiteListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Remove-MgSiteListContentType](Remove-MgSiteListContentType.md)
 The collection of content types present in this list.
@@ -645,12 +655,12 @@ Parent contentType from which this content type is derived.
 The collection of column definitions for this contentType.
 
 ### [Remove-MgSiteListContentTypeColumnLink](Remove-MgSiteListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
+The collection of columns that are required by this content type.
 
 ### [Remove-MgSiteListContentTypeColumnSourceColumnByRef](Remove-MgSiteListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
-### [Remove-MgSiteListDrive](Remove-MgSiteListDrive.md)
+### [Remove-MgSiteListDriveByRef](Remove-MgSiteListDriveByRef.md)
 Only present on document libraries.
 Allows access to the list as a [drive][] resource with [driveItems][driveItem].
 
@@ -660,7 +670,7 @@ All items contained in the list.
 ### [Remove-MgSiteListItemAnalyticByRef](Remove-MgSiteListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
 
-### [Remove-MgSiteListItemDriveItem](Remove-MgSiteListItemDriveItem.md)
+### [Remove-MgSiteListItemDriveItemByRef](Remove-MgSiteListItemDriveItemByRef.md)
 For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
 
 ### [Remove-MgSiteListItemField](Remove-MgSiteListItemField.md)
@@ -680,7 +690,7 @@ The permissions associated with the site.
 Nullable.
 
 ### [Remove-MgSiteTermStore](Remove-MgSiteTermStore.md)
-The termStore under this site.
+The default termStore under this site.
 
 ### [Remove-MgSiteTermStoreGroup](Remove-MgSiteTermStoreGroup.md)
 Collection of all groups available in the term store.
@@ -827,28 +837,35 @@ Invoke action restoreVersion
 Analytics about the view activities that took place in this site.
 
 ### [Set-MgSiteColumnSourceColumnByRef](Set-MgSiteColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgSiteContentTypeBaseByRef](Set-MgSiteContentTypeBaseByRef.md)
 Parent contentType from which this content type is derived.
 
 ### [Set-MgSiteContentTypeColumnSourceColumnByRef](Set-MgSiteContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
+
+### [Set-MgSiteDriveByRef](Set-MgSiteDriveByRef.md)
+The default drive (document library) for this site.
 
 ### [Set-MgSiteListColumnSourceColumnByRef](Set-MgSiteListColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
 
 ### [Set-MgSiteListContentTypeBaseByRef](Set-MgSiteListContentTypeBaseByRef.md)
 Parent contentType from which this content type is derived.
 
 ### [Set-MgSiteListContentTypeColumnSourceColumnByRef](Set-MgSiteListContentTypeColumnSourceColumnByRef.md)
-The source column for content type column.
+The source column for the content type column.
+
+### [Set-MgSiteListDriveByRef](Set-MgSiteListDriveByRef.md)
+Only present on document libraries.
+Allows access to the list as a [drive][] resource with [driveItems][driveItem].
 
 ### [Set-MgSiteListItemAnalyticByRef](Set-MgSiteListItemAnalyticByRef.md)
 Analytics about the view activities that took place on this item.
 
-### [Set-MgSiteListItemDriveItemContent](Set-MgSiteListItemDriveItemContent.md)
-Update media content for the navigation property driveItem in sites
+### [Set-MgSiteListItemDriveItemByRef](Set-MgSiteListItemDriveItemByRef.md)
+For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
 
 ### [Set-MgSiteTermStoreGroupSetChildRelationFromTermByRef](Set-MgSiteTermStoreGroupSetChildRelationFromTermByRef.md)
 The from [term] of the relation.
@@ -975,10 +992,7 @@ The collection of content types defined for this site.
 The collection of column definitions for this contentType.
 
 ### [Update-MgSiteContentTypeColumnLink](Update-MgSiteContentTypeColumnLink.md)
-The collection of columns that are required by this content type
-
-### [Update-MgSiteDrive](Update-MgSiteDrive.md)
-The default drive (document library) for this site.
+The collection of columns that are required by this content type.
 
 ### [Update-MgSiteList](Update-MgSiteList.md)
 The collection of lists under this site.
@@ -993,17 +1007,10 @@ The collection of content types present in this list.
 The collection of column definitions for this contentType.
 
 ### [Update-MgSiteListContentTypeColumnLink](Update-MgSiteListContentTypeColumnLink.md)
-The collection of columns that are required by this content type
-
-### [Update-MgSiteListDrive](Update-MgSiteListDrive.md)
-Only present on document libraries.
-Allows access to the list as a [drive][] resource with [driveItems][driveItem].
+The collection of columns that are required by this content type.
 
 ### [Update-MgSiteListItem](Update-MgSiteListItem.md)
 All items contained in the list.
-
-### [Update-MgSiteListItemDriveItem](Update-MgSiteListItemDriveItem.md)
-For document libraries, the driveItem relationship exposes the listItem as a [driveItem][]
 
 ### [Update-MgSiteListItemField](Update-MgSiteListItemField.md)
 The values of the columns set on this list item.
@@ -1025,7 +1032,7 @@ The permissions associated with the site.
 Nullable.
 
 ### [Update-MgSiteTermStore](Update-MgSiteTermStore.md)
-The termStore under this site.
+The default termStore under this site.
 
 ### [Update-MgSiteTermStoreGroup](Update-MgSiteTermStoreGroup.md)
 Collection of all groups available in the term store.
@@ -1080,7 +1087,4 @@ Children of current term.
 
 ### [Update-MgSiteTermStoreSetTermRelation](Update-MgSiteTermStoreSetTermRelation.md)
 To indicate which terms are related to the current term as either pinned or reused.
-
-### [Update-MgSubSite](Update-MgSubSite.md)
-The collection of the sub-sites under this site.
 

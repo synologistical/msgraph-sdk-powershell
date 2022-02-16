@@ -12,24 +12,24 @@ The default drive (document library) for this site.
 
 ## SYNTAX
 
-### Get2 (Default)
+### Get1 (Default)
 ```
 Get-MgSiteDrive -SiteId <String> [-ExpandProperty <String[]>] [-Property <String[]>] [<CommonParameters>]
 ```
 
-### Get3
+### Get2
 ```
 Get-MgSiteDrive -DriveId <String> -SiteId <String> [-ExpandProperty <String[]>] [-Property <String[]>]
  [<CommonParameters>]
 ```
 
-### GetViaIdentity2
+### GetViaIdentity1
 ```
 Get-MgSiteDrive -InputObject <ISitesIdentity> [-ExpandProperty <String[]>] [-Property <String[]>]
  [<CommonParameters>]
 ```
 
-### GetViaIdentity3
+### GetViaIdentity2
 ```
 Get-MgSiteDrive -InputObject <ISitesIdentity> [-ExpandProperty <String[]>] [-Property <String[]>]
  [<CommonParameters>]
@@ -85,7 +85,7 @@ key: id of drive
 
 ```yaml
 Type: System.String
-Parameter Sets: Get3
+Parameter Sets: Get2
 Aliases:
 
 Required: True
@@ -131,7 +131,7 @@ To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT 
 
 ```yaml
 Type: Microsoft.Graph.PowerShell.Models.ISitesIdentity
-Parameter Sets: GetViaIdentity2, GetViaIdentity3
+Parameter Sets: GetViaIdentity1, GetViaIdentity2
 Aliases:
 
 Required: True
@@ -191,7 +191,7 @@ key: id of site
 
 ```yaml
 Type: System.String
-Parameter Sets: Get2, Get3, List1
+Parameter Sets: Get1, Get2, List1
 Aliases:
 
 Required: True
@@ -296,6 +296,7 @@ INPUTOBJECT <ISitesIdentity>: Identity Parameter
   - `[SubscriptionId <String>]`: key: id of subscription
   - `[TermId <String>]`: key: id of term
   - `[TermId1 <String>]`: key: id of term
+  - `[Token <String>]`: Usage: token={token}
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS

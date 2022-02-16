@@ -15,29 +15,31 @@ Invoke action answer
 ### AnswerExpanded (Default)
 ```
 Invoke-MgAnswerCommunicationCall -CallId <String> [-AcceptedModalities <String[]>]
- [-AdditionalProperties <Hashtable>] [-CallbackUri <String>] [-MediaConfig <IMicrosoftGraphMediaConfig1>]
- [-ParticipantCapacity <Int32>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-AdditionalProperties <Hashtable>] [-CallbackUri <String>] [-CallOptions <Hashtable>]
+ [-MediaConfig <IMicrosoftGraphMediaConfig1>] [-ParticipantCapacity <Int32>] [-PassThru] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ### Answer
 ```
 Invoke-MgAnswerCommunicationCall -CallId <String>
- -BodyParameter <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1>
+ -BodyParameter <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema>
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AnswerViaIdentity
 ```
 Invoke-MgAnswerCommunicationCall -InputObject <ICloudCommunicationsIdentity>
- -BodyParameter <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1>
+ -BodyParameter <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema>
  [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
 ### AnswerViaIdentityExpanded
 ```
 Invoke-MgAnswerCommunicationCall -InputObject <ICloudCommunicationsIdentity> [-AcceptedModalities <String[]>]
- [-AdditionalProperties <Hashtable>] [-CallbackUri <String>] [-MediaConfig <IMicrosoftGraphMediaConfig1>]
- [-ParticipantCapacity <Int32>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-AdditionalProperties <Hashtable>] [-CallbackUri <String>] [-CallOptions <Hashtable>]
+ [-MediaConfig <IMicrosoftGraphMediaConfig1>] [-ParticipantCapacity <Int32>] [-PassThru] [-Confirm] [-WhatIf]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -82,7 +84,7 @@ Accept wildcard characters: False
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1
+Type: Microsoft.Graph.PowerShell.Models.IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema
 Parameter Sets: Answer, AnswerViaIdentity
 Aliases:
 
@@ -117,6 +119,21 @@ Parameter Sets: Answer, AnswerExpanded
 Aliases:
 
 Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -CallOptions
+incomingCallOptions
+
+```yaml
+Type: System.Collections.Hashtable
+Parameter Sets: AnswerExpanded, AnswerViaIdentityExpanded
+Aliases:
+
+Required: False
 Position: Named
 Default value: None
 Accept pipeline input: False
@@ -223,7 +240,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ### Microsoft.Graph.PowerShell.Models.ICloudCommunicationsIdentity
 
-### Microsoft.Graph.PowerShell.Models.IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1
+### Microsoft.Graph.PowerShell.Models.IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema
 
 ## OUTPUTS
 
@@ -238,9 +255,12 @@ COMPLEX PARAMETER PROPERTIES
 To create the parameters described below, construct a hash table containing the appropriate properties. For information on hash tables, run Get-Help about_Hash_Tables.
 
 
-BODYPARAMETER <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema1>: .
+BODYPARAMETER <IPathsQvpqn4CommunicationsCallsCallIdMicrosoftGraphAnswerPostRequestbodyContentApplicationJsonSchema>: .
   - `[(Any) <Object>]`: This indicates any property can be added to this object.
   - `[AcceptedModalities <String[]>]`: 
+  - `[CallOptions <IMicrosoftGraphIncomingCallOptions>]`: incomingCallOptions
+    - `[(Any) <Object>]`: This indicates any property can be added to this object.
+    - `[HideBotAfterEscalation <Boolean?>]`: 
   - `[CallbackUri <String>]`: 
   - `[MediaConfig <IMicrosoftGraphMediaConfig1>]`: mediaConfig
     - `[(Any) <Object>]`: This indicates any property can be added to this object.
@@ -252,7 +272,6 @@ INPUTOBJECT <ICloudCommunicationsIdentity>: Identity Parameter
   - `[AudioRoutingGroupId <String>]`: key: id of audioRoutingGroup
   - `[CallId <String>]`: key: id of call
   - `[CallRecordId <String>]`: key: id of callRecord
-  - `[CallTranscriptId <String>]`: key: id of callTranscript
   - `[CommsOperationId <String>]`: key: id of commsOperation
   - `[MeetingAttendanceReportId <String>]`: key: id of meetingAttendanceReport
   - `[MeetingRegistrationQuestionId <String>]`: key: id of meetingRegistrationQuestion

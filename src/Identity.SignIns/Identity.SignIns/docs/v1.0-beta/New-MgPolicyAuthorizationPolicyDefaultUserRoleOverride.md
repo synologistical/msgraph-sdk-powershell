@@ -211,7 +211,7 @@ BODYPARAMETER <IMicrosoftGraphDefaultUserRoleOverride>: defaultUserRoleOverride
   - `[Id <String>]`: Read-only.
   - `[IsDefault <Boolean?>]`: 
   - `[RolePermissions <IMicrosoftGraphUnifiedRolePermission[]>]`: 
-    - `[AllowedResourceActions <String[]>]`: Set of tasks that can be performed on a resource.
+    - `[AllowedResourceActions <String[]>]`: Set of tasks that can be performed on a resource. Required.
     - `[Condition <String>]`: Optional constraints that must be met for the permission to be effective.
     - `[ExcludedResourceActions <String[]>]`: Set of tasks that may not be performed on a resource. Not yet supported.
 
@@ -268,7 +268,7 @@ INPUTOBJECT <IIdentitySignInsIdentity>: Identity Parameter
   - `[WindowsHelloForBusinessAuthenticationMethodId <String>]`: key: id of windowsHelloForBusinessAuthenticationMethod
 
 ROLEPERMISSIONS <IMicrosoftGraphUnifiedRolePermission[]>: .
-  - `[AllowedResourceActions <String[]>]`: Set of tasks that can be performed on a resource.
+  - `[AllowedResourceActions <String[]>]`: Set of tasks that can be performed on a resource. Required.
   - `[Condition <String>]`: Optional constraints that must be met for the permission to be effective.
   - `[ExcludedResourceActions <String[]>]`: Set of tasks that may not be performed on a resource. Not yet supported.
 

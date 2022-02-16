@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.Identity.SignIns
-Module Guid: 2a394737-8756-4147-b513-7c415ba2e006
+Module Guid: ec71bbd9-3089-4d79-8621-0a25991bc412
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.identity.signins
 Help Version: 1.0.0.0
 Locale: en-US
@@ -22,7 +22,7 @@ Returns a collection of the specified named locations.
 ### [Get-MgIdentityConditionalAccessPolicy](Get-MgIdentityConditionalAccessPolicy.md)
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ### [Get-MgIdentityProvider](Get-MgIdentityProvider.md)
 Get entity from identityProviders by key
@@ -139,7 +139,7 @@ Returns a collection of the specified named locations.
 ### [New-MgIdentityConditionalAccessPolicy](New-MgIdentityConditionalAccessPolicy.md)
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ### [New-MgIdentityProvider](New-MgIdentityProvider.md)
 Add new entity to identityProviders
@@ -221,7 +221,7 @@ Returns a collection of the specified named locations.
 ### [Remove-MgIdentityConditionalAccessPolicy](Remove-MgIdentityConditionalAccessPolicy.md)
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ### [Remove-MgIdentityProvider](Remove-MgIdentityProvider.md)
 Delete entity from identityProviders
@@ -321,7 +321,7 @@ Returns a collection of the specified named locations.
 ### [Update-MgIdentityConditionalAccessPolicy](Update-MgIdentityConditionalAccessPolicy.md)
 Read-only.
 Nullable.
-Returns a collection of the specified Conditional Access policies.
+Returns a collection of the specified Conditional Access (CA) policies.
 
 ### [Update-MgIdentityProvider](Update-MgIdentityProvider.md)
 Update entity in identityProviders
