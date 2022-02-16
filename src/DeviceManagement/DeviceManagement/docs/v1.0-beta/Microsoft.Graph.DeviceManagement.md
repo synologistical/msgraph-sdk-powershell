@@ -1692,8 +1692,8 @@ The user experience analytics resource performance metrics.
 ### [Set-MgDeviceManagementUserExperienceAnalyticBaselineWorkFromAnywhereMetricByRef](Set-MgDeviceManagementUserExperienceAnalyticBaselineWorkFromAnywhereMetricByRef.md)
 The user experience analytics work from anywhere metrics.
 
-### [Update-MgDeviceManagement](Update-MgDeviceManagement.md)
-Update deviceManagement
+### [Set-MgDeviceManagementUserExperienceAnalyticBaselineWorkFromAnywhereMetricByRef](Set-MgDeviceManagementUserExperienceAnalyticBaselineWorkFromAnywhereMetricByRef.md)
+The user experience analytics work from anywhere metrics.
 
 ### [Update-MgDeviceManagementAdvancedThreatProtectionOnboardingStateSummary](Update-MgDeviceManagementAdvancedThreatProtectionOnboardingStateSummary.md)
 The summary state of ATP onboarding state for this account.
