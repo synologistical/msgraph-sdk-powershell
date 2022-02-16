@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Graph.Users.Actions-help.xml
 Module Name: Microsoft.Graph.Users.Actions
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.users.actions/update-mguserpassword
 schema: 2.0.0
@@ -12,30 +12,30 @@ Invoke action changePassword
 
 ## SYNTAX
 
-### ChangeExpanded1 (Default)
+### ChangeExpanded (Default)
 ```
 Update-MgUserPassword -UserId <String> [-AdditionalProperties <Hashtable>] [-CurrentPassword <String>]
- [-NewPassword <String>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-NewPassword <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### Change1
+### Change
 ```
 Update-MgUserPassword -UserId <String>
  -BodyParameter <IPaths3Mx0JpUsersUserIdMicrosoftGraphChangepasswordPostRequestbodyContentApplicationJsonSchema1>
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
-### ChangeViaIdentity1
+### ChangeViaIdentityExpanded
+```
+Update-MgUserPassword -InputObject <IUsersActionsIdentity> [-AdditionalProperties <Hashtable>]
+ [-CurrentPassword <String>] [-NewPassword <String>] [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### ChangeViaIdentity
 ```
 Update-MgUserPassword -InputObject <IUsersActionsIdentity>
  -BodyParameter <IPaths3Mx0JpUsersUserIdMicrosoftGraphChangepasswordPostRequestbodyContentApplicationJsonSchema1>
- [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### ChangeViaIdentityExpanded1
-```
-Update-MgUserPassword -InputObject <IUsersActionsIdentity> [-AdditionalProperties <Hashtable>]
- [-CurrentPassword <String>] [-NewPassword <String>] [-PassThru] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-PassThru] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -49,8 +49,8 @@ Invoke action changePassword
 Additional Parameters
 
 ```yaml
-Type: System.Collections.Hashtable
-Parameter Sets: ChangeExpanded1, ChangeViaIdentityExpanded1
+Type: Hashtable
+Parameter Sets: ChangeExpanded, ChangeViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -65,8 +65,8 @@ Accept wildcard characters: False
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IPaths3Mx0JpUsersUserIdMicrosoftGraphChangepasswordPostRequestbodyContentApplicationJsonSchema1
-Parameter Sets: Change1, ChangeViaIdentity1
+Type: IPaths3Mx0JpUsersUserIdMicrosoftGraphChangepasswordPostRequestbodyContentApplicationJsonSchema1
+Parameter Sets: Change, ChangeViaIdentity
 Aliases:
 
 Required: True
@@ -80,8 +80,8 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.String
-Parameter Sets: ChangeExpanded1, ChangeViaIdentityExpanded1
+Type: String
+Parameter Sets: ChangeExpanded, ChangeViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -96,8 +96,8 @@ Identity Parameter
 To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IUsersActionsIdentity
-Parameter Sets: ChangeViaIdentity1, ChangeViaIdentityExpanded1
+Type: IUsersActionsIdentity
+Parameter Sets: ChangeViaIdentityExpanded, ChangeViaIdentity
 Aliases:
 
 Required: True
@@ -111,8 +111,8 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.String
-Parameter Sets: ChangeExpanded1, ChangeViaIdentityExpanded1
+Type: String
+Parameter Sets: ChangeExpanded, ChangeViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -126,7 +126,7 @@ Accept wildcard characters: False
 Returns true when the command succeeds
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
@@ -141,8 +141,8 @@ Accept wildcard characters: False
 key: id of user
 
 ```yaml
-Type: System.String
-Parameter Sets: Change1, ChangeExpanded1
+Type: String
+Parameter Sets: ChangeExpanded, Change
 Aliases:
 
 Required: True
@@ -156,7 +156,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -172,7 +172,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -189,13 +189,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IPaths3Mx0JpUsersUserIdMicrosoftGraphChangepasswordPostRequestbodyContentApplicationJsonSchema1
-
 ### Microsoft.Graph.PowerShell.Models.IUsersActionsIdentity
-
 ## OUTPUTS
 
 ### System.Boolean
-
 ## NOTES
 
 ALIASES
@@ -239,4 +236,3 @@ INPUTOBJECT <IUsersActionsIdentity>: Identity Parameter
   - `[UserId <String>]`: key: id of user
 
 ## RELATED LINKS
-

@@ -170,9 +170,6 @@ Invoke action batchRecordDecisions
 ### [Invoke-MgBulkUserManagedDeviceReprovisionCloudPc](Invoke-MgBulkUserManagedDeviceReprovisionCloudPc.md)
 Invoke action bulkReprovisionCloudPc
 
-### [Invoke-MgBulkUserManagedDeviceRestoreCloudPc](Invoke-MgBulkUserManagedDeviceRestoreCloudPc.md)
-Invoke action bulkRestoreCloudPc
-
 ### [Invoke-MgCleanUserManagedDeviceWindowDevice](Invoke-MgCleanUserManagedDeviceWindowDevice.md)
 Clean Windows device
 
@@ -382,9 +379,6 @@ Reboot device
 
 ### [Restore-MgUser](Restore-MgUser.md)
 Invoke action restore
-
-### [Restore-MgUserManagedDeviceCloudPc](Restore-MgUserManagedDeviceCloudPc.md)
-Invoke action restoreCloudPc
 
 ### [Restore-MgUserManagedDevicePasscode](Restore-MgUserManagedDevicePasscode.md)
 Recover passcode
