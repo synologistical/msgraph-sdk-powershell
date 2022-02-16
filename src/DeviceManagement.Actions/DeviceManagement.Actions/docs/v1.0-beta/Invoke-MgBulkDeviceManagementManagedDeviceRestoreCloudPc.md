@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Graph.DeviceManagement.Actions-help.xml
 Module Name: Microsoft.Graph.DeviceManagement.Actions
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.devicemanagement.actions/invoke-mgbulkdevicemanagementmanageddevicerestorecloudpc
 schema: 2.0.0
@@ -15,7 +15,7 @@ Invoke action bulkRestoreCloudPc
 ### BulkExpanded (Default)
 ```
 Invoke-MgBulkDeviceManagementManagedDeviceRestoreCloudPc [-AdditionalProperties <Hashtable>]
- [-ManagedDeviceIds <String[]>] [-RestorePointDateTime <DateTime>] [-TimeRange <String>] [-Confirm] [-WhatIf]
+ [-ManagedDeviceIds <String[]>] [-RestorePointDateTime <DateTime>] [-TimeRange <String>] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -23,7 +23,7 @@ Invoke-MgBulkDeviceManagementManagedDeviceRestoreCloudPc [-AdditionalProperties 
 ```
 Invoke-MgBulkDeviceManagementManagedDeviceRestoreCloudPc
  -BodyParameter <IPaths2F9570DevicemanagementManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -37,7 +37,7 @@ Invoke action bulkRestoreCloudPc
 Additional Parameters
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: BulkExpanded
 Aliases:
 
@@ -53,7 +53,7 @@ Accept wildcard characters: False
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IPaths2F9570DevicemanagementManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
+Type: IPaths2F9570DevicemanagementManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
 Parameter Sets: Bulk
 Aliases:
 
@@ -68,7 +68,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: BulkExpanded
 Aliases:
 
@@ -83,7 +83,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: BulkExpanded
 Aliases:
 
@@ -98,7 +98,7 @@ Accept wildcard characters: False
 restoreTimeRange
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: BulkExpanded
 Aliases:
 
@@ -113,7 +113,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -129,7 +129,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -146,11 +146,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IPaths2F9570DevicemanagementManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
-
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphCloudPcBulkRemoteActionResult
-
 ## NOTES
 
 ALIASES
@@ -167,4 +165,3 @@ BODYPARAMETER <IPaths2F9570DevicemanagementManageddevicesMicrosoftGraphBulkresto
   - `[TimeRange <String>]`: restoreTimeRange
 
 ## RELATED LINKS
-

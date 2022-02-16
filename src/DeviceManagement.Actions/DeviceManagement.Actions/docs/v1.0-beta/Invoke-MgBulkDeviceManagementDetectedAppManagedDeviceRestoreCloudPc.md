@@ -1,5 +1,5 @@
 ---
-external help file:
+external help file: Microsoft.Graph.DeviceManagement.Actions-help.xml
 Module Name: Microsoft.Graph.DeviceManagement.Actions
 online version: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.devicemanagement.actions/invoke-mgbulkdevicemanagementdetectedappmanageddevicerestorecloudpc
 schema: 2.0.0
@@ -16,14 +16,22 @@ Invoke action bulkRestoreCloudPc
 ```
 Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc -DetectedAppId <String>
  [-AdditionalProperties <Hashtable>] [-ManagedDeviceIds <String[]>] [-RestorePointDateTime <DateTime>]
- [-TimeRange <String>] [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-TimeRange <String>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Bulk
 ```
 Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc -DetectedAppId <String>
  -BodyParameter <IPathsFnejuzDevicemanagementDetectedappsDetectedappIdManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema>
- [-Confirm] [-WhatIf] [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
+```
+
+### BulkViaIdentityExpanded
+```
+Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc
+ -InputObject <IDeviceManagementActionsIdentity> [-AdditionalProperties <Hashtable>]
+ [-ManagedDeviceIds <String[]>] [-RestorePointDateTime <DateTime>] [-TimeRange <String>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### BulkViaIdentity
@@ -31,15 +39,7 @@ Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc -DetectedApp
 Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc
  -InputObject <IDeviceManagementActionsIdentity>
  -BodyParameter <IPathsFnejuzDevicemanagementDetectedappsDetectedappIdManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema>
- [-Confirm] [-WhatIf] [<CommonParameters>]
-```
-
-### BulkViaIdentityExpanded
-```
-Invoke-MgBulkDeviceManagementDetectedAppManagedDeviceRestoreCloudPc
- -InputObject <IDeviceManagementActionsIdentity> [-AdditionalProperties <Hashtable>]
- [-ManagedDeviceIds <String[]>] [-RestorePointDateTime <DateTime>] [-TimeRange <String>] [-Confirm] [-WhatIf]
- [<CommonParameters>]
+ [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -53,7 +53,7 @@ Invoke action bulkRestoreCloudPc
 Additional Parameters
 
 ```yaml
-Type: System.Collections.Hashtable
+Type: Hashtable
 Parameter Sets: BulkExpanded, BulkViaIdentityExpanded
 Aliases:
 
@@ -69,7 +69,7 @@ Accept wildcard characters: False
 To construct, please use Get-Help -Online and see NOTES section for BODYPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IPathsFnejuzDevicemanagementDetectedappsDetectedappIdManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
+Type: IPathsFnejuzDevicemanagementDetectedappsDetectedappIdManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
 Parameter Sets: Bulk, BulkViaIdentity
 Aliases:
 
@@ -84,8 +84,8 @@ Accept wildcard characters: False
 key: id of detectedApp
 
 ```yaml
-Type: System.String
-Parameter Sets: Bulk, BulkExpanded
+Type: String
+Parameter Sets: BulkExpanded, Bulk
 Aliases:
 
 Required: True
@@ -100,8 +100,8 @@ Identity Parameter
 To construct, please use Get-Help -Online and see NOTES section for INPUTOBJECT properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Graph.PowerShell.Models.IDeviceManagementActionsIdentity
-Parameter Sets: BulkViaIdentity, BulkViaIdentityExpanded
+Type: IDeviceManagementActionsIdentity
+Parameter Sets: BulkViaIdentityExpanded, BulkViaIdentity
 Aliases:
 
 Required: True
@@ -115,7 +115,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.String[]
+Type: String[]
 Parameter Sets: BulkExpanded, BulkViaIdentityExpanded
 Aliases:
 
@@ -130,7 +130,7 @@ Accept wildcard characters: False
 .
 
 ```yaml
-Type: System.DateTime
+Type: DateTime
 Parameter Sets: BulkExpanded, BulkViaIdentityExpanded
 Aliases:
 
@@ -145,7 +145,7 @@ Accept wildcard characters: False
 restoreTimeRange
 
 ```yaml
-Type: System.String
+Type: String
 Parameter Sets: BulkExpanded, BulkViaIdentityExpanded
 Aliases:
 
@@ -160,7 +160,7 @@ Accept wildcard characters: False
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: cf
 
@@ -176,7 +176,7 @@ Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
 ```yaml
-Type: System.Management.Automation.SwitchParameter
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
 
@@ -193,13 +193,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IDeviceManagementActionsIdentity
-
 ### Microsoft.Graph.PowerShell.Models.IPathsFnejuzDevicemanagementDetectedappsDetectedappIdManageddevicesMicrosoftGraphBulkrestorecloudpcPostRequestbodyContentApplicationJsonSchema
-
 ## OUTPUTS
 
 ### Microsoft.Graph.PowerShell.Models.IMicrosoftGraphCloudPcBulkRemoteActionResult
-
 ## NOTES
 
 ALIASES
@@ -271,4 +268,3 @@ INPUTOBJECT <IDeviceManagementActionsIdentity>: Identity Parameter
   - `[WindowsQualityUpdateProfileId <String>]`: key: id of windowsQualityUpdateProfile
 
 ## RELATED LINKS
-
