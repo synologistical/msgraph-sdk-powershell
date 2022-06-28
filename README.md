@@ -31,79 +31,78 @@ There is a set of samples in the `samples` folder to help in getting started wit
 
 ## Usage
 
-1. Authentication
+### Authentication
 
-    The SDK supports two types of authentication: delegated access and app-only access.
-    - Delegated access.
+The SDK supports two types of authentication: delegated access and app-only access.
 
-        ``` powershell
-        # Using interactive authentication.
-        Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"
-        ```
+#### Delegated access
 
-        or
+##### Using interactive authentication
 
-        ``` powershell
-        # Using device code flow.
-        Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All" -UseDeviceAuthentication
-        ```
+``` powershell
+Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All"
+```
 
-        or
+##### Using device code flow
 
-        ``` powershell
-        # Using your own access token.
-        Connect-MgGraph -AccessToken $AccessToken
-        ```
+``` powershell
+Connect-MgGraph -Scopes "User.Read.All", "Group.ReadWrite.All" -UseDeviceAuthentication
+```
 
-    - App-only access via Client Credential with a certificate.
+##### Using your own access token
 
-        The certificate will be loaded from `Cert:\CurrentUser\My\` store when `-CertificateThumbprint` or `-CertificateName` is specified. Ensure the certificate is present in the store before calling `Connect-MgGraph`.
+``` powershell
+Connect-MgGraph -AccessToken $AccessToken
+```
 
-        ``` powershell
-        # Using -CertificateThumbprint
-        Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateThumbprint "YOUR_CERT_THUMBPRINT"
-        ```
+#### App-only access via Client Credential with a certificate
 
-        or
+The certificate will be loaded from `Cert:\CurrentUser\My\` store when `-CertificateThumbprint` or `-CertificateName` is specified. Ensure the certificate is present in the store before calling `Connect-MgGraph`.
 
-        ``` powershell
-        # Using -CertificateName
-        Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateName "YOUR_CERT_SUBJECT"
-        ```
+##### Using -CertificateThumbprint
 
-        or
+``` powershell
+Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateThumbprint "YOUR_CERT_THUMBPRINT"
+```
 
-        ``` powershell
-        # Using -Certificate
-        $Cert = Get-ChildItem Cert:\LocalMachine\My\$CertThumbprint
-        Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -Certificate $Cert
-        ```
+##### Using -CertificateName
 
-2. List users in your tenant.
+``` powershell
+Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -CertificateName "YOUR_CERT_SUBJECT"
+```
 
-    ``` powershell
-    Get-MgUser -Top 10 -Property Id, DisplayName, BusinessPhones | Format-Table Id, DisplayName, BusinessPhones
-    ```
+##### Using -Certificate
 
-3. Filter a user in your tenant.
+``` powershell
+$Cert = Get-ChildItem Cert:\LocalMachine\My\$CertThumbprint
+Connect-MgGraph -ClientId "YOUR_APP_ID" -TenantId "YOUR_TENANT_ID" -Certificate $Cert
+```
 
-    ``` powershell
-    $user = Get-MgUser -Filter "displayName eq 'Megan Bowen'"
-    ```
+### List users in your tenant
 
-4. Create a new app registration.
+``` powershell
+Get-MgUser -Top 10 -Property Id, DisplayName, BusinessPhones | Format-Table Id, DisplayName, BusinessPhones
+```
 
-    ``` powershell
-    New-MgApplication -DisplayName "ScriptedGraphPSApp" `
-                      -SignInAudience "AzureADMyOrg" `
-                      -Web @{ RedirectUris = "https://localhost"}
-    ```
+### Filter a user in your tenant
 
-5. Sign out of the current logged-in context i.e. app only or delegated access.
+``` powershell
+$user = Get-MgUser -Filter "displayName eq 'Megan Bowen'"
+```
 
-    ``` powershell
-    Disconnect-MgGraph
-    ```
+### Create a new app registration
+
+``` powershell
+New-MgApplication -DisplayName "ScriptedGraphPSApp" `
+                    -SignInAudience "AzureADMyOrg" `
+                    -Web @{ RedirectUris = "https://localhost"}
+```
+
+### Sign out of the current logged-in context i.e. app only or delegated access
+
+``` powershell
+Disconnect-MgGraph
+```
 
 ## API Version
 
