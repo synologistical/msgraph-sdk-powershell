@@ -83,9 +83,13 @@ directive:
       parameter-name: ItemCount
 # Alias DeviceAppManagement* cmdlets to DeviceAppMgt*.
   - where:
-      subject: ^DeviceAppManagement(.*)
+      subject: ^DeviceAppManagement.*
     set:
-      alias: ${verb}-MgDeviceAppMgt$1
+      alias: ${verb}-Mg${subject}
+  - where:
+      subject: (.*)(DeviceAppManagement)(.*)
+    set:
+      subject: $1DeviceAppMgt$3
 # Rename cmdlets.
   - where:
       subject: ^(Office)(Configuration)(ClientConfiguration.*)
