@@ -98,6 +98,9 @@ namespace Microsoft.Graph.PowerShell.Authentication.Cmdlets
         [Parameter(ParameterSetName = Constants.EnvironmentVariableParameterSet, Mandatory = false, HelpMessage = HelpMessages.EnvironmentVariable)]
         public SwitchParameter EnvironmentVariable { get; set; }
 
+        [Parameter(Mandatory = false, HelpMessage = HelpMessages.NoWelcome)]
+        public SwitchParameter NoWelcome { get; set; }
+
         [Parameter(Mandatory = false, DontShow = true, HelpMessage = "Wait for .NET debugger to attach")]
         public SwitchParameter Break { get; set; }
 
@@ -239,9 +242,26 @@ namespace Microsoft.Graph.PowerShell.Authentication.Cmdlets
                     await AuthenticationHelpers.LogoutAsync();
                     throw;
                 }
-                WriteObject("Welcome To Microsoft Graph!");
+
+                if (!NoWelcome.IsPresent)
+                {
+                    string welcomeMessage = FormartWelcomeMessage();
+                    WriteObject(welcomeMessage);
+                }
             }
         }
+
+        private static string FormartWelcomeMessage()
+        {
+            var clientId = GraphSession.Instance.AuthContext.ClientId;
+            var authType = GraphSession.Instance.AuthContext.AuthType.ToString().ToLowerInvariant();
+            return $"Welcome to Microsoft Graph!\r\n" +
+                $"Connected via '{authType}' access using ClientId {clientId}\r\n" +
+                "PowerShell Docs: https://learn.microsoft.com/powershell/microsoftgraph\r\n" +
+                "Microsoft Graph Docs: https://learn.microsoft.com/graph\r\n\n" +
+                "NOTE: You can use -NoWelcome switch parameter to suppress this message.";
+        }
+
         protected override void StopProcessing()
         {
             _cancellationTokenSource.Cancel();
