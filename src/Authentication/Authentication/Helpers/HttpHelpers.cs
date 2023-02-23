@@ -4,6 +4,9 @@
 using Microsoft.Graph.PowerShell.Authentication.Core.Interfaces;
 using Microsoft.Graph.PowerShell.Authentication.Core.Utilities;
 using Microsoft.Graph.PowerShell.Authentication.Handlers;
+using Microsoft.Kiota.Abstractions.Authentication;
+using Microsoft.Kiota.Http.HttpClientLibrary.Middleware;
+using Microsoft.Kiota.Http.HttpClientLibrary.Middleware.Options;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Net.Http;
