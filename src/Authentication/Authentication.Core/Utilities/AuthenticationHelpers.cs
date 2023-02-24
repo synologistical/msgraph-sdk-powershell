@@ -180,16 +180,16 @@ namespace Microsoft.Graph.PowerShell.Authentication.Core.Utilities
         }
 
         /// <summary>
-        /// Gets a <see cref="IAuthenticationProvider"/> using the provided <see cref="IAuthContext"/>
+        /// Gets a <see cref="AzureIdentityAccessTokenProvider"/> using the provided <see cref="IAuthContext"/>
         /// </summary>
         /// <param name="authContext">The <see cref="IAuthContext"/> to get a token credential for.</param>
         /// <returns>A <see cref="IAuthenticationProvider"/> based on provided <see cref="IAuthContext"/>.</returns>
-        public static async Task<IAuthenticationProvider> GetAuthenticationProviderAsync(IAuthContext authContext)
+        public static async Task<AzureIdentityAccessTokenProvider> GetAuthenticationProviderAsync(IAuthContext authContext)
         {
             if (authContext is null)
                 throw new AuthenticationException(ErrorConstants.Message.MissingAuthContext);
             var tokenCrdential = await GetTokenCredentialAsync(authContext, default).ConfigureAwait(false);
-            return new AzureIdentityAuthenticationProvider(tokenCrdential, scopes: GetScopes(authContext));
+            return new AzureIdentityAccessTokenProvider(tokenCrdential, scopes: GetScopes(authContext));
         }
 
         public static async Task<IAuthContext> AuthenticateAsync(IAuthContext authContext, CancellationToken cancellationToken)

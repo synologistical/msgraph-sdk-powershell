@@ -40,14 +40,15 @@ namespace Microsoft.Graph.Authentication.Test.Helpers
                 ContextScope = ContextScope.Process
             };
 
-            IAuthenticationProvider authProvider = await AuthenticationHelpers.GetAuthenticationProviderAsync(userProvidedAuthContext);
+            AzureIdentityAccessTokenProvider authProvider = await AuthenticationHelpers.GetAuthenticationProviderAsync(userProvidedAuthContext);
             HttpRequestMessage requestMessage = new HttpRequestMessage();
 
             // Act
-            await authProvider.AuthenticateRequestAsync(requestMessage);
+            // TODO: update test to use AuthenticationHandler.
+            // await authProvider. AuthenticateRequestAsync(requestMessage);
 
             // Assert
-            Assert.IsType<TokenCredentialAuthProvider>(authProvider);
+            Assert.IsType<AzureIdentityAccessTokenProvider>(authProvider);
             Assert.Equal("Bearer", requestMessage.Headers.Authorization.Scheme);
             Assert.Equal(accessToken, requestMessage.Headers.Authorization.Parameter);
 

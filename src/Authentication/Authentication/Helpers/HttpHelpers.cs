@@ -1,6 +1,7 @@
 ﻿// ------------------------------------------------------------------------------
 //  Copyright (c) Microsoft Corporation.  All Rights Reserved.  Licensed under the MIT License.  See License in the project root for license information.
 // ------------------------------------------------------------------------------
+using Microsoft.Graph.Authentication;
 using Microsoft.Graph.PowerShell.Authentication.Core.Interfaces;
 using Microsoft.Graph.PowerShell.Authentication.Core.Utilities;
 using Microsoft.Graph.PowerShell.Authentication.Handlers;
@@ -30,7 +31,7 @@ namespace Microsoft.Graph.PowerShell.Authentication.Helpers
 
             var requestUserAgent = new RequestUserAgent(GraphSession.Instance.AuthContext?.PSHostVersion, null);
 
-            IAuthenticationProvider authProvider = AuthenticationHelpers.GetAuthenticationProviderAsync(GraphSession.Instance.AuthContext).ConfigureAwait(false).GetAwaiter().GetResult();
+            AzureIdentityAccessTokenProvider authProvider = AuthenticationHelpers.GetAuthenticationProviderAsync(GraphSession.Instance.AuthContext).ConfigureAwait(false).GetAwaiter().GetResult();
             var newHttpClient = GetGraphHttpClient(authProvider, GraphSession.Instance.RequestContext);
             newHttpClient.DefaultRequestHeaders.UserAgent.ParseAdd(requestUserAgent.UserAgent);
             GraphSession.Instance.GraphHttpClient = newHttpClient;
@@ -43,7 +44,7 @@ namespace Microsoft.Graph.PowerShell.Authentication.Helpers
         /// </summary>
         /// <param name="authProvider">Custom AuthProvider</param>
         /// <returns></returns>
-        private static HttpClient GetGraphHttpClient(IAuthenticationProvider authProvider, IRequestContext requestContext)
+        private static HttpClient GetGraphHttpClient(AzureIdentityAccessTokenProvider authProvider, IRequestContext requestContext)
         {
             if (requestContext is null)
                 throw new AuthenticationException(string.Format(CultureInfo.InvariantCulture, Core.ErrorConstants.Message.MissingSessionProperty, nameof(requestContext)));

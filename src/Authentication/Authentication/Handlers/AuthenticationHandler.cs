@@ -3,7 +3,7 @@
 // ------------------------------------------------------------------------------
 
 
-using Microsoft.Kiota.Abstractions.Authentication;
+using Microsoft.Graph.Authentication;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -14,14 +14,14 @@ namespace Microsoft.Graph.PowerShell.Authentication.Handlers
     {
         private int MaxRetry { get; set; } = 1;
 
-        public IAuthenticationProvider AuthenticationProvider { get; set; }
+        public AzureIdentityAccessTokenProvider AuthenticationProvider { get; set; }
 
-        public AuthenticationHandler(IAuthenticationProvider authenticationProvider)
+        public AuthenticationHandler(AzureIdentityAccessTokenProvider authenticationProvider)
         {
             AuthenticationProvider = authenticationProvider;
         }
 
-        public AuthenticationHandler(IAuthenticationProvider authenticationProvider, HttpMessageHandler innerHandler)
+        public AuthenticationHandler(AzureIdentityAccessTokenProvider authenticationProvider, HttpMessageHandler innerHandler)
             : this(authenticationProvider)
         {
             InnerHandler = innerHandler;
@@ -36,11 +36,13 @@ namespace Microsoft.Graph.PowerShell.Authentication.Handlers
                 // We should consider:
                 // - Updating the AuthenticationProvider interface to accept a HttpRequestMessage via an overload.
                 // - Providing conversion between HttpRequestMessage and RequestInformation.
-                await AuthenticationProvider.AuthenticateRequestAsync(httpRequestMessage).ConfigureAwait(false);
+                var accessToken = await AuthenticationProvider.GetAuthorizationTokenAsync(httpRequestMessage.RequestUri, cancellationToken: cancellationToken).ConfigureAwait(false);
+                if (!string.IsNullOrEmpty(accessToken))
+                    httpRequestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
+
+                // TODO: Handle claims.
 
                 HttpResponseMessage response = await base.SendAsync(httpRequestMessage, cancellationToken).ConfigureAwait(false);
-
-                // TODO: Handle claims challanges and retry.
 
                 return response;
             }
