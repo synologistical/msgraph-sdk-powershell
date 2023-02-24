@@ -50,7 +50,7 @@ namespace Microsoft.Graph.PowerShell.Authentication.Helpers
 
             IList<DelegatingHandler> delegatingHandlers = new List<DelegatingHandler> {
                 new RequestHeaderHandler(),
-                new AuthenticationHandler(authProvider),
+                new AuthenticationHandler(authProvider), // Added to support pre-configured auth provider when using HttpClient.
                 new NationalCloudHandler(),
                 new ODataQueryOptionsHandler(),
                 new HttpVersionHandler(),
