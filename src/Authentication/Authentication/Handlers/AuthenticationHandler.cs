@@ -32,15 +32,11 @@ namespace Microsoft.Graph.PowerShell.Authentication.Handlers
             // Authenticate request using AuthenticationProvider
             if (AuthenticationProvider != null)
             {
-                // Fails to compile because AuthenticateRequestAsync accepts does not accept a HttpRequestMessage. It onlly accepts RequestInformation.
-                // We should consider:
-                // - Updating the AuthenticationProvider interface to accept a HttpRequestMessage via an overload.
-                // - Providing conversion between HttpRequestMessage and RequestInformation.
                 var accessToken = await AuthenticationProvider.GetAuthorizationTokenAsync(httpRequestMessage.RequestUri, cancellationToken: cancellationToken).ConfigureAwait(false);
                 if (!string.IsNullOrEmpty(accessToken))
                     httpRequestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
-                // TODO: Handle claims.
+                // TODO: Handle claims challanges and retry.
 
                 HttpResponseMessage response = await base.SendAsync(httpRequestMessage, cancellationToken).ConfigureAwait(false);
 
