@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <version>2.0.0-preview5</version>
+    <version>2.0.0-preview7</version>
     <id>Microsoft.Graph.Authentication</id>
     <description>Microsoft Graph PowerShell authentication module</description>
     <authors>Microsoft</authors>
@@ -32,6 +32,12 @@
     <file src="artifacts\Dependencies\Core\Microsoft.Identity.Client.dll" target="Dependencies\Core" />
     <file src="artifacts\Dependencies\Core\Microsoft.Identity.Client.Extensions.Msal.dll" target="Dependencies\Core" />
     <file src="artifacts\Dependencies\Core\Microsoft.IdentityModel.Abstractions.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Abstractions.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Authentication.Azure.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Http.HttpClientLibrary.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Serialization.Form.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Serialization.Json.dll" target="Dependencies\Core" />
+    <file src="artifacts\Dependencies\Core\Microsoft.Kiota.Serialization.Text.dll" target="Dependencies\Core" />
     <file src="artifacts\Dependencies\Core\Newtonsoft.Json.dll" target="Dependencies\Core" />
     <file src="artifacts\Dependencies\Core\System.Security.Cryptography.ProtectedData.dll" target="Dependencies\Core" />
     <!-- Desktop -->
@@ -42,6 +48,12 @@
     <file src="artifacts\Dependencies\Desktop\Microsoft.Identity.Client.dll" target="Dependencies\Desktop" />
     <file src="artifacts\Dependencies\Desktop\Microsoft.Identity.Client.Extensions.Msal.dll" target="Dependencies\Desktop" />
     <file src="artifacts\Dependencies\Desktop\Microsoft.IdentityModel.Abstractions.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Abstractions.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Authentication.Azure.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Http.HttpClientLibrary.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Serialization.Form.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Serialization.Json.dll" target="Dependencies\Desktop" />
+    <file src="artifacts\Dependencies\Desktop\Microsoft.Kiota.Serialization.Text.dll" target="Dependencies\Desktop" />
     <file src="artifacts\Dependencies\Desktop\Newtonsoft.Json.dll" target="Dependencies\Desktop" />
     <file src="artifacts\Dependencies\Desktop\System.Buffers.dll" target="Dependencies\Desktop" />
     <file src="artifacts\Dependencies\Desktop\System.Diagnostics.DiagnosticSource.dll" target="Dependencies\Desktop" />
