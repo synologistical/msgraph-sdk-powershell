@@ -91,7 +91,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -220,7 +220,7 @@ paths:
       parameters:
         - name: auditEvent-id
           in: path
-          description: 'key: id of auditEvent'
+          description: The unique identifier of auditEvent
           required: true
           style: simple
           schema:
@@ -279,7 +279,7 @@ paths:
       parameters:
         - name: auditEvent-id
           in: path
-          description: 'key: id of auditEvent'
+          description: The unique identifier of auditEvent
           required: true
           style: simple
           schema:
@@ -310,7 +310,7 @@ paths:
       parameters:
         - name: auditEvent-id
           in: path
-          description: 'key: id of auditEvent'
+          description: The unique identifier of auditEvent
           required: true
           style: simple
           schema:
@@ -323,7 +323,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -446,7 +446,7 @@ paths:
       parameters:
         - name: complianceManagementPartner-id
           in: path
-          description: 'key: id of complianceManagementPartner'
+          description: The unique identifier of complianceManagementPartner
           required: true
           style: simple
           schema:
@@ -503,7 +503,7 @@ paths:
       parameters:
         - name: complianceManagementPartner-id
           in: path
-          description: 'key: id of complianceManagementPartner'
+          description: The unique identifier of complianceManagementPartner
           required: true
           style: simple
           schema:
@@ -534,7 +534,7 @@ paths:
       parameters:
         - name: complianceManagementPartner-id
           in: path
-          description: 'key: id of complianceManagementPartner'
+          description: The unique identifier of complianceManagementPartner
           required: true
           style: simple
           schema:
@@ -547,7 +547,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -670,7 +670,7 @@ paths:
       parameters:
         - name: deviceManagementPartner-id
           in: path
-          description: 'key: id of deviceManagementPartner'
+          description: The unique identifier of deviceManagementPartner
           required: true
           style: simple
           schema:
@@ -727,7 +727,7 @@ paths:
       parameters:
         - name: deviceManagementPartner-id
           in: path
-          description: 'key: id of deviceManagementPartner'
+          description: The unique identifier of deviceManagementPartner
           required: true
           style: simple
           schema:
@@ -758,7 +758,7 @@ paths:
       parameters:
         - name: deviceManagementPartner-id
           in: path
-          description: 'key: id of deviceManagementPartner'
+          description: The unique identifier of deviceManagementPartner
           required: true
           style: simple
           schema:
@@ -771,7 +771,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -894,7 +894,7 @@ paths:
       parameters:
         - name: deviceManagementExchangeConnector-id
           in: path
-          description: 'key: id of deviceManagementExchangeConnector'
+          description: The unique identifier of deviceManagementExchangeConnector
           required: true
           style: simple
           schema:
@@ -951,7 +951,7 @@ paths:
       parameters:
         - name: deviceManagementExchangeConnector-id
           in: path
-          description: 'key: id of deviceManagementExchangeConnector'
+          description: The unique identifier of deviceManagementExchangeConnector
           required: true
           style: simple
           schema:
@@ -982,7 +982,7 @@ paths:
       parameters:
         - name: deviceManagementExchangeConnector-id
           in: path
-          description: 'key: id of deviceManagementExchangeConnector'
+          description: The unique identifier of deviceManagementExchangeConnector
           required: true
           style: simple
           schema:
@@ -995,7 +995,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -1124,7 +1124,7 @@ paths:
       parameters:
         - name: iosUpdateDeviceStatus-id
           in: path
-          description: 'key: id of iosUpdateDeviceStatus'
+          description: The unique identifier of iosUpdateDeviceStatus
           required: true
           style: simple
           schema:
@@ -1183,7 +1183,7 @@ paths:
       parameters:
         - name: iosUpdateDeviceStatus-id
           in: path
-          description: 'key: id of iosUpdateDeviceStatus'
+          description: The unique identifier of iosUpdateDeviceStatus
           required: true
           style: simple
           schema:
@@ -1214,7 +1214,7 @@ paths:
       parameters:
         - name: iosUpdateDeviceStatus-id
           in: path
-          description: 'key: id of iosUpdateDeviceStatus'
+          description: The unique identifier of iosUpdateDeviceStatus
           required: true
           style: simple
           schema:
@@ -1227,7 +1227,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -1368,7 +1368,7 @@ paths:
       parameters:
         - name: mobileThreatDefenseConnector-id
           in: path
-          description: 'key: id of mobileThreatDefenseConnector'
+          description: The unique identifier of mobileThreatDefenseConnector
           required: true
           style: simple
           schema:
@@ -1431,7 +1431,7 @@ paths:
       parameters:
         - name: mobileThreatDefenseConnector-id
           in: path
-          description: 'key: id of mobileThreatDefenseConnector'
+          description: The unique identifier of mobileThreatDefenseConnector
           required: true
           style: simple
           schema:
@@ -1462,7 +1462,7 @@ paths:
       parameters:
         - name: mobileThreatDefenseConnector-id
           in: path
-          description: 'key: id of mobileThreatDefenseConnector'
+          description: The unique identifier of mobileThreatDefenseConnector
           required: true
           style: simple
           schema:
@@ -1475,7 +1475,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -1583,7 +1583,7 @@ paths:
       parameters:
         - name: remoteAssistancePartner-id
           in: path
-          description: 'key: id of remoteAssistancePartner'
+          description: The unique identifier of remoteAssistancePartner
           required: true
           style: simple
           schema:
@@ -1635,7 +1635,7 @@ paths:
       parameters:
         - name: remoteAssistancePartner-id
           in: path
-          description: 'key: id of remoteAssistancePartner'
+          description: The unique identifier of remoteAssistancePartner
           required: true
           style: simple
           schema:
@@ -1666,7 +1666,7 @@ paths:
       parameters:
         - name: remoteAssistancePartner-id
           in: path
-          description: 'key: id of remoteAssistancePartner'
+          description: The unique identifier of remoteAssistancePartner
           required: true
           style: simple
           schema:
@@ -1679,7 +1679,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -1784,7 +1784,7 @@ paths:
       parameters:
         - name: resourceOperation-id
           in: path
-          description: 'key: id of resourceOperation'
+          description: The unique identifier of resourceOperation
           required: true
           style: simple
           schema:
@@ -1835,7 +1835,7 @@ paths:
       parameters:
         - name: resourceOperation-id
           in: path
-          description: 'key: id of resourceOperation'
+          description: The unique identifier of resourceOperation
           required: true
           style: simple
           schema:
@@ -1866,7 +1866,7 @@ paths:
       parameters:
         - name: resourceOperation-id
           in: path
-          description: 'key: id of resourceOperation'
+          description: The unique identifier of resourceOperation
           required: true
           style: simple
           schema:
@@ -1879,7 +1879,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -1989,7 +1989,7 @@ paths:
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
-          description: 'key: id of deviceAndAppManagementRoleAssignment'
+          description: The unique identifier of deviceAndAppManagementRoleAssignment
           required: true
           style: simple
           schema:
@@ -2043,7 +2043,7 @@ paths:
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
-          description: 'key: id of deviceAndAppManagementRoleAssignment'
+          description: The unique identifier of deviceAndAppManagementRoleAssignment
           required: true
           style: simple
           schema:
@@ -2074,7 +2074,7 @@ paths:
       parameters:
         - name: deviceAndAppManagementRoleAssignment-id
           in: path
-          description: 'key: id of deviceAndAppManagementRoleAssignment'
+          description: The unique identifier of deviceAndAppManagementRoleAssignment
           required: true
           style: simple
           schema:
@@ -2087,7 +2087,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -2197,7 +2197,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2251,7 +2251,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2282,7 +2282,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2295,7 +2295,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -2310,7 +2310,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2386,7 +2386,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2419,7 +2419,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2427,7 +2427,7 @@ paths:
           x-ms-docs-key-type: roleDefinition
         - name: roleAssignment-id
           in: path
-          description: 'key: id of roleAssignment'
+          description: The unique identifier of roleAssignment
           required: true
           style: simple
           schema:
@@ -2480,7 +2480,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2488,7 +2488,7 @@ paths:
           x-ms-docs-key-type: roleDefinition
         - name: roleAssignment-id
           in: path
-          description: 'key: id of roleAssignment'
+          description: The unique identifier of roleAssignment
           required: true
           style: simple
           schema:
@@ -2519,7 +2519,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2527,7 +2527,7 @@ paths:
           x-ms-docs-key-type: roleDefinition
         - name: roleAssignment-id
           in: path
-          description: 'key: id of roleAssignment'
+          description: The unique identifier of roleAssignment
           required: true
           style: simple
           schema:
@@ -2540,7 +2540,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -2555,7 +2555,7 @@ paths:
       parameters:
         - name: roleDefinition-id
           in: path
-          description: 'key: id of roleDefinition'
+          description: The unique identifier of roleDefinition
           required: true
           style: simple
           schema:
@@ -2563,7 +2563,7 @@ paths:
           x-ms-docs-key-type: roleDefinition
         - name: roleAssignment-id
           in: path
-          description: 'key: id of roleAssignment'
+          description: The unique identifier of roleAssignment
           required: true
           style: simple
           schema:
@@ -2715,7 +2715,7 @@ paths:
       parameters:
         - name: telecomExpenseManagementPartner-id
           in: path
-          description: 'key: id of telecomExpenseManagementPartner'
+          description: The unique identifier of telecomExpenseManagementPartner
           required: true
           style: simple
           schema:
@@ -2768,7 +2768,7 @@ paths:
       parameters:
         - name: telecomExpenseManagementPartner-id
           in: path
-          description: 'key: id of telecomExpenseManagementPartner'
+          description: The unique identifier of telecomExpenseManagementPartner
           required: true
           style: simple
           schema:
@@ -2799,7 +2799,7 @@ paths:
       parameters:
         - name: telecomExpenseManagementPartner-id
           in: path
-          description: 'key: id of telecomExpenseManagementPartner'
+          description: The unique identifier of telecomExpenseManagementPartner
           required: true
           style: simple
           schema:
@@ -2812,7 +2812,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -2936,7 +2936,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -2996,7 +2996,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3027,7 +3027,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3040,7 +3040,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -3055,7 +3055,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3134,7 +3134,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3167,7 +3167,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3175,7 +3175,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAcceptanceStatus-id
           in: path
-          description: 'key: id of termsAndConditionsAcceptanceStatus'
+          description: The unique identifier of termsAndConditionsAcceptanceStatus
           required: true
           style: simple
           schema:
@@ -3229,7 +3229,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3237,7 +3237,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAcceptanceStatus-id
           in: path
-          description: 'key: id of termsAndConditionsAcceptanceStatus'
+          description: The unique identifier of termsAndConditionsAcceptanceStatus
           required: true
           style: simple
           schema:
@@ -3268,7 +3268,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3276,7 +3276,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAcceptanceStatus-id
           in: path
-          description: 'key: id of termsAndConditionsAcceptanceStatus'
+          description: The unique identifier of termsAndConditionsAcceptanceStatus
           required: true
           style: simple
           schema:
@@ -3289,7 +3289,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -3304,7 +3304,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3312,7 +3312,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAcceptanceStatus-id
           in: path
-          description: 'key: id of termsAndConditionsAcceptanceStatus'
+          description: The unique identifier of termsAndConditionsAcceptanceStatus
           required: true
           style: simple
           schema:
@@ -3374,7 +3374,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3442,7 +3442,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3475,7 +3475,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3483,7 +3483,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAssignment-id
           in: path
-          description: 'key: id of termsAndConditionsAssignment'
+          description: The unique identifier of termsAndConditionsAssignment
           required: true
           style: simple
           schema:
@@ -3532,7 +3532,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3540,7 +3540,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAssignment-id
           in: path
-          description: 'key: id of termsAndConditionsAssignment'
+          description: The unique identifier of termsAndConditionsAssignment
           required: true
           style: simple
           schema:
@@ -3571,7 +3571,7 @@ paths:
       parameters:
         - name: termsAndConditions-id
           in: path
-          description: 'key: id of termsAndConditions'
+          description: The unique identifier of termsAndConditions
           required: true
           style: simple
           schema:
@@ -3579,7 +3579,7 @@ paths:
           x-ms-docs-key-type: termsAndConditions
         - name: termsAndConditionsAssignment-id
           in: path
-          description: 'key: id of termsAndConditionsAssignment'
+          description: The unique identifier of termsAndConditionsAssignment
           required: true
           style: simple
           schema:
@@ -3592,7 +3592,7 @@ paths:
           schema:
             type: string
       responses:
-        '204':
+        2XX:
           description: Success
         default:
           $ref: '#/components/responses/error'
@@ -3887,32 +3887,32 @@ components:
           properties:
             allowPartnerToCollectIOSApplicationMetadata:
               type: boolean
-              description: 'When TRUE, indicates the data sync partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.'
+              description: 'When TRUE, indicates the Mobile Threat Defense partner may collect metadata about installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about installed applications from Intune for IOS devices. Default value is FALSE.'
             allowPartnerToCollectIOSPersonalApplicationMetadata:
               type: boolean
-              description: 'When TRUE, indicates the data sync partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the data sync partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.'
+              description: 'When TRUE, indicates the Mobile Threat Defense partner may collect metadata about personally installed applications from Intune for IOS devices. When FALSE, indicates the Mobile Threat Defense partner may not collect metadata about personally installed applications from Intune for IOS devices. Default value is FALSE.'
             androidDeviceBlockedOnMissingPartnerData:
               type: boolean
-              description: 'For Android, set whether Intune must receive data from the data sync partner prior to marking a device compliant'
+              description: 'For Android, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant'
             androidEnabled:
               type: boolean
-              description: 'For Android, set whether data from the data sync partner should be used during compliance evaluations'
+              description: 'For Android, set whether data from the Mobile Threat Defense partner should be used during compliance evaluations'
             androidMobileApplicationManagementEnabled:
               type: boolean
-              description: 'When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.'
+              description: 'When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for Android devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for Android devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.'
             iosDeviceBlockedOnMissingPartnerData:
               type: boolean
-              description: 'For IOS, set whether Intune must receive data from the data sync partner prior to marking a device compliant'
+              description: 'For IOS, set whether Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant'
             iosEnabled:
               type: boolean
-              description: 'For IOS, get or set whether data from the data sync partner should be used during compliance evaluations'
+              description: 'For IOS, get or set whether data from the Mobile Threat Defense partner should be used during compliance evaluations'
             iosMobileApplicationManagementEnabled:
               type: boolean
-              description: 'When TRUE, inidicates that data from the data sync partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the data sync partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.'
+              description: 'When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during Mobile Application Management (MAM) evaluations for IOS devices. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during Mobile Application Management (MAM) evaluations for IOS devices. Only one partner per platform may be enabled for Mobile Application Management (MAM) evaluation. Default value is FALSE.'
             lastHeartbeatDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: DateTime of last Heartbeat recieved from the Data Sync Partner
+              description: DateTime of last Heartbeat recieved from the Mobile Threat Defense partner
               format: date-time
             microsoftDefenderForEndpointAttachEnabled:
               type: boolean
@@ -3927,16 +3927,16 @@ components:
               format: int32
             partnerUnsupportedOsVersionBlocked:
               type: boolean
-              description: Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Data Sync Partner
+              description: Get or set whether to block devices on the enabled platforms that do not meet the minimum version requirements of the Mobile Threat Defense partner
             windowsDeviceBlockedOnMissingPartnerData:
               type: boolean
-              description: 'When TRUE, inidicates that Intune must receive data from the data sync partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the data sync partner for Windows. Default value is FALSE.'
+              description: 'When TRUE, inidicates that Intune must receive data from the Mobile Threat Defense partner prior to marking a device compliant for Windows. When FALSE, inidicates that Intune may make a device compliant without receiving data from the Mobile Threat Defense partner for Windows. Default value is FALSE.'
             windowsEnabled:
               type: boolean
-              description: 'When TRUE, inidicates that data from the data sync partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the data sync partner should not be used during compliance evaluations for Windows. Default value is FALSE.'
+              description: 'When TRUE, inidicates that data from the Mobile Threat Defense partner can be used during compliance evaluations for Windows. When FALSE, inidicates that data from the Mobile Threat Defense partner should not be used during compliance evaluations for Windows. Default value is FALSE.'
           additionalProperties:
             type: object
-          description: Entity which represents a connection to Mobile threat defense partner.
+          description: Entity which represents a connection to Mobile Threat Defense partner.
     microsoft.graph.remoteAssistancePartner:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

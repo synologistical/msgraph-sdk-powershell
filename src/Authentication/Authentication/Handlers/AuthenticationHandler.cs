@@ -36,10 +36,7 @@ namespace Microsoft.Graph.PowerShell.Authentication.Handlers
                 if (!string.IsNullOrEmpty(accessToken))
                     httpRequestMessage.Headers.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
-                // TODO: Handle claims challanges and retry.
-
                 HttpResponseMessage response = await base.SendAsync(httpRequestMessage, cancellationToken).ConfigureAwait(false);
-
                 return response;
             }
             else
