@@ -87,8 +87,9 @@ namespace Microsoft.Graph.PowerShell.Authentication.Utilities
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
                 // If an error is encountered, we fall back to PowerShell's default dependency resolution.
             }
             return null;

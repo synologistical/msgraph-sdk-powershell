@@ -106,6 +106,11 @@ Where-Object { $_.Extension -in $copyExtensions } |
 Where-Object { -not $CoreAssemblies.Contains($_.BaseName) } |
 ForEach-Object { [void]$Deps.Add($_.Name); Copy-Item -Path $_.FullName -Destination $outDeps }
 
+# Copy native libraries.
+Get-ChildItem -Path "$coreSrc/bin/$Configuration/$netApp/publish/runtimes/" -Filter "msalruntime*.dll" -Recurse |
+Where-Object { -not $CoreAssemblies.Contains($_.BaseName) } |
+ForEach-Object { [void]$Deps.Add($_.Name); Copy-Item -Path $_.FullName -Destination $outDeps }
+
 Get-ChildItem -Path "$coreSrc/bin/$Configuration/$netApp/publish/" |
 Where-Object { -not $CoreAssemblies.Contains($_.BaseName) } |
 ForEach-Object { [void]$Deps.Add($_.Name); Copy-Item -Path $_.FullName -Destination $outCore }
