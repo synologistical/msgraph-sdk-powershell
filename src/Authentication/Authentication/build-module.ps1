@@ -15,6 +15,8 @@ $copyExtensions = @('.dll', '.pdb')
 # Source code locations
 $coreSrc = Join-Path $PSScriptRoot "../$ModuleName.Core"
 $cmdletsSrc = Join-Path $PSScriptRoot "../$ModuleName"
+$assemblyLoadingSrc = Join-Path $PSScriptRoot "../AssemblyLoading"
+$authenticationAssemblyLoadContextSrc = Join-Path $PSScriptRoot "../AuthenticationAssemblyLoadContext"
 
 # Generated output locations
 $outDir = Join-Path $PSScriptRoot "artifacts"
@@ -62,6 +64,17 @@ if ((Test-Path "$cmdletsSrc/bin") -or (Test-Path "$cmdletsSrc/obj")) {
 }
 
 Write-Host -ForegroundColor Green 'Compiling module...'
+
+# Build AuthenticationAssemblyLoadContext
+Push-Location $authenticationAssemblyLoadContextSrc
+dotnet publish -c $Configuration --verbosity quiet /nologo
+Pop-Location
+
+# Build # Build AssemblyLoading
+Push-Location $assemblyLoadingSrc
+dotnet publish -c $Configuration --verbosity quiet /nologo
+Pop-Location
+
 # Build authentication.core for each framework.
 Push-Location $coreSrc
 dotnet publish -c $Configuration -f $netStandard --verbosity quiet /nologo
@@ -123,5 +136,23 @@ ForEach-Object { [void]$Deps.Add($_.Name); Copy-Item -Path $_.FullName -Destinat
 Get-ChildItem -Path "$cmdletsSrc/bin/$Configuration/$netStandard/publish/" |
 Where-Object { -not $Deps.Contains($_.Name) -and $_.Extension -in $copyExtensions } |
 ForEach-Object { Copy-Item -Path $_.FullName -Destination $outDir }
+
+# Copy AssemblyLoading assets.
+Get-ChildItem -Path "$assemblyLoadingSrc/bin/$Configuration/$netApp/publish/" |
+Where-Object { -not $Deps.Contains($_.Name) -and $_.Extension -in $copyExtensions } |
+ForEach-Object { Copy-Item -Path $_.FullName -Destination $outDir }
+
+# Copy AuthenticationAssemblyLoad assets.
+Get-ChildItem -Path "$authenticationAssemblyLoadContextSrc/bin/$Configuration/$netApp/publish/" |
+Where-Object { -not $Deps.Contains($_.Name) -and $_.Extension -in $copyExtensions } |
+ForEach-Object { Copy-Item -Path $_.FullName -Destination $outDir }
+
+# Update module manifest with required assemblies.
+$RequiredAssemblies = @(
+  'Microsoft.Graph.AssemblyLoading.dll', 
+  'Microsoft.Graph.Authentication.Core.dll', 
+  'Microsoft.Graph.AuthenticationAssemblyLoadContext.dll'
+)
+Update-ModuleManifest -Path (Join-Path $outDir "$ModulePrefix.$ModuleName.psd1") -RequiredAssemblies $RequiredAssemblies
 
 Write-Host -ForegroundColor Green '-------------Done-------------'

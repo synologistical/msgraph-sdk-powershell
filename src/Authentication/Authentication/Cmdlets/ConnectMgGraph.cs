@@ -10,7 +10,6 @@ using Microsoft.Graph.PowerShell.Authentication.Extensions;
 using Microsoft.Graph.PowerShell.Authentication.Helpers;
 using Microsoft.Graph.PowerShell.Authentication.Interfaces;
 using Microsoft.Graph.PowerShell.Authentication.Models;
-using Microsoft.Graph.PowerShell.Authentication.Utilities;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -335,7 +334,7 @@ namespace Microsoft.Graph.PowerShell.Authentication.Cmdlets
         public void OnRemove(PSModuleInfo psModuleInfo)
         {
             GraphSession.Reset();
-            DependencyAssemblyResolver.Reset();
+            //DependencyAssemblyResolver.Reset();
         }
     }
 }

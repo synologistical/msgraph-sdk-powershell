@@ -22,6 +22,8 @@
     <file src="artifacts\Microsoft.Graph.Authentication.psd1" />
     <file src="artifacts\Microsoft.Graph.Authentication.dll" />
     <file src="artifacts\Microsoft.Graph.Authentication.Core.dll" />
+    <file src="artifacts\Microsoft.Graph.AuthenticationAssemblyLoadContext.dll" />
+    <file src="artifacts\Microsoft.Graph.AssemblyLoading.dll" />
     <file src="artifacts\StartupScripts\" target="StartupScripts" />
     <file src="artifacts\custom\" target="custom" />
     <!-- Copy framework dependent assemblies to respective framework directory. -->
