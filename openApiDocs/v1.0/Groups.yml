@@ -742,11 +742,11 @@ paths:
     patch:
       tags:
         - groups.group
-      summary: Add members
-      description: Add a member to a security or Microsoft 365 group through the **members** navigation property. The following table shows the types of members that can be added to either security groups or Microsoft 365 groups.
+      summary: Update group
+      description: Update the properties of a group object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/group-post-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-update?view=graph-rest-1.0
       operationId: group_UpdateGroup
       parameters:
         - name: group-id

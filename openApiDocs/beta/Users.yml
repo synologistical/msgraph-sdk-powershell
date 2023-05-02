@@ -10,11 +10,11 @@ paths:
     get:
       tags:
         - users.user
-      summary: List users
-      description: 'Retrieve a list of user objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option.'
+      summary: Get user
+      description: 'Retrieve the properties and relationships of user object. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the Properties section. To get properties that are _not_ returned by default, do a GET operation for the user and specify the properties in a `$select` OData query option. Because the **user** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **user** instance.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0
       operationId: user_ListUser
       parameters:
         - name: ConsistencyLevel
@@ -31399,11 +31399,11 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
