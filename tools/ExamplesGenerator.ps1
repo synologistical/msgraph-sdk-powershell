@@ -393,10 +393,10 @@ function Update-ExampleFile {
             "$Command, $ExternalDocUrl, $GraphProfile, $UriPath" | Out-File -FilePath $ExamplesToBeReviewed -Append -Encoding ASCII
         }
     }
-    # git config --global user.email "timwamalwa@gmail.com"
-    # git config --global user.name "Timothy Wamalwa"
-    # git add $ExampleFile
-    # git commit -m "Examples update on  $ExampleFile-$GraphProfile" 
+     git config --global user.email "timwamalwa@gmail.com"
+     git config --global user.name "Timothy Wamalwa"
+     git add $ExampleFile
+     git commit -m "Examples update on  $ExampleFile-$GraphProfile" 
 }catch {
     Write-Host "`nError Message: " $_.Exception.Message
     Write-Host "`nError in Line: " $_.InvocationInfo.Line
