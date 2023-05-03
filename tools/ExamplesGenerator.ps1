@@ -280,7 +280,7 @@ function Start-WebScrapping {
         [string] $GraphProfilePath = (Join-Path $PSScriptRoot "..\src\Users\v1.0\examples")
     ) 
     try{
-    $ExampleFile = "$GraphProfilePath/$Command.md"
+    $ExampleFile = "$GraphProfilePath\$Command.md"
     $Description = "This example shows how to use the $Command Cmdlet.`r`n`r`To learn about permissions for this resource, see the [permissions reference](/graph/permissions-reference)."
     $WebResponse = Invoke-WebRequest -Uri $ExternalDocUrl
     $HeaderList = New-Object -TypeName 'System.Collections.ArrayList';
