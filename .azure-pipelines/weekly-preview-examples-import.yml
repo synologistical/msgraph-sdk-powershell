@@ -28,7 +28,7 @@ resources:
      ref: powershell-reference-docs-examples-update
 
 jobs:
-- job: PowerShellExamplesImport[v2]
+- job: PowerShellExamplesImport_V2
   pool: 
     name: ${{ parameters.BuildAgent }}
   timeoutInMinutes: ${{ parameters.PipelineTimeout }}
