@@ -8,7 +8,7 @@ schedules:
     displayName: 'PowerShellExamplesImport Check'
     branches:
       include:
-      - features/2.0
+      - powershell-reference-docs-examples-update
     always: true
 parameters:
 - name: PipelineTimeout
@@ -25,7 +25,7 @@ resources:
      type: github
      endpoint: microsoftgraph
      name: microsoftgraph/msgraph-sdk-powershell
-     ref: features/2.0
+     ref: powershell-reference-docs-examples-update
 
 jobs:
 - job: PowerShellExamplesImport[v2]
@@ -75,9 +75,9 @@ jobs:
         git push --set-upstream origin $(ComputeBranch.WeeklyExamplesBranch)
         git status
 
-  - template: ./common-templates/create-pr.yml
-    parameters:
-      BaseBranch: "features/2.0"
-      TargetBranch: $(ComputeBranch.WeeklyExamplesBranch)
-      Title: "[v2] Examples Import"
-      Body: "This pull request was automatically created by Azure Pipelines. **Important** Check for unexpected deletions or changes in this PR."
+  # - template: ./common-templates/create-pr.yml
+  #   parameters:
+  #     BaseBranch: "features/2.0"
+  #     TargetBranch: $(ComputeBranch.WeeklyExamplesBranch)
+  #     Title: "[v2] Examples Import"
+  #     Body: "This pull request was automatically created by Azure Pipelines. **Important** Check for unexpected deletions or changes in this PR."
