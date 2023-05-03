@@ -330,6 +330,7 @@ function Update-ExampleFile {
         [string] $ExternalDocUrl = "https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=powershell"
     ) 
     try{
+    Write-Host $ExampleFile
     $Content = Get-Content -Path $ExampleFile
     $SearchText = "Example"
     $SearchTextForNewImports = "{{ Add description here }}"
