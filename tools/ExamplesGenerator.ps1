@@ -126,7 +126,7 @@ function Get-ExternalDocsUrl {
         [System.Object] $Method = "GET",
         [string] $GraphProfilePath = (Join-Path $PSScriptRoot "..\src\Users\examples\v1.0")
     )
-    
+    try{
     if ($GenerationMode -eq "manual") {
 
         if (-not([string]::IsNullOrEmpty($ManualExternalDocsUrl))) {
@@ -259,6 +259,12 @@ function Get-ExternalDocsUrl {
             }
         }
     }
+}catch {
+    Write-Host "`nError Message: " $_.Exception.Message
+    Write-Host "`nError in Line: " $_.InvocationInfo.Line
+    Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+    Write-Host "`nError Item Name: "$_.Exception.ItemName
+}
 
 }
 function Start-WebScrapping {
@@ -273,6 +279,7 @@ function Start-WebScrapping {
         [string] $Module = "Users",
         [string] $GraphProfilePath = (Join-Path $PSScriptRoot "..\src\Users\v1.0\examples")
     ) 
+    try{
     $ExampleFile = "$GraphProfilePath/$Command.md"
     $Description = "This example shows how to use the $Command Cmdlet.`r`n`r`To learn about permissions for this resource, see the [permissions reference](/graph/permissions-reference)."
     $WebResponse = Invoke-WebRequest -Uri $ExternalDocUrl
@@ -300,6 +307,12 @@ function Start-WebScrapping {
         
     }
     Update-ExampleFile -GraphProfile $GraphProfile -HeaderList $HeaderList -ExampleList $ExampleList -ExampleFile $ExampleFile -Description $Description -Command $Command -ExternalDocUrl $ExternalDocUrl -UriPath $UriPath -Module $Module
+    }catch {
+        Write-Host "`nError Message: " $_.Exception.Message
+        Write-Host "`nError in Line: " $_.InvocationInfo.Line
+        Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+        Write-Host "`nError Item Name: "$_.Exception.ItemName
+    }
 }
 
 function Update-ExampleFile {
@@ -316,7 +329,7 @@ function Update-ExampleFile {
         [ValidateNotNullOrEmpty()]
         [string] $ExternalDocUrl = "https://learn.microsoft.com/en-us/graph/api/user-get?view=graph-rest-1.0&tabs=powershell"
     ) 
-    
+    try{
     $Content = Get-Content -Path $ExampleFile
     $SearchText = "Example"
     $SearchTextForNewImports = "{{ Add description here }}"
@@ -382,7 +395,13 @@ function Update-ExampleFile {
     git config --global user.email "timwamalwa@gmail.com"
     git config --global user.name "Timothy Wamalwa"
     git add $ExampleFile
-    git commit -m "Examples update on  $ExampleFile-$GraphProfile"   
+    git commit -m "Examples update on  $ExampleFile-$GraphProfile" 
+}catch {
+    Write-Host "`nError Message: " $_.Exception.Message
+    Write-Host "`nError in Line: " $_.InvocationInfo.Line
+    Write-Host "`nError in Line Number: "$_.InvocationInfo.ScriptLineNumber
+    Write-Host "`nError Item Name: "$_.Exception.ItemName
+}  
 }
 $JsonContent = Get-Content -Path $MetaDataJsonFile
 $DeserializedContent = $JsonContent | ConvertFrom-Json
