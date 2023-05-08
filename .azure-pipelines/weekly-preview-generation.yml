@@ -121,12 +121,22 @@ jobs:
               Title: "[v2] Weekly OpenApiDocs Refresh"
               Body: "This pull request was automatically created by Azure Pipelines. **Important** Check for unexpected deletions or changes in this PR."
       # Push SDK artifacts to generation branch.
-      - task: Bash@3
-        displayName: "Switch to weekly generation branch"
+      - task: PowerShell@2
+        name: "ComputeGenerationBranch"
+        displayName: "Compute weekly generation branch name"
         inputs:
           targetType: inline
           script: |
-            git checkout $(GenerationBranch)
+            $branch = "{0}/{1}" -f "WeeklyGeneration", (Get-Date -Format yyyyMMddHHmm)
+            Write-Host "##vso[task.setvariable variable=WeeklyGenerationBranch;isOutput=true]$branch"
+      - task: Bash@3
+        displayName: "Create weekly generation branch"
+        inputs:
+          targetType: inline
+          script: |
+            git status
+            git branch $(ComputeGenerationBranch.WeeklyGenerationBranch)
+            git checkout $(ComputeGenerationBranch.WeeklyGenerationBranch)
             git status
       - task: Bash@3
         displayName: Commit Generated SDK artifacts
@@ -140,3 +150,10 @@ jobs:
             git commit -m 'Adds generated module artifacts'
             git push "https://$(GITHUB_TOKEN)@github.com/microsoftgraph/msgraph-sdk-powershell.git"
             git status
+      - ${{ if eq(parameters.CreatePullRequest, true) }}:
+          - template: common-templates/create-pr.yml
+            parameters:
+              BaseBranch: $(GenerationBranch)
+              TargetBranch: $(ComputeGenerationBranch.WeeklyGenerationBranch)
+              Title: "[v2] Weekly Generated Module Artifacts"
+              Body: "This pull request was automatically created by Azure Pipelines. **Important** Check for unexpected deletions or changes in this PR."
