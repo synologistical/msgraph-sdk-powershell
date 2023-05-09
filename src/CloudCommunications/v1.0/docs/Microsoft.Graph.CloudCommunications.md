@@ -1,0 +1,321 @@
+---
+Module Name: Microsoft.Graph.CloudCommunications
+Module Guid: a082fb2f-3279-49f0-8c5d-6541cd6d8aee
+Download Help Link: https://learn.microsoft.com/powershell/module/microsoft.graph.cloudcommunications
+Help Version: 1.0.0.0
+Locale: en-US
+---
+
+# Microsoft.Graph.CloudCommunications Module
+## Description
+Microsoft Graph PowerShell Cmdlets
+
+## Microsoft.Graph.CloudCommunications Cmdlets
+### [Add-MgCommunicationCallLargeGalleryView](Add-MgCommunicationCallLargeGalleryView.md)
+Invoke action addLargeGalleryView
+
+### [Clear-MgCommunicationPresence](Clear-MgCommunicationPresence.md)
+Invoke action clearPresence
+
+### [Clear-MgCommunicationPresenceUserPreferredPresence](Clear-MgCommunicationPresenceUserPreferredPresence.md)
+Invoke action clearUserPreferredPresence
+
+### [Get-MgCommunicationCall](Get-MgCommunicationCall.md)
+Get calls from communications
+
+### [Get-MgCommunicationCallAudioRoutingGroup](Get-MgCommunicationCallAudioRoutingGroup.md)
+Get audioRoutingGroups from communications
+
+### [Get-MgCommunicationCallAudioRoutingGroupCount](Get-MgCommunicationCallAudioRoutingGroupCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallContentSharingSession](Get-MgCommunicationCallContentSharingSession.md)
+Get contentSharingSessions from communications
+
+### [Get-MgCommunicationCallContentSharingSessionCount](Get-MgCommunicationCallContentSharingSessionCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallCount](Get-MgCommunicationCallCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallOperation](Get-MgCommunicationCallOperation.md)
+Get operations from communications
+
+### [Get-MgCommunicationCallOperationCount](Get-MgCommunicationCallOperationCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallParticipant](Get-MgCommunicationCallParticipant.md)
+Get participants from communications
+
+### [Get-MgCommunicationCallParticipantCount](Get-MgCommunicationCallParticipantCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallRecord](Get-MgCommunicationCallRecord.md)
+Get callRecords from communications
+
+### [Get-MgCommunicationCallRecordCount](Get-MgCommunicationCallRecordCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallRecordSession](Get-MgCommunicationCallRecordSession.md)
+List of sessions involved in the call.
+Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant.
+Read-only.
+Nullable.
+
+### [Get-MgCommunicationCallRecordSessionCount](Get-MgCommunicationCallRecordSessionCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationCallRecordSessionSegmentCount](Get-MgCommunicationCallRecordSessionSegmentCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationOnlineMeeting](Get-MgCommunicationOnlineMeeting.md)
+Get onlineMeetings from communications
+
+### [Get-MgCommunicationOnlineMeetingAttendanceReport](Get-MgCommunicationOnlineMeetingAttendanceReport.md)
+The attendance reports of an online meeting.
+Read-only.
+
+### [Get-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord](Get-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord.md)
+List of attendance records of an attendance report.
+Read-only.
+
+### [Get-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecordCount](Get-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecordCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationOnlineMeetingAttendanceReportCount](Get-MgCommunicationOnlineMeetingAttendanceReportCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationOnlineMeetingAttendeeReport](Get-MgCommunicationOnlineMeetingAttendeeReport.md)
+The content stream of the attendee report of a Microsoft Teams live event.
+Read-only.
+
+### [Get-MgCommunicationOnlineMeetingCount](Get-MgCommunicationOnlineMeetingCount.md)
+Get the number of the resource
+
+### [Get-MgCommunicationPresence](Get-MgCommunicationPresence.md)
+Get presences from communications
+
+### [Get-MgCommunicationPresenceByUserId](Get-MgCommunicationPresenceByUserId.md)
+Invoke action getPresencesByUserId
+
+### [Get-MgCommunicationPresenceCount](Get-MgCommunicationPresenceCount.md)
+Get the number of the resource
+
+### [Get-MgUserOnlineMeeting](Get-MgUserOnlineMeeting.md)
+Get onlineMeetings from users
+
+### [Get-MgUserOnlineMeetingAttendanceReport](Get-MgUserOnlineMeetingAttendanceReport.md)
+The attendance reports of an online meeting.
+Read-only.
+
+### [Get-MgUserOnlineMeetingAttendanceReportAttendanceRecord](Get-MgUserOnlineMeetingAttendanceReportAttendanceRecord.md)
+List of attendance records of an attendance report.
+Read-only.
+
+### [Get-MgUserOnlineMeetingAttendanceReportAttendanceRecordCount](Get-MgUserOnlineMeetingAttendanceReportAttendanceRecordCount.md)
+Get the number of the resource
+
+### [Get-MgUserOnlineMeetingAttendanceReportCount](Get-MgUserOnlineMeetingAttendanceReportCount.md)
+Get the number of the resource
+
+### [Get-MgUserOnlineMeetingAttendeeReport](Get-MgUserOnlineMeetingAttendeeReport.md)
+The content stream of the attendee report of a Microsoft Teams live event.
+Read-only.
+
+### [Get-MgUserOnlineMeetingCount](Get-MgUserOnlineMeetingCount.md)
+Get the number of the resource
+
+### [Get-MgUserPresence](Get-MgUserPresence.md)
+Get presence from users
+
+### [Invoke-MgAnswerCommunicationCall](Invoke-MgAnswerCommunicationCall.md)
+Invoke action answer
+
+### [Invoke-MgCreateOrGetCommunicationOnlineMeeting](Invoke-MgCreateOrGetCommunicationOnlineMeeting.md)
+Invoke action createOrGet
+
+### [Invoke-MgInviteCommunicationCallParticipant](Invoke-MgInviteCommunicationCallParticipant.md)
+Invoke action invite
+
+### [Invoke-MgKeepCommunicationCallAlive](Invoke-MgKeepCommunicationCallAlive.md)
+Invoke action keepAlive
+
+### [Invoke-MgLogCommunicationCallTeleconferenceDeviceQuality](Invoke-MgLogCommunicationCallTeleconferenceDeviceQuality.md)
+Invoke action logTeleconferenceDeviceQuality
+
+### [Invoke-MgMuteCommunicationCall](Invoke-MgMuteCommunicationCall.md)
+Invoke action mute
+
+### [Invoke-MgMuteCommunicationCallParticipant](Invoke-MgMuteCommunicationCallParticipant.md)
+Invoke action mute
+
+### [Invoke-MgPlayCommunicationCallPrompt](Invoke-MgPlayCommunicationCallPrompt.md)
+Invoke action playPrompt
+
+### [Invoke-MgRecordCommunicationCallResponse](Invoke-MgRecordCommunicationCallResponse.md)
+Invoke action recordResponse
+
+### [Invoke-MgRedirectCommunicationCall](Invoke-MgRedirectCommunicationCall.md)
+Invoke action redirect
+
+### [Invoke-MgRejectCommunicationCall](Invoke-MgRejectCommunicationCall.md)
+Invoke action reject
+
+### [Invoke-MgSubscribeCommunicationCallToTone](Invoke-MgSubscribeCommunicationCallToTone.md)
+Invoke action subscribeToTone
+
+### [Invoke-MgUnmuteCommunicationCall](Invoke-MgUnmuteCommunicationCall.md)
+Invoke action unmute
+
+### [Move-MgCommunicationCall](Move-MgCommunicationCall.md)
+Invoke action transfer
+
+### [New-MgCommunicationCall](New-MgCommunicationCall.md)
+Create new navigation property to calls for communications
+
+### [New-MgCommunicationCallAudioRoutingGroup](New-MgCommunicationCallAudioRoutingGroup.md)
+Create new navigation property to audioRoutingGroups for communications
+
+### [New-MgCommunicationCallContentSharingSession](New-MgCommunicationCallContentSharingSession.md)
+Create new navigation property to contentSharingSessions for communications
+
+### [New-MgCommunicationCallOperation](New-MgCommunicationCallOperation.md)
+Create new navigation property to operations for communications
+
+### [New-MgCommunicationCallParticipant](New-MgCommunicationCallParticipant.md)
+Create new navigation property to participants for communications
+
+### [New-MgCommunicationCallRecordSession](New-MgCommunicationCallRecordSession.md)
+Create new navigation property to sessions for communications
+
+### [New-MgCommunicationOnlineMeeting](New-MgCommunicationOnlineMeeting.md)
+Create new navigation property to onlineMeetings for communications
+
+### [New-MgCommunicationOnlineMeetingAttendanceReport](New-MgCommunicationOnlineMeetingAttendanceReport.md)
+Create new navigation property to attendanceReports for communications
+
+### [New-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord](New-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord.md)
+Create new navigation property to attendanceRecords for communications
+
+### [New-MgCommunicationPresence](New-MgCommunicationPresence.md)
+Create new navigation property to presences for communications
+
+### [New-MgUserOnlineMeeting](New-MgUserOnlineMeeting.md)
+Create new navigation property to onlineMeetings for users
+
+### [New-MgUserOnlineMeetingAttendanceReport](New-MgUserOnlineMeetingAttendanceReport.md)
+Create new navigation property to attendanceReports for users
+
+### [New-MgUserOnlineMeetingAttendanceReportAttendanceRecord](New-MgUserOnlineMeetingAttendanceReportAttendanceRecord.md)
+Create new navigation property to attendanceRecords for users
+
+### [Remove-MgCommunicationCall](Remove-MgCommunicationCall.md)
+Delete navigation property calls for communications
+
+### [Remove-MgCommunicationCallAudioRoutingGroup](Remove-MgCommunicationCallAudioRoutingGroup.md)
+Delete navigation property audioRoutingGroups for communications
+
+### [Remove-MgCommunicationCallContentSharingSession](Remove-MgCommunicationCallContentSharingSession.md)
+Delete navigation property contentSharingSessions for communications
+
+### [Remove-MgCommunicationCallOperation](Remove-MgCommunicationCallOperation.md)
+Delete navigation property operations for communications
+
+### [Remove-MgCommunicationCallParticipant](Remove-MgCommunicationCallParticipant.md)
+Delete navigation property participants for communications
+
+### [Remove-MgCommunicationCallRecordSession](Remove-MgCommunicationCallRecordSession.md)
+Delete navigation property sessions for communications
+
+### [Remove-MgCommunicationOnlineMeeting](Remove-MgCommunicationOnlineMeeting.md)
+Delete navigation property onlineMeetings for communications
+
+### [Remove-MgCommunicationOnlineMeetingAttendanceReport](Remove-MgCommunicationOnlineMeetingAttendanceReport.md)
+Delete navigation property attendanceReports for communications
+
+### [Remove-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord](Remove-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord.md)
+Delete navigation property attendanceRecords for communications
+
+### [Remove-MgCommunicationPresence](Remove-MgCommunicationPresence.md)
+Delete navigation property presences for communications
+
+### [Remove-MgUserOnlineMeeting](Remove-MgUserOnlineMeeting.md)
+Delete navigation property onlineMeetings for users
+
+### [Remove-MgUserOnlineMeetingAttendanceReport](Remove-MgUserOnlineMeetingAttendanceReport.md)
+Delete navigation property attendanceReports for users
+
+### [Remove-MgUserOnlineMeetingAttendanceReportAttendanceRecord](Remove-MgUserOnlineMeetingAttendanceReportAttendanceRecord.md)
+Delete navigation property attendanceRecords for users
+
+### [Remove-MgUserPresence](Remove-MgUserPresence.md)
+Delete navigation property presence for users
+
+### [Rename-MgCommunicationCallScreenSharingRole](Rename-MgCommunicationCallScreenSharingRole.md)
+Invoke action changeScreenSharingRole
+
+### [Set-MgCommunicationOnlineMeetingAttendeeReport](Set-MgCommunicationOnlineMeetingAttendeeReport.md)
+The content stream of the attendee report of a Microsoft Teams live event.
+Read-only.
+
+### [Set-MgCommunicationPresence](Set-MgCommunicationPresence.md)
+Invoke action setPresence
+
+### [Set-MgCommunicationPresenceUserPreferredPresence](Set-MgCommunicationPresenceUserPreferredPresence.md)
+Invoke action setUserPreferredPresence
+
+### [Set-MgUserOnlineMeetingAttendeeReport](Set-MgUserOnlineMeetingAttendeeReport.md)
+The content stream of the attendee report of a Microsoft Teams live event.
+Read-only.
+
+### [Start-MgCommunicationCallParticipantHoldMusic](Start-MgCommunicationCallParticipantHoldMusic.md)
+Invoke action startHoldMusic
+
+### [Stop-MgCommunicationCallMediaProcessing](Stop-MgCommunicationCallMediaProcessing.md)
+Invoke action cancelMediaProcessing
+
+### [Stop-MgCommunicationCallParticipantHoldMusic](Stop-MgCommunicationCallParticipantHoldMusic.md)
+Invoke action stopHoldMusic
+
+### [Update-MgCommunicationCallAudioRoutingGroup](Update-MgCommunicationCallAudioRoutingGroup.md)
+Update the navigation property audioRoutingGroups in communications
+
+### [Update-MgCommunicationCallContentSharingSession](Update-MgCommunicationCallContentSharingSession.md)
+Update the navigation property contentSharingSessions in communications
+
+### [Update-MgCommunicationCallOperation](Update-MgCommunicationCallOperation.md)
+Update the navigation property operations in communications
+
+### [Update-MgCommunicationCallParticipant](Update-MgCommunicationCallParticipant.md)
+Update the navigation property participants in communications
+
+### [Update-MgCommunicationCallRecordingStatus](Update-MgCommunicationCallRecordingStatus.md)
+Invoke action updateRecordingStatus
+
+### [Update-MgCommunicationCallRecordSession](Update-MgCommunicationCallRecordSession.md)
+Update the navigation property sessions in communications
+
+### [Update-MgCommunicationOnlineMeeting](Update-MgCommunicationOnlineMeeting.md)
+Update the navigation property onlineMeetings in communications
+
+### [Update-MgCommunicationOnlineMeetingAttendanceReport](Update-MgCommunicationOnlineMeetingAttendanceReport.md)
+Update the navigation property attendanceReports in communications
+
+### [Update-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord](Update-MgCommunicationOnlineMeetingAttendanceReportAttendanceRecord.md)
+Update the navigation property attendanceRecords in communications
+
+### [Update-MgCommunicationPresence](Update-MgCommunicationPresence.md)
+Update the navigation property presences in communications
+
+### [Update-MgUserOnlineMeeting](Update-MgUserOnlineMeeting.md)
+Update the navigation property onlineMeetings in users
+
+### [Update-MgUserOnlineMeetingAttendanceReport](Update-MgUserOnlineMeetingAttendanceReport.md)
+Update the navigation property attendanceReports in users
+
+### [Update-MgUserOnlineMeetingAttendanceReportAttendanceRecord](Update-MgUserOnlineMeetingAttendanceReportAttendanceRecord.md)
+Update the navigation property attendanceRecords in users
+
+### [Update-MgUserPresence](Update-MgUserPresence.md)
+Update the navigation property presence in users
+

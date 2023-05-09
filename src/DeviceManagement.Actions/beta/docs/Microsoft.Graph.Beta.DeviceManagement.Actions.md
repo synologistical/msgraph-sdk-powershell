@@ -1,0 +1,952 @@
+---
+Module Name: Microsoft.Graph.Beta.DeviceManagement.Actions
+Module Guid: 4767a7c4-005c-4dd2-85a0-48277ec7eaf8
+Download Help Link: https://learn.microsoft.com/powershell/module/microsoft.graph.beta.devicemanagement.actions
+Help Version: 1.0.0.0
+Locale: en-US
+---
+
+# Microsoft.Graph.Beta.DeviceManagement.Actions Module
+## Description
+Microsoft Graph PowerShell Cmdlets
+
+## Microsoft.Graph.Beta.DeviceManagement.Actions Cmdlets
+### [Add-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp](Add-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp.md)
+Invoke action addApps
+
+### [Add-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile](Add-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile.md)
+Invoke action addLanguageFiles
+
+### [Add-MgBetaDeviceManagementVirtualEndpointProvisioningPolicy](Add-MgBetaDeviceManagementVirtualEndpointProvisioningPolicy.md)
+Invoke action apply
+
+### [Add-MgBetaDeviceManagementVirtualEndpointProvisioningPolicyConfig](Add-MgBetaDeviceManagementVirtualEndpointProvisioningPolicyConfig.md)
+Invoke action applyConfig
+
+### [Approve-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp](Approve-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp.md)
+Invoke action approveApps
+
+### [Approve-MgBetaDeviceManagementZebraFotaConnectorFotaApp](Approve-MgBetaDeviceManagementZebraFotaConnectorFotaApp.md)
+Invoke action approveFotaApps
+
+### [Clear-MgBetaDeviceManagementComanagedDevice](Clear-MgBetaDeviceManagementComanagedDevice.md)
+Wipe a device
+
+### [Clear-MgBetaDeviceManagementManagedDevice](Clear-MgBetaDeviceManagementManagedDevice.md)
+Wipe a device
+
+### [Complete-MgBetaDeviceManagementAndroidForWorkSettingSignup](Complete-MgBetaDeviceManagementAndroidForWorkSettingSignup.md)
+Invoke action completeSignup
+
+### [Complete-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingSignup](Complete-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingSignup.md)
+Invoke action completeSignup
+
+### [Connect-MgBetaDeviceManagementChromeOSOnboardingSetting](Connect-MgBetaDeviceManagementChromeOSOnboardingSetting.md)
+Invoke action connect
+
+### [Connect-MgBetaDeviceManagementZebraFotaConnector](Connect-MgBetaDeviceManagementZebraFotaConnector.md)
+Invoke action connect
+
+### [Copy-MgBetaDeviceManagementReusablePolicySetting](Copy-MgBetaDeviceManagementReusablePolicySetting.md)
+Invoke action clone
+
+### [Disable-MgBetaDeviceManagementComanagedDevice](Disable-MgBetaDeviceManagementComanagedDevice.md)
+Invoke action disable
+
+### [Disable-MgBetaDeviceManagementComanagedDeviceLostMode](Disable-MgBetaDeviceManagementComanagedDeviceLostMode.md)
+Disable lost mode
+
+### [Disable-MgBetaDeviceManagementManagedDevice](Disable-MgBetaDeviceManagementManagedDevice.md)
+Invoke action disable
+
+### [Disable-MgBetaDeviceManagementManagedDeviceLostMode](Disable-MgBetaDeviceManagementManagedDeviceLostMode.md)
+Disable lost mode
+
+### [Disconnect-MgBetaDeviceManagementChromeOSOnboardingSetting](Disconnect-MgBetaDeviceManagementChromeOSOnboardingSetting.md)
+Invoke action disconnect
+
+### [Disconnect-MgBetaDeviceManagementRemoteAssistancePartner](Disconnect-MgBetaDeviceManagementRemoteAssistancePartner.md)
+A request to remove the active TeamViewer connector
+
+### [Disconnect-MgBetaDeviceManagementZebraFotaConnector](Disconnect-MgBetaDeviceManagementZebraFotaConnector.md)
+Invoke action disconnect
+
+### [Enable-MgBetaDeviceManagementAndroidDeviceAdministratorEnrollment](Enable-MgBetaDeviceManagementAndroidDeviceAdministratorEnrollment.md)
+Invoke action enableAndroidDeviceAdministratorEnrollment
+
+### [Enable-MgBetaDeviceManagementAssignmentFilter](Enable-MgBetaDeviceManagementAssignmentFilter.md)
+Invoke action enable
+
+### [Enable-MgBetaDeviceManagementComanagedDeviceLostMode](Enable-MgBetaDeviceManagementComanagedDeviceLostMode.md)
+Enable lost mode
+
+### [Enable-MgBetaDeviceManagementDeviceHealthScriptGlobalScript](Enable-MgBetaDeviceManagementDeviceHealthScriptGlobalScript.md)
+Invoke action enableGlobalScripts
+
+### [Enable-MgBetaDeviceManagementLegacyPcManagement](Enable-MgBetaDeviceManagementLegacyPcManagement.md)
+Invoke action enableLegacyPcManagement
+
+### [Enable-MgBetaDeviceManagementManagedDeviceLostMode](Enable-MgBetaDeviceManagementManagedDeviceLostMode.md)
+Enable lost mode
+
+### [Enable-MgBetaDeviceManagementTenantAttachRbac](Enable-MgBetaDeviceManagementTenantAttachRbac.md)
+Invoke action enable
+
+### [Enable-MgBetaDeviceManagementUnlicensedAdminstrator](Enable-MgBetaDeviceManagementUnlicensedAdminstrator.md)
+Upon enabling, users assigned as administrators via Role Assignment Memberships will no longer require an assigned Intune license.
+You are limited to 350 unlicensed direct members for each AAD security group in a role assignment, but you can assign multiple AAD security groups to a role if you need to support more than 350 unlicensed administrators.
+Licensed administrators will continue to function as-is in that transitive memberships apply and are not subject to the 350 member limit.
+
+### [Find-MgBetaDeviceManagementComanagedDevice](Find-MgBetaDeviceManagementComanagedDevice.md)
+Locate a device
+
+### [Find-MgBetaDeviceManagementManagedDevice](Find-MgBetaDeviceManagementManagedDevice.md)
+Locate a device
+
+### [Get-MgBetaDeviceManagementAssignmentFilterStatusDetail](Get-MgBetaDeviceManagementAssignmentFilterStatusDetail.md)
+Invoke action getAssignmentFiltersStatusDetails
+
+### [Get-MgBetaDeviceManagementCertificateConnectorDetailHealthMetric](Get-MgBetaDeviceManagementCertificateConnectorDetailHealthMetric.md)
+Invoke action getHealthMetrics
+
+### [Get-MgBetaDeviceManagementCertificateConnectorDetailHealthMetricTimeSeries](Get-MgBetaDeviceManagementCertificateConnectorDetailHealthMetricTimeSeries.md)
+Invoke action getHealthMetricTimeSeries
+
+### [Get-MgBetaDeviceManagementDeviceCompliancePolicyNoncompliantDeviceToRetire](Get-MgBetaDeviceManagementDeviceCompliancePolicyNoncompliantDeviceToRetire.md)
+Invoke action getNoncompliantDevicesToRetire
+
+### [Get-MgBetaDeviceManagementDeviceConfigurationTargetedUserAndDevice](Get-MgBetaDeviceManagementDeviceConfigurationTargetedUserAndDevice.md)
+Invoke action getTargetedUsersAndDevices
+
+### [Get-MgBetaDeviceManagementDeviceHealthScriptGlobalScriptHighestAvailableVersion](Get-MgBetaDeviceManagementDeviceHealthScriptGlobalScriptHighestAvailableVersion.md)
+Update the Proprietary Device Health Script
+
+### [Get-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerHealthMetric](Get-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerHealthMetric.md)
+Invoke action getHealthMetrics
+
+### [Get-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerHealthMetricTimeSeries](Get-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerHealthMetricTimeSeries.md)
+Invoke action getHealthMetricTimeSeries
+
+### [Get-MgBetaDeviceManagementReportActiveMalwareReport](Get-MgBetaDeviceManagementReportActiveMalwareReport.md)
+Invoke action getActiveMalwareReport
+
+### [Get-MgBetaDeviceManagementReportActiveMalwareSummaryReport](Get-MgBetaDeviceManagementReportActiveMalwareSummaryReport.md)
+Invoke action getActiveMalwareSummaryReport
+
+### [Get-MgBetaDeviceManagementReportAppInstallSummaryReport](Get-MgBetaDeviceManagementReportAppInstallSummaryReport.md)
+Invoke action getAppsInstallSummaryReport
+
+### [Get-MgBetaDeviceManagementReportAppStatusOverviewReport](Get-MgBetaDeviceManagementReportAppStatusOverviewReport.md)
+Invoke action getAppStatusOverviewReport
+
+### [Get-MgBetaDeviceManagementReportCachedReport](Get-MgBetaDeviceManagementReportCachedReport.md)
+Invoke action getCachedReport
+
+### [Get-MgBetaDeviceManagementReportCompliancePolicyDeviceReport](Get-MgBetaDeviceManagementReportCompliancePolicyDeviceReport.md)
+Invoke action getCompliancePolicyDevicesReport
+
+### [Get-MgBetaDeviceManagementReportCompliancePolicyDeviceSummaryReport](Get-MgBetaDeviceManagementReportCompliancePolicyDeviceSummaryReport.md)
+Invoke action getCompliancePolicyDeviceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportCompliancePolicyNonComplianceReport](Get-MgBetaDeviceManagementReportCompliancePolicyNonComplianceReport.md)
+Invoke action getCompliancePolicyNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportCompliancePolicyNonComplianceSummaryReport](Get-MgBetaDeviceManagementReportCompliancePolicyNonComplianceSummaryReport.md)
+Invoke action getCompliancePolicyNonComplianceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportCompliancePolicyReportForDevice](Get-MgBetaDeviceManagementReportCompliancePolicyReportForDevice.md)
+Invoke action getCompliancePoliciesReportForDevice
+
+### [Get-MgBetaDeviceManagementReportComplianceSettingDetailReport](Get-MgBetaDeviceManagementReportComplianceSettingDetailReport.md)
+Invoke action getComplianceSettingDetailsReport
+
+### [Get-MgBetaDeviceManagementReportComplianceSettingNonComplianceReport](Get-MgBetaDeviceManagementReportComplianceSettingNonComplianceReport.md)
+Invoke action getComplianceSettingNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportComplianceSettingReport](Get-MgBetaDeviceManagementReportComplianceSettingReport.md)
+Invoke action getComplianceSettingsReport
+
+### [Get-MgBetaDeviceManagementReportConfigManagerDevicePolicyStatusReport](Get-MgBetaDeviceManagementReportConfigManagerDevicePolicyStatusReport.md)
+Invoke action getConfigManagerDevicePolicyStatusReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicyDeviceReport](Get-MgBetaDeviceManagementReportConfigurationPolicyDeviceReport.md)
+Invoke action getConfigurationPolicyDevicesReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicyDeviceSummaryReport](Get-MgBetaDeviceManagementReportConfigurationPolicyDeviceSummaryReport.md)
+Invoke action getConfigurationPolicyDeviceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicyNonComplianceReport](Get-MgBetaDeviceManagementReportConfigurationPolicyNonComplianceReport.md)
+Invoke action getConfigurationPolicyNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicyNonComplianceSummaryReport](Get-MgBetaDeviceManagementReportConfigurationPolicyNonComplianceSummaryReport.md)
+Invoke action getConfigurationPolicyNonComplianceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicyReportForDevice](Get-MgBetaDeviceManagementReportConfigurationPolicyReportForDevice.md)
+Invoke action getConfigurationPoliciesReportForDevice
+
+### [Get-MgBetaDeviceManagementReportConfigurationPolicySettingDeviceSummaryReport](Get-MgBetaDeviceManagementReportConfigurationPolicySettingDeviceSummaryReport.md)
+Invoke action getConfigurationPolicySettingsDeviceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationSettingDetailReport](Get-MgBetaDeviceManagementReportConfigurationSettingDetailReport.md)
+Invoke action getConfigurationSettingDetailsReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationSettingNonComplianceReport](Get-MgBetaDeviceManagementReportConfigurationSettingNonComplianceReport.md)
+Invoke action getConfigurationSettingNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportConfigurationSettingReport](Get-MgBetaDeviceManagementReportConfigurationSettingReport.md)
+Invoke action getConfigurationSettingsReport
+
+### [Get-MgBetaDeviceManagementReportDeviceConfigurationPolicySettingSummaryReport](Get-MgBetaDeviceManagementReportDeviceConfigurationPolicySettingSummaryReport.md)
+Invoke action getDeviceConfigurationPolicySettingsSummaryReport
+
+### [Get-MgBetaDeviceManagementReportDeviceConfigurationPolicyStatusSummary](Get-MgBetaDeviceManagementReportDeviceConfigurationPolicyStatusSummary.md)
+Invoke action getDeviceConfigurationPolicyStatusSummary
+
+### [Get-MgBetaDeviceManagementReportDeviceInstallStatusReport](Get-MgBetaDeviceManagementReportDeviceInstallStatusReport.md)
+Invoke action getDeviceInstallStatusReport
+
+### [Get-MgBetaDeviceManagementReportDeviceManagementIntentPerSettingContributingProfile](Get-MgBetaDeviceManagementReportDeviceManagementIntentPerSettingContributingProfile.md)
+Invoke action getDeviceManagementIntentPerSettingContributingProfiles
+
+### [Get-MgBetaDeviceManagementReportDeviceManagementIntentSettingReport](Get-MgBetaDeviceManagementReportDeviceManagementIntentSettingReport.md)
+Invoke action getDeviceManagementIntentSettingsReport
+
+### [Get-MgBetaDeviceManagementReportDeviceNonComplianceReport](Get-MgBetaDeviceManagementReportDeviceNonComplianceReport.md)
+Invoke action getDeviceNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportDevicePolicyComplianceReport](Get-MgBetaDeviceManagementReportDevicePolicyComplianceReport.md)
+Invoke action getDevicePoliciesComplianceReport
+
+### [Get-MgBetaDeviceManagementReportDevicePolicySettingComplianceReport](Get-MgBetaDeviceManagementReportDevicePolicySettingComplianceReport.md)
+Invoke action getDevicePolicySettingsComplianceReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusByCompliacePolicyReport](Get-MgBetaDeviceManagementReportDeviceStatusByCompliacePolicyReport.md)
+Invoke action getDeviceStatusByCompliacePolicyReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusByCompliancePolicySettingReport](Get-MgBetaDeviceManagementReportDeviceStatusByCompliancePolicySettingReport.md)
+Invoke action getDeviceStatusByCompliancePolicySettingReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusByPolicyPlatformComplianceReport](Get-MgBetaDeviceManagementReportDeviceStatusByPolicyPlatformComplianceReport.md)
+Invoke action getDevicesStatusByPolicyPlatformComplianceReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusBySettingReport](Get-MgBetaDeviceManagementReportDeviceStatusBySettingReport.md)
+Invoke action getDevicesStatusBySettingReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusSummaryByCompliacePolicyReport](Get-MgBetaDeviceManagementReportDeviceStatusSummaryByCompliacePolicyReport.md)
+Invoke action getDeviceStatusSummaryByCompliacePolicyReport
+
+### [Get-MgBetaDeviceManagementReportDeviceStatusSummaryByCompliancePolicySettingReport](Get-MgBetaDeviceManagementReportDeviceStatusSummaryByCompliancePolicySettingReport.md)
+Invoke action getDeviceStatusSummaryByCompliancePolicySettingsReport
+
+### [Get-MgBetaDeviceManagementReportDeviceWithoutCompliancePolicyReport](Get-MgBetaDeviceManagementReportDeviceWithoutCompliancePolicyReport.md)
+Invoke action getDevicesWithoutCompliancePolicyReport
+
+### [Get-MgBetaDeviceManagementReportEncryptionReportForDevice](Get-MgBetaDeviceManagementReportEncryptionReportForDevice.md)
+Invoke action getEncryptionReportForDevices
+
+### [Get-MgBetaDeviceManagementReportEnrollmentConfigurationPolicyByDevice](Get-MgBetaDeviceManagementReportEnrollmentConfigurationPolicyByDevice.md)
+Invoke action getEnrollmentConfigurationPoliciesByDevice
+
+### [Get-MgBetaDeviceManagementReportFailedMobileAppReport](Get-MgBetaDeviceManagementReportFailedMobileAppReport.md)
+Invoke action getFailedMobileAppsReport
+
+### [Get-MgBetaDeviceManagementReportFailedMobileAppSummaryReport](Get-MgBetaDeviceManagementReportFailedMobileAppSummaryReport.md)
+Invoke action getFailedMobileAppsSummaryReport
+
+### [Get-MgBetaDeviceManagementReportFilter](Get-MgBetaDeviceManagementReportFilter.md)
+Invoke action getReportFilters
+
+### [Get-MgBetaDeviceManagementReportGroupPolicySettingDeviceSettingReport](Get-MgBetaDeviceManagementReportGroupPolicySettingDeviceSettingReport.md)
+Invoke action getGroupPolicySettingsDeviceSettingsReport
+
+### [Get-MgBetaDeviceManagementReportHistoricalReport](Get-MgBetaDeviceManagementReportHistoricalReport.md)
+Invoke action getHistoricalReport
+
+### [Get-MgBetaDeviceManagementReportMalwareSummaryReport](Get-MgBetaDeviceManagementReportMalwareSummaryReport.md)
+Invoke action getMalwareSummaryReport
+
+### [Get-MgBetaDeviceManagementReportMobileApplicationManagementAppConfigurationReport](Get-MgBetaDeviceManagementReportMobileApplicationManagementAppConfigurationReport.md)
+Invoke action getMobileApplicationManagementAppConfigurationReport
+
+### [Get-MgBetaDeviceManagementReportMobileApplicationManagementAppRegistrationSummaryReport](Get-MgBetaDeviceManagementReportMobileApplicationManagementAppRegistrationSummaryReport.md)
+Invoke action getMobileApplicationManagementAppRegistrationSummaryReport
+
+### [Get-MgBetaDeviceManagementReportNoncompliantDeviceAndSettingReport](Get-MgBetaDeviceManagementReportNoncompliantDeviceAndSettingReport.md)
+Invoke action getNoncompliantDevicesAndSettingsReport
+
+### [Get-MgBetaDeviceManagementReportPolicyNonComplianceMetadata](Get-MgBetaDeviceManagementReportPolicyNonComplianceMetadata.md)
+Invoke action getPolicyNonComplianceMetadata
+
+### [Get-MgBetaDeviceManagementReportPolicyNonComplianceReport](Get-MgBetaDeviceManagementReportPolicyNonComplianceReport.md)
+Invoke action getPolicyNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportPolicyNonComplianceSummaryReport](Get-MgBetaDeviceManagementReportPolicyNonComplianceSummaryReport.md)
+Invoke action getPolicyNonComplianceSummaryReport
+
+### [Get-MgBetaDeviceManagementReportQuietTimePolicyUserReport](Get-MgBetaDeviceManagementReportQuietTimePolicyUserReport.md)
+Invoke action getQuietTimePolicyUsersReport
+
+### [Get-MgBetaDeviceManagementReportQuietTimePolicyUserSummaryReport](Get-MgBetaDeviceManagementReportQuietTimePolicyUserSummaryReport.md)
+Invoke action getQuietTimePolicyUserSummaryReport
+
+### [Get-MgBetaDeviceManagementReportRelatedAppStatusReport](Get-MgBetaDeviceManagementReportRelatedAppStatusReport.md)
+Invoke action getRelatedAppsStatusReport
+
+### [Get-MgBetaDeviceManagementReportRemoteAssistanceSessionReport](Get-MgBetaDeviceManagementReportRemoteAssistanceSessionReport.md)
+Invoke action getRemoteAssistanceSessionsReport
+
+### [Get-MgBetaDeviceManagementReportSettingNonComplianceReport](Get-MgBetaDeviceManagementReportSettingNonComplianceReport.md)
+Invoke action getSettingNonComplianceReport
+
+### [Get-MgBetaDeviceManagementReportUnhealthyDefenderAgentReport](Get-MgBetaDeviceManagementReportUnhealthyDefenderAgentReport.md)
+Invoke action getUnhealthyDefenderAgentsReport
+
+### [Get-MgBetaDeviceManagementReportUnhealthyFirewallReport](Get-MgBetaDeviceManagementReportUnhealthyFirewallReport.md)
+Invoke action getUnhealthyFirewallReport
+
+### [Get-MgBetaDeviceManagementReportUnhealthyFirewallSummaryReport](Get-MgBetaDeviceManagementReportUnhealthyFirewallSummaryReport.md)
+Invoke action getUnhealthyFirewallSummaryReport
+
+### [Get-MgBetaDeviceManagementReportUserInstallStatusReport](Get-MgBetaDeviceManagementReportUserInstallStatusReport.md)
+Invoke action getUserInstallStatusReport
+
+### [Get-MgBetaDeviceManagementReportWindowsQualityUpdateAlertPerPolicyPerDeviceReport](Get-MgBetaDeviceManagementReportWindowsQualityUpdateAlertPerPolicyPerDeviceReport.md)
+Invoke action getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport
+
+### [Get-MgBetaDeviceManagementReportWindowsQualityUpdateAlertSummaryReport](Get-MgBetaDeviceManagementReportWindowsQualityUpdateAlertSummaryReport.md)
+Invoke action getWindowsQualityUpdateAlertSummaryReport
+
+### [Get-MgBetaDeviceManagementReportWindowsUpdateAlertPerPolicyPerDeviceReport](Get-MgBetaDeviceManagementReportWindowsUpdateAlertPerPolicyPerDeviceReport.md)
+Invoke action getWindowsUpdateAlertsPerPolicyPerDeviceReport
+
+### [Get-MgBetaDeviceManagementReportWindowsUpdateAlertSummaryReport](Get-MgBetaDeviceManagementReportWindowsUpdateAlertSummaryReport.md)
+Invoke action getWindowsUpdateAlertSummaryReport
+
+### [Get-MgBetaDeviceManagementReportZebraFotaDeploymentReport](Get-MgBetaDeviceManagementReportZebraFotaDeploymentReport.md)
+Invoke action getZebraFotaDeploymentReport
+
+### [Get-MgBetaDeviceManagementRoleScopeTagRoleScopeTagById](Get-MgBetaDeviceManagementRoleScopeTagRoleScopeTagById.md)
+Invoke action getRoleScopeTagsById
+
+### [Get-MgBetaDeviceManagementVirtualEndpointReportDailyAggregatedRemoteConnectionReport](Get-MgBetaDeviceManagementVirtualEndpointReportDailyAggregatedRemoteConnectionReport.md)
+Invoke action getDailyAggregatedRemoteConnectionReports
+
+### [Get-MgBetaDeviceManagementVirtualEndpointReportRemoteConnectionHistoricalReport](Get-MgBetaDeviceManagementVirtualEndpointReportRemoteConnectionHistoricalReport.md)
+Invoke action getRemoteConnectionHistoricalReports
+
+### [Get-MgBetaDeviceManagementVirtualEndpointReportSharedUseLicenseUsageReport](Get-MgBetaDeviceManagementVirtualEndpointReportSharedUseLicenseUsageReport.md)
+Invoke action getSharedUseLicenseUsageReport
+
+### [Get-MgBetaDeviceManagementVirtualEndpointReportTotalAggregatedRemoteConnectionReport](Get-MgBetaDeviceManagementVirtualEndpointReportTotalAggregatedRemoteConnectionReport.md)
+Invoke action getTotalAggregatedRemoteConnectionReports
+
+### [Import-MgBetaDeviceManagementDepOnboardingSettingImportedAppleDeviceIdentityAppleDeviceIdentityList](Import-MgBetaDeviceManagementDepOnboardingSettingImportedAppleDeviceIdentityAppleDeviceIdentityList.md)
+Invoke action importAppleDeviceIdentityList
+
+### [Import-MgBetaDeviceManagementImportedDeviceIdentityList](Import-MgBetaDeviceManagementImportedDeviceIdentityList.md)
+Invoke action importDeviceIdentityList
+
+### [Import-MgBetaDeviceManagementImportedWindowsAutopilotDeviceIdentity](Import-MgBetaDeviceManagementImportedWindowsAutopilotDeviceIdentity.md)
+Invoke action import
+
+### [Import-MgBetaDeviceManagementTemplateMigratableToOffice365DeviceConfigurationPolicy](Import-MgBetaDeviceManagementTemplateMigratableToOffice365DeviceConfigurationPolicy.md)
+Invoke action importOffice365DeviceConfigurationPolicies
+
+### [Import-MgBetaDeviceManagementTemplateOffice365DeviceConfigurationPolicy](Import-MgBetaDeviceManagementTemplateOffice365DeviceConfigurationPolicy.md)
+Invoke action importOffice365DeviceConfigurationPolicies
+
+### [Initialize-MgBetaDeviceManagementComanagedDeviceEsim](Initialize-MgBetaDeviceManagementComanagedDeviceEsim.md)
+Activate eSIM on the device.
+
+### [Initialize-MgBetaDeviceManagementManagedDeviceEsim](Initialize-MgBetaDeviceManagementManagedDeviceEsim.md)
+Activate eSIM on the device.
+
+### [Invoke-MgBetaAccountDeviceManagementWindowsAutopilotDeviceIdentity](Invoke-MgBetaAccountDeviceManagementWindowsAutopilotDeviceIdentity.md)
+Unassigns the resource account from an Autopilot device.
+
+### [Invoke-MgBetaBeginDeviceManagementRemoteAssistancePartnerOnboarding](Invoke-MgBetaBeginDeviceManagementRemoteAssistancePartnerOnboarding.md)
+A request to start onboarding.
+Must be coupled with the appropriate TeamViewer account information
+
+### [Invoke-MgBetaBulkDeviceManagementComanagedDeviceSetCloudPcReviewStatus](Invoke-MgBetaBulkDeviceManagementComanagedDeviceSetCloudPcReviewStatus.md)
+Invoke action bulkSetCloudPcReviewStatus
+
+### [Invoke-MgBetaBulkDeviceManagementManagedDeviceSetCloudPcReviewStatus](Invoke-MgBetaBulkDeviceManagementManagedDeviceSetCloudPcReviewStatus.md)
+Invoke action bulkSetCloudPcReviewStatus
+
+### [Invoke-MgBetaBulkDeviceManagementVirtualEndpointCloudPcResize](Invoke-MgBetaBulkDeviceManagementVirtualEndpointCloudPcResize.md)
+Invoke action bulkResize
+
+### [Invoke-MgBetaBulkReprovisionDeviceManagementComanagedDeviceCloudPc](Invoke-MgBetaBulkReprovisionDeviceManagementComanagedDeviceCloudPc.md)
+Invoke action bulkReprovisionCloudPc
+
+### [Invoke-MgBetaBulkReprovisionDeviceManagementManagedDeviceCloudPc](Invoke-MgBetaBulkReprovisionDeviceManagementManagedDeviceCloudPc.md)
+Invoke action bulkReprovisionCloudPc
+
+### [Invoke-MgBetaBulkRestoreDeviceManagementComanagedDeviceCloudPc](Invoke-MgBetaBulkRestoreDeviceManagementComanagedDeviceCloudPc.md)
+Invoke action bulkRestoreCloudPc
+
+### [Invoke-MgBetaBulkRestoreDeviceManagementManagedDeviceCloudPc](Invoke-MgBetaBulkRestoreDeviceManagementManagedDeviceCloudPc.md)
+Invoke action bulkRestoreCloudPc
+
+### [Invoke-MgBetaCleanDeviceManagementComanagedDeviceWindowsDevice](Invoke-MgBetaCleanDeviceManagementComanagedDeviceWindowsDevice.md)
+Clean Windows device
+
+### [Invoke-MgBetaCleanDeviceManagementManagedDeviceWindowsDevice](Invoke-MgBetaCleanDeviceManagementManagedDeviceWindowsDevice.md)
+Clean Windows device
+
+### [Invoke-MgBetaConsentDeviceManagementDataSharingConsentToDataSharing](Invoke-MgBetaConsentDeviceManagementDataSharingConsentToDataSharing.md)
+Invoke action consentToDataSharing
+
+### [Invoke-MgBetaDeprovisionDeviceManagementComanagedDevice](Invoke-MgBetaDeprovisionDeviceManagementComanagedDevice.md)
+Invoke action deprovision
+
+### [Invoke-MgBetaDeprovisionDeviceManagementManagedDevice](Invoke-MgBetaDeprovisionDeviceManagementManagedDevice.md)
+Invoke action deprovision
+
+### [Invoke-MgBetaDeviceManagementDeviceConfigurationAssignedAccessMultiModeProfile](Invoke-MgBetaDeviceManagementDeviceConfigurationAssignedAccessMultiModeProfile.md)
+Invoke action assignedAccessMultiModeProfiles
+
+### [Invoke-MgBetaDeviceManagementDeviceConfigurationWindowsPrivacyAccessControl](Invoke-MgBetaDeviceManagementDeviceConfigurationWindowsPrivacyAccessControl.md)
+Invoke action windowsPrivacyAccessControls
+
+### [Invoke-MgBetaDownDeviceManagementComanagedDeviceShut](Invoke-MgBetaDownDeviceManagementComanagedDeviceShut.md)
+Shut down device
+
+### [Invoke-MgBetaDownDeviceManagementManagedDeviceShut](Invoke-MgBetaDownDeviceManagementManagedDeviceShut.md)
+Shut down device
+
+### [Invoke-MgBetaDownloadDeviceManagementComanagedDeviceAppDiagnostic](Invoke-MgBetaDownloadDeviceManagementComanagedDeviceAppDiagnostic.md)
+Invoke action downloadAppDiagnostics
+
+### [Invoke-MgBetaDownloadDeviceManagementManagedDeviceAppDiagnostic](Invoke-MgBetaDownloadDeviceManagementManagedDeviceAppDiagnostic.md)
+Invoke action downloadAppDiagnostics
+
+### [Invoke-MgBetaEnrollDeviceManagementComanagedDeviceNowAction](Invoke-MgBetaEnrollDeviceManagementComanagedDeviceNowAction.md)
+Trigger comanagement enrollment action on ConfigurationManager client
+
+### [Invoke-MgBetaEnrollDeviceManagementManagedDeviceNowAction](Invoke-MgBetaEnrollDeviceManagementManagedDeviceNowAction.md)
+Trigger comanagement enrollment action on ConfigurationManager client
+
+### [Invoke-MgBetaExecuteDeviceManagementComanagedDeviceAction](Invoke-MgBetaExecuteDeviceManagementComanagedDeviceAction.md)
+Invoke action executeAction
+
+### [Invoke-MgBetaExecuteDeviceManagementManagedDeviceAction](Invoke-MgBetaExecuteDeviceManagementManagedDeviceAction.md)
+Invoke action executeAction
+
+### [Invoke-MgBetaExecuteDeviceManagementWindowsDriverUpdateProfileAction](Invoke-MgBetaExecuteDeviceManagementWindowsDriverUpdateProfileAction.md)
+Invoke action executeAction
+
+### [Invoke-MgBetaGraphDeviceManagementDepOnboardingSetting](Invoke-MgBetaGraphDeviceManagementDepOnboardingSetting.md)
+Invoke action unshareForSchoolDataSyncService
+
+### [Invoke-MgBetaHasDeviceManagementDeviceCompliancePolicyPayloadLink](Invoke-MgBetaHasDeviceManagementDeviceCompliancePolicyPayloadLink.md)
+Invoke action hasPayloadLinks
+
+### [Invoke-MgBetaHasDeviceManagementDeviceConfigurationPayloadLink](Invoke-MgBetaHasDeviceManagementDeviceConfigurationPayloadLink.md)
+Invoke action hasPayloadLinks
+
+### [Invoke-MgBetaHasDeviceManagementDeviceEnrollmentConfigurationPayloadLink](Invoke-MgBetaHasDeviceManagementDeviceEnrollmentConfigurationPayloadLink.md)
+Invoke action hasPayloadLinks
+
+### [Invoke-MgBetaHasDeviceManagementScriptPayloadLink](Invoke-MgBetaHasDeviceManagementScriptPayloadLink.md)
+Invoke action hasPayloadLinks
+
+### [Invoke-MgBetaHasDeviceManagementWindowsAutopilotDeploymentProfilePayloadLink](Invoke-MgBetaHasDeviceManagementWindowsAutopilotDeploymentProfilePayloadLink.md)
+Invoke action hasPayloadLinks
+
+### [Invoke-MgBetaHasDeviceManagementZebraFotaConnectorActiveDeployment](Invoke-MgBetaHasDeviceManagementZebraFotaConnectorActiveDeployment.md)
+Invoke action hasActiveDeployments
+
+### [Invoke-MgBetaInitiateDeviceManagementComanagedDeviceMobileDeviceManagementKeyRecovery](Invoke-MgBetaInitiateDeviceManagementComanagedDeviceMobileDeviceManagementKeyRecovery.md)
+Perform MDM key recovery and TPM attestation
+
+### [Invoke-MgBetaInitiateDeviceManagementComanagedDeviceOnDemandProactiveRemediation](Invoke-MgBetaInitiateDeviceManagementComanagedDeviceOnDemandProactiveRemediation.md)
+Perform On Demand Proactive Remediation
+
+### [Invoke-MgBetaInitiateDeviceManagementManagedDeviceMobileDeviceManagementKeyRecovery](Invoke-MgBetaInitiateDeviceManagementManagedDeviceMobileDeviceManagementKeyRecovery.md)
+Perform MDM key recovery and TPM attestation
+
+### [Invoke-MgBetaInitiateDeviceManagementManagedDeviceOnDemandProactiveRemediation](Invoke-MgBetaInitiateDeviceManagementManagedDeviceOnDemandProactiveRemediation.md)
+Perform On Demand Proactive Remediation
+
+### [Invoke-MgBetaLogoutDeviceManagementComanagedDeviceSharedAppleDeviceActiveUser](Invoke-MgBetaLogoutDeviceManagementComanagedDeviceSharedAppleDeviceActiveUser.md)
+Logout shared Apple device active user
+
+### [Invoke-MgBetaLogoutDeviceManagementManagedDeviceSharedAppleDeviceActiveUser](Invoke-MgBetaLogoutDeviceManagementManagedDeviceSharedAppleDeviceActiveUser.md)
+Logout shared Apple device active user
+
+### [Invoke-MgBetaOverrideDeviceManagementComanagedDeviceComplianceState](Invoke-MgBetaOverrideDeviceManagementComanagedDeviceComplianceState.md)
+Invoke action overrideComplianceState
+
+### [Invoke-MgBetaOverrideDeviceManagementManagedDeviceComplianceState](Invoke-MgBetaOverrideDeviceManagementManagedDeviceComplianceState.md)
+Invoke action overrideComplianceState
+
+### [Invoke-MgBetaPlayDeviceManagementComanagedDeviceLostModeSound](Invoke-MgBetaPlayDeviceManagementComanagedDeviceLostModeSound.md)
+Play lost mode sound
+
+### [Invoke-MgBetaPlayDeviceManagementManagedDeviceLostModeSound](Invoke-MgBetaPlayDeviceManagementManagedDeviceLostModeSound.md)
+Play lost mode sound
+
+### [Invoke-MgBetaQueryDeviceManagementResourceAccessProfileByPlatformType](Invoke-MgBetaQueryDeviceManagementResourceAccessProfileByPlatformType.md)
+Invoke action queryByPlatformType
+
+### [Invoke-MgBetaReenableDeviceManagementComanagedDevice](Invoke-MgBetaReenableDeviceManagementComanagedDevice.md)
+Invoke action reenable
+
+### [Invoke-MgBetaReenableDeviceManagementManagedDevice](Invoke-MgBetaReenableDeviceManagementManagedDevice.md)
+Invoke action reenable
+
+### [Invoke-MgBetaReorderDeviceManagementConfigurationPolicy](Invoke-MgBetaReorderDeviceManagementConfigurationPolicy.md)
+Invoke action reorder
+
+### [Invoke-MgBetaReorderDeviceManagementReusablePolicySettingReferencingConfigurationPolicy](Invoke-MgBetaReorderDeviceManagementReusablePolicySettingReferencingConfigurationPolicy.md)
+Invoke action reorder
+
+### [Invoke-MgBetaReprovisionDeviceManagementComanagedDeviceCloudPc](Invoke-MgBetaReprovisionDeviceManagementComanagedDeviceCloudPc.md)
+Invoke action reprovisionCloudPc
+
+### [Invoke-MgBetaReprovisionDeviceManagementManagedDeviceCloudPc](Invoke-MgBetaReprovisionDeviceManagementManagedDeviceCloudPc.md)
+Invoke action reprovisionCloudPc
+
+### [Invoke-MgBetaReprovisionDeviceManagementVirtualEndpointCloudPc](Invoke-MgBetaReprovisionDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action reprovision
+
+### [Invoke-MgBetaRetireDeviceManagementComanagedDevice](Invoke-MgBetaRetireDeviceManagementComanagedDevice.md)
+Retire a device
+
+### [Invoke-MgBetaRetireDeviceManagementManagedDevice](Invoke-MgBetaRetireDeviceManagementManagedDevice.md)
+Retire a device
+
+### [Invoke-MgBetaRetryDeviceManagementVirtualEndpointCloudPcPartnerAgentInstallation](Invoke-MgBetaRetryDeviceManagementVirtualEndpointCloudPcPartnerAgentInstallation.md)
+Invoke action retryPartnerAgentInstallation
+
+### [Invoke-MgBetaReuploadDeviceManagementVirtualEndpointDeviceImage](Invoke-MgBetaReuploadDeviceManagementVirtualEndpointDeviceImage.md)
+Invoke action reupload
+
+### [Invoke-MgBetaRotateDeviceManagementComanagedDeviceBitLockerKey](Invoke-MgBetaRotateDeviceManagementComanagedDeviceBitLockerKey.md)
+Rotate BitLockerKeys
+
+### [Invoke-MgBetaRotateDeviceManagementComanagedDeviceFileVaultKey](Invoke-MgBetaRotateDeviceManagementComanagedDeviceFileVaultKey.md)
+Invoke action rotateFileVaultKey
+
+### [Invoke-MgBetaRotateDeviceManagementComanagedDeviceLocalAdminPassword](Invoke-MgBetaRotateDeviceManagementComanagedDeviceLocalAdminPassword.md)
+Initiates a manual rotation for the local admin password on the device
+
+### [Invoke-MgBetaRotateDeviceManagementManagedDeviceBitLockerKey](Invoke-MgBetaRotateDeviceManagementManagedDeviceBitLockerKey.md)
+Rotate BitLockerKeys
+
+### [Invoke-MgBetaRotateDeviceManagementManagedDeviceFileVaultKey](Invoke-MgBetaRotateDeviceManagementManagedDeviceFileVaultKey.md)
+Invoke action rotateFileVaultKey
+
+### [Invoke-MgBetaRotateDeviceManagementManagedDeviceLocalAdminPassword](Invoke-MgBetaRotateDeviceManagementManagedDeviceLocalAdminPassword.md)
+Initiates a manual rotation for the local admin password on the device
+
+### [Invoke-MgBetaScanDeviceManagementComanagedDeviceWindowsDefender](Invoke-MgBetaScanDeviceManagementComanagedDeviceWindowsDefender.md)
+Invoke action windowsDefenderScan
+
+### [Invoke-MgBetaScanDeviceManagementManagedDeviceWindowsDefender](Invoke-MgBetaScanDeviceManagementManagedDeviceWindowsDefender.md)
+Invoke action windowsDefenderScan
+
+### [Invoke-MgBetaScheduleDeviceManagementDeviceCompliancePolicyActionForRule](Invoke-MgBetaScheduleDeviceManagementDeviceCompliancePolicyActionForRule.md)
+Invoke action scheduleActionsForRules
+
+### [Invoke-MgBetaShareDeviceManagementDepOnboardingSettingForSchoolDataSyncService](Invoke-MgBetaShareDeviceManagementDepOnboardingSettingForSchoolDataSyncService.md)
+Invoke action shareForSchoolDataSyncService
+
+### [Invoke-MgBetaTerminateDeviceManagementPartner](Invoke-MgBetaTerminateDeviceManagementPartner.md)
+Invoke action terminate
+
+### [Invoke-MgBetaTroubleshootDeviceManagementVirtualEndpointCloudPc](Invoke-MgBetaTroubleshootDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action troubleshoot
+
+### [Invoke-MgBetaUnassignDeviceManagementWindowsAutopilotDeploymentProfileAssignedDeviceUserFromDevice](Invoke-MgBetaUnassignDeviceManagementWindowsAutopilotDeploymentProfileAssignedDeviceUserFromDevice.md)
+Unassigns the user from an Autopilot device.
+
+### [Invoke-MgBetaUnassignDeviceManagementWindowsAutopilotDeviceIdentityUserFromDevice](Invoke-MgBetaUnassignDeviceManagementWindowsAutopilotDeviceIdentityUserFromDevice.md)
+Unassigns the user from an Autopilot device.
+
+### [Invoke-MgBetaUnbindDeviceManagementAndroidForWorkSetting](Invoke-MgBetaUnbindDeviceManagementAndroidForWorkSetting.md)
+Invoke action unbind
+
+### [Invoke-MgBetaUnbindDeviceManagementAndroidManagedStoreAccountEnterpriseSetting](Invoke-MgBetaUnbindDeviceManagementAndroidManagedStoreAccountEnterpriseSetting.md)
+Invoke action unbind
+
+### [Invoke-MgBetaUploadDeviceManagementDepOnboardingSettingDepToken](Invoke-MgBetaUploadDeviceManagementDepOnboardingSettingDepToken.md)
+Uploads a new Device Enrollment Program token
+
+### [Invoke-MgBetaUploadDeviceManagementGroupPolicyUploadedDefinitionFileNewVersion](Invoke-MgBetaUploadDeviceManagementGroupPolicyUploadedDefinitionFileNewVersion.md)
+Invoke action uploadNewVersion
+
+### [Lock-MgBetaDeviceManagementComanagedDeviceRemote](Lock-MgBetaDeviceManagementComanagedDeviceRemote.md)
+Remote lock
+
+### [Lock-MgBetaDeviceManagementManagedDeviceRemote](Lock-MgBetaDeviceManagementManagedDeviceRemote.md)
+Remote lock
+
+### [Move-MgBetaDeviceManagementComanagedDeviceToOu](Move-MgBetaDeviceManagementComanagedDeviceToOu.md)
+Invoke action moveDevicesToOU
+
+### [Move-MgBetaDeviceManagementIntentToTemplate](Move-MgBetaDeviceManagementIntentToTemplate.md)
+Invoke action migrateToTemplate
+
+### [Move-MgBetaDeviceManagementManagedDeviceToOu](Move-MgBetaDeviceManagementManagedDeviceToOu.md)
+Invoke action moveDevicesToOU
+
+### [New-MgBetaDeviceManagementAndroidDeviceOwnerEnrollmentProfileToken](New-MgBetaDeviceManagementAndroidDeviceOwnerEnrollmentProfileToken.md)
+Invoke action createToken
+
+### [New-MgBetaDeviceManagementAndroidForWorkEnrollmentProfileToken](New-MgBetaDeviceManagementAndroidForWorkEnrollmentProfileToken.md)
+Invoke action createToken
+
+### [New-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingGooglePlayWebToken](New-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingGooglePlayWebToken.md)
+Generates a web token that is used in an embeddable component.
+
+### [New-MgBetaDeviceManagementApplePushNotificationCertificateApplePushNotificationCertificateSigningRequest](New-MgBetaDeviceManagementApplePushNotificationCertificateApplePushNotificationCertificateSigningRequest.md)
+Download Apple push notification certificate signing request
+
+### [New-MgBetaDeviceManagementComanagedDeviceLogCollectionRequestDownloadUrl](New-MgBetaDeviceManagementComanagedDeviceLogCollectionRequestDownloadUrl.md)
+Invoke action createDownloadUrl
+
+### [New-MgBetaDeviceManagementConfigurationPolicyCopy](New-MgBetaDeviceManagementConfigurationPolicyCopy.md)
+Invoke action createCopy
+
+### [New-MgBetaDeviceManagementDepOnboardingSettingEncryptionPublicKey](New-MgBetaDeviceManagementDepOnboardingSettingEncryptionPublicKey.md)
+Generate a public key to use to encrypt the Apple device enrollment program token
+
+### [New-MgBetaDeviceManagementDeviceEnrollmentConfigurationEnrollmentNotificationConfiguration](New-MgBetaDeviceManagementDeviceEnrollmentConfigurationEnrollmentNotificationConfiguration.md)
+Invoke action createEnrollmentNotificationConfiguration
+
+### [New-MgBetaDeviceManagementGroupPolicyMigrationReport](New-MgBetaDeviceManagementGroupPolicyMigrationReport.md)
+Invoke action createMigrationReport
+
+### [New-MgBetaDeviceManagementIntentCopy](New-MgBetaDeviceManagementIntentCopy.md)
+Invoke action createCopy
+
+### [New-MgBetaDeviceManagementManagedDeviceLogCollectionRequest](New-MgBetaDeviceManagementManagedDeviceLogCollectionRequest.md)
+Invoke action createDeviceLogCollectionRequest
+
+### [New-MgBetaDeviceManagementManagedDeviceLogCollectionRequestDownloadUrl](New-MgBetaDeviceManagementManagedDeviceLogCollectionRequestDownloadUrl.md)
+Invoke action createDownloadUrl
+
+### [New-MgBetaDeviceManagementManagedDeviceWindowsDefenderUpdateSignature](New-MgBetaDeviceManagementManagedDeviceWindowsDefenderUpdateSignature.md)
+Invoke action windowsDefenderUpdateSignatures
+
+### [New-MgBetaDeviceManagementMicrosoftTunnelServerLogCollectionResponseDownloadUrl](New-MgBetaDeviceManagementMicrosoftTunnelServerLogCollectionResponseDownloadUrl.md)
+Invoke action createDownloadUrl
+
+### [New-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerLogCollectionRequest](New-MgBetaDeviceManagementMicrosoftTunnelSiteMicrosoftTunnelServerLogCollectionRequest.md)
+Invoke action createServerLogCollectionRequest
+
+### [New-MgBetaDeviceManagementMobileAppTroubleshootingEventAppLogCollectionRequestDownloadUrl](New-MgBetaDeviceManagementMobileAppTroubleshootingEventAppLogCollectionRequestDownloadUrl.md)
+Invoke action createDownloadUrl
+
+### [New-MgBetaDeviceManagementTemplateInstance](New-MgBetaDeviceManagementTemplateInstance.md)
+Invoke action createInstance
+
+### [New-MgBetaDeviceManagementTemplateMigratableToInstance](New-MgBetaDeviceManagementTemplateMigratableToInstance.md)
+Invoke action createInstance
+
+### [Remove-MgBetaDeviceManagementComanagedDeviceFirmwareConfigurationInterfaceManagement](Remove-MgBetaDeviceManagementComanagedDeviceFirmwareConfigurationInterfaceManagement.md)
+Remove device from Device Firmware Configuration Interface management
+
+### [Remove-MgBetaDeviceManagementComanagedDeviceUserFromSharedAppleDevice](Remove-MgBetaDeviceManagementComanagedDeviceUserFromSharedAppleDevice.md)
+Delete user from shared Apple device
+
+### [Remove-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFile](Remove-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFile.md)
+Invoke action remove
+
+### [Remove-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile](Remove-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile.md)
+Invoke action removeLanguageFiles
+
+### [Remove-MgBetaDeviceManagementManagedDeviceFirmwareConfigurationInterfaceManagement](Remove-MgBetaDeviceManagementManagedDeviceFirmwareConfigurationInterfaceManagement.md)
+Remove device from Device Firmware Configuration Interface management
+
+### [Remove-MgBetaDeviceManagementManagedDeviceUserFromSharedAppleDevice](Remove-MgBetaDeviceManagementManagedDeviceUserFromSharedAppleDevice.md)
+Delete user from shared Apple device
+
+### [Rename-MgBetaDeviceManagementVirtualEndpointCloudPc](Rename-MgBetaDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action rename
+
+### [Rename-MgBetaDeviceManagementVirtualEndpointCloudPcUserAccountType](Rename-MgBetaDeviceManagementVirtualEndpointCloudPcUserAccountType.md)
+Invoke action changeUserAccountType
+
+### [Request-MgBetaDeviceManagementAndroidForWorkSettingSignupUrl](Request-MgBetaDeviceManagementAndroidForWorkSettingSignupUrl.md)
+Invoke action requestSignupUrl
+
+### [Request-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingSignupUrl](Request-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingSignupUrl.md)
+Invoke action requestSignupUrl
+
+### [Request-MgBetaDeviceManagementComanagedDeviceRemoteAssistance](Request-MgBetaDeviceManagementComanagedDeviceRemoteAssistance.md)
+Request remote assistance
+
+### [Request-MgBetaDeviceManagementManagedDeviceRemoteAssistance](Request-MgBetaDeviceManagementManagedDeviceRemoteAssistance.md)
+Request remote assistance
+
+### [Request-MgBetaDeviceManagementMicrosoftTunnelSiteUpgrade](Request-MgBetaDeviceManagementMicrosoftTunnelSiteUpgrade.md)
+Invoke action requestUpgrade
+
+### [Reset-MgBetaDeviceManagementComanagedDevicePasscode](Reset-MgBetaDeviceManagementComanagedDevicePasscode.md)
+Reset passcode
+
+### [Reset-MgBetaDeviceManagementManagedDevicePasscode](Reset-MgBetaDeviceManagementManagedDevicePasscode.md)
+Reset passcode
+
+### [Resize-MgBetaDeviceManagementComanagedDeviceCloudPc](Resize-MgBetaDeviceManagementComanagedDeviceCloudPc.md)
+Invoke action resizeCloudPc
+
+### [Resize-MgBetaDeviceManagementManagedDeviceCloudPc](Resize-MgBetaDeviceManagementManagedDeviceCloudPc.md)
+Invoke action resizeCloudPc
+
+### [Restart-MgBetaDeviceManagementComanagedDeviceNow](Restart-MgBetaDeviceManagementComanagedDeviceNow.md)
+Reboot device
+
+### [Restart-MgBetaDeviceManagementManagedDeviceNow](Restart-MgBetaDeviceManagementManagedDeviceNow.md)
+Reboot device
+
+### [Restart-MgBetaDeviceManagementVirtualEndpointCloudPc](Restart-MgBetaDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action reboot
+
+### [Restore-MgBetaDeviceManagementComanagedDeviceCloudPc](Restore-MgBetaDeviceManagementComanagedDeviceCloudPc.md)
+Invoke action restoreCloudPc
+
+### [Restore-MgBetaDeviceManagementComanagedDevicePasscode](Restore-MgBetaDeviceManagementComanagedDevicePasscode.md)
+Recover passcode
+
+### [Restore-MgBetaDeviceManagementManagedDeviceCloudPc](Restore-MgBetaDeviceManagementManagedDeviceCloudPc.md)
+Invoke action restoreCloudPc
+
+### [Restore-MgBetaDeviceManagementManagedDevicePasscode](Restore-MgBetaDeviceManagementManagedDevicePasscode.md)
+Recover passcode
+
+### [Restore-MgBetaDeviceManagementVirtualEndpointCloudPc](Restore-MgBetaDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action restore
+
+### [Revoke-MgBetaDeviceManagementAndroidDeviceOwnerEnrollmentProfileToken](Revoke-MgBetaDeviceManagementAndroidDeviceOwnerEnrollmentProfileToken.md)
+Invoke action revokeToken
+
+### [Revoke-MgBetaDeviceManagementAndroidForWorkEnrollmentProfileToken](Revoke-MgBetaDeviceManagementAndroidForWorkEnrollmentProfileToken.md)
+Invoke action revokeToken
+
+### [Revoke-MgBetaDeviceManagementComanagedDeviceAppleVppLicense](Revoke-MgBetaDeviceManagementComanagedDeviceAppleVppLicense.md)
+Revoke all Apple Vpp licenses for a device
+
+### [Revoke-MgBetaDeviceManagementManagedDeviceAppleVppLicense](Revoke-MgBetaDeviceManagementManagedDeviceAppleVppLicense.md)
+Revoke all Apple Vpp licenses for a device
+
+### [Search-MgBetaDeviceManagementImportedDeviceIdentityExistingIdentity](Search-MgBetaDeviceManagementImportedDeviceIdentityExistingIdentity.md)
+Invoke action searchExistingIdentities
+
+### [Send-MgBetaDeviceManagementComanagedDeviceCustomNotificationToCompanyPortal](Send-MgBetaDeviceManagementComanagedDeviceCustomNotificationToCompanyPortal.md)
+Invoke action sendCustomNotificationToCompanyPortal
+
+### [Send-MgBetaDeviceManagementCustomNotificationToCompanyPortal](Send-MgBetaDeviceManagementCustomNotificationToCompanyPortal.md)
+Invoke action sendCustomNotificationToCompanyPortal
+
+### [Send-MgBetaDeviceManagementManagedDeviceCustomNotificationToCompanyPortal](Send-MgBetaDeviceManagementManagedDeviceCustomNotificationToCompanyPortal.md)
+Invoke action sendCustomNotificationToCompanyPortal
+
+### [Send-MgBetaDeviceManagementNotificationMessageTemplateTestMessage](Send-MgBetaDeviceManagementNotificationMessageTemplateTestMessage.md)
+Sends test message using the specified notificationMessageTemplate in the default locale
+
+### [Set-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingAndroidDeviceOwnerFullyManagedEnrollmentState](Set-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingAndroidDeviceOwnerFullyManagedEnrollmentState.md)
+Sets the AndroidManagedStoreAccountEnterpriseSettings AndroidDeviceOwnerFullyManagedEnrollmentEnabled to the given value.
+
+### [Set-MgBetaDeviceManagementAppleUserInitiatedEnrollmentProfilePriority](Set-MgBetaDeviceManagementAppleUserInitiatedEnrollmentProfilePriority.md)
+Invoke action setPriority
+
+### [Set-MgBetaDeviceManagementComanagedDeviceCloudPcReviewStatus](Set-MgBetaDeviceManagementComanagedDeviceCloudPcReviewStatus.md)
+Invoke action setCloudPcReviewStatus
+
+### [Set-MgBetaDeviceManagementComanagedDeviceName](Set-MgBetaDeviceManagementComanagedDeviceName.md)
+Set device name of the device.
+
+### [Set-MgBetaDeviceManagementCompliancePolicy](Set-MgBetaDeviceManagementCompliancePolicy.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementCompliancePolicyScheduledAction](Set-MgBetaDeviceManagementCompliancePolicyScheduledAction.md)
+Invoke action setScheduledActions
+
+### [Set-MgBetaDeviceManagementConfigurationPolicy](Set-MgBetaDeviceManagementConfigurationPolicy.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDepOnboardingSettingEnrollmentProfileDefaultProfile](Set-MgBetaDeviceManagementDepOnboardingSettingEnrollmentProfileDefaultProfile.md)
+Invoke action setDefaultProfile
+
+### [Set-MgBetaDeviceManagementDeviceCompliancePolicy](Set-MgBetaDeviceManagementDeviceCompliancePolicy.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceCompliancePolicyScheduledRetireState](Set-MgBetaDeviceManagementDeviceCompliancePolicyScheduledRetireState.md)
+Invoke action setScheduledRetireState
+
+### [Set-MgBetaDeviceManagementDeviceComplianceScript](Set-MgBetaDeviceManagementDeviceComplianceScript.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceConfiguration](Set-MgBetaDeviceManagementDeviceConfiguration.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceCustomAttributeShellScript](Set-MgBetaDeviceManagementDeviceCustomAttributeShellScript.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceEnrollmentConfiguration](Set-MgBetaDeviceManagementDeviceEnrollmentConfiguration.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceEnrollmentConfigurationPriority](Set-MgBetaDeviceManagementDeviceEnrollmentConfigurationPriority.md)
+Invoke action setPriority
+
+### [Set-MgBetaDeviceManagementDeviceHealthScript](Set-MgBetaDeviceManagementDeviceHealthScript.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementDeviceShellScript](Set-MgBetaDeviceManagementDeviceShellScript.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementEmbeddedSimActivationCodePool](Set-MgBetaDeviceManagementEmbeddedSimActivationCodePool.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementGroupPolicyConfiguration](Set-MgBetaDeviceManagementGroupPolicyConfiguration.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementIntent](Set-MgBetaDeviceManagementIntent.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementIntuneBrandingProfile](Set-MgBetaDeviceManagementIntuneBrandingProfile.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementManagedDeviceCloudPcReviewStatus](Set-MgBetaDeviceManagementManagedDeviceCloudPcReviewStatus.md)
+Invoke action setCloudPcReviewStatus
+
+### [Set-MgBetaDeviceManagementManagedDeviceName](Set-MgBetaDeviceManagementManagedDeviceName.md)
+Set device name of the device.
+
+### [Set-MgBetaDeviceManagementMonitoringAlertRecordPortalNotificationAsSent](Set-MgBetaDeviceManagementMonitoringAlertRecordPortalNotificationAsSent.md)
+Invoke action setPortalNotificationAsSent
+
+### [Set-MgBetaDeviceManagementResourceAccessProfile](Set-MgBetaDeviceManagementResourceAccessProfile.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementRoleScopeTag](Set-MgBetaDeviceManagementRoleScopeTag.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementScript](Set-MgBetaDeviceManagementScript.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementVirtualEndpointProvisioningPolicy](Set-MgBetaDeviceManagementVirtualEndpointProvisioningPolicy.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementVirtualEndpointUserSetting](Set-MgBetaDeviceManagementVirtualEndpointUserSetting.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementWindowsAutopilotDeploymentProfile](Set-MgBetaDeviceManagementWindowsAutopilotDeploymentProfile.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementWindowsAutopilotDeploymentProfileAssignedDeviceUserToDevice](Set-MgBetaDeviceManagementWindowsAutopilotDeploymentProfileAssignedDeviceUserToDevice.md)
+Assigns user to Autopilot devices.
+
+### [Set-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityResourceAccountToDevice](Set-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityResourceAccountToDevice.md)
+Assigns resource account to Autopilot devices.
+
+### [Set-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityUserToDevice](Set-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityUserToDevice.md)
+Assigns user to Autopilot devices.
+
+### [Set-MgBetaDeviceManagementWindowsDriverUpdateProfile](Set-MgBetaDeviceManagementWindowsDriverUpdateProfile.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementWindowsFeatureUpdateProfile](Set-MgBetaDeviceManagementWindowsFeatureUpdateProfile.md)
+Invoke action assign
+
+### [Set-MgBetaDeviceManagementWindowsQualityUpdateProfile](Set-MgBetaDeviceManagementWindowsQualityUpdateProfile.md)
+Invoke action assign
+
+### [Skip-MgBetaDeviceManagementComanagedDeviceActivationLock](Skip-MgBetaDeviceManagementComanagedDeviceActivationLock.md)
+Bypass activation lock
+
+### [Skip-MgBetaDeviceManagementManagedDeviceActivationLock](Skip-MgBetaDeviceManagementManagedDeviceActivationLock.md)
+Bypass activation lock
+
+### [Start-MgBetaDeviceManagementComanagedDeviceConfigurationManagerAction](Start-MgBetaDeviceManagementComanagedDeviceConfigurationManagerAction.md)
+Trigger action on ConfigurationManager client
+
+### [Start-MgBetaDeviceManagementManagedDeviceConfigurationManagerAction](Start-MgBetaDeviceManagementManagedDeviceConfigurationManagerAction.md)
+Trigger action on ConfigurationManager client
+
+### [Start-MgBetaDeviceManagementVirtualEndpointCloudPc](Start-MgBetaDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action powerOn
+
+### [Start-MgBetaDeviceManagementVirtualEndpointOnPremiseConnectionHealthCheck](Start-MgBetaDeviceManagementVirtualEndpointOnPremiseConnectionHealthCheck.md)
+Invoke action runHealthChecks
+
+### [Stop-MgBetaDeviceManagementVirtualEndpointCloudPc](Stop-MgBetaDeviceManagementVirtualEndpointCloudPc.md)
+Invoke action powerOff
+
+### [Stop-MgBetaDeviceManagementVirtualEndpointCloudPcGracePeriod](Stop-MgBetaDeviceManagementVirtualEndpointCloudPcGracePeriod.md)
+Invoke action endGracePeriod
+
+### [Stop-MgBetaDeviceManagementZebraFotaDeployment](Stop-MgBetaDeviceManagementZebraFotaDeployment.md)
+Invoke action cancel
+
+### [Sync-MgBetaDeviceManagementAndroidForWorkSettingApp](Sync-MgBetaDeviceManagementAndroidForWorkSettingApp.md)
+Invoke action syncApps
+
+### [Sync-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp](Sync-MgBetaDeviceManagementAndroidManagedStoreAccountEnterpriseSettingApp.md)
+Invoke action syncApps
+
+### [Sync-MgBetaDeviceManagementComanagedDevice](Sync-MgBetaDeviceManagementComanagedDevice.md)
+Invoke action syncDevice
+
+### [Sync-MgBetaDeviceManagementDepOnboardingSettingWithAppleDeviceEnrollmentProgram](Sync-MgBetaDeviceManagementDepOnboardingSettingWithAppleDeviceEnrollmentProgram.md)
+Synchronizes between Apple Device Enrollment Program and Intune
+
+### [Sync-MgBetaDeviceManagementExchangeConnector](Sync-MgBetaDeviceManagementExchangeConnector.md)
+Invoke action sync
+
+### [Sync-MgBetaDeviceManagementManagedDevice](Sync-MgBetaDeviceManagementManagedDevice.md)
+Invoke action syncDevice
+
+### [Sync-MgBetaDeviceManagementWindowsAutopilotSetting](Sync-MgBetaDeviceManagementWindowsAutopilotSetting.md)
+Initiates a sync of all AutoPilot registered devices from Store for Business and other portals.
+If the sync successful, this action returns a 204 No Content response code.
+If a sync is already in progress, the action returns a 409 Conflict response code.
+If this sync action is called within 10 minutes of the previous sync, the action returns a 429 Too Many Requests response code.
+
+### [Sync-MgBetaDeviceManagementWindowsDriverUpdateProfileInventory](Sync-MgBetaDeviceManagementWindowsDriverUpdateProfileInventory.md)
+Sync the driver inventory of a WindowsDriverUpdateProfile.
+
+### [Test-MgBetaDeviceManagementAssignmentFilter](Test-MgBetaDeviceManagementAssignmentFilter.md)
+Invoke action validateFilter
+
+### [Test-MgBetaDeviceManagementDeviceCompliancePolicyComplianceScript](Test-MgBetaDeviceManagementDeviceCompliancePolicyComplianceScript.md)
+Invoke action validateComplianceScript
+
+### [Test-MgBetaDeviceManagementVirtualEndpointCloudPcBulkResize](Test-MgBetaDeviceManagementVirtualEndpointCloudPcBulkResize.md)
+Invoke action validateBulkResize
+
+### [Update-MgBetaDeviceManagementDepOnboardingSettingEnrollmentProfileDeviceProfileAssignment](Update-MgBetaDeviceManagementDepOnboardingSettingEnrollmentProfileDeviceProfileAssignment.md)
+Invoke action updateDeviceProfileAssignment
+
+### [Update-MgBetaDeviceManagementDeviceCompliancePolicyDeviceComplianceReportSummarization](Update-MgBetaDeviceManagementDeviceCompliancePolicyDeviceComplianceReportSummarization.md)
+Invoke action refreshDeviceComplianceReportSummarization
+
+### [Update-MgBetaDeviceManagementDeviceHealthScriptGlobalScript](Update-MgBetaDeviceManagementDeviceHealthScriptGlobalScript.md)
+Update the Proprietary Device Health Script
+
+### [Update-MgBetaDeviceManagementGroupPolicyConfigurationMultipleDefinitionValue](Update-MgBetaDeviceManagementGroupPolicyConfigurationMultipleDefinitionValue.md)
+Invoke action updateDefinitionValues
+
+### [Update-MgBetaDeviceManagementGroupPolicyMigrationReportScopeTag](Update-MgBetaDeviceManagementGroupPolicyMigrationReportScopeTag.md)
+Invoke action updateScopeTags
+
+### [Update-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile](Update-MgBetaDeviceManagementGroupPolicyUploadedDefinitionFileLanguageFile.md)
+Invoke action updateLanguageFiles
+
+### [Update-MgBetaDeviceManagementIntentMultipleSetting](Update-MgBetaDeviceManagementIntentMultipleSetting.md)
+Invoke action updateSettings
+
+### [Update-MgBetaDeviceManagementManagedDeviceWindowsDeviceAccount](Update-MgBetaDeviceManagementManagedDeviceWindowsDeviceAccount.md)
+Invoke action updateWindowsDeviceAccount
+
+### [Update-MgBetaDeviceManagementVirtualEndpointOnPremiseConnectionAdDomainPassword](Update-MgBetaDeviceManagementVirtualEndpointOnPremiseConnectionAdDomainPassword.md)
+Invoke action updateAdDomainPassword
+
+### [Update-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityDeviceProperty](Update-MgBetaDeviceManagementWindowsAutopilotDeviceIdentityDeviceProperty.md)
+Updates properties on Autopilot devices.
+
