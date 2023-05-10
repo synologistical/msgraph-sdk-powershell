@@ -13357,6 +13357,37 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - organization.certificateBasedAuthConfiguration
+      summary: Create new navigation property to certificateBasedAuthConfiguration for organization
+      operationId: organization_CreateCertificateBasedAuthConfiguration
+      parameters:
+        - name: organization-id
+          in: path
+          description: The unique identifier of organization
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/organization/{organization-id}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration-id}':
     get:
       tags:
@@ -13413,6 +13444,40 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - organization.certificateBasedAuthConfiguration
+      summary: Delete navigation property certificateBasedAuthConfiguration for organization
+      operationId: organization_DeleteCertificateBasedAuthConfiguration
+      parameters:
+        - name: organization-id
+          in: path
+          description: The unique identifier of organization
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: organization
+        - name: certificateBasedAuthConfiguration-id
+          in: path
+          description: The unique identifier of certificateBasedAuthConfiguration
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: certificateBasedAuthConfiguration
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13814,6 +13879,133 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/policies/activityBasedTimeoutPolicies/{activityBasedTimeoutPolicy-id}/appliesTo':
+    get:
+      tags:
+        - policies.activityBasedTimeoutPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.activityBasedTimeoutPolicies_ListAppliesTo
+      parameters:
+        - name: activityBasedTimeoutPolicy-id
+          in: path
+          description: The unique identifier of activityBasedTimeoutPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: activityBasedTimeoutPolicy
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/policies/activityBasedTimeoutPolicies/{activityBasedTimeoutPolicy-id}/appliesTo/{directoryObject-id}':
+    get:
+      tags:
+        - policies.activityBasedTimeoutPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.activityBasedTimeoutPolicies_GetAppliesTo
+      parameters:
+        - name: activityBasedTimeoutPolicy-id
+          in: path
+          description: The unique identifier of activityBasedTimeoutPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: activityBasedTimeoutPolicy
+        - name: directoryObject-id
+          in: path
+          description: The unique identifier of directoryObject
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15966,6 +16158,133 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/policies/claimsMappingPolicies/{claimsMappingPolicy-id}/appliesTo':
+    get:
+      tags:
+        - policies.claimsMappingPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.claimsMappingPolicies_ListAppliesTo
+      parameters:
+        - name: claimsMappingPolicy-id
+          in: path
+          description: The unique identifier of claimsMappingPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: claimsMappingPolicy
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/policies/claimsMappingPolicies/{claimsMappingPolicy-id}/appliesTo/{directoryObject-id}':
+    get:
+      tags:
+        - policies.claimsMappingPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.claimsMappingPolicies_GetAppliesTo
+      parameters:
+        - name: claimsMappingPolicy-id
+          in: path
+          description: The unique identifier of claimsMappingPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: claimsMappingPolicy
+        - name: directoryObject-id
+          in: path
+          description: The unique identifier of directoryObject
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   /policies/conditionalAccessPolicies:
     get:
       tags:
@@ -17842,6 +18161,133 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/policies/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}/appliesTo':
+    get:
+      tags:
+        - policies.homeRealmDiscoveryPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.homeRealmDiscoveryPolicies_ListAppliesTo
+      parameters:
+        - name: homeRealmDiscoveryPolicy-id
+          in: path
+          description: The unique identifier of homeRealmDiscoveryPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: homeRealmDiscoveryPolicy
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/policies/homeRealmDiscoveryPolicies/{homeRealmDiscoveryPolicy-id}/appliesTo/{directoryObject-id}':
+    get:
+      tags:
+        - policies.homeRealmDiscoveryPolicy
+      summary: Get appliesTo from policies
+      operationId: policies.homeRealmDiscoveryPolicies_GetAppliesTo
+      parameters:
+        - name: homeRealmDiscoveryPolicy-id
+          in: path
+          description: The unique identifier of homeRealmDiscoveryPolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: homeRealmDiscoveryPolicy
+        - name: directoryObject-id
+          in: path
+          description: The unique identifier of directoryObject
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21906,6 +22352,133 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/policies/tokenIssuancePolicies/{tokenIssuancePolicy-id}/appliesTo':
+    get:
+      tags:
+        - policies.tokenIssuancePolicy
+      summary: Get appliesTo from policies
+      operationId: policies.tokenIssuancePolicies_ListAppliesTo
+      parameters:
+        - name: tokenIssuancePolicy-id
+          in: path
+          description: The unique identifier of tokenIssuancePolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: tokenIssuancePolicy
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/policies/tokenIssuancePolicies/{tokenIssuancePolicy-id}/appliesTo/{directoryObject-id}':
+    get:
+      tags:
+        - policies.tokenIssuancePolicy
+      summary: Get appliesTo from policies
+      operationId: policies.tokenIssuancePolicies_GetAppliesTo
+      parameters:
+        - name: tokenIssuancePolicy-id
+          in: path
+          description: The unique identifier of tokenIssuancePolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: tokenIssuancePolicy
+        - name: directoryObject-id
+          in: path
+          description: The unique identifier of directoryObject
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   /policies/tokenLifetimePolicies:
     get:
       tags:
@@ -22111,6 +22684,133 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/policies/tokenLifetimePolicies/{tokenLifetimePolicy-id}/appliesTo':
+    get:
+      tags:
+        - policies.tokenLifetimePolicy
+      summary: Get appliesTo from policies
+      operationId: policies.tokenLifetimePolicies_ListAppliesTo
+      parameters:
+        - name: tokenLifetimePolicy-id
+          in: path
+          description: The unique identifier of tokenLifetimePolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: tokenLifetimePolicy
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/policies/tokenLifetimePolicies/{tokenLifetimePolicy-id}/appliesTo/{directoryObject-id}':
+    get:
+      tags:
+        - policies.tokenLifetimePolicy
+      summary: Get appliesTo from policies
+      operationId: policies.tokenLifetimePolicies_GetAppliesTo
+      parameters:
+        - name: tokenLifetimePolicy-id
+          in: path
+          description: The unique identifier of tokenLifetimePolicy
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: tokenLifetimePolicy
+        - name: directoryObject-id
+          in: path
+          description: The unique identifier of directoryObject
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30447,6 +31147,20 @@ components:
           type: object
           additionalProperties:
             type: object
+    microsoft.graph.directoryObject:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: directoryObject
+          type: object
+          properties:
+            deletedDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: Date and time when this object was deleted. Always null when the object hasn't been deleted.
+              format: date-time
+              nullable: true
+          additionalProperties:
+            type: object
     microsoft.graph.adminConsentRequestPolicy:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -30498,20 +31212,6 @@ components:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
               description: Collection of application and service principals to which a policy is applied.
               x-ms-navigationProperty: true
-          additionalProperties:
-            type: object
-    microsoft.graph.directoryObject:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.entity'
-        - title: directoryObject
-          type: object
-          properties:
-            deletedDateTime:
-              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
-              type: string
-              description: Date and time when this object was deleted. Always null when the object hasn't been deleted.
-              format: date-time
-              nullable: true
           additionalProperties:
             type: object
     microsoft.graph.authenticationFlowsPolicy:
@@ -32497,7 +33197,7 @@ components:
         lastNonInteractiveSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastNonInteractiveSignInRequestId:
@@ -32507,7 +33207,7 @@ components:
         lastSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user signed in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastSignInRequestId:
@@ -35866,9 +36566,15 @@ components:
               type: boolean
               description: Specifies if participants are allowed to rename themselves in an instance of the meeting.
               nullable: true
+            allowRecording:
+              type: boolean
+              nullable: true
             allowTeamworkReactions:
               type: boolean
               description: Indicates if Teams reactions are enabled for the meeting.
+              nullable: true
+            allowTranscription:
+              type: boolean
               nullable: true
             alternativeRecording:
               type: string
@@ -37441,19 +38147,6 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    microsoft.graph.appManagementPolicyCollectionResponse:
-      title: Collection of appManagementPolicy
-      type: object
-      properties:
-        value:
-          type: array
-          items:
-            $ref: '#/components/schemas/microsoft.graph.appManagementPolicy'
-        '@odata.nextLink':
-          type: string
-          nullable: true
-      additionalProperties:
-        type: object
     microsoft.graph.directoryObjectCollectionResponse:
       title: Collection of directoryObject
       type: object
@@ -37462,6 +38155,19 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        '@odata.nextLink':
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.appManagementPolicyCollectionResponse:
+      title: Collection of appManagementPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.appManagementPolicy'
         '@odata.nextLink':
           type: string
           nullable: true
@@ -45468,11 +46174,11 @@ components:
       properties:
         key:
           type: string
-          description: Key.
+          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
           nullable: true
         value:
           type: string
-          description: Value.
+          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
           nullable: true
       additionalProperties:
         type: object
@@ -56637,18 +57343,18 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/microsoft.graph.activityBasedTimeoutPolicyCollectionResponse'
-    microsoft.graph.appManagementPolicyCollectionResponse:
-      description: Retrieved collection
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/microsoft.graph.appManagementPolicyCollectionResponse'
     microsoft.graph.directoryObjectCollectionResponse:
       description: Retrieved collection
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/microsoft.graph.directoryObjectCollectionResponse'
+    microsoft.graph.appManagementPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.appManagementPolicyCollectionResponse'
     microsoft.graph.authenticationMethodConfigurationCollectionResponse:
       description: Retrieved collection
       content:

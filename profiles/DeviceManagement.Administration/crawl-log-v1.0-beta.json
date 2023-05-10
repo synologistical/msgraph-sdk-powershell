@@ -309,6 +309,14 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
     },
+    "/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile-id}/definitions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
+    },
+    "/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile-id}/definitions/{groupPolicyDefinition-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
+    },
     "/deviceManagement/groupPolicyUploadedDefinitionFiles/{groupPolicyUploadedDefinitionFile-id}/groupPolicyOperations": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
@@ -378,6 +386,10 @@
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
     },
     "/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
+    },
+    "/deviceManagement/roleAssignments/{deviceAndAppManagementRoleAssignment-id}/roleDefinition": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Administration.yml"
     },

@@ -128,6 +128,22 @@
     "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/assignedToTaskBoardFormat": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/bucketTaskBoardFormat": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/details": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/businessScenarios/{businessScenario-id}/planner/tasks/{businessScenarioTask-id}/progressTaskBoardFormat": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
     }
   }
 }

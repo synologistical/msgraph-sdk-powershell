@@ -97,6 +97,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
+    "/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/roleDefinition": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
     "/roleManagement/directory/roleAssignmentScheduleInstances/microsoft.graph.filterByCurrentUser(on='{on}')": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
@@ -153,6 +169,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
+    "/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/roleDefinition": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
     "/roleManagement/directory/roleAssignmentSchedules/microsoft.graph.filterByCurrentUser(on='{on}')": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
@@ -178,6 +210,22 @@
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
     "/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/roleDefinition": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
@@ -226,6 +274,22 @@
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
     "/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/roleDefinition": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
@@ -289,6 +353,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
+    "/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/roleDefinition": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
     "/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/microsoft.graph.filterByCurrentUser(on='{on}')": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
@@ -345,6 +425,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
+    "/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/roleDefinition": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
     "/roleManagement/entitlementManagement/roleAssignmentSchedules/microsoft.graph.filterByCurrentUser(on='{on}')": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
@@ -370,6 +466,22 @@
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
     "/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/roleDefinition": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
@@ -418,6 +530,22 @@
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
     "/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/appScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/directoryScope": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/principal": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
+    },
+    "/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/roleDefinition": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/DeviceManagement.Enrolment.yml"
     },
