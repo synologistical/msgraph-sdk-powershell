@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Devices.ServiceAnnouncement
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/v1.0
   version: v1.0
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/v1.0/
-    description: Core
+  - url: https://graph.microsoft.com/v1.0
 paths:
   '/admin/edge/internetExplorerMode/siteLists/{browserSiteList-id}/microsoft.graph.publish':
     post:
@@ -2897,13 +2900,3 @@ components:
       explode: false
       schema:
         type: boolean
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Bookings
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/v1.0
   version: v1.0
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/v1.0/
-    description: Core
+  - url: https://graph.microsoft.com/v1.0
 paths:
   /solutions:
     get:
@@ -3160,11 +3163,6 @@ components:
       type: object
       additionalProperties:
         type: object
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.bookingPriceType:
       title: bookingPriceType
       enum:
@@ -3630,13 +3628,3 @@ components:
       explode: false
       schema:
         type: boolean
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

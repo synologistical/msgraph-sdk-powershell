@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Security
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/v1.0
   version: v1.0
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/v1.0/
-    description: Core
+  - url: https://graph.microsoft.com/v1.0
 paths:
   /security:
     get:
@@ -297,7 +300,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0
-      operationId: security_ListAlerts_v2
+      operationId: security.ListAlerts_v2
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -438,7 +441,7 @@ paths:
       tags:
         - security.alert
       summary: Create new navigation property to alerts_v2 for security
-      operationId: security_CreateAlerts_v2
+      operationId: security.CreateAlerts_v2
       requestBody:
         description: New navigation property
         content:
@@ -465,7 +468,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0
-      operationId: security_GetAlerts_v2
+      operationId: security.GetAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -545,7 +548,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0
-      operationId: security_UpdateAlerts_v2
+      operationId: security.UpdateAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -576,7 +579,7 @@ paths:
       tags:
         - security.alert
       summary: Delete navigation property alerts_v2 for security
-      operationId: security_DeleteAlerts_v2
+      operationId: security.DeleteAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -603,7 +606,7 @@ paths:
       tags:
         - security.alert
       summary: Get the number of the resource
-      operationId: security.alerts_v2_GetCount
+      operationId: security.alerts_v2.GetCount
       parameters:
         - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
@@ -6617,7 +6620,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-ediscoverysearch-estimatestatistics?view=graph-rest-1.0
-      operationId: security.case.ediscoveryCase.search_estimatestatistics
+      operationId: security.case.ediscoveryCase.search_estimateStatistics
       parameters:
         - name: ediscoveryCase-id
           in: path
@@ -13571,11 +13574,6 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.averageComparativeScore:
       title: averageComparativeScore
       type: object
@@ -25299,13 +25297,3 @@ components:
       explode: false
       schema:
         type: boolean
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

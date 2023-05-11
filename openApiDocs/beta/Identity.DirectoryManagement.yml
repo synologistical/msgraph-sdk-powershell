@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Identity.DirectoryManagement
-  version: v1.0-beta
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/beta
+  version: beta
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/beta/
-    description: Core
+  - url: https://graph.microsoft.com/beta
 paths:
   /administrativeUnits:
     get:
@@ -1031,8 +1034,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/administrativeUnits/{administrativeUnit-id}/members/$count':
@@ -1775,8 +1778,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -1816,8 +1819,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/administrativeUnits/{administrativeUnit-id}/microsoft.graph.checkMemberGroups':
@@ -3153,8 +3156,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/contacts/{orgContact-id}/directReports/$count':
@@ -3376,8 +3379,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -3417,8 +3420,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/contacts/{orgContact-id}/manager':
@@ -8004,8 +8007,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/devices/{device-id}/registeredOwners/$count':
@@ -8421,8 +8424,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -8462,8 +8465,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/devices/{device-id}/registeredUsers':
@@ -8798,8 +8801,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/devices/{device-id}/registeredUsers/$count':
@@ -9215,8 +9218,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -9256,8 +9259,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/devices/{device-id}/transitiveMemberOf':
@@ -11483,8 +11486,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/directory/administrativeUnits/{administrativeUnit-id}/members/$count':
@@ -12227,8 +12230,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -12268,8 +12271,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/directory/administrativeUnits/{administrativeUnit-id}/microsoft.graph.checkMemberGroups':
@@ -14488,8 +14491,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   /directory/deletedItems/$count:
@@ -15091,8 +15094,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -15114,8 +15117,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   /directory/deletedItems/microsoft.graph.validateProperties:
@@ -15231,8 +15234,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-pageable:
@@ -15262,8 +15265,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15324,8 +15327,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15361,8 +15364,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15393,8 +15396,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15466,8 +15469,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-pageable:
@@ -15510,8 +15513,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15562,8 +15565,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15591,8 +15594,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
   '/directory/featureRolloutPolicies/{featureRolloutPolicy-id}/appliesTo/$ref':
@@ -15638,8 +15641,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-pageable:
@@ -15673,8 +15676,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: operation
@@ -15751,8 +15754,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: function
@@ -15819,8 +15822,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: action
@@ -15873,8 +15876,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: action
@@ -15928,8 +15931,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
       x-ms-docs-operation-type: action
@@ -15949,8 +15952,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2021-06-30T00:00:00.0000000+00:00'
-        date: '2021-03-05T00:00:00.0000000+00:00'
+        removalDate: '2021-06-30T00:00:00.0000000-07:00'
+        date: '2021-03-05T00:00:00.0000000-08:00'
         version: 2021-01/DirectoryFeatureRolloutPolicies
         description: Feature Rollout Policies have been grouped with other policies under /policies. The existing /directory/featureRolloutPolicies is deprecated and will stop returning data on 06/30/2021. Please use /policies/featureRolloutPolicies.
   /directory/federationConfigurations:
@@ -19417,8 +19420,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/directoryRoles/{directoryRole-id}/members/$count':
@@ -20164,8 +20167,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -20205,8 +20208,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/directoryRoles/{directoryRole-id}/microsoft.graph.checkMemberGroups':
@@ -27882,8 +27885,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -27922,8 +27925,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -27989,8 +27992,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -28034,8 +28037,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -28074,8 +28077,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -28103,8 +28106,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
 components:
@@ -43536,11 +43539,6 @@ components:
         - identitySecureScore
         - unknownFutureValue
       type: string
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.recommendationFeatureAreas:
       title: recommendationFeatureAreas
       enum:
@@ -55335,13 +55333,3 @@ components:
           schema:
             $ref: '#/components/schemas/ReferenceCreate'
       required: true
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

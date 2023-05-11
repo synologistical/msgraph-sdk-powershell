@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Compliance
-  version: v1.0-beta
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/beta
+  version: beta
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/beta/
-    description: Core
+  - url: https://graph.microsoft.com/beta
 paths:
   /compliance:
     get:
@@ -114,8 +117,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -142,8 +145,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -166,8 +169,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -274,8 +277,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -309,8 +312,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -393,8 +396,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -434,8 +437,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -470,8 +473,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -578,8 +581,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -622,8 +625,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -706,8 +709,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -755,8 +758,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -795,8 +798,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -865,8 +868,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -904,8 +907,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -939,8 +942,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -978,8 +981,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -1013,8 +1016,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -1048,8 +1051,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -1143,8 +1146,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -1195,8 +1198,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1276,8 +1279,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1329,8 +1332,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1381,8 +1384,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1502,8 +1505,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1539,8 +1542,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/unifiedGroupSources':
@@ -1636,8 +1639,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -1688,8 +1691,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1770,8 +1773,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1823,8 +1826,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -1875,8 +1878,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2055,8 +2058,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2092,8 +2095,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/userSources':
@@ -2193,8 +2196,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -2245,8 +2248,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2327,8 +2330,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2380,8 +2383,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2432,8 +2435,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2469,8 +2472,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/custodians/$count':
@@ -2497,8 +2500,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/custodians/microsoft.graph.ediscovery.applyHold':
@@ -2538,8 +2541,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -2580,8 +2583,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -2686,8 +2689,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -2726,8 +2729,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2809,8 +2812,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2858,8 +2861,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2902,8 +2905,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -2997,8 +3000,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -3049,8 +3052,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3127,8 +3130,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3180,8 +3183,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3228,8 +3231,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3349,8 +3352,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3386,8 +3389,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/unifiedGroupSources':
@@ -3479,8 +3482,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -3527,8 +3530,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3605,8 +3608,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3658,8 +3661,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3706,8 +3709,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3886,8 +3889,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -3923,8 +3926,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/legalHolds/{legalHold-id}/userSources':
@@ -4024,8 +4027,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -4076,8 +4079,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4155,8 +4158,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4208,8 +4211,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4256,8 +4259,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4293,8 +4296,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/legalHolds/$count':
@@ -4321,8 +4324,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/microsoft.graph.ediscovery.close':
@@ -4351,8 +4354,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -4382,8 +4385,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -4480,8 +4483,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -4524,8 +4527,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4602,8 +4605,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4647,8 +4650,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4687,8 +4690,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4755,8 +4758,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4800,8 +4803,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4840,8 +4843,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4910,8 +4913,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -4945,8 +4948,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -4984,8 +4987,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -5019,8 +5022,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -5054,8 +5057,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -5083,8 +5086,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/microsoft.graph.ediscovery.applyHold':
@@ -5124,8 +5127,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -5166,8 +5169,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -5257,8 +5260,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -5297,8 +5300,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5368,8 +5371,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5413,8 +5416,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5453,8 +5456,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5523,8 +5526,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/operations/$count':
@@ -5551,8 +5554,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/operations/microsoft.graph.ediscovery.caseExportOperation':
@@ -5640,8 +5643,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -5671,8 +5674,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/reviewSets':
@@ -5751,8 +5754,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -5795,8 +5798,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5867,8 +5870,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5912,8 +5915,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -5952,8 +5955,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6005,8 +6008,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -6070,8 +6073,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -6169,8 +6172,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -6221,8 +6224,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6302,8 +6305,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6359,8 +6362,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6411,8 +6414,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6476,8 +6479,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -6513,8 +6516,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/reviewSets/$count':
@@ -6541,8 +6544,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/settings':
@@ -6602,8 +6605,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6643,8 +6646,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6675,8 +6678,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6706,8 +6709,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -6813,8 +6816,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -6857,8 +6860,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6939,8 +6942,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -6988,8 +6991,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7032,8 +7035,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7125,8 +7128,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -7173,8 +7176,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7249,8 +7252,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7302,8 +7305,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7350,8 +7353,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7387,8 +7390,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/addToReviewSetOperation':
@@ -7464,8 +7467,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7557,8 +7560,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -7636,8 +7639,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7673,8 +7676,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/sourceCollections/{sourceCollection-id}/lastEstimateStatisticsOperation':
@@ -7754,8 +7757,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -7793,8 +7796,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -7832,8 +7835,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: action
@@ -7938,8 +7941,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -8024,8 +8027,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8061,8 +8064,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/sourceCollections/$count':
@@ -8089,8 +8092,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/tags':
@@ -8180,8 +8183,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -8224,8 +8227,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8300,8 +8303,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8349,8 +8352,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8393,8 +8396,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8493,8 +8496,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-pageable:
@@ -8577,8 +8580,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8614,8 +8617,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/tags/{tag-id}/parent':
@@ -8686,8 +8689,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: operation
@@ -8715,8 +8718,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
   '/compliance/ediscovery/cases/{case-id}/tags/microsoft.graph.ediscovery.asHierarchy()':
@@ -8803,8 +8806,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
       x-ms-docs-operation-type: function
@@ -8827,8 +8830,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-02-01T00:00:00.0000000+00:00'
-        date: '2022-12-05T00:00:00.0000000+00:00'
+        removalDate: '2023-02-01T00:00:00.0000000-08:00'
+        date: '2022-12-05T00:00:00.0000000-08:00'
         version: 2022-12/ediscoveryNamespace
         description: 'The ediscovery Apis are deprecated under /compliance and will stop returning data from February 01, 2023. Please use the new ediscovery Apis under /security.'
 components:
@@ -18061,11 +18064,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.driveItem'
           additionalProperties:
             type: object
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.termStore.term:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -33699,13 +33697,3 @@ components:
       explode: false
       schema:
         type: boolean
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Security
-  version: v1.0-beta
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/beta
+  version: beta
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/beta/
-    description: Core
+  - url: https://graph.microsoft.com/beta
 paths:
   /security:
     get:
@@ -326,7 +329,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-list-alerts_v2?view=graph-rest-1.0
-      operationId: security_ListAlerts_v2
+      operationId: security.ListAlerts_v2
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -470,7 +473,7 @@ paths:
       tags:
         - security.alert
       summary: Create new navigation property to alerts_v2 for security
-      operationId: security_CreateAlerts_v2
+      operationId: security.CreateAlerts_v2
       requestBody:
         description: New navigation property
         content:
@@ -497,7 +500,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-alert-get?view=graph-rest-1.0
-      operationId: security_GetAlerts_v2
+      operationId: security.GetAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -578,7 +581,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/security-alert-update?view=graph-rest-1.0
-      operationId: security_UpdateAlerts_v2
+      operationId: security.UpdateAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -609,7 +612,7 @@ paths:
       tags:
         - security.alert
       summary: Delete navigation property alerts_v2 for security
-      operationId: security_DeleteAlerts_v2
+      operationId: security.DeleteAlerts_v2
       parameters:
         - name: alert-id
           in: path
@@ -636,7 +639,7 @@ paths:
       tags:
         - security.alert
       summary: Get the number of the resource
-      operationId: security.alerts_v2_GetCount
+      operationId: security.alerts_v2.GetCount
       parameters:
         - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
@@ -15751,8 +15754,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -16029,8 +16032,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -16102,8 +16105,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
     patch:
@@ -16146,8 +16149,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/security/subjectRightsRequests/{subjectRightsRequest-id}/approvers/$count':
@@ -16174,8 +16177,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators':
@@ -16618,8 +16621,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
@@ -16896,8 +16899,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
@@ -16969,8 +16972,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
     patch:
@@ -17013,8 +17016,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/security/subjectRightsRequests/{subjectRightsRequest-id}/collaborators/$count':
@@ -17041,8 +17044,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
+        removalDate: '2023-03-20T00:00:00.0000000-07:00'
+        date: '2023-03-09T00:00:00.0000000-08:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/security/subjectRightsRequests/{subjectRightsRequest-id}/microsoft.graph.getFinalAttachment()':
@@ -30238,11 +30241,6 @@ components:
         - teams
         - unknownFutureValue
       type: string
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.simulationAttackType:
       title: simulationAttackType
       enum:
@@ -55836,13 +55834,3 @@ components:
       explode: false
       schema:
         type: boolean
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]

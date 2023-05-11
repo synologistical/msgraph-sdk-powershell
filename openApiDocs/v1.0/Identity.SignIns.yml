@@ -1,10 +1,13 @@
 openapi: 3.0.1
 info:
-  title: Identity.SignIns
+  title: OData Service for namespace microsoft.graph - Subset
+  description: This OData service is located at https://graph.microsoft.com/v1.0
   version: v1.0
+  x-ms-generated-by:
+    toolName: Microsoft.OpenApi.OData
+    toolVersion: 1.0.9.0
 servers:
-  - url: https://graph.microsoft.com/v1.0/
-    description: Core
+  - url: https://graph.microsoft.com/v1.0
 paths:
   /dataPolicyOperations:
     get:
@@ -895,8 +898,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-pageable:
@@ -966,8 +969,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -1010,8 +1013,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -1039,8 +1042,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
   '/identity/b2xUserFlows/{b2xIdentityUserFlow-id}/languages':
@@ -6964,8 +6967,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-pageable:
@@ -6995,8 +6998,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -7058,8 +7061,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -7099,8 +7102,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -7135,8 +7138,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
@@ -7156,8 +7159,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
   /identityProviders/microsoft.graph.availableProviderTypes():
@@ -7194,8 +7197,8 @@ paths:
           $ref: '#/components/responses/error'
       deprecated: true
       x-ms-deprecation:
-        removalDate: '2023-03-15T00:00:00.0000000+00:00'
-        date: '2021-08-24T00:00:00.0000000+00:00'
+        removalDate: '2023-03-15T00:00:00.0000000-07:00'
+        date: '2021-08-24T00:00:00.0000000-07:00'
         version: 2021-05/identityProvider
         description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: function
@@ -21592,11 +21595,6 @@ components:
           description: The unique idenfier for an entity. Read-only.
       additionalProperties:
         type: object
-    ReferenceNumeric:
-      enum:
-        - '-INF'
-        - INF
-        - NaN
     microsoft.graph.dataPolicyOperationStatus:
       title: dataPolicyOperationStatus
       enum:
@@ -35076,13 +35074,3 @@ components:
           schema:
             $ref: '#/components/schemas/ReferenceCreate'
       required: true
-  securitySchemes:
-    azureaadv2:
-      type: oauth2
-      flows:
-        authorizationCode:
-          authorizationUrl: https://login.microsoftonline.com/common/oauth2/v2.0/authorize
-          tokenUrl: https://login.microsoftonline.com/common/oauth2/v2.0/token
-          scopes: { }
-security:
-  - azureaadv2: [ ]
