@@ -70731,6 +70731,116 @@ paths:
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
+  '/users/{user-id}/teamwork/associatedTeams/{associatedTeamInfo-id}/team':
+    get:
+      tags:
+        - users.userTeamwork
+      summary: Get team from users
+      operationId: user.teamwork.associatedTeam_GetTeam
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: associatedTeamInfo-id
+          in: path
+          description: The unique identifier of associatedTeamInfo
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: associatedTeamInfo
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - classification
+                - createdDateTime
+                - description
+                - discoverySettings
+                - displayName
+                - funSettings
+                - guestSettings
+                - internalId
+                - isArchived
+                - isMembershipLimitedToOwners
+                - memberSettings
+                - messagingSettings
+                - specialization
+                - summary
+                - tenantId
+                - visibility
+                - webUrl
+                - allChannels
+                - channels
+                - group
+                - incomingChannels
+                - installedApps
+                - members
+                - operations
+                - owners
+                - permissionGrants
+                - photo
+                - primaryChannel
+                - tags
+                - template
+                - templateDefinition
+                - schedule
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - allChannels
+                - channels
+                - group
+                - incomingChannels
+                - installedApps
+                - members
+                - operations
+                - owners
+                - permissionGrants
+                - photo
+                - primaryChannel
+                - tags
+                - template
+                - templateDefinition
+                - schedule
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.team'
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-20T00:00:00.0000000+00:00'
+        date: '2023-03-09T00:00:00.0000000+00:00'
+        version: 2023-03/Notification_Deprecation
+        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
+      x-ms-docs-operation-type: operation
   '/users/{user-id}/teamwork/associatedTeams/$count':
     get:
       tags:
@@ -71286,6 +71396,156 @@ paths:
       x-ms-deprecation:
         removalDate: '2023-03-20T00:00:00.0000000-07:00'
         date: '2023-03-09T00:00:00.0000000-08:00'
+        version: 2023-03/Notification_Deprecation
+        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/teamwork/installedApps/{userScopeTeamsAppInstallation-id}/teamsApp':
+    get:
+      tags:
+        - users.userTeamwork
+      summary: Get teamsApp from users
+      description: The app that is installed.
+      operationId: user.teamwork.installedApp_GetTeamsApp
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: userScopeTeamsAppInstallation-id
+          in: path
+          description: The unique identifier of userScopeTeamsAppInstallation
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: userScopeTeamsAppInstallation
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - distributionMethod
+                - externalId
+                - appDefinitions
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - appDefinitions
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.teamsApp'
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-20T00:00:00.0000000+00:00'
+        date: '2023-03-09T00:00:00.0000000+00:00'
+        version: 2023-03/Notification_Deprecation
+        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/teamwork/installedApps/{userScopeTeamsAppInstallation-id}/teamsAppDefinition':
+    get:
+      tags:
+        - users.userTeamwork
+      summary: Get teamsAppDefinition from users
+      description: The details of this version of the app.
+      operationId: user.teamwork.installedApp_GetTeamsAppDefinition
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: userScopeTeamsAppInstallation-id
+          in: path
+          description: The unique identifier of userScopeTeamsAppInstallation
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: userScopeTeamsAppInstallation
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - allowedInstallationScopes
+                - authorization
+                - azureADAppId
+                - createdBy
+                - description
+                - displayName
+                - lastModifiedDateTime
+                - publishingState
+                - shortdescription
+                - teamsAppId
+                - version
+                - bot
+                - colorIcon
+                - outlineIcon
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - bot
+                - colorIcon
+                - outlineIcon
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.teamsAppDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-20T00:00:00.0000000+00:00'
+        date: '2023-03-09T00:00:00.0000000+00:00'
         version: 2023-03/Notification_Deprecation
         description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
