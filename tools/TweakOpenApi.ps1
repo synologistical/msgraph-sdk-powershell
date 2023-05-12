@@ -17,12 +17,6 @@ $prepositionReplacements = @{
     For  = "GraphFPre"
     Of   = "GraphOPre"
 }
-
-$wordReplacements = @{
-    Deltum = "delta"
-    Quotum = "quota"
-    Statistic = "statistics"
-}
 $targetOperationIdRegex = [Regex]::new("([a-z*])($($prepositionReplacements.Keys -join "|"))([A-Z*]|$)", "Compiled")
 $stopwatch = [system.diagnostics.stopwatch]::StartNew()
 # Tweak prepositions in operationIds to byPass https://github.com/Azure/autorest.powershell/issues/795.
@@ -32,14 +26,6 @@ Get-ChildItem -Path $OpenAPIFilesPath | ForEach-Object {
     $updatedContent = Get-Content $filePath | ForEach-Object {
         if ($_.contains("operationId:")) {
             $operationId = $_
-            $wordReplacements.Keys | ForEach-Object {
-                if ($operationId.EndsWith($_, "CurrentCultureIgnoreCase")) {
-                    $operationId = ($operationId -replace $_, $wordReplacements[$_])
-                    $modified = $true
-                    Write-Debug "$_ -> $operationId".Trim()
-                }
-            }
-
             if (($targetOperationIdRegex.Match($_)).Success) {
                 $prepositionReplacements.Keys | ForEach-Object {
                     # Replace prepositions with replacement word.
