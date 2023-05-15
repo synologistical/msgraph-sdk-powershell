@@ -10,34 +10,11 @@ Param(
     [Switch] $SetNavigationPropertiesAsReadOnly
 )
 
-$prepositionReplacements = @{
-    By   = "GraphBPre"
-    With = "GraphWPre"
-    At   = "GraphAPre"
-    For  = "GraphFPre"
-    Of   = "GraphOPre"
-}
-$targetOperationIdRegex = [Regex]::new("([a-z*])($($prepositionReplacements.Keys -join "|"))([A-Z*]|$)", "Compiled")
 $stopwatch = [system.diagnostics.stopwatch]::StartNew()
-# Tweak prepositions in operationIds to byPass https://github.com/Azure/autorest.powershell/issues/795.
 Get-ChildItem -Path $OpenAPIFilesPath | ForEach-Object {
     $filePath = $_.FullName
     $modified = $false
     $updatedContent = Get-Content $filePath | ForEach-Object {
-        if ($_.contains("operationId:")) {
-            $operationId = $_
-            if (($targetOperationIdRegex.Match($_)).Success) {
-                $prepositionReplacements.Keys | ForEach-Object {
-                    # Replace prepositions with replacement word.
-                    #e.g., 'applications_GetCreatedOnBehalfOfByRef' will be renamed to 'applications_GetCreatedOnBehalfGraphOPreGraphBPreRef'.
-                    $operationId = ($operationId -creplace $_, $prepositionReplacements[$_])
-                    $modified = $true
-                    Write-Debug "$_ -> $operationId".Trim()
-                }
-            }
-            return $operationId
-        }
-
         if ($SetNavigationPropertiesAsReadOnly.IsPresent -and $_.contains("x-ms-navigationProperty: true")) {
             # Mark navigation properties as readOnly.
             $navigationPropertyExtension = ($_ -replace "x-ms-navigationProperty", "readOnly")

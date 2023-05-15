@@ -139,95 +139,6 @@ directive:
       parameter-name: Body
     set:
       parameter-name: BodyParameter
-# Rename cmdlets
-  - where:
-      verb: Invoke
-      subject: (^Delta)(.*)
-    set:
-      verb: Get
-      subject: $2$1
-  - where:
-      verb: Test
-      variant: ^(Check|Verify)(.*)
-    set:
-      verb: Confirm
-  - where:
-      subject: Io(Lob|Managed)
-    set:
-      subject: iOS$1
-  - where:
-      subject: ^(Office)(Configuration)(ClientConfiguration.*)
-    set:
-      subject: $1$3
-  - where:
-      verb: Invoke
-      subject: ^Link(.*)HasPayload$
-    set:
-      subject: Has$1PayloadLink
-# Remove *AvailableExtensionProperty commands except those bound to DirectoryObject.
-  - where:
-      subject: ^(?!DirectoryObject).*AvailableExtensionProperty$
-    remove: true
-  - where:
-      verb: Clear
-      subject: ^UserManagedAppRegistrationByDeviceTag$
-      variant: ^Wipe1$|^WipeExpanded1$|^WipeViaIdentity1$|^WipeViaIdentityExpanded1$
-# Remove commands
-  - where:
-      verb: Restore
-      subject: ^(Application|Contact|Contract|Device|DirectoryObject|DirectoryRole|DirectoryRoleTemplate|EntitlementManagementConnectedOrganizationInternalSponsor|Group|GroupPermissionGrant|Organization|ServicePrincipal|User|UserAuthenticationMicrosoftAuthenticatorMethodDevice|UserAuthenticationWindowHelloForBusinessMethodDevice|AdministrativeUnit|ChatPermissionGrant|DirectoryAdministrativeUnit|DirectorySettingTemplate|TeamPermissionGrant|UserAuthenticationPasswordlessMicrosoftAuthenticatorMethodDevice|UserChatPermissionGrant|UserDevice)$
-    remove: true
-# Rename prepositions to bypass https://github.com/Azure/autorest.powershell/issues/795.
-  - where:
-      subject: ^(\w*[a-z])GraphBPre(\w*)$
-    set:
-      subject: $1By$2
-  - where:
-      subject: ^(\w*[a-z])GraphWPre(\w*)$
-    set:
-      subject: $1With$2
-  - where:
-      subject: ^(\w*[a-z])GraphAPre(\w*)$
-    set:
-      subject: $1At$2
-  - where:
-      subject: ^(\w*[a-z])GraphFPre(\w*)$
-    set:
-      subject: $1For$2
-  - where:
-      subject: ^(\w*[a-z])GraphOPre(\w*)$
-    set:
-      subject: $1Of$2
-  - where:
-      verb: Clear
-      subject: ^UserManagedAppRegistrationByDeviceTag$
-      variant: ^Wipe$|^WipeExpanded$|^WipeViaIdentity$|^WipeViaIdentityExpanded$
-    remove: true
-  - where:
-      verb: New|Remove|Update|Get
-      subject: ^(.*)(IdentityGovernance)TermOfUse$
-    remove: true
-# Pluralize commands
-  - where:
-      subject: (\w*[a-z]|^)Window([^s]\w*|$)
-    set:
-      subject: $1Windows$2
-  - where:
-      subject: (\w*[a-z]|^)TermOfUse([A-Z]\w*|$)
-    set:
-      subject: $1TermsOfUse$2
-  - where:
-      subject: (\w*[a-z]|^)MethodSm([A-Z]\w*|$)
-    set:
-      subject: $1MethodSms$2
-  - where:
-      subject: (\w*[a-z]|^)PassiveDn([^s]\w*|$)
-    set:
-      subject: $1PassiveDns$2
-  - where:
-      subject: (\w*[a-z]|^)UsageRight([^s]\w*|$)
-    set:
-      subject: $1UsageRights$2
 # Modify OpenAPI documents to correct AutoREST.PowerShell limitations.
 # Change content-type from text/plain to application/json. AutoREST does not support non-json content types.
 # See https://github.com/Azure/autorest.powershell/issues/206.
@@ -263,6 +174,112 @@ directive:
     where: $..paths..responses['2XX'].content['application/octet-stream'].schema
     transform: >-
       if ($.type === 'object') { $['format'] = "binary" }
+# Preposition fix for https://github.com/Azure/autorest.powershell/issues/795.
+  - from: openapi-document
+    where: $.paths..operationId
+    transform: 'return $.replace(/By/, "GraphBPre")'
+  - from: openapi-document
+    where: $.paths..operationId
+    transform: 'return $.replace(/With/, "GraphWPre")'
+  - from: openapi-document
+    where: $.paths..operationId
+    transform: 'return $.replace(/At/, "GraphAPre")'
+  - from: openapi-document
+    where: $.paths..operationId
+    transform: 'return $.replace(/For/, "GraphFPre")'
+  - from: openapi-document
+    where: $.paths..operationId
+    transform: 'return $.replace(/Of/, "GraphOPre")'
+# Rename prepositions to bypass https://github.com/Azure/autorest.powershell/issues/795.
+  - where:
+      subject: ^(\w*[a-z])GraphBPre(\w*)$
+    set:
+      subject: $1By$2
+  - where:
+      subject: ^(\w*[a-z])GraphWPre(\w*)$
+    set:
+      subject: $1With$2
+  - where:
+      subject: ^(\w*[a-z])GraphAPre(\w*)$
+    set:
+      subject: $1At$2
+  - where:
+      subject: ^(\w*[a-z])GraphFPre(\w*)$
+    set:
+      subject: $1For$2
+  - where:
+      subject: ^(\w*[a-z])GraphOPre(\w*)$
+    set:
+      subject: $1Of$2
+# Rename cmdlets
+  - where:
+      verb: Invoke
+      subject: (^Delta)(.*)
+    set:
+      verb: Get
+      subject: $2$1
+  - where:
+      verb: Test
+      variant: ^(Check|Verify)(.*)
+    set:
+      verb: Confirm
+  - where:
+      subject: Io(Lob|Managed)
+    set:
+      subject: iOS$1
+  - where:
+      subject: ^(Office)(Configuration)(ClientConfiguration.*)
+    set:
+      subject: $1$3
+  - where:
+      verb: Invoke
+      subject: ^Link(.*)HasPayload$
+    set:
+      subject: Has$1PayloadLink
+# Remove *AvailableExtensionProperty commands except those bound to DirectoryObject.
+  - where:
+      subject: ^(?!DirectoryObject).*AvailableExtensionProperty$
+    remove: true
+  - where:
+      verb: Clear
+      subject: ^UserManagedAppRegistrationByDeviceTag$
+      variant: ^Wipe1$|^WipeExpanded1$|^WipeViaIdentity1$|^WipeViaIdentityExpanded1$
+    remove: true
+# Remove commands
+  - where:
+      verb: Restore
+      subject: ^(Application|Contact|Contract|Device|DirectoryObject|DirectoryRole|DirectoryRoleTemplate|EntitlementManagementConnectedOrganizationInternalSponsor|Group|GroupPermissionGrant|Organization|ServicePrincipal|User|UserAuthenticationMicrosoftAuthenticatorMethodDevice|UserAuthenticationWindowHelloForBusinessMethodDevice|AdministrativeUnit|ChatPermissionGrant|DirectoryAdministrativeUnit|DirectorySettingTemplate|TeamPermissionGrant|UserAuthenticationPasswordlessMicrosoftAuthenticatorMethodDevice|UserChatPermissionGrant|UserDevice)$
+    remove: true
+  - where:
+      verb: Clear
+      subject: ^UserManagedAppRegistrationByDeviceTag$
+      variant: ^Wipe$|^WipeExpanded$|^WipeViaIdentity$|^WipeViaIdentityExpanded$
+    remove: true
+  - where:
+      verb: New|Remove|Update|Get
+      subject: ^(.*)(IdentityGovernance)TermOfUse$
+    remove: true
+# Pluralize commands
+  - where:
+      subject: (\w*[a-z]|^)Window([^s]\w*|$)
+    set:
+      subject: $1Windows$2
+  - where:
+      subject: (\w*[a-z]|^)TermOfUse([A-Z]\w*|$)
+    set:
+      subject: $1TermsOfUse$2
+  - where:
+      subject: (\w*[a-z]|^)MethodSm([A-Z]\w*|$)
+    set:
+      subject: $1MethodSms$2
+  - where:
+      subject: (\w*[a-z]|^)PassiveDn([^s]\w*|$)
+    set:
+      subject: $1PassiveDns$2
+  - where:
+      subject: (\w*[a-z]|^)UsageRight([^s]\w*|$)
+    set:
+      subject: $1UsageRights$2
 # Modify generated .json.cs model classes.
   - from: source-file-csharp
     where: $
