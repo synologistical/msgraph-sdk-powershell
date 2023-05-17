@@ -11,6 +11,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function recent
+      description: 'Get recent activities for a given user. This OData function has some default behaviors included to make it operate like a ''most recently used'' API. The service will query for the most recent historyItems, and then pull those related activities. Activities will be sorted according to the most recent **lastModified** on the **historyItem**. This means that activities without **historyItems** will not be included in the response. The UserActivity.ReadWrite.CreatedByApp permission will also apply extra filtering to the response, so that only activities created by your application are returned. This server-side filtering might result in empty pages if the user is particularly active and other applications have created more recent activities. To get your application''s activities, use the **nextLink** property to paginate.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/projectrome-get-recent-activities?view=graph-rest-1.0
       operationId: users.activities_recent
       parameters:
         - name: user-id
@@ -120,6 +124,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendar.calendarView.instances_delta
       parameters:
         - name: user-id
@@ -326,6 +334,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendar.calendarView_delta
       parameters:
         - name: user-id
@@ -524,6 +536,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendar.events.instances_delta
       parameters:
         - name: user-id
@@ -730,6 +746,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendar.events_delta
       parameters:
         - name: user-id
@@ -978,6 +998,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarGroups.calendars.calendarView.instances_delta
       parameters:
         - name: user-id
@@ -1200,6 +1224,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarGroups.calendars.calendarView_delta
       parameters:
         - name: user-id
@@ -1414,6 +1442,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarGroups.calendars.events.instances_delta
       parameters:
         - name: user-id
@@ -1636,6 +1668,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarGroups.calendars.events_delta
       parameters:
         - name: user-id
@@ -1916,6 +1952,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendars.calendarView.instances_delta
       parameters:
         - name: user-id
@@ -2130,6 +2170,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendars.calendarView_delta
       parameters:
         - name: user-id
@@ -2336,6 +2380,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendars.events.instances_delta
       parameters:
         - name: user-id
@@ -2550,6 +2598,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendars.events_delta
       parameters:
         - name: user-id
@@ -2814,6 +2866,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarView.instances_delta
       parameters:
         - name: user-id
@@ -3020,6 +3076,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.calendarView_delta
       parameters:
         - name: user-id
@@ -3659,6 +3719,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the contacts in \nthat folder. This allows you to maintain and synchronize a local store of a user's contacts without \nhaving to fetch the entire set of contacts from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0
       operationId: users.contactFolders.childFolders.contacts_delta
       parameters:
         - name: user-id
@@ -3862,6 +3926,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of contact folders that have been added, deleted, or removed from the user's mailbox. A **delta** function call for contact folders in a mailbox is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the contact folders. This allows you to maintain and synchronize \na local store of a user's contact folders without having to fetch all the contact folders of that mailbox from the server every time."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/contactfolder-delta?view=graph-rest-1.0
       operationId: users.contactFolders.childFolders_delta
       parameters:
         - name: user-id
@@ -3952,6 +4020,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the contacts in \nthat folder. This allows you to maintain and synchronize a local store of a user's contacts without \nhaving to fetch the entire set of contacts from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0
       operationId: users.contactFolders.contacts_delta
       parameters:
         - name: user-id
@@ -4147,6 +4219,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of contact folders that have been added, deleted, or removed from the user's mailbox. A **delta** function call for contact folders in a mailbox is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the contact folders. This allows you to maintain and synchronize \na local store of a user's contact folders without having to fetch all the contact folders of that mailbox from the server every time."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/contactfolder-delta?view=graph-rest-1.0
       operationId: users.contactFolders_delta
       parameters:
         - name: user-id
@@ -4229,6 +4305,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of contacts that have been added, deleted, or updated in a specified folder. A **delta** function call for contacts in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the contacts in \nthat folder. This allows you to maintain and synchronize a local store of a user's contacts without \nhaving to fetch the entire set of contacts from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/contact-delta?view=graph-rest-1.0
       operationId: users.contacts_delta
       parameters:
         - name: user-id
@@ -7510,6 +7590,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.events.instances_delta
       parameters:
         - name: user-id
@@ -7716,6 +7800,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: 'Get a set of event resources that have been added, deleted, or updated in a **calendarView** (a range of events defined by start and end dates) of the user''s primary calendar. Typically, synchronizing events in a **calendarView** in a local store entails a round of multiple **delta** function calls. The initial call is a full synchronization, and every subsequent **delta** call in the same round gets the incremental changes (additions, deletions, or updates). This allows you to maintain and synchronize a local store of events in the specified **calendarView**, without having to fetch all the events of that calendar from the server every time.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/event-delta?view=graph-rest-1.0
       operationId: users.events_delta
       parameters:
         - name: user-id
@@ -8954,6 +9042,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of messages that have been added, deleted, or updated in a specified folder. A **delta** function call for messages in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, you can [query for incremental changes in the messages in \nthat folder](/graph/delta-query-messages). This allows you to maintain and synchronize a local store of a user's messages without \nhaving to fetch the entire set of messages from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/message-delta?view=graph-rest-1.0
       operationId: users.mailFolders.childFolders.messages_delta
       parameters:
         - name: user-id
@@ -9136,6 +9228,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of mail folders that have been added, deleted, or removed from the user's mailbox. A **delta** function call for mail folders in a mailbox is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the mail folders. This allows you to maintain and synchronize \na local store of a user's mail folders without having to fetch all the mail folders of that mailbox from the server every time."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/mailfolder-delta?view=graph-rest-1.0
       operationId: users.mailFolders.childFolders_delta
       parameters:
         - name: user-id
@@ -9239,6 +9335,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of messages that have been added, deleted, or updated in a specified folder. A **delta** function call for messages in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, you can [query for incremental changes in the messages in \nthat folder](/graph/delta-query-messages). This allows you to maintain and synchronize a local store of a user's messages without \nhaving to fetch the entire set of messages from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/message-delta?view=graph-rest-1.0
       operationId: users.mailFolders.messages_delta
       parameters:
         - name: user-id
@@ -9413,6 +9513,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of mail folders that have been added, deleted, or removed from the user's mailbox. A **delta** function call for mail folders in a mailbox is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, \nyou can query for incremental changes in the mail folders. This allows you to maintain and synchronize \na local store of a user's mail folders without having to fetch all the mail folders of that mailbox from the server every time."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/mailfolder-delta?view=graph-rest-1.0
       operationId: users.mailFolders_delta
       parameters:
         - name: user-id
@@ -9508,6 +9612,10 @@ paths:
       tags:
         - users.Functions
       summary: Invoke function delta
+      description: "Get a set of messages that have been added, deleted, or updated in a specified folder. A **delta** function call for messages in a folder is similar to a GET request, except that by appropriately \napplying state tokens in one or more of these calls, you can [query for incremental changes in the messages in \nthat folder](/graph/delta-query-messages). This allows you to maintain and synchronize a local store of a user's messages without \nhaving to fetch the entire set of messages from the server every time.  "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/message-delta?view=graph-rest-1.0
       operationId: users.messages_delta
       parameters:
         - name: user-id
@@ -10185,11 +10293,54 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
+  '/users/{user-id}/onlineMeetings/{onlineMeeting-id}/microsoft.graph.getVirtualAppointmentJoinWebUrl()':
+    get:
+      tags:
+        - users.Functions
+      summary: Invoke function getVirtualAppointmentJoinWebUrl
+      operationId: users.onlineMeetings_getVirtualAppointmentJoinWebUrl
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: onlineMeeting-id
+          in: path
+          description: The unique identifier of onlineMeeting
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: onlineMeeting
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: string
+                    nullable: true
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: function
   '/users/{user-id}/outlook/microsoft.graph.supportedLanguages()':
     get:
       tags:
         - users.Functions
       summary: Invoke function supportedLanguages
+      description: "Get the list of locales and languages that are supported for the user, as configured on the user's mailbox server. When setting up an Outlook client, the user selects the preferred language from this supported list. You can subsequently get the preferred language by \ngetting the user's mailbox settings."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookuser-supportedlanguages?view=graph-rest-1.0
       operationId: users.outlook_supportedLanguages
       parameters:
         - name: user-id
@@ -14492,7 +14643,7 @@ components:
         lastNonInteractiveSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastNonInteractiveSignInRequestId:
@@ -14502,7 +14653,7 @@ components:
         lastSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user signed in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastSignInRequestId:
@@ -21393,7 +21544,7 @@ components:
               description: List of time periods between joining and leaving a meeting.
             emailAddress:
               type: string
-              description: Email address of the user associated with this atttendance record.
+              description: Email address of the user associated with this attendance record.
               nullable: true
             identity:
               $ref: '#/components/schemas/microsoft.graph.identity'
@@ -21444,6 +21595,10 @@ components:
               description: 'The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
+            deviceCategory:
+              type: string
+              description: User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+              nullable: true
             deviceId:
               type: string
               description: 'Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).'
@@ -21451,6 +21606,10 @@ components:
             deviceMetadata:
               type: string
               description: For internal use only. Set to null.
+              nullable: true
+            deviceOwnership:
+              type: string
+              description: 'Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.'
               nullable: true
             deviceVersion:
               maximum: 2147483647
@@ -21462,6 +21621,10 @@ components:
             displayName:
               type: string
               description: 'The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
+              nullable: true
+            enrollmentProfileName:
+              type: string
+              description: 'Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.'
               nullable: true
             isCompliant:
               type: boolean
@@ -21501,6 +21664,12 @@ components:
             profileType:
               type: string
               description: 'The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.'
+              nullable: true
+            registrationDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: 'Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
+              format: date-time
               nullable: true
             systemLabels:
               type: array
