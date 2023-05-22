@@ -3065,6 +3065,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Sites.yml"
     },
+    "/sites/microsoft.graph.getAllSites()": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Sites.yml"
+    },
     "/sites/microsoft.graph.remove": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Sites.yml"

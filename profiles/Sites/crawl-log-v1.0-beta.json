@@ -2421,6 +2421,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Sites.yml"
     },
+    "/sites/microsoft.graph.getAllSites()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Sites.yml"
+    },
     "/sites/microsoft.graph.remove": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Sites.yml"

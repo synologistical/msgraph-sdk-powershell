@@ -5024,6 +5024,8 @@ paths:
                 - imAddresses desc
                 - infoCatalogs
                 - infoCatalogs desc
+                - isLicenseReconciliationNeeded
+                - isLicenseReconciliationNeeded desc
                 - isManagementRestricted
                 - isManagementRestricted desc
                 - isResourceAccount
@@ -5170,6 +5172,7 @@ paths:
                 - identities
                 - imAddresses
                 - infoCatalogs
+                - isLicenseReconciliationNeeded
                 - isManagementRestricted
                 - isResourceAccount
                 - jobTitle
@@ -28758,6 +28761,8 @@ paths:
                 - imAddresses desc
                 - infoCatalogs
                 - infoCatalogs desc
+                - isLicenseReconciliationNeeded
+                - isLicenseReconciliationNeeded desc
                 - isManagementRestricted
                 - isManagementRestricted desc
                 - isResourceAccount
@@ -28904,6 +28909,7 @@ paths:
                 - identities
                 - imAddresses
                 - infoCatalogs
+                - isLicenseReconciliationNeeded
                 - isManagementRestricted
                 - isResourceAccount
                 - jobTitle
@@ -48776,26 +48782,26 @@ components:
               nullable: true
             categoryId:
               type: string
-              description: Specifies the area group under which the setting is configured in a specified configuration service provider (CSP)
+              description: Specify category in which the setting is under. Support $filters.
               nullable: true
             description:
               type: string
-              description: Description of the item
+              description: Description of the setting.
               nullable: true
             displayName:
               type: string
-              description: Display name of the item
+              description: 'Name of the setting. For example: Allow Toast.'
               nullable: true
             helpText:
               type: string
-              description: Help text of the item
+              description: Help text of the setting. Give more details of the setting.
               nullable: true
             infoUrls:
               type: array
               items:
                 type: string
                 nullable: true
-              description: List of links more info for the setting can be found at
+              description: List of links more info for the setting can be found at.
             keywords:
               type: array
               items:
@@ -48819,7 +48825,7 @@ components:
               description: List of referred setting information.
             rootDefinitionId:
               type: string
-              description: Root setting definition if the setting is a child setting.
+              description: Root setting definition id if the setting is a child setting.
               nullable: true
             settingUsage:
               $ref: '#/components/schemas/microsoft.graph.deviceManagementConfigurationSettingUsage'
@@ -59119,6 +59125,10 @@ components:
               items:
                 type: string
               description: 'Identifies the info segments assigned to the user.  Supports $filter (eq, not, ge, le, startsWith).'
+            isLicenseReconciliationNeeded:
+              type: boolean
+              description: Indicates whether the user is pending an exchange mailbox license assignment.  Read-only.  Supports $filter (eq where true only).
+              nullable: true
             isManagementRestricted:
               type: boolean
               nullable: true
@@ -59249,6 +59259,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceProvisioningError'
+              description: 'Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a user object .  Supports $filter (eq, not, for isResolved and serviceInstance).'
             showInAddressList:
               type: boolean
               description: Do not use in Microsoft Graph. Manage this property through the Microsoft 365 admin center instead. Represents whether the user should be included in the Outlook global address list. See Known issue.
@@ -60850,7 +60861,7 @@ components:
       properties:
         settingDefinitionId:
           type: string
-          description: Setting definition id that is being referred to a setting. Applicable for reusable setting.
+          description: Setting definition id that is being referred to a setting. Applicable for reusable setting
           nullable: true
       additionalProperties:
         type: object
@@ -61946,10 +61957,10 @@ components:
       properties:
         name:
           type: string
-          description: Name for this key-value pair
+          description: 'Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.'
         value:
           type: string
-          description: Value for this key-value pair
+          description: 'Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.'
           nullable: true
       additionalProperties:
         type: object
@@ -65241,6 +65252,7 @@ components:
               nullable: true
             cloudPcNamingTemplate:
               type: string
+              description: 'The template used to name Cloud PCs provisioned using this policy. This can contain custom text and replacement tokens, including %USERNAME:x% and %RAND:x%, which represent the user''s name and a randomly generated number, respectively. For example, ''CPC-%USERNAME:4%-%RAND:5%'' means that the Cloud PC''s name will start with ''CPC-'', have a four-character username in the middle followed by a ''-'' character, and end with five random characters. The total length of the text generated by the template can be no more than 15 characters. Supports $filter, $select, $orderBy.'
               nullable: true
             description:
               type: string
@@ -68571,13 +68583,16 @@ components:
         createdDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
+          description: The date and time at which the error occurred.
           format: date-time
           nullable: true
         isResolved:
           type: boolean
+          description: Indicates whether the Error has been attended to.
           nullable: true
         serviceInstance:
           type: string
+          description: 'Qualified service instance (e.g., ''SharePoint/Dublin'') that published the service error information.'
           nullable: true
       additionalProperties:
         type: object
@@ -68797,7 +68812,7 @@ components:
             preferredTokenSigningKeyEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.'
+              description: 'Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint. Updating this attribute is not currentlysupported. For details, see ServicePrincipal property differences.'
               format: date-time
               nullable: true
             preferredTokenSigningKeyThumbprint:
@@ -69728,6 +69743,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceProvisioningError'
+              description: 'Errors published by a federated service describing a non-transient, service-specific error regarding the properties or link from a group object .  Supports $filter (eq, not, for isResolved and serviceInstance).'
             theme:
               type: string
               description: 'Specifies a Microsoft 365 group''s color theme. Possible values are Teal, Purple, Green, Blue, Pink, Orange or Red. Returned by default.'
@@ -72451,6 +72467,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.user'
+              description: 'The assignment targeted users for the provisioning policy. This list of users is computed based on assignments, licenses, group memberships, and policies. This property is read-only. Supports$expand.'
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
@@ -73854,11 +73871,11 @@ components:
           nullable: true
         type:
           type: string
-          description: 'The type of key credential; for example, Symmetric, AsymmetricX509Cert.'
+          description: 'The type of key credential; for example, Symmetric, AsymmetricX509Cert, or X509CertAndPassword.'
           nullable: true
         usage:
           type: string
-          description: 'A string that describes the purpose for which the key can be used; for example, Verify.'
+          description: 'A string that describes the purpose for which the key can be used; for example, None​, Verify​, PairwiseIdentifier​, Delegation​, Decrypt​, Encrypt​, HashedIdentifier​, SelfSignedTls, or Sign. If usage is Sign​, the type should be X509CertAndPassword​, and the passwordCredentials​ for signing should be defined.'
           nullable: true
       additionalProperties:
         type: object
@@ -78563,33 +78580,42 @@ components:
               items:
                 type: string
                 nullable: true
+              description: The assigned categories for the team template.
             description:
               type: string
+              description: A brief description of the team template as it will appear to the users in Microsoft Teams.
               nullable: true
             displayName:
               type: string
+              description: The user defined name of the team template.
               nullable: true
             iconUrl:
               type: string
+              description: The icon url for the team template.
               nullable: true
             languageTag:
               type: string
+              description: Language the template is available in.
               nullable: true
             lastModifiedBy:
               $ref: '#/components/schemas/microsoft.graph.identitySet'
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
+              description: The date time of when the team template was last modified.
               format: date-time
               nullable: true
             parentTemplateId:
               type: string
+              description: The templateId for the team template
               nullable: true
             publisherName:
               type: string
+              description: The organization which published the team template.
               nullable: true
             shortDescription:
               type: string
+              description: A short-description of the team template as it will appear to the users in Microsoft Teams.
               nullable: true
             teamDefinition:
               $ref: '#/components/schemas/microsoft.graph.team'
@@ -82744,7 +82770,7 @@ components:
               description: List of time periods between joining and leaving a meeting.
             emailAddress:
               type: string
-              description: Email address of the user associated with this atttendance record.
+              description: Email address of the user associated with this attendance record.
               nullable: true
             identity:
               $ref: '#/components/schemas/microsoft.graph.identity'
