@@ -37,6 +37,70 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
     },
+    "/print/printers/{printer-id}/jobs": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/documents": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.abort": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.cancel": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.redirect": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.start": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/tasks": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printers/{printer-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
     "/print/printers/{printer-id}/microsoft.graph.getCapabilities()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
@@ -113,6 +177,70 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
     },
+    "/print/printerShares/{printerShare-id}/jobs": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.abort": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancel": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.redirect": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.start": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/printerShares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
     "/print/printerShares/{printerShare-id}/printer": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
@@ -166,6 +294,70 @@
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
     },
     "/print/shares/{printerShare-id}/allowedUsers/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/$value": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/documents/{printDocument-id}/microsoft.graph.createUploadSession": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.abort": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancel": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.cancelPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.redirect": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.start": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/microsoft.graph.startPrintJob": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/definition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
+    },
+    "/print/shares/{printerShare-id}/jobs/{printJob-id}/tasks/{printTask-id}/trigger": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Devices.CloudPrint.yml"
     },

@@ -605,6 +605,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Security.yml"
     },
+    "/security/threatIntelligence/articleIndicators/{articleIndicator-id}/artifact": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Security.yml"
+    },
     "/security/threatIntelligence/articles": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Security.yml"
@@ -714,6 +718,10 @@
       "originalLocation": "/openApiDocs/beta/Security.yml"
     },
     "/security/threatIntelligence/intelligenceProfileIndicators/{intelligenceProfileIndicator-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Security.yml"
+    },
+    "/security/threatIntelligence/intelligenceProfileIndicators/{intelligenceProfileIndicator-id}/artifact": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Security.yml"
     },

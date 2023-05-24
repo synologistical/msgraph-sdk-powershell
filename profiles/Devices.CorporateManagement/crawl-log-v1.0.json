@@ -21,6 +21,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
+    "/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection-id}/assignments": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
     "/deviceAppManagement/androidManagedAppProtections/{androidManagedAppProtection-id}/deploymentSummary": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
@@ -58,6 +66,14 @@
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
     "/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection-id}/apps/{managedMobileApp-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection-id}/assignments": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/iosManagedAppProtections/{iosManagedAppProtection-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
@@ -182,6 +198,30 @@
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
     "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/assignments": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/exemptAppLockerFiles": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/exemptAppLockerFiles/{windowsInformationProtectionAppLockerFile-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/protectedAppLockerFiles": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/mdmWindowsInformationProtectionPolicies/{mdmWindowsInformationProtectionPolicy-id}/protectedAppLockerFiles/{windowsInformationProtectionAppLockerFile-id}": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
@@ -338,6 +378,30 @@
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
     "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/assignments": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/assignments/{targetedManagedAppPolicyAssignment-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/exemptAppLockerFiles": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/exemptAppLockerFiles/{windowsInformationProtectionAppLockerFile-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/protectedAppLockerFiles": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
+    },
+    "/deviceAppManagement/windowsInformationProtectionPolicies/{windowsInformationProtectionPolicy-id}/protectedAppLockerFiles/{windowsInformationProtectionAppLockerFile-id}": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Devices.CorporateManagement.yml"
     },
