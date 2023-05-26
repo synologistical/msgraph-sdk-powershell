@@ -1238,7 +1238,7 @@ paths:
         - deviceManagement.managedAllDeviceCertificateState
       summary: Get deviceConfigurationsAllManagedDeviceCertificateStates from deviceManagement
       description: Summary of all certificates for all devices.
-      operationId: deviceManagement_ListDeviceConfigurationsAllManagedDeviceCertificateStates
+      operationId: deviceManagement_ListDeviceConfigurationsGraphAlPreManagedDeviceCertificateStates
       parameters:
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
@@ -1331,7 +1331,7 @@ paths:
       tags:
         - deviceManagement.managedAllDeviceCertificateState
       summary: Create new navigation property to deviceConfigurationsAllManagedDeviceCertificateStates for deviceManagement
-      operationId: deviceManagement_CreateDeviceConfigurationsAllManagedDeviceCertificateStates
+      operationId: deviceManagement_CreateDeviceConfigurationsGraphAlPreManagedDeviceCertificateStates
       requestBody:
         description: New navigation property
         content:
@@ -1355,7 +1355,7 @@ paths:
         - deviceManagement.managedAllDeviceCertificateState
       summary: Get deviceConfigurationsAllManagedDeviceCertificateStates from deviceManagement
       description: Summary of all certificates for all devices.
-      operationId: deviceManagement_GetDeviceConfigurationsAllManagedDeviceCertificateStates
+      operationId: deviceManagement_GetDeviceConfigurationsGraphAlPreManagedDeviceCertificateStates
       parameters:
         - name: managedAllDeviceCertificateState-id
           in: path
@@ -1415,7 +1415,7 @@ paths:
       tags:
         - deviceManagement.managedAllDeviceCertificateState
       summary: Update the navigation property deviceConfigurationsAllManagedDeviceCertificateStates in deviceManagement
-      operationId: deviceManagement_UpdateDeviceConfigurationsAllManagedDeviceCertificateStates
+      operationId: deviceManagement_UpdateDeviceConfigurationsGraphAlPreManagedDeviceCertificateStates
       parameters:
         - name: managedAllDeviceCertificateState-id
           in: path
@@ -1442,7 +1442,7 @@ paths:
       tags:
         - deviceManagement.managedAllDeviceCertificateState
       summary: Delete navigation property deviceConfigurationsAllManagedDeviceCertificateStates for deviceManagement
-      operationId: deviceManagement_DeleteDeviceConfigurationsAllManagedDeviceCertificateStates
+      operationId: deviceManagement_DeleteDeviceConfigurationsGraphAlPreManagedDeviceCertificateStates
       parameters:
         - name: managedAllDeviceCertificateState-id
           in: path

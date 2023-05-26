@@ -29233,7 +29233,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-createreplyall?view=graph-rest-1.0
-      operationId: users.mailFolders.childFolders.messages_createReplyAll
+      operationId: users.mailFolders.childFolders.messages_createReplyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -29658,7 +29658,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-replyall?view=graph-rest-1.0
-      operationId: users.mailFolders.childFolders.messages_replyAll
+      operationId: users.mailFolders.childFolders.messages_replyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -30226,7 +30226,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-createreplyall?view=graph-rest-1.0
-      operationId: users.mailFolders.messages_createReplyAll
+      operationId: users.mailFolders.messages_createReplyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -30603,7 +30603,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-replyall?view=graph-rest-1.0
-      operationId: users.mailFolders.messages_replyAll
+      operationId: users.mailFolders.messages_replyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -33221,7 +33221,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-createreplyall?view=graph-rest-1.0
-      operationId: users.messages_createReplyAll
+      operationId: users.messages_createReplyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -33550,7 +33550,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/message-replyall?view=graph-rest-1.0
-      operationId: users.messages_replyAll
+      operationId: users.messages_replyGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -34090,7 +34090,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/user-invalidateallrefreshtokens?view=graph-rest-1.0
-      operationId: users_invalidateAllRefreshTokens
+      operationId: users_invalidateGraphAlPreRefreshTokens
       parameters:
         - name: user-id
           in: path
@@ -34118,7 +34118,7 @@ paths:
         - users.Actions
       summary: Invoke action removeAllDevicesFromManagement
       description: Retire all devices from management for this user
-      operationId: users_removeAllDevicesFromManagement
+      operationId: users_removeGraphAlPreDevicesFromManagement
       parameters:
         - name: user-id
           in: path
@@ -36752,7 +36752,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-recordalldecisions?view=graph-rest-1.0
-      operationId: users.pendingAccessReviewInstances.decisions.instance.stages.decisions_recordAllDecisions
+      operationId: users.pendingAccessReviewInstances.decisions.instance.stages.decisions_recordGraphAlPreDecisions
       parameters:
         - name: user-id
           in: path
@@ -36884,7 +36884,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-recordalldecisions?view=graph-rest-1.0
-      operationId: users.pendingAccessReviewInstances.decisions_recordAllDecisions
+      operationId: users.pendingAccessReviewInstances.decisions_recordGraphAlPreDecisions
       parameters:
         - name: user-id
           in: path
@@ -37236,7 +37236,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-recordalldecisions?view=graph-rest-1.0
-      operationId: users.pendingAccessReviewInstances.stages.decisions.instance.decisions_recordAllDecisions
+      operationId: users.pendingAccessReviewInstances.stages.decisions.instance.decisions_recordGraphAlPreDecisions
       parameters:
         - name: user-id
           in: path
@@ -37716,7 +37716,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-recordalldecisions?view=graph-rest-1.0
-      operationId: users.pendingAccessReviewInstances.stages.decisions_recordAllDecisions
+      operationId: users.pendingAccessReviewInstances.stages.decisions_recordGraphAlPreDecisions
       parameters:
         - name: user-id
           in: path

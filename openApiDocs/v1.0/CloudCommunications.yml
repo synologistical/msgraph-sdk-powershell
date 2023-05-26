@@ -2506,6 +2506,8 @@ paths:
                 - metadata desc
                 - recordingInfo
                 - recordingInfo desc
+                - restrictedExperience
+                - restrictedExperience desc
               type: string
         - name: $select
           in: query
@@ -2524,6 +2526,7 @@ paths:
                 - mediaStreams
                 - metadata
                 - recordingInfo
+                - restrictedExperience
               type: string
         - name: $expand
           in: query
@@ -2621,6 +2624,7 @@ paths:
                 - mediaStreams
                 - metadata
                 - recordingInfo
+                - restrictedExperience
               type: string
         - name: $expand
           in: query
@@ -2874,10 +2878,10 @@ paths:
       tags:
         - communications.Actions
       summary: Invoke action invite
-      description: 'Delete a specific participant in a call. In some situations, it is appropriate for an application to remove a participant from an active call. This action can be done before or after the participant answers the call. When an active caller is removed, they are immediately dropped from the call with no pre- or post-removal notification. When an invited participant is removed, any outstanding add participant request is canceled. '
+      description: 'Invite participants to the active call. For more information about how to handle operations, see commsOperation.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/participant-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/participant-invite?view=graph-rest-1.0
       operationId: communications.calls.participants_invite
       parameters:
         - name: call-id
@@ -5900,6 +5904,8 @@ components:
               nullable: true
             recordingInfo:
               $ref: '#/components/schemas/microsoft.graph.recordingInfo'
+            restrictedExperience:
+              $ref: '#/components/schemas/microsoft.graph.onlineMeetingRestricted'
           additionalProperties:
             type: object
     microsoft.graph.startHoldMusicOperation:
@@ -6441,6 +6447,16 @@ components:
           $ref: '#/components/schemas/microsoft.graph.identitySet'
         recordingStatus:
           $ref: '#/components/schemas/microsoft.graph.recordingStatus'
+      additionalProperties:
+        type: object
+    microsoft.graph.onlineMeetingRestricted:
+      title: onlineMeetingRestricted
+      type: object
+      properties:
+        contentSharingDisabled:
+          $ref: '#/components/schemas/microsoft.graph.onlineMeetingContentSharingDisabledReason'
+        videoDisabled:
+          $ref: '#/components/schemas/microsoft.graph.onlineMeetingVideoDisabledReason'
       additionalProperties:
         type: object
     microsoft.graph.teleconferenceDeviceMediaQuality:
@@ -7366,6 +7382,18 @@ components:
         - sendOnly
         - receiveOnly
         - sendReceive
+      type: string
+    microsoft.graph.onlineMeetingContentSharingDisabledReason:
+      title: onlineMeetingContentSharingDisabledReason
+      enum:
+        - watermarkProtection
+        - unknownFutureValue
+      type: string
+    microsoft.graph.onlineMeetingVideoDisabledReason:
+      title: onlineMeetingVideoDisabledReason
+      enum:
+        - watermarkProtection
+        - unknownFutureValue
       type: string
     ReferenceNumeric:
       enum:

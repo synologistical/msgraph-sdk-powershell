@@ -3248,7 +3248,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/participant-muteall?view=graph-rest-1.0
-      operationId: communications.calls.participants_muteAll
+      operationId: communications.calls.participants_muteGraphAlPre
       parameters:
         - name: call-id
           in: path
@@ -4909,11 +4909,11 @@ paths:
     delete:
       tags:
         - communications.onlineMeeting
-      summary: Delete meetingRegistration
-      description: Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+      summary: Delete externalMeetingRegistration
+      description: Disable and delete the externalMeetingRegistration of an onlineMeeting.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0
       operationId: communications.onlineMeetings_DeleteRegistration
       parameters:
         - name: onlineMeeting-id
@@ -8348,11 +8348,11 @@ paths:
     delete:
       tags:
         - users.onlineMeeting
-      summary: Delete meetingRegistration
-      description: Disable and delete the meetingRegistration of an onlineMeeting on behalf of the organizer.
+      summary: Delete externalMeetingRegistration
+      description: Disable and delete the externalMeetingRegistration of an onlineMeeting.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/meetingregistration-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/externalmeetingregistration-delete?view=graph-rest-1.0
       operationId: users.onlineMeetings_DeleteRegistration
       parameters:
         - name: user-id
@@ -9689,11 +9689,11 @@ paths:
     get:
       tags:
         - users.presence
-      summary: 'presence: setStatusMessage'
-      description: Set a presence status message for a user. An optional expiration date and time can be supplied.
+      summary: Get presence
+      description: Get a user's presence information.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/presence-setstatusmessage?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/presence-get?view=graph-rest-1.0
       operationId: users_GetPresence
       parameters:
         - name: user-id
@@ -11675,11 +11675,11 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
+          description: The display name of the identity. This property is read-only.
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
+          description: The identifier of the identity. This property is read-only.
           nullable: true
       additionalProperties:
         type: object

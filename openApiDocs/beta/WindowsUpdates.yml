@@ -4005,11 +4005,11 @@ paths:
     get:
       tags:
         - admin.adminWindows
-      summary: Get operationalInsightsConnection
-      description: Read the properties and relationships of an operationalInsightsConnection object.
+      summary: Get resourceConnection
+      description: Read the properties and relationships of a resourceConnection object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/windowsupdates-operationalinsightsconnection-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/windowsupdates-resourceconnection-get?view=graph-rest-1.0
       operationId: admin.windows.updates_GetResourceConnections
       parameters:
         - name: resourceConnection-id
@@ -4283,11 +4283,11 @@ paths:
     delete:
       tags:
         - admin.adminWindows
-      summary: Delete updatableAsset
-      description: Delete an updatableAsset object.
+      summary: Delete updatableAssetGroup
+      description: 'Delete an updatableAssetGroup object. When an updatableAssetGroup object, its member updatableAsset objects are not deleted.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/windowsupdates-updatableasset-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/windowsupdates-updatableassetgroup-delete?view=graph-rest-1.0
       operationId: admin.windows.updates_DeleteUpdatableAssets
       parameters:
         - name: updatableAsset-id
@@ -6313,11 +6313,11 @@ paths:
     get:
       tags:
         - admin.adminWindows
-      summary: Get complianceChange
-      description: Read the properties and relationships of a complianceChange object.
+      summary: Get contentApproval
+      description: Read the properties and relationships of a contentApproval object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/windowsupdates-compliancechange-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/windowsupdates-contentapproval-get?view=graph-rest-1.0
       operationId: admin.windows.updates.updatePolicies_GetComplianceChanges
       parameters:
         - name: updatePolicy-id
@@ -7355,11 +7355,11 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
+          description: The display name of the identity. This property is read-only.
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
+          description: The identifier of the identity. This property is read-only.
           nullable: true
       additionalProperties:
         type: object

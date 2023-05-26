@@ -9199,7 +9199,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get all from users
-      operationId: users.planner_ListAll
+      operationId: users.planner_ListGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -9270,7 +9270,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Create new navigation property to all for users
-      operationId: users.planner_CreateAll
+      operationId: users.planner_CreateGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -9308,7 +9308,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Get all from users
-      operationId: users.planner_GetAll
+      operationId: users.planner_GetGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -9370,7 +9370,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Update the navigation property all in users
-      operationId: users.planner_UpdateAll
+      operationId: users.planner_UpdateGraphAlPre
       parameters:
         - name: user-id
           in: path
@@ -9411,7 +9411,7 @@ paths:
       tags:
         - users.plannerUser
       summary: Delete navigation property all for users
-      operationId: users.planner_DeleteAll
+      operationId: users.planner_DeleteGraphAlPre
       parameters:
         - name: user-id
           in: path

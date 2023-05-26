@@ -11842,11 +11842,11 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -12069,7 +12069,7 @@ components:
           $ref: '#/components/schemas/microsoft.graph.authenticationEventType'
         executedListenerId:
           type: string
-          description: ID of the Event Listener that was executed.
+          description: ID of the authentication event listener that was executed.
           nullable: true
         handlerResult:
           $ref: '#/components/schemas/microsoft.graph.authenticationEventHandlerResult'
@@ -12575,11 +12575,12 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Number of days the user is OOF during a simulation journey/course of a campaign.
           format: int32
           nullable: true
         userId:
           type: string
-          description: id property value of the user resource that represents the user in the Azure Active Directory tenant.
+          description: The id property value of the user resource that represents the user in the Azure Active Directory tenant.
           nullable: true
       additionalProperties:
         type: object
@@ -12688,10 +12689,10 @@ components:
       properties:
         name:
           type: string
-          description: 'Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.'
+          description: Name for this key-value pair
         value:
           type: string
-          description: 'Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.'
+          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object
@@ -12911,11 +12912,11 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
+          description: The display name of the identity. This property is read-only.
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
+          description: The identifier of the identity. This property is read-only.
           nullable: true
       additionalProperties:
         type: object

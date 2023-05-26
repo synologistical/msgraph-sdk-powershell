@@ -2017,11 +2017,7 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
-    "/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow-id}/executionScope/{user-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
-    },
-    "/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow-id}/executionScope/{user-id}/mailboxSettings": {
+    "/identityGovernance/lifecycleWorkflows/deletedItems/workflows/{workflow-id}/executionScope/{userProcessingResult-id}": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
@@ -2333,11 +2329,7 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
-    "/identityGovernance/lifecycleWorkflows/workflows/{workflow-id}/executionScope/{user-id}": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
-    },
-    "/identityGovernance/lifecycleWorkflows/workflows/{workflow-id}/executionScope/{user-id}/mailboxSettings": {
+    "/identityGovernance/lifecycleWorkflows/workflows/{workflow-id}/executionScope/{userProcessingResult-id}": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },

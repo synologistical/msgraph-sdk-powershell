@@ -2709,7 +2709,7 @@ paths:
       tags:
         - drives.driveItem
       summary: Get allTime from drives
-      operationId: drives.items.analytics_GetAllTime
+      operationId: drives.items.analytics_GetGraphAlPreTime
       parameters:
         - name: drive-id
           in: path
@@ -20129,7 +20129,7 @@ paths:
       tags:
         - drives.driveItem
       summary: Get allTime from drives
-      operationId: drives.root.analytics_GetAllTime
+      operationId: drives.root.analytics_GetGraphAlPreTime
       parameters:
         - name: drive-id
           in: path
@@ -31123,7 +31123,7 @@ paths:
       tags:
         - groups.drive
       summary: Get allTime from groups
-      operationId: groups.drives.items.analytics_GetAllTime
+      operationId: groups.drives.items.analytics_GetGraphAlPreTime
       parameters:
         - name: group-id
           in: path
@@ -46762,7 +46762,7 @@ paths:
       tags:
         - groups.drive
       summary: Get allTime from groups
-      operationId: groups.drives.root.analytics_GetAllTime
+      operationId: groups.drives.root.analytics_GetGraphAlPreTime
       parameters:
         - name: group-id
           in: path
@@ -69443,7 +69443,7 @@ paths:
       tags:
         - users.drive
       summary: Get allTime from users
-      operationId: users.drives.items.analytics_GetAllTime
+      operationId: users.drives.items.analytics_GetGraphAlPreTime
       parameters:
         - name: user-id
           in: path
@@ -86108,7 +86108,7 @@ paths:
       tags:
         - users.drive
       summary: Get allTime from users
-      operationId: users.drives.root.analytics_GetAllTime
+      operationId: users.drives.root.analytics_GetGraphAlPreTime
       parameters:
         - name: user-id
           in: path
