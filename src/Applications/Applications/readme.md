@@ -45,7 +45,7 @@ directive:
   - where:
       verb: Test
       subject: (Application|ServicePrincipal)SynchronizationJobCredentials
-      variant: Validate1|ValidateExpanded1|ValidateViaIdentity1|ValidateViaIdentityExpanded1
+      variant: Validate(1|3)|ValidateExpanded(1|3)|ValidateViaIdentity(1|3)|ValidateViaIdentityExpanded(1|3)
     remove: true
   - where:
       verb: Get
