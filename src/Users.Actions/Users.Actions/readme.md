@@ -90,18 +90,6 @@ directive:
       variant: ^Dismiss$|^DismissViaIdentity$|Dismiss3$|^DismissViaIdentity3$
     set:
       subject: $1Default$2
-  - where:
-      verb: Invoke
-      subject: ^(Reply)(UserMessage|UserMailFolderMessage|UserMailFolderChildFolderMessage)$
-      variant: ^Reply1$|^ReplyExpanded1$|^ReplyViaIdentity1$|^ReplyViaIdentityExpanded1$|^Reply3$|^ReplyExpanded3$|^ReplyViaIdentity3$|^ReplyViaIdentityExpanded3$
-    set:
-      subject: $1All$2
-  - where:
-      verb: New
-      subject: ^(User)(MessageReply|MailFolderMessageReply|MailFolderChildFolderMessageReply)$
-      variant: ^Create1$|^CreateExpanded1$|^CreateViaIdentity1$|^CreateViaIdentityExpanded1$|^Create3$|^CreateExpanded3$|^CreateViaIdentity3$|^CreateViaIdentityExpanded3$
-    set:
-      subject: $1$2All
   # https://docs.microsoft.com/en-us/graph/api/resources/intune-devices-devicelogcollectionresponse?view=graph-rest-beta
   - where:
       verb: New
