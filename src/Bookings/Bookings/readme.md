@@ -40,7 +40,7 @@ subject-prefix: ''
 ``` yaml
 directive:
 # Remove invalid paths.
-  - remove-path-by-operation: ^solutions.solutionsRoot.*$
+  - remove-path-by-operation: ^solutions.solutionsRoot.*|solutions_UpdateVirtualEvents$
 # Rename cmdlets
   - where:
       subject: ^Solution(.*)$
