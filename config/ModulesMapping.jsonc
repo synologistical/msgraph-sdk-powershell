@@ -16,7 +16,7 @@
   "DeviceManagement.Functions": "^deviceManagement.Functions$",
   "DirectoryObjects": "^directoryObjects\\.",
   "Education": "^education\\.",
-  "Files": "^drives\\.|^shares\\.|^users.drive$|^groups.drive$",
+  // "Files": "^drives\\.|^shares\\.|^users.drive$|^groups.drive$",
   "Financials": "^financials\\.",
   "Groups": "^groups.group$|^groups.directoryObject$|^groups.conversation$|^groups.endpoint$|^groups.extension$|^groups.groupLifecyclePolicy$|^groups.resourceSpecificPermissionGrant$|^groups.profilePhoto$|^groups.conversationThread$|^groupLifecyclePolicies\\.|^users.group$|^groups.directorySetting$|^groups.Actions$|^groups.Functions$|^groupSettings\\.|^groups.groupSetting$|^groupSettingTemplates\\.",
   "Identity.DirectoryManagement": "^administrativeUnits\\.|^contacts\\.|^devices\\.|^domains\\.|^directoryRoles\\.|^directoryRoleTemplates\\.|^directorySettingTemplates\\.|^settings\\.|^subscribedSkus\\.|^contracts\\.|^directory\\.|^users.scopedRoleMembership$|^organization.organization$|^organization.organizationalBranding$|^organization.organizationSettings$|^organization.Actions$|^organization.extension$",
