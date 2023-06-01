@@ -621,6 +621,26 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
+    "/directory/certificateAuthorities": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/certificateAuthorities/certificateBasedApplicationConfigurations": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration-id}/trustedCertificateAuthorities": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/certificateAuthorities/certificateBasedApplicationConfigurations/{certificateBasedApplicationConfiguration-id}/trustedCertificateAuthorities/{certificateAuthorityAsEntity-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
     "/directory/customSecurityAttributeDefinitions": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"

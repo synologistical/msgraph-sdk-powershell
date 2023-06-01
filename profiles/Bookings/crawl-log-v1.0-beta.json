@@ -197,6 +197,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },
+    "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/broadcastRecording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
     "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/meetingAttendanceReport": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
@@ -210,6 +214,18 @@
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },
     "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/recording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/recordings": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/recordings/{callRecording-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/events/{virtualEvent-id}/sessions/{virtualEventSession-id}/recordings/{callRecording-id}/content": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },
@@ -305,6 +321,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },
+    "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/broadcastRecording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
     "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/meetingAttendanceReport": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
@@ -318,6 +338,18 @@
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },
     "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/recording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/recordings": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/recordings/{callRecording-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Bookings.yml"
+    },
+    "/solutions/virtualEvents/webinars/{virtualEventWebinar-id}/sessions/{virtualEventSession-id}/recordings/{callRecording-id}/content": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Bookings.yml"
     },

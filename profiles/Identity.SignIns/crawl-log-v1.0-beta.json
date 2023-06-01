@@ -33,6 +33,14 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.SignIns.yml"
     },
+    "/identity/authenticationEventsFlows": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.SignIns.yml"
+    },
+    "/identity/authenticationEventsFlows/{authenticationEventsFlow-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.SignIns.yml"
+    },
     "/identity/b2cUserFlows": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.SignIns.yml"

@@ -201,6 +201,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },
+    "/communications/onlineMeetings/{onlineMeeting-id}/broadcastRecording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
     "/communications/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
@@ -218,6 +222,18 @@
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },
     "/communications/onlineMeetings/{onlineMeeting-id}/recording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/communications/onlineMeetings/{onlineMeeting-id}/recordings": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/communications/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/communications/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}/content": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },
@@ -325,6 +341,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },
+    "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/broadcastRecording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
     "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/meetingAttendanceReport": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
@@ -338,6 +358,18 @@
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },
     "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recording": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
+    },
+    "/users/{user-id}/onlineMeetings/{onlineMeeting-id}/recordings/{callRecording-id}/content": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/CloudCommunications.yml"
     },

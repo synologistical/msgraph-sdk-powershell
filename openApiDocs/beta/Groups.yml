@@ -11335,11 +11335,11 @@ paths:
     post:
       tags:
         - groups.conversation
-      summary: Create openTypeExtension
-      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
+      summary: Create conversation
+      description: Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0
       operationId: groups_CreateConversations
       parameters:
         - name: group-id
@@ -14038,10 +14038,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: 'Reply to a post and add a new post to the specified thread in a group conversation.  You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation.'
+      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
       operationId: groups.conversations.threads.posts.inReplyTo_reply
       parameters:
         - name: group-id
@@ -14480,10 +14480,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: 'Reply to a post and add a new post to the specified thread in a group conversation.  You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation.'
+      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
       operationId: groups.conversations.threads.posts_reply
       parameters:
         - name: group-id
@@ -25389,12 +25389,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/groups/{group-id}/members/$ref':
     get:
       tags:
@@ -25944,12 +25938,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -26504,12 +26492,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/groups/{group-id}/membersWithLicenseErrors/microsoft.graph.application':
     get:
       tags:
@@ -26975,12 +26957,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -29693,12 +29669,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/groups/{group-id}/owners/$ref':
     get:
       tags:
@@ -30248,12 +30218,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -40744,11 +40708,11 @@ paths:
     get:
       tags:
         - groups.conversationThread
-      summary: Get conversationThread
-      description: "Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, \nyou can specify the thread without referencing the parent conversation. "
+      summary: Get conversation thread
+      description: Get a thread object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0
       operationId: groups_GetThreads
       parameters:
         - name: group-id
@@ -40840,11 +40804,11 @@ paths:
     delete:
       tags:
         - groups.conversationThread
-      summary: Delete conversationThread
-      description: Delete conversationThread.
+      summary: Delete conversation thread
+      description: Delete a thread object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0
       operationId: groups_DeleteThreads
       parameters:
         - name: group-id
@@ -42910,10 +42874,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: 'Reply to a post and add a new post to the specified thread in a group conversation.  You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation.'
+      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
       operationId: groups.threads.posts.inReplyTo_reply
       parameters:
         - name: group-id
@@ -43304,10 +43268,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: 'Reply to a post and add a new post to the specified thread in a group conversation.  You can specify both the parent conversation and thread in the request, or, you can specify just the parent thread without the parent conversation.'
+      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
       operationId: groups.threads.posts_reply
       parameters:
         - name: group-id
@@ -44348,12 +44312,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/groups/{group-id}/transitiveMembers/microsoft.graph.application':
     get:
       tags:
@@ -44819,12 +44777,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -45473,12 +45425,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.groupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -49086,7 +49032,7 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.'
+              description: 'The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.'
             visibleHistoryStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -51431,7 +51377,7 @@ components:
           nullable: true
         key:
           type: string
-          description: 'Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.'
+          description: 'Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.'
           format: base64url
           nullable: true
         keyId:
@@ -54371,6 +54317,10 @@ components:
               nullable: true
             audioConferencing:
               $ref: '#/components/schemas/microsoft.graph.audioConferencing'
+            broadcastRecording:
+              type: string
+              format: base64url
+              nullable: true
             broadcastSettings:
               $ref: '#/components/schemas/microsoft.graph.broadcastMeetingSettings'
             capabilities:
@@ -54457,6 +54407,11 @@ components:
               $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
             registration:
               $ref: '#/components/schemas/microsoft.graph.meetingRegistration'
+            recordings:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.callRecording'
+              x-ms-navigationProperty: true
             transcripts:
               type: array
               items:
@@ -56804,11 +56759,11 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name of the identity. This property is read-only.
+          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: The identifier of the identity. This property is read-only.
+          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -61935,6 +61890,23 @@ components:
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
+    microsoft.graph.callRecording:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: callRecording
+          type: object
+          properties:
+            content:
+              type: string
+              format: base64url
+              nullable: true
+            createdDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
+          additionalProperties:
+            type: object
     microsoft.graph.callTranscript:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -61997,6 +61969,8 @@ components:
           type: boolean
           description: Indicates whether the credential preferences of the system are enabled.
           nullable: true
+        userPreferredMethodForSecondaryAuthentication:
+          $ref: '#/components/schemas/microsoft.graph.userDefaultAuthenticationMethodType'
       additionalProperties:
         type: object
     microsoft.graph.emailAuthenticationMethod:
@@ -66718,6 +66692,17 @@ components:
               nullable: true
           additionalProperties:
             type: object
+    microsoft.graph.userDefaultAuthenticationMethodType:
+      title: userDefaultAuthenticationMethodType
+      enum:
+        - push
+        - oath
+        - voiceMobile
+        - voiceAlternateMobile
+        - voiceOffice
+        - sms
+        - unknownFutureValue
+      type: string
     microsoft.graph.attestationLevel:
       title: attestationLevel
       enum:

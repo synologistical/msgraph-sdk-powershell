@@ -3677,7 +3677,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-delete-allowedgroup?view=graph-rest-1.0
-      operationId: print.shares_DeleteAllowedGroupsGraphBPreRef
+      operationId: print.shares_DeleteGraphAlPreowedGroupsGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3723,7 +3723,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-list-allowedgroups?view=graph-rest-1.0
-      operationId: print.shares_ListAllowedGroupsGraphBPreRef
+      operationId: print.shares_ListGraphAlPreowedGroupsGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path
@@ -3846,7 +3846,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-post-allowedgroups?view=graph-rest-1.0
-      operationId: print.shares_CreateAllowedGroupsGraphBPreRef
+      operationId: print.shares_CreateGraphAlPreowedGroupsGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path
@@ -4260,7 +4260,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-delete-alloweduser?view=graph-rest-1.0
-      operationId: print.shares_DeleteAllowedUsersGraphBPreRef
+      operationId: print.shares_DeleteGraphAlPreowedUsersGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path
@@ -4405,7 +4405,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-list-allowedusers?view=graph-rest-1.0
-      operationId: print.shares_ListAllowedUsersGraphBPreRef
+      operationId: print.shares_ListGraphAlPreowedUsersGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path
@@ -4600,7 +4600,7 @@ paths:
       externalDocs:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/printershare-post-allowedusers?view=graph-rest-1.0
-      operationId: print.shares_CreateAllowedUsersGraphBPreRef
+      operationId: print.shares_CreateGraphAlPreowedUsersGraphBPreRef
       parameters:
         - name: printerShare-id
           in: path

@@ -52,6 +52,8 @@ paths:
                 - appId desc
                 - appRoles
                 - appRoles desc
+                - authenticationBehaviors
+                - authenticationBehaviors desc
                 - certification
                 - certification desc
                 - createdDateTime
@@ -134,6 +136,7 @@ paths:
                 - api
                 - appId
                 - appRoles
+                - authenticationBehaviors
                 - certification
                 - createdDateTime
                 - defaultRedirectUri
@@ -269,6 +272,7 @@ paths:
                 - api
                 - appId
                 - appRoles
+                - authenticationBehaviors
                 - certification
                 - createdDateTime
                 - defaultRedirectUri
@@ -2338,12 +2342,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/applications/{application-id}/owners/$ref':
     get:
       tags:
@@ -2659,12 +2657,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -2723,11 +2715,11 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-    patch:
+    put:
       tags:
         - applications.synchronization
       summary: Update the navigation property synchronization in applications
-      operationId: applications_UpdateSynchronization
+      operationId: applications_SetSynchronization
       parameters:
         - name: application-id
           in: path
@@ -3174,35 +3166,6 @@ paths:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-start?view=graph-rest-1.0
       operationId: applications.synchronization.jobs_start
-      parameters:
-        - name: application-id
-          in: path
-          description: The unique identifier of application
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: application
-        - name: synchronizationJob-id
-          in: path
-          description: The unique identifier of synchronizationJob
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: synchronizationJob
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: action
-  '/applications/{application-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.stop':
-    post:
-      tags:
-        - applications.Actions
-      summary: Invoke action stop
-      operationId: applications.synchronization.jobs_stop
       parameters:
         - name: application-id
           in: path
@@ -5521,6 +5484,7 @@ paths:
                 - api
                 - appId
                 - appRoles
+                - authenticationBehaviors
                 - certification
                 - createdDateTime
                 - defaultRedirectUri
@@ -5585,6 +5549,8 @@ paths:
                 - appId desc
                 - appRoles
                 - appRoles desc
+                - authenticationBehaviors
+                - authenticationBehaviors desc
                 - certification
                 - certification desc
                 - createdDateTime
@@ -8459,10 +8425,10 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Create connectorGroup
-      description: Create a new connectorGroup.
+      description: Create a connectorGroup object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/connectorgroup-post-connectorgroups?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/connectorgroup-post?view=graph-rest-1.0
       operationId: onPremisesPublishingProfiles_CreateConnectorGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8684,6 +8650,8 @@ paths:
                 - appId desc
                 - appRoles
                 - appRoles desc
+                - authenticationBehaviors
+                - authenticationBehaviors desc
                 - certification
                 - certification desc
                 - createdDateTime
@@ -8766,6 +8734,7 @@ paths:
                 - api
                 - appId
                 - appRoles
+                - authenticationBehaviors
                 - certification
                 - createdDateTime
                 - defaultRedirectUri
@@ -8887,6 +8856,7 @@ paths:
                 - api
                 - appId
                 - appRoles
+                - authenticationBehaviors
                 - certification
                 - createdDateTime
                 - defaultRedirectUri
@@ -15121,12 +15091,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.user'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
   '/servicePrincipals/{servicePrincipal-id}/owners/$ref':
     get:
       tags:
@@ -15442,12 +15406,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -15506,11 +15464,11 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-    patch:
+    put:
       tags:
         - servicePrincipals.synchronization
       summary: Update the navigation property synchronization in servicePrincipals
-      operationId: servicePrincipals_UpdateSynchronization
+      operationId: servicePrincipals_SetSynchronization
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15957,35 +15915,6 @@ paths:
         description: Find more info here
         url: https://docs.microsoft.com/graph/api/synchronization-synchronizationjob-start?view=graph-rest-1.0
       operationId: servicePrincipals.synchronization.jobs_start
-      parameters:
-        - name: servicePrincipal-id
-          in: path
-          description: The unique identifier of servicePrincipal
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: servicePrincipal
-        - name: synchronizationJob-id
-          in: path
-          description: The unique identifier of synchronizationJob
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: synchronizationJob
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: action
-  '/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.stop':
-    post:
-      tags:
-        - servicePrincipals.Actions
-      summary: Invoke action stop
-      operationId: servicePrincipals.synchronization.jobs_stop
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -19010,12 +18939,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.appRoleAssignmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -19054,12 +18977,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.appRoleAssignment'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/appRoleAssignments/{appRoleAssignment-id}':
     get:
@@ -19135,12 +19052,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.appRoleAssignment'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -19176,12 +19087,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -19220,12 +19125,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
 components:
   schemas:
@@ -19246,6 +19145,8 @@ components:
               items:
                 $ref: '#/components/schemas/microsoft.graph.appRole'
               description: 'The collection of roles defined for the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.'
+            authenticationBehaviors:
+              $ref: '#/components/schemas/microsoft.graph.authenticationBehaviors'
             certification:
               $ref: '#/components/schemas/microsoft.graph.certification'
             createdDateTime:
@@ -19468,6 +19369,7 @@ components:
               description: Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
             isMultiValued:
               type: boolean
+              description: 'Defines the directory extension as a multi-valued property. When true, the directory extension property can store a collection of objects of the dataType; for example, a collection of integers. The default value is false. Supports $filter (eq).'
             isSyncedFromOnPremises:
               type: boolean
               description: Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
@@ -19536,7 +19438,7 @@ components:
           nullable: true
         key:
           type: string
-          description: 'Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.'
+          description: 'Value for the key credential. Should be a Base64 encoded value. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.'
           format: base64url
           nullable: true
         keyId:
@@ -20772,7 +20674,7 @@ components:
         metadata:
           type: array
           items:
-            $ref: '#/components/schemas/microsoft.graph.metadataEntry'
+            $ref: '#/components/schemas/microsoft.graph.attributeDefinitionMetadataEntry'
           description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
         multivalued:
           type: boolean
@@ -20845,7 +20747,7 @@ components:
             metadata:
               type: array
               items:
-                $ref: '#/components/schemas/microsoft.graph.metadataEntry'
+                $ref: '#/components/schemas/microsoft.graph.synchronizationMetadataEntry'
               description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
             schema:
               $ref: '#/components/schemas/microsoft.graph.synchronizationSchema'
@@ -21243,7 +21145,7 @@ components:
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
+              description: 'Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
               format: date-time
               nullable: true
             groupTypes:
@@ -21770,6 +21672,18 @@ components:
         value:
           type: string
           description: 'Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & '' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..'
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.authenticationBehaviors:
+      title: authenticationBehaviors
+      type: object
+      properties:
+        removeUnverifiedEmailClaim:
+          type: boolean
+          nullable: true
+        requireClientServicePrincipal:
+          type: boolean
           nullable: true
       additionalProperties:
         type: object
@@ -25189,6 +25103,10 @@ components:
               nullable: true
             audioConferencing:
               $ref: '#/components/schemas/microsoft.graph.audioConferencing'
+            broadcastRecording:
+              type: string
+              format: base64url
+              nullable: true
             broadcastSettings:
               $ref: '#/components/schemas/microsoft.graph.broadcastMeetingSettings'
             capabilities:
@@ -25275,6 +25193,11 @@ components:
               $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
             registration:
               $ref: '#/components/schemas/microsoft.graph.meetingRegistration'
+            recordings:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.callRecording'
+              x-ms-navigationProperty: true
             transcripts:
               type: array
               items:
@@ -25706,10 +25629,10 @@ components:
       properties:
         name:
           type: string
-          description: 'Name for this key-value pair. For more information about possible names for each resource type that uses this configuration, see keyValuePair names and values.'
+          description: Name for this key-value pair
         value:
           type: string
-          description: 'Value for this key-value pair. For more information about possible values for each resource type that uses this configuration, see keyValuePair names and values.'
+          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object
@@ -25855,7 +25778,7 @@ components:
         metadata:
           type: array
           items:
-            $ref: '#/components/schemas/microsoft.graph.metadataEntry'
+            $ref: '#/components/schemas/microsoft.graph.objectDefinitionMetadataEntry'
         name:
           type: string
           nullable: true
@@ -25916,17 +25839,14 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    microsoft.graph.metadataEntry:
-      title: metadataEntry
+    microsoft.graph.attributeDefinitionMetadataEntry:
+      title: attributeDefinitionMetadataEntry
       type: object
       properties:
         key:
-          type: string
-          description: Name of the metadata property.
-          nullable: true
+          $ref: '#/components/schemas/microsoft.graph.attributeDefinitionMetadata'
         value:
           type: string
-          description: Value of the metadata property.
           nullable: true
       additionalProperties:
         type: object
@@ -25993,6 +25913,17 @@ components:
             $ref: '#/components/schemas/microsoft.graph.stringKeyAttributeMappingSourceValuePair'
         type:
           $ref: '#/components/schemas/microsoft.graph.attributeMappingSourceType'
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationMetadataEntry:
+      title: synchronizationMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationMetadata'
+        value:
+          type: string
+          nullable: true
       additionalProperties:
         type: object
     microsoft.graph.informationalUrls:
@@ -26937,11 +26868,11 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -31116,6 +31047,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.plannerSharedWithContainer'
+              description: List of containers the plan is shared with.
             title:
               type: string
               description: Required. Title of the plan.
@@ -31232,6 +31164,8 @@ components:
               description: Number of external references that exist on the task.
               format: int32
               nullable: true
+            specifiedCompletionRequirements:
+              $ref: '#/components/schemas/microsoft.graph.plannerTaskCompletionRequirements'
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -32511,6 +32445,23 @@ components:
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
+    microsoft.graph.callRecording:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: callRecording
+          type: object
+          properties:
+            content:
+              type: string
+              format: base64url
+              nullable: true
+            createdDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
+          additionalProperties:
+            type: object
     microsoft.graph.callTranscript:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -32573,6 +32524,8 @@ components:
           type: boolean
           description: Indicates whether the credential preferences of the system are enabled.
           nullable: true
+        userPreferredMethodForSecondaryAuthentication:
+          $ref: '#/components/schemas/microsoft.graph.userDefaultAuthenticationMethodType'
       additionalProperties:
         type: object
     microsoft.graph.emailAuthenticationMethod:
@@ -32911,7 +32864,7 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.'
+              description: 'The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.'
             visibleHistoryStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -33809,7 +33762,7 @@ components:
         metadata:
           type: array
           items:
-            $ref: '#/components/schemas/microsoft.graph.metadataEntry'
+            $ref: '#/components/schemas/microsoft.graph.objectMappingMetadataEntry'
           description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
         name:
           type: string
@@ -33827,6 +33780,30 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.objectDefinitionMetadataEntry:
+      title: objectDefinitionMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.objectDefinitionMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeDefinitionMetadata:
+      title: attributeDefinitionMetadata
+      enum:
+        - BaseAttributeName
+        - ComplexObjectDefinition
+        - IsContainer
+        - IsCustomerDefined
+        - IsDomainQualified
+        - LinkPropertyNames
+        - LinkTypeName
+        - MaximumLength
+        - ReferencedProperty
+      type: string
     microsoft.graph.publicErrorDetail:
       title: publicErrorDetail
       type: object
@@ -33887,6 +33864,19 @@ components:
         - Constant
         - Function
       type: string
+    microsoft.graph.synchronizationMetadata:
+      title: synchronizationMetadata
+      enum:
+        - galleryApplicationIdentifier
+        - galleryApplicationKey
+        - isOAuthEnabled
+        - IsSynchronizationAgentAssignmentRequired
+        - isSynchronizationAgentRequired
+        - isSynchronizationInPreview
+        - oAuthSettings
+        - synchronizationLearnMoreIbizaFwLink
+        - configurationFields
+      type: string
     microsoft.graph.updateWindow:
       title: updateWindow
       type: object
@@ -33909,6 +33899,11 @@ components:
       title: keyCredentialConfiguration
       type: object
       properties:
+        certificateBasedApplicationConfigurationIds:
+          type: array
+          items:
+            type: string
+            nullable: true
         maxLifetime:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
@@ -37837,6 +37832,13 @@ components:
           description: The recurrence series this task belongs to. A GUID-based value that serves as the unique identifier for a series.
       additionalProperties:
         type: object
+    microsoft.graph.plannerTaskCompletionRequirements:
+      title: plannerTaskCompletionRequirements
+      enum:
+        - none
+        - checklistCompletion
+        - unknownFutureValue
+      type: string
     microsoft.graph.plannerAssignedToTaskBoardTaskFormat:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.plannerDelta'
@@ -37871,6 +37873,8 @@ components:
           properties:
             checklist:
               $ref: '#/components/schemas/microsoft.graph.plannerChecklistItems'
+            completionRequirements:
+              $ref: '#/components/schemas/microsoft.graph.plannerTaskCompletionRequirementDetails'
             description:
               type: string
               description: Description of the task.
@@ -38611,6 +38615,17 @@ components:
               nullable: true
           additionalProperties:
             type: object
+    microsoft.graph.userDefaultAuthenticationMethodType:
+      title: userDefaultAuthenticationMethodType
+      enum:
+        - push
+        - oath
+        - voiceMobile
+        - voiceAlternateMobile
+        - voiceOffice
+        - sms
+        - unknownFutureValue
+      type: string
     microsoft.graph.attestationLevel:
       title: attestationLevel
       enum:
@@ -39488,6 +39503,17 @@ components:
         - Update
         - Delete
       type: string
+    microsoft.graph.objectMappingMetadataEntry:
+      title: objectMappingMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.objectMappingMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.filter:
       title: filter
       type: object
@@ -39509,10 +39535,22 @@ components:
           description: '*Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn''t satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.'
       additionalProperties:
         type: object
+    microsoft.graph.objectDefinitionMetadata:
+      title: objectDefinitionMetadata
+      enum:
+        - PropertyNameAccountEnabled
+        - PropertyNameSoftDeleted
+        - IsSoftDeletionSupported
+        - IsSynchronizeAllSupported
+        - ConnectorDataStorageRequired
+        - Extensions
+        - BaseObjectName
+      type: string
     microsoft.graph.appKeyCredentialRestrictionType:
       title: appKeyCredentialRestrictionType
       enum:
         - asymmetricKeyLifetime
+        - trustedCertificateAuthority
         - unknownFutureValue
       type: string
     microsoft.graph.appCredentialRestrictionType:
@@ -41625,6 +41663,14 @@ components:
       type: object
       additionalProperties:
         type: object
+    microsoft.graph.plannerTaskCompletionRequirementDetails:
+      title: plannerTaskCompletionRequirementDetails
+      type: object
+      properties:
+        checklistRequirement:
+          $ref: '#/components/schemas/microsoft.graph.plannerChecklistRequirement'
+      additionalProperties:
+        type: object
     microsoft.graph.plannerExternalReferences:
       title: plannerExternalReferences
       type: object
@@ -42357,6 +42403,17 @@ components:
         - MultiValueAddOnly
         - ValueAddOnly
         - AttributeAddOnly
+      type: string
+    microsoft.graph.objectMappingMetadata:
+      title: objectMappingMetadata
+      enum:
+        - EscrowBehavior
+        - DisableMonitoringForChanges
+        - OriginalJoiningProperty
+        - Disposition
+        - IsCustomerDefined
+        - ExcludeFromReporting
+        - Unsynchronized
       type: string
     microsoft.graph.filterGroup:
       title: filterGroup
@@ -43924,6 +43981,17 @@ components:
         - deviceIntent
       type: string
       description: Authoring source of a policy
+    microsoft.graph.plannerChecklistRequirement:
+      title: plannerChecklistRequirement
+      type: object
+      properties:
+        requiredChecklistItemIds:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.insightIdentity:
       title: insightIdentity
       type: object

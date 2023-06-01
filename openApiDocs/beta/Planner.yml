@@ -772,6 +772,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -809,6 +811,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -960,6 +963,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -1528,6 +1532,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -2084,6 +2089,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -2121,6 +2128,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -2256,6 +2264,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -2752,6 +2761,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -3412,6 +3422,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -3449,6 +3461,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -3568,6 +3581,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -3992,6 +4006,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -4291,6 +4306,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -4352,6 +4368,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -5041,6 +5059,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -5078,6 +5098,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -5213,6 +5234,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -5709,6 +5731,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -6056,6 +6079,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -6117,6 +6141,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -6431,6 +6457,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -6468,6 +6496,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -6587,6 +6616,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -7011,6 +7041,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -7310,6 +7341,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -7371,6 +7403,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -8190,6 +8224,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -8227,6 +8263,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -8336,6 +8373,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -8702,6 +8740,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -8953,6 +8992,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -9014,6 +9054,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -9112,12 +9154,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerUser'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -9155,12 +9191,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -9187,12 +9217,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/all':
     get:
@@ -9256,12 +9280,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerDeltaCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -9296,12 +9314,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerDelta'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/all/{plannerDelta-id}':
     get:
@@ -9359,12 +9371,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerDelta'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -9400,12 +9406,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -9440,12 +9440,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/favoritePlans':
     get:
@@ -9543,12 +9537,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerPlanCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -9624,12 +9612,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlan'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans':
     get:
@@ -9727,12 +9709,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerPlanCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -9767,12 +9743,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlan'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}':
     get:
@@ -9844,12 +9814,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlan'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -9885,12 +9849,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -9925,12 +9883,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets':
     get:
@@ -10020,12 +9972,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerBucketCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -10068,12 +10014,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucket'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}':
     get:
@@ -10146,12 +10086,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucket'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -10195,12 +10129,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -10243,12 +10171,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks':
     get:
@@ -10344,6 +10266,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -10381,6 +10305,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -10409,12 +10334,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -10465,12 +10384,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}':
     get:
@@ -10544,6 +10457,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -10576,12 +10490,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -10633,12 +10541,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -10689,12 +10591,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat':
     get:
@@ -10774,12 +10670,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerAssignedToTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -10841,12 +10731,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -10897,12 +10781,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat':
     get:
@@ -10981,12 +10859,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucketTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -11048,12 +10920,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -11104,12 +10970,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/details':
     get:
@@ -11166,6 +11026,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -11192,12 +11053,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTaskDetails'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -11259,12 +11114,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -11315,12 +11164,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/buckets/{plannerBucket-id}/tasks/{plannerTask-id}/progressTaskBoardFormat':
     get:
@@ -11399,12 +11242,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerProgressTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -11466,12 +11303,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -11522,12 +11353,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/details':
     get:
@@ -11592,12 +11417,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlanDetails'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -11643,12 +11462,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -11683,12 +11496,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks':
     get:
@@ -11776,6 +11583,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -11813,6 +11622,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -11841,12 +11651,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -11889,12 +11693,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}':
     get:
@@ -11960,6 +11758,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -11992,12 +11791,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -12041,12 +11834,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -12089,12 +11876,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/assignedToTaskBoardFormat':
     get:
@@ -12166,12 +11947,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerAssignedToTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -12225,12 +12000,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -12273,12 +12042,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/bucketTaskBoardFormat':
     get:
@@ -12349,12 +12112,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucketTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -12408,12 +12165,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -12456,12 +12207,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/details':
     get:
@@ -12510,6 +12255,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -12536,12 +12282,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTaskDetails'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -12595,12 +12335,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -12643,12 +12377,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/plans/{plannerPlan-id}/tasks/{plannerTask-id}/progressTaskBoardFormat':
     get:
@@ -12719,12 +12447,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerProgressTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -12778,12 +12500,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -12826,12 +12542,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/recentPlans':
     get:
@@ -12929,12 +12639,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerPlanCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -13010,12 +12714,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlan'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/rosterPlans':
     get:
@@ -13113,12 +12811,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerPlanCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -13194,12 +12886,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerPlan'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks':
     get:
@@ -13279,6 +12965,8 @@ paths:
                 - recurrence desc
                 - referenceCount
                 - referenceCount desc
+                - specifiedCompletionRequirements
+                - specifiedCompletionRequirements desc
                 - startDateTime
                 - startDateTime desc
                 - title
@@ -13316,6 +13004,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -13344,12 +13033,6 @@ paths:
           $ref: '#/components/responses/microsoft.graph.plannerTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -13384,12 +13067,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks/{plannerTask-id}':
     get:
@@ -13447,6 +13124,7 @@ paths:
                 - priority
                 - recurrence
                 - referenceCount
+                - specifiedCompletionRequirements
                 - startDateTime
                 - title
                 - assignedToTaskBoardFormat
@@ -13479,12 +13157,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTask'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -13520,12 +13192,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -13560,12 +13226,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks/{plannerTask-id}/assignedToTaskBoardFormat':
     get:
@@ -13629,12 +13289,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerAssignedToTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -13680,12 +13334,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -13720,12 +13368,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks/{plannerTask-id}/bucketTaskBoardFormat':
     get:
@@ -13788,12 +13430,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerBucketTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -13839,12 +13475,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -13879,12 +13509,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks/{plannerTask-id}/details':
     get:
@@ -13925,6 +13549,7 @@ paths:
               enum:
                 - id
                 - checklist
+                - completionRequirements
                 - description
                 - notes
                 - previewType
@@ -13951,12 +13576,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerTaskDetails'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -14002,12 +13621,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -14042,12 +13655,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
   '/users/{user-id}/planner/tasks/{plannerTask-id}/progressTaskBoardFormat':
     get:
@@ -14110,12 +13717,6 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.plannerProgressTaskBoardTaskFormat'
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -14161,12 +13762,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -14201,12 +13796,6 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      deprecated: true
-      x-ms-deprecation:
-        removalDate: '2023-03-20T00:00:00.0000000+00:00'
-        date: '2023-03-09T00:00:00.0000000+00:00'
-        version: 2023-03/Notification_Deprecation
-        description: 'The Graph Notification API is deprecated and will stop returning data on March 20, 2023.'
       x-ms-docs-operation-type: operation
 components:
   schemas:
@@ -14251,6 +13840,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.plannerSharedWithContainer'
+              description: List of containers the plan is shared with.
             title:
               type: string
               description: Required. Title of the plan.
@@ -14394,6 +13984,8 @@ components:
               description: Number of external references that exist on the task.
               format: int32
               nullable: true
+            specifiedCompletionRequirements:
+              $ref: '#/components/schemas/microsoft.graph.plannerTaskCompletionRequirements'
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -14447,6 +14039,8 @@ components:
           properties:
             checklist:
               $ref: '#/components/schemas/microsoft.graph.plannerChecklistItems'
+            completionRequirements:
+              $ref: '#/components/schemas/microsoft.graph.plannerTaskCompletionRequirementDetails'
             description:
               type: string
               description: Description of the task.
@@ -14739,6 +14333,13 @@ components:
           description: The recurrence series this task belongs to. A GUID-based value that serves as the unique identifier for a series.
       additionalProperties:
         type: object
+    microsoft.graph.plannerTaskCompletionRequirements:
+      title: plannerTaskCompletionRequirements
+      enum:
+        - none
+        - checklistCompletion
+        - unknownFutureValue
+      type: string
     microsoft.graph.plannerOrderHintsByAssignee:
       title: plannerOrderHintsByAssignee
       type: object
@@ -14747,6 +14348,14 @@ components:
     microsoft.graph.plannerChecklistItems:
       title: plannerChecklistItems
       type: object
+      additionalProperties:
+        type: object
+    microsoft.graph.plannerTaskCompletionRequirementDetails:
+      title: plannerTaskCompletionRequirementDetails
+      type: object
+      properties:
+        checklistRequirement:
+          $ref: '#/components/schemas/microsoft.graph.plannerChecklistRequirement'
       additionalProperties:
         type: object
     microsoft.graph.itemBody:
@@ -15066,6 +14675,17 @@ components:
           description: 'The start date for the recurrence pattern. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Required.'
           format: date-time
           nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.plannerChecklistRequirement:
+      title: plannerChecklistRequirement
+      type: object
+      properties:
+        requiredChecklistItemIds:
+          type: array
+          items:
+            type: string
+            nullable: true
       additionalProperties:
         type: object
     microsoft.graph.bodyType:
