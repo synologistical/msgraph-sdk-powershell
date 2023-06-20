@@ -2641,7 +2641,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get the number of the resource
-      operationId: application.ListOwner_GetCountAsEndpoint
+      operationId: application.Owner_GetCountAsEndpoint
       parameters:
         - name: application-id
           in: path
@@ -2751,7 +2751,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get the number of the resource
-      operationId: application.ListOwner_GetCountAsServicePrincipal
+      operationId: application.Owner_GetCountAsServicePrincipal
       parameters:
         - name: application-id
           in: path
@@ -2861,7 +2861,7 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get the number of the resource
-      operationId: application.ListOwner_GetCountAsUser
+      operationId: application.Owner_GetCountAsUser
       parameters:
         - name: application-id
           in: path
@@ -12979,7 +12979,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListCreatedObject_GetCountAsServicePrincipal
+      operationId: servicePrincipal.CreatedObject_GetCountAsServicePrincipal
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14713,7 +14713,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListMemberOf_GetCountAsAdministrativeUnit
+      operationId: servicePrincipal.MemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -14823,7 +14823,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListMemberOf_GetCountAsGroup
+      operationId: servicePrincipal.MemberOf_GetCountAsGroup
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -15939,7 +15939,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwnedObject_GetCountAsApplication
+      operationId: servicePrincipal.OwnedObject_GetCountAsApplication
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16029,7 +16029,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwnedObject_GetCountAsEndpoint
+      operationId: servicePrincipal.OwnedObject_GetCountAsEndpoint
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16119,7 +16119,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwnedObject_GetCountAsGroup
+      operationId: servicePrincipal.OwnedObject_GetCountAsGroup
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16209,7 +16209,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwnedObject_GetCountAsServicePrincipal
+      operationId: servicePrincipal.OwnedObject_GetCountAsServicePrincipal
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16755,7 +16755,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwner_GetCountAsEndpoint
+      operationId: servicePrincipal.Owner_GetCountAsEndpoint
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16865,7 +16865,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwner_GetCountAsServicePrincipal
+      operationId: servicePrincipal.Owner_GetCountAsServicePrincipal
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -16975,7 +16975,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListOwner_GetCountAsUser
+      operationId: servicePrincipal.Owner_GetCountAsUser
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -20270,7 +20270,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListTransitiveMemberOf_GetCountAsAdministrativeUnit
+      operationId: servicePrincipal.TransitiveMemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -20380,7 +20380,7 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get the number of the resource
-      operationId: servicePrincipal.ListTransitiveMemberOf_GetCountAsGroup
+      operationId: servicePrincipal.TransitiveMemberOf_GetCountAsGroup
       parameters:
         - name: servicePrincipal-id
           in: path
@@ -23639,6 +23639,7 @@ components:
       properties:
         removeUnverifiedEmailClaim:
           type: boolean
+          description: Removes the email claim from tokens sent to an application when the email address's domain cannot be verified.
           nullable: true
         requireClientServicePrincipal:
           type: boolean
@@ -28845,11 +28846,11 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -29337,11 +29338,11 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name of the identity. This property is read-only.
+          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: The identifier of the identity. This property is read-only.
+          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -36034,7 +36035,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
@@ -40998,21 +40999,25 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of guests in a channel.
           format: int32
           nullable: true
         hasMembersFromOtherTenants:
           type: boolean
+          description: Indicates whether external members are included on the channel.
           nullable: true
         membersCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of members in a channel.
           format: int32
           nullable: true
         ownersCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of owners in a channel.
           format: int32
           nullable: true
       additionalProperties:

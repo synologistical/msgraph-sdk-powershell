@@ -1588,11 +1588,11 @@ paths:
     get:
       tags:
         - chats.conversationMember
-      summary: Get conversationMember in a chat
-      description: Retrieve a conversationMember from a chat.
+      summary: Get conversationMember
+      description: Retrieve a conversationMember from a chat or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0
       operationId: chat_GetMember
       parameters:
         - name: chat-id
@@ -2757,11 +2757,11 @@ paths:
     post:
       tags:
         - chats.chatMessage
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: chat.message_CreateReply
       parameters:
         - name: chat-id
@@ -5960,11 +5960,11 @@ paths:
     patch:
       tags:
         - groups.team
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: group.team.channel_UpdateMember
       parameters:
         - name: group-id
@@ -7088,11 +7088,11 @@ paths:
     post:
       tags:
         - groups.team
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: group.team.channel.message_CreateReply
       parameters:
         - name: group-id
@@ -8677,7 +8677,11 @@ paths:
     post:
       tags:
         - groups.team
-      summary: Create new navigation property to tabs for groups
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: group.team.channel_CreateTab
       parameters:
         - name: group-id
@@ -8717,8 +8721,11 @@ paths:
     get:
       tags:
         - groups.team
-      summary: Get tabs from groups
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: group.team.channel_GetTab
       parameters:
         - name: group-id
@@ -8787,7 +8794,11 @@ paths:
     patch:
       tags:
         - groups.team
-      summary: Update the navigation property tabs in groups
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: group.team.channel_UpdateTab
       parameters:
         - name: group-id
@@ -8834,7 +8845,11 @@ paths:
     delete:
       tags:
         - groups.team
-      summary: Delete navigation property tabs for groups
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: group.team.channel_DeleteTab
       parameters:
         - name: group-id
@@ -10987,11 +11002,11 @@ paths:
     patch:
       tags:
         - groups.team
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: group.team.primaryChannel_UpdateMember
       parameters:
         - name: group-id
@@ -11979,11 +11994,11 @@ paths:
     post:
       tags:
         - groups.team
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: group.team.primaryChannel.message_CreateReply
       parameters:
         - name: group-id
@@ -13368,7 +13383,11 @@ paths:
     post:
       tags:
         - groups.team
-      summary: Create new navigation property to tabs for groups
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: group.team.primaryChannel_CreateTab
       parameters:
         - name: group-id
@@ -13400,8 +13419,11 @@ paths:
     get:
       tags:
         - groups.team
-      summary: Get tabs from groups
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: group.team.primaryChannel_GetTab
       parameters:
         - name: group-id
@@ -13462,7 +13484,11 @@ paths:
     patch:
       tags:
         - groups.team
-      summary: Update the navigation property tabs in groups
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: group.team.primaryChannel_UpdateTab
       parameters:
         - name: group-id
@@ -13501,7 +13527,11 @@ paths:
     delete:
       tags:
         - groups.team
-      summary: Delete navigation property tabs for groups
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: group.team.primaryChannel_DeleteTab
       parameters:
         - name: group-id
@@ -18246,11 +18276,11 @@ paths:
     patch:
       tags:
         - teams.channel
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: team.channel_UpdateMember
       parameters:
         - name: team-id
@@ -19520,11 +19550,11 @@ paths:
     post:
       tags:
         - teams.channel
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: team.channel.message_CreateReply
       parameters:
         - name: team-id
@@ -21677,7 +21707,11 @@ paths:
     post:
       tags:
         - teams.channel
-      summary: Create new navigation property to tabs for teams
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: team.channel_CreateTab
       parameters:
         - name: team-id
@@ -21717,8 +21751,11 @@ paths:
     get:
       tags:
         - teams.channel
-      summary: Get tabs from teams
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: team.channel_GetTab
       parameters:
         - name: team-id
@@ -21787,7 +21824,11 @@ paths:
     patch:
       tags:
         - teams.channel
-      summary: Update the navigation property tabs in teams
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: team.channel_UpdateTab
       parameters:
         - name: team-id
@@ -21834,7 +21875,11 @@ paths:
     delete:
       tags:
         - teams.channel
-      summary: Delete navigation property tabs for teams
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: team.channel_DeleteTab
       parameters:
         - name: team-id
@@ -24405,11 +24450,11 @@ paths:
     patch:
       tags:
         - teams.channel
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: team.primaryChannel_UpdateMember
       parameters:
         - name: team-id
@@ -25519,11 +25564,11 @@ paths:
     post:
       tags:
         - teams.channel
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: team.primaryChannel.message_CreateReply
       parameters:
         - name: team-id
@@ -27412,7 +27457,11 @@ paths:
     post:
       tags:
         - teams.channel
-      summary: Create new navigation property to tabs for teams
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: team.primaryChannel_CreateTab
       parameters:
         - name: team-id
@@ -27444,8 +27493,11 @@ paths:
     get:
       tags:
         - teams.channel
-      summary: Get tabs from teams
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: team.primaryChannel_GetTab
       parameters:
         - name: team-id
@@ -27506,7 +27558,11 @@ paths:
     patch:
       tags:
         - teams.channel
-      summary: Update the navigation property tabs in teams
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: team.primaryChannel_UpdateTab
       parameters:
         - name: team-id
@@ -27545,7 +27601,11 @@ paths:
     delete:
       tags:
         - teams.channel
-      summary: Delete navigation property tabs for teams
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: team.primaryChannel_DeleteTab
       parameters:
         - name: team-id
@@ -32217,11 +32277,11 @@ paths:
     patch:
       tags:
         - teamwork.deletedTeam
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel_UpdateMember
       parameters:
         - name: deletedTeam-id
@@ -33491,11 +33551,11 @@ paths:
     post:
       tags:
         - teamwork.deletedTeam
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel.message_CreateReply
       parameters:
         - name: deletedTeam-id
@@ -35648,7 +35708,11 @@ paths:
     post:
       tags:
         - teamwork.deletedTeam
-      summary: Create new navigation property to tabs for teamwork
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel_CreateTab
       parameters:
         - name: deletedTeam-id
@@ -35688,8 +35752,11 @@ paths:
     get:
       tags:
         - teamwork.deletedTeam
-      summary: Get tabs from teamwork
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel_GetTab
       parameters:
         - name: deletedTeam-id
@@ -35758,7 +35825,11 @@ paths:
     patch:
       tags:
         - teamwork.deletedTeam
-      summary: Update the navigation property tabs in teamwork
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel_UpdateTab
       parameters:
         - name: deletedTeam-id
@@ -35805,7 +35876,11 @@ paths:
     delete:
       tags:
         - teamwork.deletedTeam
-      summary: Delete navigation property tabs for teamwork
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: teamwork.deletedTeam.channel_DeleteTab
       parameters:
         - name: deletedTeam-id
@@ -36252,6 +36327,10 @@ paths:
       tags:
         - teamwork.Actions
       summary: Invoke action sendActivityNotificationToRecipients
+      description: "Send activity feed notifications to multiple users, in bulk.  For more details about sending notifications and the requirements for doing so, see\nsending Teams activity notifications."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/teamwork-sendactivitynotificationtorecipients?view=graph-rest-1.0
       operationId: teamwork_sendActivityNotificationToRecipient
       requestBody:
         description: Action parameters
@@ -37577,11 +37656,11 @@ paths:
     get:
       tags:
         - users.chat
-      summary: Get conversationMember in a chat
-      description: Retrieve a conversationMember from a chat.
+      summary: Get conversationMember
+      description: Retrieve a conversationMember from a chat or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/chat-get-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-get?view=graph-rest-1.0
       operationId: user.chat_GetMember
       parameters:
         - name: user-id
@@ -38768,11 +38847,11 @@ paths:
     post:
       tags:
         - users.chat
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: user.chat.message_CreateReply
       parameters:
         - name: user-id
@@ -41804,11 +41883,11 @@ paths:
     patch:
       tags:
         - users.team
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: user.joinedTeam.channel_UpdateMember
       parameters:
         - name: user-id
@@ -43068,11 +43147,11 @@ paths:
     post:
       tags:
         - users.team
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: user.joinedTeam.channel.message_CreateReply
       parameters:
         - name: user-id
@@ -44857,7 +44936,11 @@ paths:
     post:
       tags:
         - users.team
-      summary: Create new navigation property to tabs for users
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.channel_CreateTab
       parameters:
         - name: user-id
@@ -44905,8 +44988,11 @@ paths:
     get:
       tags:
         - users.team
-      summary: Get tabs from users
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.channel_GetTab
       parameters:
         - name: user-id
@@ -44983,7 +45069,11 @@ paths:
     patch:
       tags:
         - users.team
-      summary: Update the navigation property tabs in users
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.channel_UpdateTab
       parameters:
         - name: user-id
@@ -45038,7 +45128,11 @@ paths:
     delete:
       tags:
         - users.team
-      summary: Delete navigation property tabs for users
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.channel_DeleteTab
       parameters:
         - name: user-id
@@ -47535,11 +47629,11 @@ paths:
     patch:
       tags:
         - users.team
-      summary: Update member in channel
-      description: Update the role of a conversationMember in a channel. This operation is allowed only for channels with a **membershipType** value of `private` or `shared`.
+      summary: Update conversationMember
+      description: Update the role of a conversationMember in a team or channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-update-members?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationmember-update?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel_UpdateMember
       parameters:
         - name: user-id
@@ -48663,11 +48757,11 @@ paths:
     post:
       tags:
         - users.team
-      summary: Reply to a message in a channel
-      description: Create a new reply to a chatMessage in a specified channel.
+      summary: Send replies to a message in a channel
+      description: Send a new reply to a chatMessage in a specified channel.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/channel-post-messagereply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/chatmessage-post-replies?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel.message_CreateReply
       parameters:
         - name: user-id
@@ -50252,7 +50346,11 @@ paths:
     post:
       tags:
         - users.team
-      summary: Create new navigation property to tabs for users
+      summary: Add tab to channel
+      description: "Adds (pins) a tab to the specified channel within a team. \nThe corresponding app must already be installed in the team."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-post-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel_CreateTab
       parameters:
         - name: user-id
@@ -50292,8 +50390,11 @@ paths:
     get:
       tags:
         - users.team
-      summary: Get tabs from users
-      description: A collection of all the tabs in the channel. A navigation property.
+      summary: Get tab
+      description: 'Retrieve the properties and relationships of the specified tab in a channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-get-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel_GetTab
       parameters:
         - name: user-id
@@ -50362,7 +50463,11 @@ paths:
     patch:
       tags:
         - users.team
-      summary: Update the navigation property tabs in users
+      summary: Update tab
+      description: "Update the properties of the specified tab.\nThis can be used to configure the content of the tab."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-patch-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel_UpdateTab
       parameters:
         - name: user-id
@@ -50409,7 +50514,11 @@ paths:
     delete:
       tags:
         - users.team
-      summary: Delete navigation property tabs for users
+      summary: Delete tab from channel
+      description: 'Removes (unpins) a tab from the specified channel within a team. '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/channel-delete-tabs?view=graph-rest-1.0
       operationId: user.joinedTeam.primaryChannel_DeleteTab
       parameters:
         - name: user-id
@@ -61800,7 +61909,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object

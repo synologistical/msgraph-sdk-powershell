@@ -10,11 +10,11 @@ paths:
     get:
       tags:
         - users.user
-      summary: Get a user
-      description: Retrieve the properties and relationships of user object.
+      summary: List users
+      description: Retrieve a list of user objects.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0
       operationId: user_ListUser
       parameters:
         - name: ConsistencyLevel
@@ -989,7 +989,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListCreatedObject_GetCountAsServicePrincipal
+      operationId: user.CreatedObject_GetCountAsServicePrincipal
       parameters:
         - name: user-id
           in: path
@@ -1407,7 +1407,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListDirectReport_GetCountAsOrgContact
+      operationId: user.DirectReport_GetCountAsOrgContact
       parameters:
         - name: user-id
           in: path
@@ -1517,7 +1517,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListDirectReport_GetCountAsUser
+      operationId: user.DirectReport_GetCountAsUser
       parameters:
         - name: user-id
           in: path
@@ -2059,6 +2059,93 @@ paths:
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
+        default:
+          $ref: '#/components/responses/error'
+  '/users/{user-id}/mailboxSettings':
+    get:
+      tags:
+        - users.mailboxSettings
+      summary: Get mailboxSettings property value
+      description: 'Settings for the primary mailbox of the signed-in user. You can get or update settings for sending automatic replies to incoming messages, locale and time zone. Returned only on $select.'
+      operationId: user_GetMailboxSetting
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - archiveFolder
+                - automaticRepliesSetting
+                - dateFormat
+                - delegateMeetingMessageDeliveryOptions
+                - language
+                - timeFormat
+                - timeZone
+                - userPurpose
+                - workingHours
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        2XX:
+          description: Result entities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.mailboxSettings'
+        default:
+          $ref: '#/components/responses/error'
+    patch:
+      tags:
+        - users.mailboxSettings
+      summary: Update property mailboxSettings value.
+      operationId: user_UpdateMailboxSetting
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+      requestBody:
+        description: New property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.mailboxSettings'
+        required: true
+      responses:
+        2XX:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.mailboxSettings'
         default:
           $ref: '#/components/responses/error'
   '/users/{user-id}/manager':
@@ -2631,7 +2718,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListMemberOf_GetCountAsAdministrativeUnit
+      operationId: user.MemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: user-id
           in: path
@@ -2741,7 +2828,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListMemberOf_GetCountAsGroup
+      operationId: user.MemberOf_GetCountAsGroup
       parameters:
         - name: user-id
           in: path
@@ -3694,7 +3781,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedDevice_GetCountAsAppRoleAssignment
+      operationId: user.OwnedDevice_GetCountAsAppRoleAssignment
       parameters:
         - name: user-id
           in: path
@@ -3804,7 +3891,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedDevice_GetCountAsDevice
+      operationId: user.OwnedDevice_GetCountAsDevice
       parameters:
         - name: user-id
           in: path
@@ -3914,7 +4001,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedDevice_GetCountAsEndpoint
+      operationId: user.OwnedDevice_GetCountAsEndpoint
       parameters:
         - name: user-id
           in: path
@@ -4409,7 +4496,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedObject_GetCountAsApplication
+      operationId: user.OwnedObject_GetCountAsApplication
       parameters:
         - name: user-id
           in: path
@@ -4519,7 +4606,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedObject_GetCountAsGroup
+      operationId: user.OwnedObject_GetCountAsGroup
       parameters:
         - name: user-id
           in: path
@@ -4629,7 +4716,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListOwnedObject_GetCountAsServicePrincipal
+      operationId: user.OwnedObject_GetCountAsServicePrincipal
       parameters:
         - name: user-id
           in: path
@@ -5472,7 +5559,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListRegisteredDevice_GetCountAsAppRoleAssignment
+      operationId: user.RegisteredDevice_GetCountAsAppRoleAssignment
       parameters:
         - name: user-id
           in: path
@@ -5582,7 +5669,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListRegisteredDevice_GetCountAsDevice
+      operationId: user.RegisteredDevice_GetCountAsDevice
       parameters:
         - name: user-id
           in: path
@@ -5692,7 +5779,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListRegisteredDevice_GetCountAsEndpoint
+      operationId: user.RegisteredDevice_GetCountAsEndpoint
       parameters:
         - name: user-id
           in: path
@@ -5723,7 +5810,11 @@ paths:
     get:
       tags:
         - users.userSettings
-      summary: Get settings from users
+      summary: Get settings
+      description: "Read the user and organization userSettings object.\nTo learn how to update the properties of the userSettings object, see update user settings."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0
       operationId: user_GetSetting
       parameters:
         - name: user-id
@@ -9348,7 +9439,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListTransitiveMemberOf_GetCountAsAdministrativeUnit
+      operationId: user.TransitiveMemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: user-id
           in: path
@@ -9458,7 +9549,7 @@ paths:
       tags:
         - users.directoryObject
       summary: Get the number of the resource
-      operationId: user.ListTransitiveMemberOf_GetCountAsGroup
+      operationId: user.TransitiveMemberOf_GetCountAsGroup
       parameters:
         - name: user-id
           in: path
@@ -9662,7 +9753,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -10432,6 +10523,38 @@ components:
               nullable: true
           additionalProperties:
             type: object
+    microsoft.graph.mailboxSettings:
+      title: mailboxSettings
+      type: object
+      properties:
+        archiveFolder:
+          type: string
+          description: Folder ID of an archive folder for the user.
+          nullable: true
+        automaticRepliesSetting:
+          $ref: '#/components/schemas/microsoft.graph.automaticRepliesSetting'
+        dateFormat:
+          type: string
+          description: The date format for the user's mailbox.
+          nullable: true
+        delegateMeetingMessageDeliveryOptions:
+          $ref: '#/components/schemas/microsoft.graph.delegateMeetingMessageDeliveryOptions'
+        language:
+          $ref: '#/components/schemas/microsoft.graph.localeInfo'
+        timeFormat:
+          type: string
+          description: The time format for the user's mailbox.
+          nullable: true
+        timeZone:
+          type: string
+          description: The default time zone for the user's mailbox.
+          nullable: true
+        userPurpose:
+          $ref: '#/components/schemas/microsoft.graph.userPurpose'
+        workingHours:
+          $ref: '#/components/schemas/microsoft.graph.workingHours'
+      additionalProperties:
+        type: object
     microsoft.graph.administrativeUnit:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.directoryObject'
@@ -11771,38 +11894,6 @@ components:
           type: string
           description: 'The name of the service; for example, ''AccessControlS2S'''
           nullable: true
-      additionalProperties:
-        type: object
-    microsoft.graph.mailboxSettings:
-      title: mailboxSettings
-      type: object
-      properties:
-        archiveFolder:
-          type: string
-          description: Folder ID of an archive folder for the user.
-          nullable: true
-        automaticRepliesSetting:
-          $ref: '#/components/schemas/microsoft.graph.automaticRepliesSetting'
-        dateFormat:
-          type: string
-          description: The date format for the user's mailbox.
-          nullable: true
-        delegateMeetingMessageDeliveryOptions:
-          $ref: '#/components/schemas/microsoft.graph.delegateMeetingMessageDeliveryOptions'
-        language:
-          $ref: '#/components/schemas/microsoft.graph.localeInfo'
-        timeFormat:
-          type: string
-          description: The time format for the user's mailbox.
-          nullable: true
-        timeZone:
-          type: string
-          description: The default time zone for the user's mailbox.
-          nullable: true
-        userPurpose:
-          $ref: '#/components/schemas/microsoft.graph.userPurpose'
-        workingHours:
-          $ref: '#/components/schemas/microsoft.graph.workingHours'
       additionalProperties:
         type: object
     microsoft.graph.scopedRoleMembership:
@@ -14104,6 +14195,85 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.automaticRepliesSetting:
+      title: automaticRepliesSetting
+      type: object
+      properties:
+        externalAudience:
+          $ref: '#/components/schemas/microsoft.graph.externalAudienceScope'
+        externalReplyMessage:
+          type: string
+          description: 'The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.'
+          nullable: true
+        internalReplyMessage:
+          type: string
+          description: 'The automatic reply to send to the audience internal to the signed-in user''s organization, if Status is AlwaysEnabled or Scheduled.'
+          nullable: true
+        scheduledEndDateTime:
+          $ref: '#/components/schemas/microsoft.graph.dateTimeTimeZone'
+        scheduledStartDateTime:
+          $ref: '#/components/schemas/microsoft.graph.dateTimeTimeZone'
+        status:
+          $ref: '#/components/schemas/microsoft.graph.automaticRepliesStatus'
+      additionalProperties:
+        type: object
+    microsoft.graph.delegateMeetingMessageDeliveryOptions:
+      title: delegateMeetingMessageDeliveryOptions
+      enum:
+        - sendToDelegateAndInformationToPrincipal
+        - sendToDelegateAndPrincipal
+        - sendToDelegateOnly
+      type: string
+    microsoft.graph.localeInfo:
+      title: localeInfo
+      type: object
+      properties:
+        displayName:
+          type: string
+          description: 'A name representing the user''s locale in natural language, for example, ''English (United States)''.'
+          nullable: true
+        locale:
+          type: string
+          description: 'A locale representation for the user, which includes the user''s preferred language and country/region. For example, ''en-us''. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.'
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.userPurpose:
+      title: userPurpose
+      enum:
+        - user
+        - linked
+        - shared
+        - room
+        - equipment
+        - others
+        - unknownFutureValue
+      type: string
+    microsoft.graph.workingHours:
+      title: workingHours
+      type: object
+      properties:
+        daysOfWeek:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.dayOfWeek'
+          description: The days of the week on which the user works.
+        endTime:
+          pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
+          type: string
+          description: The time of the day that the user stops working.
+          format: time
+          nullable: true
+        startTime:
+          pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
+          type: string
+          description: The time of the day that the user starts working.
+          format: time
+          nullable: true
+        timeZone:
+          $ref: '#/components/schemas/microsoft.graph.timeZoneBase'
+      additionalProperties:
+        type: object
     microsoft.graph.assignedLabel:
       title: assignedLabel
       type: object
@@ -14939,85 +15109,6 @@ components:
         '@odata.nextLink':
           type: string
           nullable: true
-      additionalProperties:
-        type: object
-    microsoft.graph.automaticRepliesSetting:
-      title: automaticRepliesSetting
-      type: object
-      properties:
-        externalAudience:
-          $ref: '#/components/schemas/microsoft.graph.externalAudienceScope'
-        externalReplyMessage:
-          type: string
-          description: 'The automatic reply to send to the specified external audience, if Status is AlwaysEnabled or Scheduled.'
-          nullable: true
-        internalReplyMessage:
-          type: string
-          description: 'The automatic reply to send to the audience internal to the signed-in user''s organization, if Status is AlwaysEnabled or Scheduled.'
-          nullable: true
-        scheduledEndDateTime:
-          $ref: '#/components/schemas/microsoft.graph.dateTimeTimeZone'
-        scheduledStartDateTime:
-          $ref: '#/components/schemas/microsoft.graph.dateTimeTimeZone'
-        status:
-          $ref: '#/components/schemas/microsoft.graph.automaticRepliesStatus'
-      additionalProperties:
-        type: object
-    microsoft.graph.delegateMeetingMessageDeliveryOptions:
-      title: delegateMeetingMessageDeliveryOptions
-      enum:
-        - sendToDelegateAndInformationToPrincipal
-        - sendToDelegateAndPrincipal
-        - sendToDelegateOnly
-      type: string
-    microsoft.graph.localeInfo:
-      title: localeInfo
-      type: object
-      properties:
-        displayName:
-          type: string
-          description: 'A name representing the user''s locale in natural language, for example, ''English (United States)''.'
-          nullable: true
-        locale:
-          type: string
-          description: 'A locale representation for the user, which includes the user''s preferred language and country/region. For example, ''en-us''. The language component follows 2-letter codes as defined in ISO 639-1, and the country component follows 2-letter codes as defined in ISO 3166-1 alpha-2.'
-          nullable: true
-      additionalProperties:
-        type: object
-    microsoft.graph.userPurpose:
-      title: userPurpose
-      enum:
-        - user
-        - linked
-        - shared
-        - room
-        - equipment
-        - others
-        - unknownFutureValue
-      type: string
-    microsoft.graph.workingHours:
-      title: workingHours
-      type: object
-      properties:
-        daysOfWeek:
-          type: array
-          items:
-            $ref: '#/components/schemas/microsoft.graph.dayOfWeek'
-          description: The days of the week on which the user works.
-        endTime:
-          pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
-          type: string
-          description: The time of the day that the user stops working.
-          format: time
-          nullable: true
-        startTime:
-          pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
-          type: string
-          description: The time of the day that the user starts working.
-          format: time
-          nullable: true
-        timeZone:
-          $ref: '#/components/schemas/microsoft.graph.timeZoneBase'
       additionalProperties:
         type: object
     microsoft.graph.identity:
@@ -18491,6 +18582,41 @@ components:
         - pager
         - radio
       type: string
+    microsoft.graph.externalAudienceScope:
+      title: externalAudienceScope
+      enum:
+        - none
+        - contactsOnly
+        - all
+      type: string
+    microsoft.graph.automaticRepliesStatus:
+      title: automaticRepliesStatus
+      enum:
+        - disabled
+        - alwaysEnabled
+        - scheduled
+      type: string
+    microsoft.graph.dayOfWeek:
+      title: dayOfWeek
+      enum:
+        - sunday
+        - monday
+        - tuesday
+        - wednesday
+        - thursday
+        - friday
+        - saturday
+      type: string
+    microsoft.graph.timeZoneBase:
+      title: timeZoneBase
+      type: object
+      properties:
+        name:
+          type: string
+          description: 'The name of a time zone. It can be a standard time zone name such as ''Hawaii-Aleutian Standard Time'', or ''Customized Time Zone'' for a custom time zone.'
+          nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.settingValue:
       title: settingValue
       type: object
@@ -18759,43 +18885,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
-      additionalProperties:
-        type: object
-    microsoft.graph.externalAudienceScope:
-      title: externalAudienceScope
-      enum:
-        - none
-        - contactsOnly
-        - all
-      type: string
-    microsoft.graph.automaticRepliesStatus:
-      title: automaticRepliesStatus
-      enum:
-        - disabled
-        - alwaysEnabled
-        - scheduled
-      type: string
-    microsoft.graph.dayOfWeek:
-      title: dayOfWeek
-      enum:
-        - sunday
-        - monday
-        - tuesday
-        - wednesday
-        - thursday
-        - friday
-        - saturday
-      type: string
-    microsoft.graph.timeZoneBase:
-      title: timeZoneBase
-      type: object
-      properties:
-        name:
-          type: string
-          description: 'The name of a time zone. It can be a standard time zone name such as ''Hawaii-Aleutian Standard Time'', or ''Customized Time Zone'' for a custom time zone.'
-          nullable: true
       additionalProperties:
         type: object
     microsoft.graph.calendarRoleType:

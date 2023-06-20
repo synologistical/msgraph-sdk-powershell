@@ -229,6 +229,10 @@ paths:
       tags:
         - groupLifecyclePolicies.Actions
       summary: Invoke action addGroup
+      description: Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0
       operationId: groupLifecyclePolicy_addGroup
       parameters:
         - name: groupLifecyclePolicy-id
@@ -272,6 +276,10 @@ paths:
       tags:
         - groupLifecyclePolicies.Actions
       summary: Invoke action removeGroup
+      description: Removes a group from a lifecycle policy.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0
       operationId: groupLifecyclePolicy_removeGroup
       parameters:
         - name: groupLifecyclePolicy-id
@@ -4887,11 +4895,11 @@ paths:
     post:
       tags:
         - groups.conversation
-      summary: Create open extension
-      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
+      summary: Create conversation
+      description: Use reply thread or reply post to further post to that conversation.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0
       operationId: group_CreateConversation
       parameters:
         - name: group-id
@@ -4981,7 +4989,7 @@ paths:
       description: Delete conversation.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0
       operationId: group_DeleteConversation
       parameters:
         - name: group-id
@@ -5328,10 +5336,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: "Add an attachment when creating a group post. This operation limits the size of the attachment you can add to under 3 MB. An attachment can be one of the following types: All these types of attachment resources are derived from the attachment\nresource. "
+      description: "Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation \nin the request, or, you can specify just the thread without the parent conversation."
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-post-attachments?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationthread-reply?view=graph-rest-1.0
       operationId: group.conversation.thread_reply
       parameters:
         - name: group-id
@@ -5380,11 +5388,11 @@ paths:
     get:
       tags:
         - groups.conversation
-      summary: List posts
-      description: "Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, \nyou can specify the thread without referencing the parent conversation."
+      summary: Get post
+      description: "Get the properties and relationships of a post in a specified thread. You can specify both the parent \nconversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the **post** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **post** instance."
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/post-get?view=graph-rest-1.0
       operationId: group.conversation.thread_ListPost
       parameters:
         - name: group-id
@@ -14711,6 +14719,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action addGroup
+      description: Adds specific groups to a lifecycle policy. This action limits the group lifecycle policy to a set of groups only if the **managedGroupTypes** property of groupLifecyclePolicy is set to `Selected`.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/grouplifecyclepolicy-addgroup?view=graph-rest-1.0
       operationId: group.groupLifecyclePolicy_addGroup
       parameters:
         - name: group-id
@@ -14762,6 +14774,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action removeGroup
+      description: Removes a group from a lifecycle policy.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/grouplifecyclepolicy-removegroup?view=graph-rest-1.0
       operationId: group.groupLifecyclePolicy_removeGroup
       parameters:
         - name: group-id
@@ -15231,7 +15247,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMemberOf_GetCountAsAdministrativeUnit
+      operationId: group.MemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: group-id
           in: path
@@ -15341,7 +15357,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMemberOf_GetCountAsGroup
+      operationId: group.MemberOf_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -16098,7 +16114,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsApplication
+      operationId: group.Member_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -16208,7 +16224,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsDevice
+      operationId: group.Member_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -16318,7 +16334,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsGroup
+      operationId: group.Member_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -16428,7 +16444,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsOrgContact
+      operationId: group.Member_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -16538,7 +16554,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsServicePrincipal
+      operationId: group.Member_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -16648,7 +16664,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsUser
+      operationId: group.Member_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -17341,7 +17357,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsApplication
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -17451,7 +17467,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsDevice
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -17561,7 +17577,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsGroup
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -17671,7 +17687,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsOrgContact
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -17781,7 +17797,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsServicePrincipal
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -17891,7 +17907,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsUser
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -20763,7 +20779,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsApplication
+      operationId: group.Owner_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -20873,7 +20889,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsDevice
+      operationId: group.Owner_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -20983,7 +20999,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsGroup
+      operationId: group.Owner_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -21093,7 +21109,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsOrgContact
+      operationId: group.Owner_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -21203,7 +21219,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsServicePrincipal
+      operationId: group.Owner_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -21313,7 +21329,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsUser
+      operationId: group.Owner_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -26991,6 +27007,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action softDelete
+      description: Delete a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0
       operationId: group.team.channel.message_softDelete
       parameters:
         - name: group-id
@@ -27028,6 +27048,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action undoSoftDelete
+      description: Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0
       operationId: group.team.channel.message_undoSoftDelete
       parameters:
         - name: group-id
@@ -27065,6 +27089,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action softDelete
+      description: Delete a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0
       operationId: group.team.channel.message.reply_softDelete
       parameters:
         - name: group-id
@@ -27110,6 +27138,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action undoSoftDelete
+      description: Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0
       operationId: group.team.channel.message.reply_undoSoftDelete
       parameters:
         - name: group-id
@@ -28099,6 +28131,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action softDelete
+      description: Delete a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0
       operationId: group.team.primaryChannel.message_softDelete
       parameters:
         - name: group-id
@@ -28128,6 +28164,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action undoSoftDelete
+      description: Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0
       operationId: group.team.primaryChannel.message_undoSoftDelete
       parameters:
         - name: group-id
@@ -28157,6 +28197,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action softDelete
+      description: Delete a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-softdelete?view=graph-rest-1.0
       operationId: group.team.primaryChannel.message.reply_softDelete
       parameters:
         - name: group-id
@@ -28194,6 +28238,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action undoSoftDelete
+      description: Undo soft deletion of a single chatMessage or a chat message reply in a channel or a chat.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/chatmessage-undosoftdelete?view=graph-rest-1.0
       operationId: group.team.primaryChannel.message.reply_undoSoftDelete
       parameters:
         - name: group-id
@@ -28818,11 +28866,11 @@ paths:
     get:
       tags:
         - groups.conversationThread
-      summary: Get conversationThread
-      description: "Get a specific thread that belongs to a group. You can specify both the parent conversation and the thread, or, \nyou can specify the thread without referencing the parent conversation. "
+      summary: Get conversation thread
+      description: Get a thread object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-get-thread?view=graph-rest-1.0
       operationId: group_GetThread
       parameters:
         - name: group-id
@@ -28917,11 +28965,11 @@ paths:
     delete:
       tags:
         - groups.conversationThread
-      summary: Delete conversationThread
+      summary: Delete conversation thread
       description: Delete conversationThread.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/group-delete-thread?view=graph-rest-1.0
       operationId: group_DeleteThread
       parameters:
         - name: group-id
@@ -28957,10 +29005,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: "Add an attachment when creating a group post. This operation limits the size of the attachment you can add to under 3 MB. An attachment can be one of the following types: All these types of attachment resources are derived from the attachment\nresource. "
+      description: "Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation \nin the request, or, you can specify just the thread without the parent conversation."
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/post-post-attachments?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversationthread-reply?view=graph-rest-1.0
       operationId: group.thread_reply
       parameters:
         - name: group-id
@@ -29001,11 +29049,11 @@ paths:
     get:
       tags:
         - groups.conversationThread
-      summary: List posts
-      description: "Get the posts of the specified thread. You can specify both the parent conversation and the thread, or, \nyou can specify the thread without referencing the parent conversation."
+      summary: Get post
+      description: "Get the properties and relationships of a post in a specified thread. You can specify both the parent \nconversation and the thread, or, you can specify the thread without referencing the parent conversation. Since the **post** resource supports extensions, you can also use the `GET` operation to get custom properties and extension data in a **post** instance."
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-list-posts?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/post-get?view=graph-rest-1.0
       operationId: group.thread_ListPost
       parameters:
         - name: group-id
@@ -31412,7 +31460,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMemberOf_GetCountAsAdministrativeUnit
+      operationId: group.TransitiveMemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: group-id
           in: path
@@ -31522,7 +31570,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMemberOf_GetCountAsGroup
+      operationId: group.TransitiveMemberOf_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -32218,7 +32266,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsApplication
+      operationId: group.TransitiveMember_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -32328,7 +32376,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsDevice
+      operationId: group.TransitiveMember_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -32438,7 +32486,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsGroup
+      operationId: group.TransitiveMember_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -32548,7 +32596,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsOrgContact
+      operationId: group.TransitiveMember_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -32658,7 +32706,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsServicePrincipal
+      operationId: group.TransitiveMember_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -32768,7 +32816,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsUser
+      operationId: group.TransitiveMember_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -36083,7 +36131,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -40192,7 +40240,7 @@ components:
               nullable: true
             isFavorite:
               type: boolean
-              description: true if the user has flagged this person as a favorite.
+              description: True if the user has flagged this person as a favorite.
               nullable: true
             jobTitle:
               type: string
@@ -45562,7 +45610,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object

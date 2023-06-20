@@ -2911,8 +2911,11 @@ paths:
     get:
       tags:
         - identity.conditionalAccessRoot
-      summary: Get authenticationContextClassReferences from identity
-      description: Read-only. Nullable. Returns a collection of the specified authentication context class references.
+      summary: Get authenticationContextClassReference
+      description: Retrieve the properties and relationships of a authenticationContextClassReference object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/authenticationcontextclassreference-get?view=graph-rest-1.0
       operationId: identity.conditionalAccess_GetAuthenticationContextClassReference
       parameters:
         - name: authenticationContextClassReference-id
@@ -2963,7 +2966,11 @@ paths:
     patch:
       tags:
         - identity.conditionalAccessRoot
-      summary: Update the navigation property authenticationContextClassReferences in identity
+      summary: Update authenticationContextClassReference
+      description: 'Create an authenticationContextClassReference object, if the ID has not been used. If ID has been used, this call updates the authenticationContextClassReference object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/authenticationcontextclassreference-update?view=graph-rest-1.0
       operationId: identity.conditionalAccess_UpdateAuthenticationContextClassReference
       parameters:
         - name: authenticationContextClassReference-id
@@ -2994,7 +3001,11 @@ paths:
     delete:
       tags:
         - identity.conditionalAccessRoot
-      summary: Delete navigation property authenticationContextClassReferences for identity
+      summary: Delete authenticationContextClassReference
+      description: Delete an authenticationContextClassReference object that's not published or used by a conditional access policy.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/authenticationcontextclassreference-delete?view=graph-rest-1.0
       operationId: identity.conditionalAccess_DeleteAuthenticationContextClassReference
       parameters:
         - name: authenticationContextClassReference-id
@@ -4096,11 +4107,11 @@ paths:
     delete:
       tags:
         - identity.conditionalAccessRoot
-      summary: Delete countryNamedLocation
-      description: Delete a countryNamedLocation object.
+      summary: Delete namedLocation
+      description: Delete a namedLocation object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/countrynamedlocation-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/namedlocation-delete?view=graph-rest-1.0
       operationId: identity.conditionalAccess_DeleteNamedLocation
       parameters:
         - name: namedLocation-id
@@ -11044,8 +11055,11 @@ paths:
     get:
       tags:
         - policies.authorizationPolicy
-      summary: Get authorizationPolicy from policies
-      description: The policy that controls Azure AD authorization settings.
+      summary: Get authorizationPolicy
+      description: Retrieve the properties of an authorizationPolicy object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/authorizationpolicy-get?view=graph-rest-1.0
       operationId: policy_GetAuthorizationPolicy
       parameters:
         - name: $select
@@ -17038,8 +17052,11 @@ paths:
     get:
       tags:
         - users.authentication
-      summary: Get methods from users
-      description: Represents all authentication methods registered to a user.
+      summary: Get authenticationMethod
+      description: Retrieve the properties and relationships of an authenticationMethod object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/authenticationmethod-get?view=graph-rest-1.0
       operationId: user.authentication_GetMethod
       parameters:
         - name: user-id
@@ -20082,7 +20099,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -23086,7 +23103,7 @@ components:
               nullable: true
             isFavorite:
               type: boolean
-              description: true if the user has flagged this person as a favorite.
+              description: True if the user has flagged this person as a favorite.
               nullable: true
             jobTitle:
               type: string

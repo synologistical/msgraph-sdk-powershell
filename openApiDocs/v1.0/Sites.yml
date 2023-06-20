@@ -6,6 +6,207 @@ servers:
   - url: https://graph.microsoft.com/v1.0/
     description: Core
 paths:
+  /admin/sharepoint:
+    get:
+      tags:
+        - admin.sharepoint
+      summary: Get sharepoint from admin
+      operationId: admin_GetSharepoint
+      parameters:
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - settings
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - settings
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.sharepoint'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - admin.sharepoint
+      summary: Update the navigation property sharepoint in admin
+      operationId: admin_UpdateSharepoint
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.sharepoint'
+        required: true
+      responses:
+        2XX:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.sharepoint'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - admin.sharepoint
+      summary: Delete navigation property sharepoint for admin
+      operationId: admin_DeleteSharepoint
+      parameters:
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  /admin/sharepoint/settings:
+    get:
+      tags:
+        - admin.sharepoint
+      summary: Get settings
+      description: Get the tenant-level settings for SharePoint and OneDrive.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/sharepointsettings-get?view=graph-rest-1.0
+      operationId: admin.sharepoint_GetSetting
+      parameters:
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - allowedDomainGuidsForSyncApp
+                - availableManagedPathsForSiteCreation
+                - deletedUserPersonalSiteRetentionPeriodInDays
+                - excludedFileExtensionsForSyncApp
+                - idleSessionSignOut
+                - imageTaggingOption
+                - isCommentingOnSitePagesEnabled
+                - isFileActivityNotificationEnabled
+                - isLegacyAuthProtocolsEnabled
+                - isLoopEnabled
+                - isMacSyncAppEnabled
+                - isRequireAcceptingUserToMatchInvitedUserEnabled
+                - isResharingByExternalUsersEnabled
+                - isSharePointMobileNotificationEnabled
+                - isSharePointNewsfeedEnabled
+                - isSiteCreationEnabled
+                - isSiteCreationUIEnabled
+                - isSitePagesCreationEnabled
+                - isSitesStorageLimitAutomatic
+                - isSyncButtonHiddenOnPersonalSite
+                - isUnmanagedSyncAppForTenantRestricted
+                - personalSiteDefaultStorageLimitInMB
+                - sharingAllowedDomainList
+                - sharingBlockedDomainList
+                - sharingCapability
+                - sharingDomainRestrictionMode
+                - siteCreationDefaultManagedPath
+                - siteCreationDefaultStorageLimitInMB
+                - tenantDefaultTimezone
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.sharepointSettings'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - admin.sharepoint
+      summary: Update settings
+      description: Update one or more tenant-level settings for SharePoint and OneDrive.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/sharepointsettings-update?view=graph-rest-1.0
+      operationId: admin.sharepoint_UpdateSetting
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.sharepointSettings'
+        required: true
+      responses:
+        2XX:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.sharepointSettings'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - admin.sharepoint
+      summary: Delete navigation property settings for admin
+      operationId: admin.sharepoint_DeleteSetting
+      parameters:
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/groups/{group-id}/sites':
     get:
       tags:
@@ -78992,6 +79193,299 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
+  '/sites/{site-id}/operations':
+    get:
+      tags:
+        - sites.richLongRunningOperation
+      summary: List operations on a site
+      description: Get a list of rich long-running operations associated with a site.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/site-list-operations?view=graph-rest-1.0
+      operationId: site_ListOperation
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - createdDateTime
+                - createdDateTime desc
+                - lastActionDateTime
+                - lastActionDateTime desc
+                - resourceLocation
+                - resourceLocation desc
+                - status
+                - status desc
+                - statusDetail
+                - statusDetail desc
+                - error
+                - error desc
+                - percentageComplete
+                - percentageComplete desc
+                - resourceId
+                - resourceId desc
+                - type
+                - type desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - lastActionDateTime
+                - resourceLocation
+                - status
+                - statusDetail
+                - error
+                - percentageComplete
+                - resourceId
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        2XX:
+          $ref: '#/components/responses/microsoft.graph.richLongRunningOperationCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - sites.richLongRunningOperation
+      summary: Create new navigation property to operations for sites
+      operationId: site_CreateOperation
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        required: true
+      responses:
+        2XX:
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/sites/{site-id}/operations/{richLongRunningOperation-id}':
+    get:
+      tags:
+        - sites.richLongRunningOperation
+      summary: Get richLongRunningOperation
+      description: Get the status of a rich long-running operation on a site or a list.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/richlongrunningoperation-get?view=graph-rest-1.0
+      operationId: site_GetOperation
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+        - name: richLongRunningOperation-id
+          in: path
+          description: The unique identifier of richLongRunningOperation
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: richLongRunningOperation
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - createdDateTime
+                - lastActionDateTime
+                - resourceLocation
+                - status
+                - statusDetail
+                - error
+                - percentageComplete
+                - resourceId
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        2XX:
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - sites.richLongRunningOperation
+      summary: Update the navigation property operations in sites
+      operationId: site_UpdateOperation
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+        - name: richLongRunningOperation-id
+          in: path
+          description: The unique identifier of richLongRunningOperation
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: richLongRunningOperation
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        required: true
+      responses:
+        2XX:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.richLongRunningOperation'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - sites.richLongRunningOperation
+      summary: Delete navigation property operations for sites
+      operationId: site_DeleteOperation
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+        - name: richLongRunningOperation-id
+          in: path
+          description: The unique identifier of richLongRunningOperation
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: richLongRunningOperation
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/sites/{site-id}/operations/$count':
+    get:
+      tags:
+        - sites.richLongRunningOperation
+      summary: Get the number of the resource
+      operationId: site.operation_GetCount
+      parameters:
+        - name: site-id
+          in: path
+          description: The unique identifier of site
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: site
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+      responses:
+        2XX:
+          $ref: '#/components/responses/ODataCountResponse'
+        default:
+          $ref: '#/components/responses/error'
   '/sites/{site-id}/permissions':
     get:
       tags:
@@ -117578,6 +118072,149 @@ paths:
           $ref: '#/components/responses/error'
 components:
   schemas:
+    microsoft.graph.sharepoint:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: sharepoint
+          type: object
+          properties:
+            settings:
+              $ref: '#/components/schemas/microsoft.graph.sharepointSettings'
+          additionalProperties:
+            type: object
+    microsoft.graph.sharepointSettings:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: sharepointSettings
+          type: object
+          properties:
+            allowedDomainGuidsForSyncApp:
+              type: array
+              items:
+                pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                type: string
+                format: uuid
+                nullable: true
+              description: Collection of trusted domain GUIDs for the OneDrive sync app.
+            availableManagedPathsForSiteCreation:
+              type: array
+              items:
+                type: string
+              description: Collection of managed paths available for site creation. Read-only.
+            deletedUserPersonalSiteRetentionPeriodInDays:
+              maximum: 2147483647
+              minimum: -2147483648
+              type: integer
+              description: The number of days for preserving a deleted user's OneDrive.
+              format: int32
+              nullable: true
+            excludedFileExtensionsForSyncApp:
+              type: array
+              items:
+                type: string
+                nullable: true
+              description: Collection of file extensions not uploaded by the OneDrive sync app.
+            idleSessionSignOut:
+              $ref: '#/components/schemas/microsoft.graph.idleSessionSignOut'
+            imageTaggingOption:
+              $ref: '#/components/schemas/microsoft.graph.imageTaggingChoice'
+            isCommentingOnSitePagesEnabled:
+              type: boolean
+              description: Indicates whether comments are allowed on modern site pages in SharePoint.
+              nullable: true
+            isFileActivityNotificationEnabled:
+              type: boolean
+              description: Indicates whether push notifications are enabled for OneDrive events.
+              nullable: true
+            isLegacyAuthProtocolsEnabled:
+              type: boolean
+              description: Indicates whether legacy authentication protocols are enabled for the tenant.
+              nullable: true
+            isLoopEnabled:
+              type: boolean
+              description: Indicates whether if Fluid Framework is allowed on SharePoint sites.
+              nullable: true
+            isMacSyncAppEnabled:
+              type: boolean
+              description: Indicates whether files can be synced using the OneDrive sync app for Mac.
+              nullable: true
+            isRequireAcceptingUserToMatchInvitedUserEnabled:
+              type: boolean
+              description: Indicates whether guests must sign in using the same account to which sharing invitations are sent.
+              nullable: true
+            isResharingByExternalUsersEnabled:
+              type: boolean
+              description: 'Indicates whether guests are allowed to reshare files, folders, and sites they don''t own.'
+              nullable: true
+            isSharePointMobileNotificationEnabled:
+              type: boolean
+              description: Indicates whether mobile push notifications are enabled for SharePoint.
+              nullable: true
+            isSharePointNewsfeedEnabled:
+              type: boolean
+              description: Indicates whether the newsfeed is allowed on the modern site pages in SharePoint.
+              nullable: true
+            isSiteCreationEnabled:
+              type: boolean
+              description: Indicates whether users are allowed to create sites.
+              nullable: true
+            isSiteCreationUIEnabled:
+              type: boolean
+              description: Indicates whether the UI commands for creating sites are shown.
+              nullable: true
+            isSitePagesCreationEnabled:
+              type: boolean
+              description: Indicates whether creating new modern pages is allowed on SharePoint sites.
+              nullable: true
+            isSitesStorageLimitAutomatic:
+              type: boolean
+              description: Indicates whether site storage space is automatically managed or if specific storage limits are set per site.
+              nullable: true
+            isSyncButtonHiddenOnPersonalSite:
+              type: boolean
+              description: Indicates whether the sync button in OneDrive is hidden.
+              nullable: true
+            isUnmanagedSyncAppForTenantRestricted:
+              type: boolean
+              description: Indicates whether users are allowed to sync files only on PCs joined to specific domains.
+              nullable: true
+            personalSiteDefaultStorageLimitInMB:
+              type: integer
+              description: The default OneDrive storage limit for all new and existing users who are assigned a qualifying license. Measured in megabytes (MB).
+              format: int64
+              nullable: true
+            sharingAllowedDomainList:
+              type: array
+              items:
+                type: string
+                nullable: true
+              description: Collection of email domains that are allowed for sharing outside the organization.
+            sharingBlockedDomainList:
+              type: array
+              items:
+                type: string
+                nullable: true
+              description: Collection of email domains that are blocked for sharing outside the organization.
+            sharingCapability:
+              $ref: '#/components/schemas/microsoft.graph.sharingCapabilities'
+            sharingDomainRestrictionMode:
+              $ref: '#/components/schemas/microsoft.graph.sharingDomainRestrictionMode'
+            siteCreationDefaultManagedPath:
+              type: string
+              description: The value of the team site managed path. This is the path under which new team sites will be created.
+            siteCreationDefaultStorageLimitInMB:
+              maximum: 2147483647
+              minimum: -2147483648
+              type: integer
+              description: The default storage quota for a new site upon creation. Measured in megabytes (MB).
+              format: int32
+              nullable: true
+            tenantDefaultTimezone:
+              type: string
+              description: 'The default timezone of a tenant for newly created sites. For a list of possible values, see SPRegionalSettings.TimeZones property.'
+              nullable: true
+          additionalProperties:
+            type: object
     microsoft.graph.site:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.baseItem'
@@ -118191,7 +118828,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -119535,6 +120172,60 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.entity:
+      title: entity
+      type: object
+      properties:
+        id:
+          type: string
+          description: The unique idenfier for an entity. Read-only.
+      additionalProperties:
+        type: object
+    microsoft.graph.idleSessionSignOut:
+      title: idleSessionSignOut
+      type: object
+      properties:
+        isEnabled:
+          type: boolean
+          description: Indicates whether the idle session sign-out policy is enabled.
+          nullable: true
+        signOutAfterInSeconds:
+          type: integer
+          description: Number of seconds of inactivity after which a user is signed out.
+          format: int64
+          nullable: true
+        warnAfterInSeconds:
+          type: integer
+          description: Number of seconds of inactivity after which a user is notified that they'll be signed out.
+          format: int64
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.imageTaggingChoice:
+      title: imageTaggingChoice
+      enum:
+        - disabled
+        - basic
+        - enhanced
+        - unknownFutureValue
+      type: string
+    microsoft.graph.sharingCapabilities:
+      title: sharingCapabilities
+      enum:
+        - disabled
+        - externalUserSharingOnly
+        - externalUserAndGuestSharing
+        - existingExternalUserSharingOnly
+        - unknownFutureValue
+      type: string
+    microsoft.graph.sharingDomainRestrictionMode:
+      title: sharingDomainRestrictionMode
+      enum:
+        - none
+        - allowList
+        - blockList
+        - unknownFutureValue
+      type: string
     microsoft.graph.publicError:
       title: publicError
       type: object
@@ -119613,15 +120304,6 @@ components:
           nullable: true
         root:
           $ref: '#/components/schemas/microsoft.graph.root'
-      additionalProperties:
-        type: object
-    microsoft.graph.entity:
-      title: entity
-      type: object
-      properties:
-        id:
-          type: string
-          description: The unique idenfier for an entity. Read-only.
       additionalProperties:
         type: object
     microsoft.graph.itemActionStat:
@@ -123187,6 +123869,15 @@ components:
         - OneDriveForBusiness
         - OnPremOneDriveForBusiness
       type: string
+    microsoft.graph.ODataErrors.ODataError:
+      required:
+        - error
+      type: object
+      properties:
+        error:
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.MainError'
+      additionalProperties:
+        type: object
     microsoft.graph.siteCollectionResponse:
       title: Collection of site
       type: object
@@ -123198,15 +123889,6 @@ components:
         '@odata.nextLink':
           type: string
           nullable: true
-      additionalProperties:
-        type: object
-    microsoft.graph.ODataErrors.ODataError:
-      required:
-        - error
-      type: object
-      properties:
-        error:
-          $ref: '#/components/schemas/microsoft.graph.ODataErrors.MainError'
       additionalProperties:
         type: object
     microsoft.graph.itemActivityStatCollectionResponse:
@@ -130361,18 +131043,18 @@ components:
           additionalProperties:
             type: object
   responses:
-    microsoft.graph.siteCollectionResponse:
-      description: Retrieved collection
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/microsoft.graph.siteCollectionResponse'
     error:
       description: error
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ODataError'
+    microsoft.graph.siteCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.siteCollectionResponse'
     microsoft.graph.itemActivityStatCollectionResponse:
       description: Retrieved collection
       content:

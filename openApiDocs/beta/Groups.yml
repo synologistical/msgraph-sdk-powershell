@@ -11378,11 +11378,11 @@ paths:
     post:
       tags:
         - groups.conversation
-      summary: Create conversation
-      description: Create a new conversation by including a thread and a post. Use reply thread or reply post to further post to that conversation.
+      summary: Create openTypeExtension
+      description: 'Create an open extension (openTypeExtension object) and add custom properties in a new or existing instance of a resource. You can create an open extension in a resource instance and store custom data to it all in the same operation, except for specific resources. See known limitations of open extensions for more information. The table in the Permissions section lists the resources that support open extensions.'
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/group-post-conversations?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/opentypeextension-post-opentypeextension?view=graph-rest-1.0
       operationId: group_CreateConversation
       parameters:
         - name: group-id
@@ -11469,10 +11469,10 @@ paths:
       tags:
         - groups.conversation
       summary: Delete conversation
-      description: Delete a conversation object.
+      description: Delete conversation.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/group-delete-conversation?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/conversation-delete?view=graph-rest-1.0
       operationId: group_DeleteConversation
       parameters:
         - name: group-id
@@ -11815,10 +11815,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: "Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation \nin the request, or, you can specify just the thread without the parent conversation."
+      description: "Add an attachment when creating a group post.  This operation limits the size of the attachment you can add to under 3 MB. An attachment can be one of the following types: All these types of attachment resources are derived from the attachment\nresource. "
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/post-post-attachments?view=graph-rest-1.0
       operationId: group.conversation.thread_reply
       parameters:
         - name: group-id
@@ -25312,7 +25312,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMemberOf_GetCountAsAdministrativeUnit
+      operationId: group.MemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: group-id
           in: path
@@ -25422,7 +25422,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMemberOf_GetCountAsGroup
+      operationId: group.MemberOf_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -26179,7 +26179,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsApplication
+      operationId: group.Member_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -26289,7 +26289,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsDevice
+      operationId: group.Member_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -26399,7 +26399,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsGroup
+      operationId: group.Member_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -26509,7 +26509,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsOrgContact
+      operationId: group.Member_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -26619,7 +26619,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsServicePrincipal
+      operationId: group.Member_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -26729,7 +26729,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMember_GetCountAsUser
+      operationId: group.Member_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -27422,7 +27422,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsApplication
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -27532,7 +27532,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsDevice
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -27642,7 +27642,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsGroup
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -27752,7 +27752,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsOrgContact
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -27862,7 +27862,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsServicePrincipal
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -27972,7 +27972,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListMembersGraphWPreLicenseError_GetCountAsUser
+      operationId: group.MembersGraphWPreLicenseError_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -30907,7 +30907,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsApplication
+      operationId: group.Owner_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -31017,7 +31017,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsDevice
+      operationId: group.Owner_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -31127,7 +31127,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsGroup
+      operationId: group.Owner_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -31237,7 +31237,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsOrgContact
+      operationId: group.Owner_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -31347,7 +31347,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsServicePrincipal
+      operationId: group.Owner_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -31457,7 +31457,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListOwner_GetCountAsUser
+      operationId: group.Owner_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -42209,10 +42209,10 @@ paths:
       tags:
         - groups.Actions
       summary: Invoke action reply
-      description: "Reply to a thread in a group conversation and add a new post to it. You can specify the parent conversation \nin the request, or, you can specify just the thread without the parent conversation."
+      description: "Add an attachment when creating a group post.  This operation limits the size of the attachment you can add to under 3 MB. An attachment can be one of the following types: All these types of attachment resources are derived from the attachment\nresource. "
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/conversationthread-reply?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/post-post-attachments?view=graph-rest-1.0
       operationId: group.thread_reply
       parameters:
         - name: group-id
@@ -45366,7 +45366,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMemberOf_GetCountAsAdministrativeUnit
+      operationId: group.TransitiveMemberOf_GetCountAsAdministrativeUnit
       parameters:
         - name: group-id
           in: path
@@ -45476,7 +45476,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMemberOf_GetCountAsGroup
+      operationId: group.TransitiveMemberOf_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -46172,7 +46172,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsApplication
+      operationId: group.TransitiveMember_GetCountAsApplication
       parameters:
         - name: group-id
           in: path
@@ -46282,7 +46282,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsDevice
+      operationId: group.TransitiveMember_GetCountAsDevice
       parameters:
         - name: group-id
           in: path
@@ -46392,7 +46392,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsGroup
+      operationId: group.TransitiveMember_GetCountAsGroup
       parameters:
         - name: group-id
           in: path
@@ -46502,7 +46502,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsOrgContact
+      operationId: group.TransitiveMember_GetCountAsOrgContact
       parameters:
         - name: group-id
           in: path
@@ -46612,7 +46612,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsServicePrincipal
+      operationId: group.TransitiveMember_GetCountAsServicePrincipal
       parameters:
         - name: group-id
           in: path
@@ -46722,7 +46722,7 @@ paths:
       tags:
         - groups.directoryObject
       summary: Get the number of the resource
-      operationId: group.ListTransitiveMember_GetCountAsUser
+      operationId: group.TransitiveMember_GetCountAsUser
       parameters:
         - name: group-id
           in: path
@@ -53289,6 +53289,7 @@ components:
       properties:
         removeUnverifiedEmailClaim:
           type: boolean
+          description: Removes the email claim from tokens sent to an application when the email address's domain cannot be verified.
           nullable: true
         requireClientServicePrincipal:
           type: boolean
@@ -58765,11 +58766,11 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name of the identity. This property is read-only.
+          description: 'The display name of the identity. Note that this might not always be available or up to date. For example, if a user changes their display name, the API might show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: The identifier of the identity. This property is read-only.
+          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -59853,11 +59854,11 @@ components:
       properties:
         key:
           type: string
-          description: 'Contains the name of the field that a value is associated with. When a sign in or domain hint is included in the sign-in request, corresponding fields are included as key-value pairs. Possible keys: Login hint present, Domain hint present.'
+          description: Key.
           nullable: true
         value:
           type: string
-          description: Contains the corresponding value for the specified key. The value is true if a sign in hint was included in the sign-in request; otherwise false. The value is true if a domain hint was included in the sign-in request; otherwise false.
+          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -65107,7 +65108,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
@@ -65226,21 +65227,25 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of guests in a channel.
           format: int32
           nullable: true
         hasMembersFromOtherTenants:
           type: boolean
+          description: Indicates whether external members are included on the channel.
           nullable: true
         membersCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of members in a channel.
           format: int32
           nullable: true
         ownersCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
+          description: Count of owners in a channel.
           format: int32
           nullable: true
       additionalProperties:
