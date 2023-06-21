@@ -167,8 +167,11 @@ paths:
     get:
       tags:
         - agreements.agreementAcceptance
-      summary: Get acceptances from agreements
-      description: Read-only. Information about acceptances of this agreement.
+      summary: List acceptances
+      description: Get the details about the acceptance records for a specific agreement.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0
       operationId: agreements_ListAcceptances
       parameters:
         - name: agreement-id
@@ -444,8 +447,11 @@ paths:
     get:
       tags:
         - agreements.agreementFile
-      summary: Get file from agreements
-      description: Default PDF linked to this agreement.
+      summary: Get agreementFile
+      description: 'Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0
       operationId: agreements_GetFile
       parameters:
         - name: agreement-id
@@ -1195,7 +1201,11 @@ paths:
     post:
       tags:
         - agreements.agreementFileLocalization
-      summary: Create new navigation property to files for agreements
+      summary: Create agreementFileLocalization
+      description: Create a new localized agreement file.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0
       operationId: agreements_CreateFiles
       parameters:
         - name: agreement-id
@@ -1803,8 +1813,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get definitions from identityGovernance
-      description: Represents the template and scheduling for an access review.
+      summary: List definitions
+      description: Get a list of the accessReviewScheduleDefinition objects and their properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewset-list-definitions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_ListDefinitions
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1905,7 +1918,11 @@ paths:
     post:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Create new navigation property to definitions for identityGovernance
+      summary: Create definitions
+      description: Create a new accessReviewScheduleDefinition object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewset-post-definitions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_CreateDefinitions
       requestBody:
         description: New navigation property
@@ -1928,8 +1945,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get definitions from identityGovernance
-      description: Represents the template and scheduling for an access review.
+      summary: Get accessReviewScheduleDefinition
+      description: 'Read the properties and relationships of an accessReviewScheduleDefinition object. To retrieve the instances of the access review series, use the list accessReviewInstance API.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_GetDefinitions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -1993,7 +2013,11 @@ paths:
     patch:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Update the navigation property definitions in identityGovernance
+      summary: Update accessReviewScheduleDefinition
+      description: Update an existing accessReviewScheduleDefinition object to change one or more of its properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-update?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_UpdateDefinitions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2020,7 +2044,11 @@ paths:
     delete:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Delete navigation property definitions for identityGovernance
+      summary: Delete accessReviewScheduleDefinition
+      description: Deletes an accessReviewScheduleDefinition object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-delete?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_DeleteDefinitions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2047,8 +2075,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get instances from identityGovernance
-      description: 'If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.'
+      summary: List instances
+      description: Get a list of the accessReviewInstance objects and their properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewscheduledefinition-list-instances?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions_ListInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2169,8 +2200,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get instances from identityGovernance
-      description: 'If the accessReviewScheduleDefinition is a recurring access review, instances represent each recurrence. A review that does not recur will have exactly one instance. Instances also represent each unique resource under review in the accessReviewScheduleDefinition. If a review has multiple resources and multiple instances, each resource will have a unique instance for each recurrence.'
+      summary: Get accessReviewInstance
+      description: Read the properties and relationships of an accessReviewInstance object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions_GetInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2238,7 +2272,11 @@ paths:
     patch:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Update the navigation property instances in identityGovernance
+      summary: Update accessReviewInstance
+      description: 'Update the properties of an accessReviewInstance object. Only the **reviewers** and **fallbackReviewers** properties can be updated but the **scope** property is also required in the request body. You can only add reviewers to the **fallbackReviewers** property but can''t remove existing **fallbackReviewers**. To update an **accessReviewInstance**, it''s **status** must be `InProgress`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-update?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions_UpdateInstances
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2308,8 +2346,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get contactedReviewers from identityGovernance
-      description: 'Returns the collection of reviewers who were contacted to complete this review. While the reviewers and fallbackReviewers properties of the accessReviewScheduleDefinition might specify group owners or managers as reviewers, contactedReviewers returns their individual identities. Supports $select. Read-only.'
+      summary: List contactedReviewers
+      description: 'Get the reviewers for an access review instance, irrespective of whether or not they have received a notification. The reviewers are represented by an accessReviewReviewer object. A list of zero or more objects are returned, including all of their nested properties.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-list-contactedreviewers?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_ListContactedReviewers
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2585,8 +2626,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
+      summary: List decisions
+      description: 'Get the accessReviewInstanceDecisionItem resources from the decisions navigation property on a given accessReviewInstance. A list of zero or more accessReviewInstanceDecisionItem objects are returned, including all of their nested properties.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-list-decisions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_ListDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -2738,8 +2782,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewInstance has a decision item representing if they were approved, denied, or not yet reviewed.'
+      summary: Get accessReviewInstanceDecisionItem
+      description: Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_GetDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3026,6 +3073,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action acceptRecommendations
+      description: Allows the acceptance of recommendations on all accessReviewInstanceDecisionItem objects that have not been reviewed on an accessReviewInstance object for which the calling user is a reviewer.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-acceptrecommendations?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_acceptRecommendations
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3055,6 +3106,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action applyDecisions
+      description: Apply review decisions on an accessReviewInstance if the decisions were not applied automatically because the autoApplyDecisionsEnabled property is `false` in the review's accessReviewScheduleSettings. The status of the accessReviewInstance must be `Completed` to call this method.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-applydecisions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_applyDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3084,6 +3139,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action batchRecordDecisions
+      description: 'Enables reviewers to review all accessReviewInstanceDecisionItem objects in batches by using **principalId**, **resourceId**, or neither.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-batchrecorddecisions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_batchRecordDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3135,6 +3194,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action resetDecisions
+      description: Resets all accessReviewInstanceDecisionItem objects on an accessReviewInstance to `notReviewed`.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-resetdecisions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_resetDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3164,6 +3227,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action sendReminder
+      description: Send a reminder to the reviewers of an active accessReviewInstance.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-sendreminder?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_sendReminder
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3193,6 +3260,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action stop
+      description: 'Stop a currently active accessReviewInstance. After the access review instance stops, the instance status is marked as `Completed`, the reviewers can no longer give input, and the access review decisions are applied. Stopping an instance will not stop future instances. To prevent a recurring access review from starting future instances, update the schedule definition to change its scheduled end date.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-stop?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_stop
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3221,8 +3292,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get stages from identityGovernance
-      description: 'If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.'
+      summary: List stages (of an access review)
+      description: Retrieve the stages in a multi-stage access review instance.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstance-list-stages?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_ListStages
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3352,8 +3426,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get stages from identityGovernance
-      description: 'If the instance has multiple stages, this returns the collection of stages. A new stage will only be created when the previous stage ends. The existence, number, and settings of stages on a review instance are created based on the accessReviewStageSettings on the parent accessReviewScheduleDefinition.'
+      summary: Get accessReviewStage
+      description: Retrieve the properties and relationships of an accessReviewStage object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewstage-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_GetStages
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3424,7 +3501,11 @@ paths:
     patch:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Update the navigation property stages in identityGovernance
+      summary: Update accessReviewStage
+      description: 'Update the properties of an accessReviewStage object. Only the **reviewers** and **fallbackReviewers** properties can be updated. You can only add reviewers to the **fallbackReviewers** property but can''t remove existing **fallbackReviewers**. To update an **accessReviewStage**, its **status** must be `NotStarted`, `Initializing`, or `InProgress`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewstage-update?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances_UpdateStages
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3510,8 +3591,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.'
+      summary: List decisions (from a multi-stage access review)
+      description: Get the decisions from a stage in a multi-stage access review. The decisions in an accessReviewStage object are represented by an accessReviewInstanceDecisionItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewstage-list-decisions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances.stages_ListDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3679,8 +3763,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get decisions from identityGovernance
-      description: 'Each user reviewed in an accessReviewStage has a decision item representing if they were approved, denied, or not yet reviewed.'
+      summary: Get accessReviewInstanceDecisionItem
+      description: Read the properties and relationships of an accessReviewInstanceDecisionItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances.stages_GetDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3765,7 +3852,11 @@ paths:
     patch:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Update the navigation property decisions in identityGovernance
+      summary: Update accessReviewInstanceDecisionItem
+      description: 'Update access decisions, known as accessReviewInstanceDecisionItems, for which the user is the reviewer.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewinstancedecisionitem-update?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances.stages_UpdateDecisions
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -3999,6 +4090,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action stop
+      description: 'Stop an access review stage that is `inProgress`. After the access review stage stops, the stage **status** will be `Completed` and the reviewers can no longer give input. If there are subsequent stages that depend on the completed stage, the next stage will be created.  The accessReviewInstanceDecisionItem objects will always reflect the last decisions recorded across all stages at that given time, regardless of the status of the stages.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewstage-stop?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.definitions.instances.stages_stop
       parameters:
         - name: accessReviewScheduleDefinition-id
@@ -4364,8 +4459,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get historyDefinitions from identityGovernance
-      description: Represents a collection of access review history data and the scopes used to collect that data.
+      summary: List historyDefinitions
+      description: 'Retrieve the accessReviewHistoryDefinition objects created in the last 30 days, including all nested properties.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewset-list-historydefinitions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_ListHistoryDefinitions
       parameters:
         - $ref: '#/components/parameters/top'
@@ -4451,7 +4549,11 @@ paths:
     post:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Create new navigation property to historyDefinitions for identityGovernance
+      summary: Create historyDefinitions
+      description: Create a new accessReviewHistoryDefinition object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewset-post-historydefinitions?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_CreateHistoryDefinitions
       requestBody:
         description: New navigation property
@@ -4474,8 +4576,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get historyDefinitions from identityGovernance
-      description: Represents a collection of access review history data and the scopes used to collect that data.
+      summary: Get accessReviewHistoryDefinition
+      description: 'Retrieve an accessReviewHistoryDefinition object by its identifier. All the properties of the access review history definition object are returned. If the definition is 30 days or older, a `404 Not Found` error is returned.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-get?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews_GetHistoryDefinitions
       parameters:
         - name: accessReviewHistoryDefinition-id
@@ -4588,8 +4693,11 @@ paths:
     get:
       tags:
         - identityGovernance.accessReviewSet
-      summary: Get instances from identityGovernance
-      description: 'If the accessReviewHistoryDefinition is a recurring definition, instances represent each recurrence. A definition that does not recur will have exactly one instance.'
+      summary: List instances (of an accessReviewHistoryDefinition)
+      description: Retrieve the instances of an access review history definition created in the last 30 days.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewhistorydefinition-list-instances?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.historyDefinitions_ListInstances
       parameters:
         - name: accessReviewHistoryDefinition-id
@@ -4842,6 +4950,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action generateDownloadUri
+      description: Generates a URI for an accessReviewHistoryInstance object the **status** for which is `done`. Each URI can be used to retrieve the instance's review history data. Each URI is valid for 24 hours and can be retrieved by fetching the **downloadUri** property from the accessReviewHistoryInstance object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accessreviewhistoryinstance-generatedownloaduri?view=graph-rest-1.0
       operationId: identityGovernance.accessReviews.historyDefinitions.instances_generateDownloadUri
       parameters:
         - name: accessReviewHistoryDefinition-id
@@ -4953,8 +5065,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get appConsentRequests from identityGovernance
-      description: A collection of userConsentRequest objects for a specific application.
+      summary: List appConsentRequests
+      description: Retrieve appConsentRequest objects and their properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/appconsentapprovalroute-list-appconsentrequests?view=graph-rest-1.0
       operationId: identityGovernance.appConsent_ListAppConsentRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -5045,8 +5160,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get appConsentRequests from identityGovernance
-      description: A collection of userConsentRequest objects for a specific application.
+      summary: Get appConsentRequest
+      description: Read the properties and relationships of an appConsentRequest object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/appconsentrequest-get?view=graph-rest-1.0
       operationId: identityGovernance.appConsent_GetAppConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -5153,8 +5271,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get userConsentRequests from identityGovernance
-      description: A list of pending user consent requests. Supports $filter (eq).
+      summary: List userConsentRequests
+      description: Retrieve a collection of userConsentRequest objects and their properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/appconsentrequest-list-userconsentrequests?view=graph-rest-1.0
       operationId: identityGovernance.appConsent.appConsentRequests_ListUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -5274,8 +5395,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get userConsentRequests from identityGovernance
-      description: A list of pending user consent requests. Supports $filter (eq).
+      summary: Get userConsentRequest
+      description: Read the properties and relationships of a userConsentRequest object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/userconsentrequest-get?view=graph-rest-1.0
       operationId: identityGovernance.appConsent.appConsentRequests_GetUserConsentRequests
       parameters:
         - name: appConsentRequest-id
@@ -5539,8 +5663,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get stages from identityGovernance
-      description: A collection of stages in the approval decision.
+      summary: List approval stages
+      description: 'In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_ListStages
       parameters:
         - name: appConsentRequest-id
@@ -5674,8 +5801,11 @@ paths:
     get:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Get stages from identityGovernance
-      description: A collection of stages in the approval decision.
+      summary: Get approvalStage
+      description: 'In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_GetStages
       parameters:
         - name: appConsentRequest-id
@@ -5746,7 +5876,11 @@ paths:
     patch:
       tags:
         - identityGovernance.appConsentApprovalRoute
-      summary: Update the navigation property stages in identityGovernance
+      summary: Update approvalStage
+      description: 'In Azure AD entitlement management, approve or deny an approvalStage object in an approval.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0
       operationId: identityGovernance.appConsent.appConsentRequests.userConsentRequests.approval_UpdateStages
       parameters:
         - name: appConsentRequest-id
@@ -6101,8 +6235,8 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get accessPackageAssignmentApprovals from identityGovernance
-      description: Approval stages for decisions associated with access package assignment requests.
+      summary: Get approval
+      description: 'In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.'
       operationId: identityGovernance.entitlementManagement_ListAccessPackageAssignmentApprovals
       parameters:
         - $ref: '#/components/parameters/top'
@@ -6184,8 +6318,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get accessPackageAssignmentApprovals from identityGovernance
-      description: Approval stages for decisions associated with access package assignment requests.
+      summary: Get approval
+      description: 'In Azure AD entitlement management, retrieve the properties of an approval object.  This call can be made by an approver, providing the identifier of the access package assignment request.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approval-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetAccessPackageAssignmentApprovals
       parameters:
         - name: approval-id
@@ -6289,8 +6426,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get stages from identityGovernance
-      description: A collection of stages in the approval decision.
+      summary: List approval stages
+      description: 'In Azure AD entitlement management, list the approvalStage objects associated with an approval object. This call can be made by an approver, providing the identifier of the access package assignment request.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approval-list-stages?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_ListStages
       parameters:
         - name: approval-id
@@ -6408,8 +6548,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get stages from identityGovernance
-      description: A collection of stages in the approval decision.
+      summary: Get approvalStage
+      description: 'In Azure AD entitlement management, retrieve the properties of an approvalStage object. An approval stage is contained within an approval object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approvalstage-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_GetStages
       parameters:
         - name: approval-id
@@ -6472,7 +6615,11 @@ paths:
     patch:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Update the navigation property stages in identityGovernance
+      summary: Update approvalStage
+      description: 'In Azure AD entitlement management, approve or deny an approvalStage object in an approval.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/approvalstage-update?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackageAssignmentApprovals_UpdateStages
       parameters:
         - name: approval-id
@@ -6611,8 +6758,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get accessPackages from identityGovernance
-      description: Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+      summary: List accessPackages
+      description: 'Retrieve a list of accessPackage objects.  The resulting list includes all the access packages that the caller has access to read, across all catalogs.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-accesspackages?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListAccessPackages
       parameters:
         - $ref: '#/components/parameters/top'
@@ -6694,7 +6844,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to accessPackages for identityGovernance
+      summary: Create accessPackage
+      description: Create a new accessPackage object. The access package will be added to an existing accessPackageCatalog.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-post-accesspackages?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_CreateAccessPackages
       requestBody:
         description: New navigation property
@@ -6717,8 +6871,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get accessPackages from identityGovernance
-      description: Access packages define the collection of resource roles and the policies for which subjects can request or be assigned access to those resources.
+      summary: Get accessPackage
+      description: Retrieve the properties and relationships of an accessPackage object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetAccessPackages
       parameters:
         - name: accessPackage-id
@@ -6781,7 +6938,11 @@ paths:
     patch:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Update the navigation property accessPackages in identityGovernance
+      summary: Update accessPackage
+      description: 'Update an existing accessPackage object to change one or more of its properties, such as the display name or description.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-update?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_UpdateAccessPackages
       parameters:
         - name: accessPackage-id
@@ -6808,7 +6969,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete navigation property accessPackages for identityGovernance
+      summary: Delete accessPackage
+      description: Delete an accessPackage object. You cannot delete an access package if it has any **accessPackageAssignment**.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-delete?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_DeleteAccessPackages
       parameters:
         - name: accessPackage-id
@@ -6835,8 +7000,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get accessPackagesIncompatibleWith from identityGovernance
-      description: The access packages that are incompatible with this package. Read-only.
+      summary: List accessPackagesIncompatibleWith
+      description: Retrieve a list of the accessPackage objects that have marked a specified accessPackage as incompatible.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-list-accesspackagesincompatiblewith?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_ListAccessPackagesIncompatibleGraphWPre
       parameters:
         - name: accessPackage-id
@@ -7762,8 +7930,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get incompatibleAccessPackages from identityGovernance
-      description: The access packages whose assigned users are ineligible to be assigned this access package.
+      summary: List incompatibleAccessPackages
+      description: 'Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_ListIncompatibleAccessPackages
       parameters:
         - name: accessPackage-id
@@ -7854,7 +8025,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property incompatibleAccessPackages for identityGovernance
+      summary: Remove accessPackage from incompatibleAccessPackages
+      description: 'Remove an access package from the list of access packages that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-delete-incompatibleaccesspackage?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_DeleteIncompatibleAccessPackagesGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -7896,8 +8071,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get ref of incompatibleAccessPackages from identityGovernance
-      description: The access packages whose assigned users are ineligible to be assigned this access package.
+      summary: List incompatibleAccessPackages
+      description: 'Retrieve a list of the accessPackage objects that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-list-incompatibleaccesspackages?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_ListIncompatibleAccessPackagesGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -7948,7 +8126,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to incompatibleAccessPackages for identityGovernance
+      summary: Add accessPackage to incompatibleAccessPackages
+      description: 'Add an accessPackage to the list of access packages that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-post-incompatibleaccesspackage?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_CreateIncompatibleAccessPackagesGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -7971,8 +8153,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get incompatibleGroups from identityGovernance
-      description: The groups whose members are ineligible to be assigned this access package.
+      summary: List incompatibleGroups
+      description: 'Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_ListIncompatibleGroups
       parameters:
         - name: accessPackage-id
@@ -8209,7 +8394,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property incompatibleGroups for identityGovernance
+      summary: Remove group from incompatibleGroups
+      description: 'Remove a group from the list of groups that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-delete-incompatiblegroup?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_DeleteIncompatibleGroupsGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -8251,8 +8440,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get ref of incompatibleGroups from identityGovernance
-      description: The groups whose members are ineligible to be assigned this access package.
+      summary: List incompatibleGroups
+      description: 'Retrieve a list of the group objects that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-list-incompatiblegroups?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_ListIncompatibleGroupsGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -8371,7 +8563,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to incompatibleGroups for identityGovernance
+      summary: Add group to incompatibleGroups
+      description: 'Add a group to the list of groups that have been marked as incompatible on an accessPackage.  '
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-post-incompatiblegroup?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_CreateIncompatibleGroupsGraphBPreRef
       parameters:
         - name: accessPackage-id
@@ -8395,6 +8591,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action getApplicablePolicyRequirements
+      description: 'In Azure AD entitlement management, this action retrieves a list of accessPackageAssignmentRequestRequirements objects that the currently signed-in user can use to create an accessPackageAssignmentRequest.  Each requirement object corresponds to an access package assignment policy that the currently signed-in user is allowed to request an assignment for.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackage-getapplicablepolicyrequirements?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.accessPackages_getApplicablePolicyRequirements
       parameters:
         - name: accessPackage-id
@@ -8520,8 +8720,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignmentPolicies from identityGovernance
-      description: Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+      summary: List assignmentPolicies
+      description: 'In Azure AD entitlement management, retrieve a list of accessPackageAssignmentPolicy objects. If the delegated user is in a directory role, the resulting list includes all the assignment policies that the caller has access to read, across all catalogs and access packages. If the delegated user is an access package manager or catalog owner, they should instead retrieve the policies for the access packages they can read with list accessPackages by including `$expand=accessPackageAssignmentPolicies` as a query parameter.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentpolicies?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListAssignmentPolicies
       parameters:
         - $ref: '#/components/parameters/top'
@@ -8617,7 +8820,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to assignmentPolicies for identityGovernance
+      summary: Create assignmentPolicies
+      description: 'In Azure AD entitlement management, create a new accessPackageAssignmentPolicy object.  The request will include a reference to the accessPackage that will contain this policy, which must already exist.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-post-assignmentpolicies?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_CreateAssignmentPolicies
       requestBody:
         description: New navigation property
@@ -8640,8 +8847,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignmentPolicies from identityGovernance
-      description: Access package assignment policies govern which subjects can request or be assigned an access package via an access package assignment.
+      summary: Get accessPackageAssignmentPolicy
+      description: "In Azure AD entitlement management, retrieve the properties and relationships of an\n accessPackageAssignmentPolicy object."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetAssignmentPolicies
       parameters:
         - name: accessPackageAssignmentPolicy-id
@@ -8733,7 +8943,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete navigation property assignmentPolicies for identityGovernance
+      summary: Delete accessPackageAssignmentPolicy
+      description: 'In Azure AD entitlement management, delete an accessPackageAssignmentPolicy.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentpolicy-delete?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_DeleteAssignmentPolicies
       parameters:
         - name: accessPackageAssignmentPolicy-id
@@ -9129,8 +9343,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignmentRequests from identityGovernance
-      description: Access package assignment requests created by or on behalf of a subject.
+      summary: List assignmentRequests
+      description: 'In Azure AD entitlement management, retrieve a list of accessPackageAssignmentRequest objects.  The resulting list includes all the assignment requests, current and well as expired, that the caller has access to read, across all catalogs and access packages.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignmentrequests?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListAssignmentRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -9214,7 +9431,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to assignmentRequests for identityGovernance
+      summary: Create accessPackageAssignmentRequest
+      description: 'In Azure AD Entitlement Management, create a new accessPackageAssignmentRequest object.  This operation is used to assign a user to an access package, update the assignment, or to remove an access package assignment.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-post-assignmentrequests?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_CreateAssignmentRequests
       requestBody:
         description: New navigation property
@@ -9237,8 +9458,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignmentRequests from identityGovernance
-      description: Access package assignment requests created by or on behalf of a subject.
+      summary: Get accessPackageAssignmentRequest
+      description: 'In Azure AD entitlement management, retrieve the properties and relationships of an  accessPackageAssignmentRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetAssignmentRequests
       parameters:
         - name: accessPackageAssignmentRequest-id
@@ -9326,7 +9550,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete navigation property assignmentRequests for identityGovernance
+      summary: Delete accessPackageAssignmentRequest
+      description: Delete an accessPackageAssignmentRequest object. This request can be made to remove a denied or completed request.  You cannot delete an access package assignment request if it has any **accessPackageAssignment** objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-delete?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_DeleteAssignmentRequests
       parameters:
         - name: accessPackageAssignmentRequest-id
@@ -9479,6 +9707,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action cancel
+      description: 'In Azure AD Entitlement Management, cancel accessPackageAssignmentRequest objects that are in a cancellable state: `accepted`, `pendingApproval`, `pendingNotBefore`, `pendingApprovalEscalated`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-cancel?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.assignmentRequests_cancel
       parameters:
         - name: accessPackageAssignmentRequest-id
@@ -9500,6 +9732,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action reprocess
+      description: 'In Azure AD entitlement management, callers can automatically retry a user''s request for access to an access package. It is performed on an accessPackageAssignmentRequest object whose **requestState** is in a `DeliveryFailed` or `PartiallyDelivered` state.  You can only reprocess a request within 14 days from the time the original request was completed. For requests completed more than 14 days, you will need to ask the users to cancel the request(s) and make a new request in the MyAccess portal.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignmentrequest-reprocess?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.assignmentRequests_reprocess
       parameters:
         - name: accessPackageAssignmentRequest-id
@@ -9670,8 +9906,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignments from identityGovernance
-      description: The assignment of an access package to a subject for a period of time.
+      summary: List assignments
+      description: 'In Azure AD entitlement management, retrieve a list of accessPackageAssignment objects. For directory-wide administrators, the resulting list includes all the assignments, current and well as expired, that the caller has access to read, across all catalogs and access packages.  If the caller is on behalf of a delegated user who is assigned only to catalog-specific delegated administrative roles, the request must supply a filter to indicate a specific access package, such as: `$filter=accessPackage/id eq ''a914b616-e04e-476b-aa37-91038f0b165b''`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-assignments?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListAssignments
       parameters:
         - $ref: '#/components/parameters/top'
@@ -9769,8 +10008,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get assignments from identityGovernance
-      description: The assignment of an access package to a subject for a period of time.
+      summary: Get accessPackageAssignment
+      description: 'In Azure AD entitlement management, retrieve the properties and relationships of an accessPackageAssignment object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignment-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetAssignments
       parameters:
         - name: accessPackageAssignment-id
@@ -10015,6 +10257,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action reprocess
+      description: 'In Azure AD entitlement management, callers can automatically reevaluate and enforce an accessPackageAssignment object of a user’s assignments for a specific access package. The **state** of the access package assignment must be `Delivered` for the administrator to reprocess the user''s assignment. Only admins with the Access Package Assignment Manager role, or higher, in Azure AD entitlement management can perform this action.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackageassignment-reprocess?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.assignments_reprocess
       parameters:
         - name: accessPackageAssignment-id
@@ -10344,8 +10590,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get catalogs from identityGovernance
-      description: A container for access packages.
+      summary: List catalogs
+      description: Retrieve a list of accessPackageCatalog objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-catalogs?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListCatalogs
       parameters:
         - $ref: '#/components/parameters/top'
@@ -10425,7 +10674,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to catalogs for identityGovernance
+      summary: Create accessPackageCatalog
+      description: Create a new accessPackageCatalog object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-post-catalogs?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_CreateCatalogs
       requestBody:
         description: New navigation property
@@ -10448,8 +10701,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get catalogs from identityGovernance
-      description: A container for access packages.
+      summary: Get accessPackageCatalog
+      description: Retrieve the properties and relationships of an accessPackageCatalog object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackagecatalog-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetCatalogs
       parameters:
         - name: accessPackageCatalog-id
@@ -10506,7 +10762,11 @@ paths:
     patch:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Update the navigation property catalogs in identityGovernance
+      summary: Update accessPackageCatalog
+      description: 'Update an existing accessPackageCatalog object to change one or more of its properties, such as the display name or description.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackagecatalog-update?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_UpdateCatalogs
       parameters:
         - name: accessPackageCatalog-id
@@ -10533,7 +10793,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete navigation property catalogs for identityGovernance
+      summary: Delete accessPackageCatalog
+      description: Delete an accessPackageCatalog.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/accesspackagecatalog-delete?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_DeleteCatalogs
       parameters:
         - name: accessPackageCatalog-id
@@ -10648,37 +10912,6 @@ paths:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Create new navigation property to accessPackages for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs_CreateAccessPackages
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-      requestBody:
-        description: New navigation property
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackage'
-        required: true
-      responses:
-        '201':
-          description: Created navigation property.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackage'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
   '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}':
     get:
       tags:
@@ -10752,1966 +10985,15 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-    patch:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Update the navigation property accessPackages in identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs_UpdateAccessPackages
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-      requestBody:
-        description: New navigation property values
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackage'
-        required: true
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    delete:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Delete navigation property accessPackages for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs_DeleteAccessPackages
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: If-Match
-          in: header
-          description: ETag
-          style: simple
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/accessPackagesIncompatibleWith':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get accessPackagesIncompatibleWith from identityGovernance
-      description: The access packages that are incompatible with this package. Read-only.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListAccessPackagesIncompatibleGraphWPre
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - isHidden
-                - isHidden desc
-                - modifiedDateTime
-                - modifiedDateTime desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - createdDateTime
-                - description
-                - displayName
-                - isHidden
-                - modifiedDateTime
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.accessPackageCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/accessPackagesIncompatibleWith/{accessPackage-id1}':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get accessPackagesIncompatibleWith from identityGovernance
-      description: The access packages that are incompatible with this package. Read-only.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_GetAccessPackagesIncompatibleGraphWPre
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackage-id1
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - createdDateTime
-                - description
-                - displayName
-                - isHidden
-                - modifiedDateTime
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackage'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get assignmentPolicies from identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListAssignmentPolicies
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - allowedTargetScope
-                - allowedTargetScope desc
-                - automaticRequestSettings
-                - automaticRequestSettings desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - expiration
-                - expiration desc
-                - modifiedDateTime
-                - modifiedDateTime desc
-                - requestApprovalSettings
-                - requestApprovalSettings desc
-                - requestorSettings
-                - requestorSettings desc
-                - reviewSettings
-                - reviewSettings desc
-                - specificAllowedTargets
-                - specificAllowedTargets desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - allowedTargetScope
-                - automaticRequestSettings
-                - createdDateTime
-                - description
-                - displayName
-                - expiration
-                - modifiedDateTime
-                - requestApprovalSettings
-                - requestorSettings
-                - reviewSettings
-                - specificAllowedTargets
-                - accessPackage
-                - catalog
-                - questions
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackage
-                - catalog
-                - questions
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.accessPackageAssignmentPolicyCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Create new navigation property to assignmentPolicies for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_CreateAssignmentPolicies
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-      requestBody:
-        description: New navigation property
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentPolicy'
-        required: true
-      responses:
-        '201':
-          description: Created navigation property.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentPolicy'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get assignmentPolicies from identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_GetAssignmentPolicies
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - allowedTargetScope
-                - automaticRequestSettings
-                - createdDateTime
-                - description
-                - displayName
-                - expiration
-                - modifiedDateTime
-                - requestApprovalSettings
-                - requestorSettings
-                - reviewSettings
-                - specificAllowedTargets
-                - accessPackage
-                - catalog
-                - questions
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackage
-                - catalog
-                - questions
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentPolicy'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    patch:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Update the navigation property assignmentPolicies in identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_UpdateAssignmentPolicies
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-      requestBody:
-        description: New navigation property values
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentPolicy'
-        required: true
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    delete:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Delete navigation property assignmentPolicies for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_DeleteAssignmentPolicies
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: If-Match
-          in: header
-          description: ETag
-          style: simple
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}/accessPackage':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get accessPackage from identityGovernance
-      description: Access package containing this policy. Read-only.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_GetAccessPackage
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - createdDateTime
-                - description
-                - displayName
-                - isHidden
-                - modifiedDateTime
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackage'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}/catalog':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get catalog from identityGovernance
-      description: Catalog of the access package containing this policy. Read-only.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_GetCatalog
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - catalogType
-                - createdDateTime
-                - description
-                - displayName
-                - isExternallyVisible
-                - modifiedDateTime
-                - state
-                - accessPackages
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackages
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageCatalog'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}/questions':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get questions from identityGovernance
-      description: Questions that are posed to the  requestor.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_ListQuestions
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - isAnswerEditable
-                - isAnswerEditable desc
-                - isRequired
-                - isRequired desc
-                - localizations
-                - localizations desc
-                - sequence
-                - sequence desc
-                - text
-                - text desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - isAnswerEditable
-                - isRequired
-                - localizations
-                - sequence
-                - text
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.accessPackageQuestionCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Create new navigation property to questions for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_CreateQuestions
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-      requestBody:
-        description: New navigation property
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackageQuestion'
-        required: true
-      responses:
-        '201':
-          description: Created navigation property.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageQuestion'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/assignmentPolicies/{accessPackageAssignmentPolicy-id}/questions/{accessPackageQuestion-id}':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get questions from identityGovernance
-      description: Questions that are posed to the  requestor.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_GetQuestions
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: accessPackageQuestion-id
-          in: path
-          description: The unique identifier of accessPackageQuestion
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageQuestion
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - isAnswerEditable
-                - isRequired
-                - localizations
-                - sequence
-                - text
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageQuestion'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    patch:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Update the navigation property questions in identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_UpdateQuestions
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: accessPackageQuestion-id
-          in: path
-          description: The unique identifier of accessPackageQuestion
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageQuestion
-      requestBody:
-        description: New navigation property values
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/microsoft.graph.accessPackageQuestion'
-        required: true
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    delete:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Delete navigation property questions for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages.assignmentPolicies_DeleteQuestions
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackageAssignmentPolicy-id
-          in: path
-          description: The unique identifier of accessPackageAssignmentPolicy
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageAssignmentPolicy
-        - name: accessPackageQuestion-id
-          in: path
-          description: The unique identifier of accessPackageQuestion
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageQuestion
-        - name: If-Match
-          in: header
-          description: ETag
-          style: simple
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/catalog':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get catalog from identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_GetCatalog
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - catalogType
-                - createdDateTime
-                - description
-                - displayName
-                - isExternallyVisible
-                - modifiedDateTime
-                - state
-                - accessPackages
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackages
-              type: string
-      responses:
-        '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/microsoft.graph.accessPackageCatalog'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleAccessPackages':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get incompatibleAccessPackages from identityGovernance
-      description: The access packages whose assigned users are ineligible to be assigned this access package.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListIncompatibleAccessPackages
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - isHidden
-                - isHidden desc
-                - modifiedDateTime
-                - modifiedDateTime desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - createdDateTime
-                - description
-                - displayName
-                - isHidden
-                - modifiedDateTime
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.accessPackageCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleAccessPackages/{accessPackage-id1}/$ref':
-    delete:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property incompatibleAccessPackages for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_DeleteIncompatibleAccessPackagesGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: accessPackage-id1
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: If-Match
-          in: header
-          description: ETag
-          style: simple
-          schema:
-            type: string
-        - name: '@id'
-          in: query
-          description: Delete Uri
-          style: form
-          explode: false
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleAccessPackages/$ref':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get ref of incompatibleAccessPackages from identityGovernance
-      description: The access packages whose assigned users are ineligible to be assigned this access package.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListIncompatibleAccessPackagesGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - isHidden
-                - isHidden desc
-                - modifiedDateTime
-                - modifiedDateTime desc
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/StringCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to incompatibleAccessPackages for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_CreateIncompatibleAccessPackagesGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-      requestBody:
-        $ref: '#/components/requestBodies/refPostBody'
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleGroups':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get incompatibleGroups from identityGovernance
-      description: The groups whose members are ineligible to be assigned this access package.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListIncompatibleGroups
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-                - assignedLabels
-                - assignedLabels desc
-                - assignedLicenses
-                - assignedLicenses desc
-                - classification
-                - classification desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - expirationDateTime
-                - expirationDateTime desc
-                - groupTypes
-                - groupTypes desc
-                - hasMembersWithLicenseErrors
-                - hasMembersWithLicenseErrors desc
-                - isAssignableToRole
-                - isAssignableToRole desc
-                - licenseProcessingState
-                - licenseProcessingState desc
-                - mail
-                - mail desc
-                - mailEnabled
-                - mailEnabled desc
-                - mailNickname
-                - mailNickname desc
-                - membershipRule
-                - membershipRule desc
-                - membershipRuleProcessingState
-                - membershipRuleProcessingState desc
-                - onPremisesDomainName
-                - onPremisesDomainName desc
-                - onPremisesLastSyncDateTime
-                - onPremisesLastSyncDateTime desc
-                - onPremisesNetBiosName
-                - onPremisesNetBiosName desc
-                - onPremisesProvisioningErrors
-                - onPremisesProvisioningErrors desc
-                - onPremisesSamAccountName
-                - onPremisesSamAccountName desc
-                - onPremisesSecurityIdentifier
-                - onPremisesSecurityIdentifier desc
-                - onPremisesSyncEnabled
-                - onPremisesSyncEnabled desc
-                - preferredDataLocation
-                - preferredDataLocation desc
-                - preferredLanguage
-                - preferredLanguage desc
-                - proxyAddresses
-                - proxyAddresses desc
-                - renewedDateTime
-                - renewedDateTime desc
-                - securityEnabled
-                - securityEnabled desc
-                - securityIdentifier
-                - securityIdentifier desc
-                - theme
-                - theme desc
-                - visibility
-                - visibility desc
-                - allowExternalSenders
-                - allowExternalSenders desc
-                - autoSubscribeNewMembers
-                - autoSubscribeNewMembers desc
-                - hideFromAddressLists
-                - hideFromAddressLists desc
-                - hideFromOutlookClients
-                - hideFromOutlookClients desc
-                - isSubscribedByMail
-                - isSubscribedByMail desc
-                - unseenCount
-                - unseenCount desc
-                - isArchived
-                - isArchived desc
-              type: string
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - deletedDateTime
-                - assignedLabels
-                - assignedLicenses
-                - classification
-                - createdDateTime
-                - description
-                - displayName
-                - expirationDateTime
-                - groupTypes
-                - hasMembersWithLicenseErrors
-                - isAssignableToRole
-                - licenseProcessingState
-                - mail
-                - mailEnabled
-                - mailNickname
-                - membershipRule
-                - membershipRuleProcessingState
-                - onPremisesDomainName
-                - onPremisesLastSyncDateTime
-                - onPremisesNetBiosName
-                - onPremisesProvisioningErrors
-                - onPremisesSamAccountName
-                - onPremisesSecurityIdentifier
-                - onPremisesSyncEnabled
-                - preferredDataLocation
-                - preferredLanguage
-                - proxyAddresses
-                - renewedDateTime
-                - securityEnabled
-                - securityIdentifier
-                - theme
-                - visibility
-                - allowExternalSenders
-                - autoSubscribeNewMembers
-                - hideFromAddressLists
-                - hideFromOutlookClients
-                - isSubscribedByMail
-                - unseenCount
-                - isArchived
-                - appRoleAssignments
-                - createdOnBehalfOf
-                - memberOf
-                - members
-                - membersWithLicenseErrors
-                - owners
-                - permissionGrants
-                - settings
-                - transitiveMemberOf
-                - transitiveMembers
-                - acceptedSenders
-                - calendar
-                - calendarView
-                - conversations
-                - events
-                - rejectedSenders
-                - threads
-                - drive
-                - drives
-                - sites
-                - extensions
-                - groupLifecyclePolicies
-                - planner
-                - onenote
-                - photo
-                - photos
-                - team
-              type: string
-        - name: $expand
-          in: query
-          description: Expand related entities
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - '*'
-                - appRoleAssignments
-                - createdOnBehalfOf
-                - memberOf
-                - members
-                - membersWithLicenseErrors
-                - owners
-                - permissionGrants
-                - settings
-                - transitiveMemberOf
-                - transitiveMembers
-                - acceptedSenders
-                - calendar
-                - calendarView
-                - conversations
-                - events
-                - rejectedSenders
-                - threads
-                - drive
-                - drives
-                - sites
-                - extensions
-                - groupLifecyclePolicies
-                - planner
-                - onenote
-                - photo
-                - photos
-                - team
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/microsoft.graph.groupCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleGroups/{group-id}/$ref':
-    delete:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property incompatibleGroups for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_DeleteIncompatibleGroupsGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - name: group-id
-          in: path
-          description: The unique identifier of group
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: group
-        - name: If-Match
-          in: header
-          description: ETag
-          style: simple
-          schema:
-            type: string
-        - name: '@id'
-          in: query
-          description: Delete Uri
-          style: form
-          explode: false
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/incompatibleGroups/$ref':
-    get:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Get ref of incompatibleGroups from identityGovernance
-      description: The groups whose members are ineligible to be assigned this access package.
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_ListIncompatibleGroupsGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - deletedDateTime
-                - deletedDateTime desc
-                - assignedLabels
-                - assignedLabels desc
-                - assignedLicenses
-                - assignedLicenses desc
-                - classification
-                - classification desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - expirationDateTime
-                - expirationDateTime desc
-                - groupTypes
-                - groupTypes desc
-                - hasMembersWithLicenseErrors
-                - hasMembersWithLicenseErrors desc
-                - isAssignableToRole
-                - isAssignableToRole desc
-                - licenseProcessingState
-                - licenseProcessingState desc
-                - mail
-                - mail desc
-                - mailEnabled
-                - mailEnabled desc
-                - mailNickname
-                - mailNickname desc
-                - membershipRule
-                - membershipRule desc
-                - membershipRuleProcessingState
-                - membershipRuleProcessingState desc
-                - onPremisesDomainName
-                - onPremisesDomainName desc
-                - onPremisesLastSyncDateTime
-                - onPremisesLastSyncDateTime desc
-                - onPremisesNetBiosName
-                - onPremisesNetBiosName desc
-                - onPremisesProvisioningErrors
-                - onPremisesProvisioningErrors desc
-                - onPremisesSamAccountName
-                - onPremisesSamAccountName desc
-                - onPremisesSecurityIdentifier
-                - onPremisesSecurityIdentifier desc
-                - onPremisesSyncEnabled
-                - onPremisesSyncEnabled desc
-                - preferredDataLocation
-                - preferredDataLocation desc
-                - preferredLanguage
-                - preferredLanguage desc
-                - proxyAddresses
-                - proxyAddresses desc
-                - renewedDateTime
-                - renewedDateTime desc
-                - securityEnabled
-                - securityEnabled desc
-                - securityIdentifier
-                - securityIdentifier desc
-                - theme
-                - theme desc
-                - visibility
-                - visibility desc
-                - allowExternalSenders
-                - allowExternalSenders desc
-                - autoSubscribeNewMembers
-                - autoSubscribeNewMembers desc
-                - hideFromAddressLists
-                - hideFromAddressLists desc
-                - hideFromOutlookClients
-                - hideFromOutlookClients desc
-                - isSubscribedByMail
-                - isSubscribedByMail desc
-                - unseenCount
-                - unseenCount desc
-                - isArchived
-                - isArchived desc
-              type: string
-      responses:
-        '200':
-          $ref: '#/components/responses/StringCollectionResponse'
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to incompatibleGroups for identityGovernance
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_CreateIncompatibleGroupsGraphBPreRef
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-      requestBody:
-        $ref: '#/components/requestBodies/refPostBody'
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/{accessPackage-id}/microsoft.graph.getApplicablePolicyRequirements':
-    post:
-      tags:
-        - identityGovernance.Actions
-      summary: Invoke action getApplicablePolicyRequirements
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_getApplicablePolicyRequirements
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: accessPackage-id
-          in: path
-          description: The unique identifier of accessPackage
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackage
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackageAssignmentRequestRequirements'
-                  '@odata.nextLink':
-                    type: string
-                    nullable: true
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: action
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-  '/identityGovernance/entitlementManagement/catalogs/{accessPackageCatalog-id}/accessPackages/microsoft.graph.filterByCurrentUser(on=''{on}'')':
-    get:
-      tags:
-        - identityGovernance.Functions
-      summary: Invoke function filterByCurrentUser
-      operationId: identityGovernance.entitlementManagement.catalogs.accessPackages_filterGraphBPreCurrentUser
-      parameters:
-        - name: accessPackageCatalog-id
-          in: path
-          description: The unique identifier of accessPackageCatalog
-          required: true
-          style: simple
-          schema:
-            type: string
-          x-ms-docs-key-type: accessPackageCatalog
-        - name: on
-          in: path
-          description: 'Usage: on=''{on}'''
-          required: true
-          style: simple
-          schema:
-            $ref: '#/components/schemas/microsoft.graph.accessPackageFilterByCurrentUserOptions'
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $select
-          in: query
-          description: Select properties to be returned
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - createdDateTime
-                - description
-                - displayName
-                - isHidden
-                - modifiedDateTime
-                - accessPackagesIncompatibleWith
-                - assignmentPolicies
-                - catalog
-                - incompatibleAccessPackages
-                - incompatibleGroups
-              type: string
-        - name: $orderby
-          in: query
-          description: Order items by property values
-          style: form
-          explode: false
-          schema:
-            uniqueItems: true
-            type: array
-            items:
-              enum:
-                - id
-                - id desc
-                - createdDateTime
-                - createdDateTime desc
-                - description
-                - description desc
-                - displayName
-                - displayName desc
-                - isHidden
-                - isHidden desc
-                - modifiedDateTime
-                - modifiedDateTime desc
-              type: string
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                title: Collection of accessPackage
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.accessPackage'
-                  '@odata.nextLink':
-                    type: string
-                    nullable: true
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: function
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
   /identityGovernance/entitlementManagement/connectedOrganizations:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get connectedOrganizations from identityGovernance
-      description: References to a directory or domain of another organization whose users can request access.
+      summary: List connectedOrganizations
+      description: Retrieve a list of connectedOrganization objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-list-connectedorganizations?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_ListConnectedOrganizations
       parameters:
         - $ref: '#/components/parameters/top'
@@ -12790,7 +11072,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to connectedOrganizations for identityGovernance
+      summary: Create connectedOrganization
+      description: Create a new connectedOrganization object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagement-post-connectedorganizations?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_CreateConnectedOrganizations
       requestBody:
         description: New navigation property
@@ -12813,8 +11099,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get connectedOrganizations from identityGovernance
-      description: References to a directory or domain of another organization whose users can request access.
+      summary: Get connectedOrganization
+      description: Retrieve the properties and relationships of a connectedOrganization object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetConnectedOrganizations
       parameters:
         - name: connectedOrganization-id
@@ -12872,7 +11161,11 @@ paths:
     patch:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Update the navigation property connectedOrganizations in identityGovernance
+      summary: Update connectedOrganization
+      description: Update a connectedOrganization object to change one or more of its properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-update?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_UpdateConnectedOrganizations
       parameters:
         - name: connectedOrganization-id
@@ -12899,7 +11192,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete navigation property connectedOrganizations for identityGovernance
+      summary: Delete connectedOrganization
+      description: Delete a connectedOrganization object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-delete?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_DeleteConnectedOrganizations
       parameters:
         - name: connectedOrganization-id
@@ -12926,7 +11223,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get externalSponsors from identityGovernance
+      summary: List externalSponsors
+      description: Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-list-externalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_ListExternalSponsors
       parameters:
         - name: connectedOrganization-id
@@ -12994,7 +11295,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to externalSponsors for identityGovernance
+      summary: Add externalSponsors
+      description: Add a user or a group to the connected organization's external sponsors. The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-post-externalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_CreateExternalSponsors
       parameters:
         - name: connectedOrganization-id
@@ -13026,7 +11331,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property externalSponsors for identityGovernance
+      summary: Remove externalSponsors
+      description: Remove a user or a group from the connected organization's external sponsors. The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-delete-externalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_DeleteExternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13068,7 +11377,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get ref of externalSponsors from identityGovernance
+      summary: List externalSponsors
+      description: Retrieve a list of a connectedOrganization's external sponsors.  The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-list-externalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_ListExternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13111,7 +11424,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to externalSponsors for identityGovernance
+      summary: Add externalSponsors
+      description: Add a user or a group to the connected organization's external sponsors. The external sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-post-externalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_CreateExternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13210,6 +11527,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action getAvailableExtensionProperties
+      description: "Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:\n+ user\n+ group\n+ administrativeUnit\n+ application\n+ device\n+ organization"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.externalSponsors_getAvailableExtensionProperties
       parameters:
         - name: connectedOrganization-id
@@ -13263,6 +11584,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action getByIds
+      description: 'Return the directory objects specified in a list of IDs. Some common uses for this function are to:'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.externalSponsors_getGraphBPreIds
       parameters:
         - name: connectedOrganization-id
@@ -13321,6 +11646,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action validateProperties
+      description: "Validate that a Microsoft 365 group's display name or mail nickname complies with naming policies.  Clients can use this API to determine whether a display name or mail nickname is valid before trying to create a Microsoft 365 group. To validate the properties of an existing group, use the group: validateProperties function. The following policy validations are performed for the display name and mail nickname properties:\n1. Validate the prefix and suffix naming policy\n2. Validate the custom banned words policy\n3. Validate that the mail nickname is unique This API only returns the first validation failure that is encountered. If the properties fail multiple validations, only the first validation failure is returned. However, you can validate both the mail nickname and the display name and receive a collection of validation errors if you are only validating the prefix and suffix naming policy. To learn more about configuring naming policies, see Configure naming policy."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-validateproperties?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.externalSponsors_validateProperties
       parameters:
         - name: connectedOrganization-id
@@ -13365,7 +11694,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get internalSponsors from identityGovernance
+      summary: List internalSponsors
+      description: Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_ListInternalSponsors
       parameters:
         - name: connectedOrganization-id
@@ -13433,7 +11766,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property to internalSponsors for identityGovernance
+      summary: Add internalSponsors
+      description: Add a user or a group to the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_CreateInternalSponsors
       parameters:
         - name: connectedOrganization-id
@@ -13465,7 +11802,11 @@ paths:
     delete:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Delete ref of navigation property internalSponsors for identityGovernance
+      summary: Remove internalSponsors
+      description: Remove a user or a group from the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-delete-internalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_DeleteInternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13507,7 +11848,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get ref of internalSponsors from identityGovernance
+      summary: List internalSponsors
+      description: Retrieve a list of a connectedOrganization's internal sponsors.  The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-list-internalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_ListInternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13550,7 +11895,11 @@ paths:
     post:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Create new navigation property ref to internalSponsors for identityGovernance
+      summary: Add internalSponsors
+      description: Add a user or a group to the connected organization's internal sponsors. The internal sponsors are a set of users who can approve requests on behalf of other users from that connected organization.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/connectedorganization-post-internalsponsors?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations_CreateInternalSponsorsGraphBPreRef
       parameters:
         - name: connectedOrganization-id
@@ -13649,6 +11998,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action getAvailableExtensionProperties
+      description: "Return all directory extension definitions that have been registered in a directory, including through multi-tenant apps. The following entities support extension properties:\n+ user\n+ group\n+ administrativeUnit\n+ application\n+ device\n+ organization"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-getavailableextensionproperties?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.internalSponsors_getAvailableExtensionProperties
       parameters:
         - name: connectedOrganization-id
@@ -13702,6 +12055,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action getByIds
+      description: 'Return the directory objects specified in a list of IDs. Some common uses for this function are to:'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-getbyids?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.internalSponsors_getGraphBPreIds
       parameters:
         - name: connectedOrganization-id
@@ -13760,6 +12117,10 @@ paths:
       tags:
         - identityGovernance.Actions
       summary: Invoke action validateProperties
+      description: "Validate that a Microsoft 365 group's display name or mail nickname complies with naming policies.  Clients can use this API to determine whether a display name or mail nickname is valid before trying to create a Microsoft 365 group. To validate the properties of an existing group, use the group: validateProperties function. The following policy validations are performed for the display name and mail nickname properties:\n1. Validate the prefix and suffix naming policy\n2. Validate the custom banned words policy\n3. Validate that the mail nickname is unique This API only returns the first validation failure that is encountered. If the properties fail multiple validations, only the first validation failure is returned. However, you can validate both the mail nickname and the display name and receive a collection of validation errors if you are only validating the prefix and suffix naming policy. To learn more about configuring naming policies, see Configure naming policy."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/directoryobject-validateproperties?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement.connectedOrganizations.internalSponsors_validateProperties
       parameters:
         - name: connectedOrganization-id
@@ -13804,8 +12165,11 @@ paths:
     get:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Get settings from identityGovernance
-      description: The settings that control the behavior of Azure AD entitlement management.
+      summary: Get entitlementManagementSettings
+      description: Retrieve the properties of an entitlementManagementSettings object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagementsettings-get?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_GetSettings
       parameters:
         - name: $select
@@ -13847,7 +12211,11 @@ paths:
     patch:
       tags:
         - identityGovernance.entitlementManagement
-      summary: Update the navigation property settings in identityGovernance
+      summary: Update entitlementManagementSettings
+      description: Update an existing entitlementManagementSettings object to change one or more of its properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/entitlementmanagementsettings-update?view=graph-rest-1.0
       operationId: identityGovernance.entitlementManagement_UpdateSettings
       requestBody:
         description: New navigation property values
@@ -14201,8 +12569,11 @@ paths:
     get:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Get agreements from identityGovernance
-      description: Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+      summary: List agreements
+      description: Retrieve a list of agreement objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/termsofusecontainer-list-agreements?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse_ListAgreements
       parameters:
         - $ref: '#/components/parameters/top'
@@ -14280,7 +12651,11 @@ paths:
     post:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Create new navigation property to agreements for identityGovernance
+      summary: Create agreement
+      description: Create a new agreement object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/termsofusecontainer-post-agreements?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse_CreateAgreements
       requestBody:
         description: New navigation property
@@ -14303,8 +12678,11 @@ paths:
     get:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Get agreements from identityGovernance
-      description: Represents a tenant's customizable terms of use agreement that's created and managed with Azure Active Directory (Azure AD).
+      summary: Get agreement
+      description: Retrieve the properties and relationships of an agreement object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-get?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse_GetAgreements
       parameters:
         - name: agreement-id
@@ -14363,7 +12741,11 @@ paths:
     patch:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Update the navigation property agreements in identityGovernance
+      summary: Update agreement
+      description: Update the properties of an agreement object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-update?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse_UpdateAgreements
       parameters:
         - name: agreement-id
@@ -14390,7 +12772,11 @@ paths:
     delete:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Delete navigation property agreements for identityGovernance
+      summary: Delete agreement
+      description: Delete an agreement object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-delete?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse_DeleteAgreements
       parameters:
         - name: agreement-id
@@ -14417,8 +12803,11 @@ paths:
     get:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Get acceptances from identityGovernance
-      description: Read-only. Information about acceptances of this agreement.
+      summary: List acceptances
+      description: Get the details about the acceptance records for a specific agreement.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-list-acceptances?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse.agreements_ListAcceptances
       parameters:
         - name: agreement-id
@@ -14694,8 +13083,11 @@ paths:
     get:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Get file from identityGovernance
-      description: Default PDF linked to this agreement.
+      summary: Get agreementFile
+      description: 'Retrieve the details of the default file for an agreement, including the language and version information. The file information is specified through the agreementFile object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreementfile-get?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse.agreements_GetFile
       parameters:
         - name: agreement-id
@@ -15445,7 +13837,11 @@ paths:
     post:
       tags:
         - identityGovernance.termsOfUseContainer
-      summary: Create new navigation property to files for identityGovernance
+      summary: Create agreementFileLocalization
+      description: Create a new localized agreement file.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/agreement-post-files?view=graph-rest-1.0
       operationId: identityGovernance.termsGraphOPreUse.agreements_CreateFiles
       parameters:
         - name: agreement-id
@@ -15906,8 +14302,11 @@ paths:
     get:
       tags:
         - users.agreementAcceptance
-      summary: Get agreementAcceptances from users
-      description: The user's terms of use acceptance statuses. Read-only. Nullable.
+      summary: List agreementAcceptances
+      description: Retrieve the signed-in user's agreementAcceptance objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-agreementacceptances?view=graph-rest-1.0
       operationId: users_ListAgreementAcceptances
       parameters:
         - name: user-id
@@ -16619,7 +15018,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appConsentRequest'
-              description: A collection of userConsentRequest objects for a specific application.
+              description: A collection of appConsentRequest objects representing apps for which admin consent has been requested by one or more users.
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
@@ -17593,7 +15992,7 @@ components:
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
+              description: 'Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
               format: date-time
               nullable: true
             groupTypes:
@@ -19422,7 +17821,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
@@ -20944,7 +19343,7 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.'
+              description: 'The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.'
             visibleHistoryStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -21522,7 +19921,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -23568,6 +21967,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.chatMessageHistoryItem'
+              description: 'List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.'
             messageType:
               $ref: '#/components/schemas/microsoft.graph.chatMessageType'
             policyViolation:
@@ -24764,7 +23164,7 @@ components:
               nullable: true
             isFavorite:
               type: boolean
-              description: true if the user has flagged this person as a favorite.
+              description: True if the user has flagged this person as a favorite.
               nullable: true
             jobTitle:
               type: string
@@ -26423,6 +24823,7 @@ components:
         modifiedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
+          description: The date and time when the message was modified.
           format: date-time
         reaction:
           $ref: '#/components/schemas/microsoft.graph.chatMessageReaction'
@@ -29360,7 +27761,7 @@ components:
               description: List of time periods between joining and leaving a meeting.
             emailAddress:
               type: string
-              description: Email address of the user associated with this atttendance record.
+              description: Email address of the user associated with this attendance record.
               nullable: true
             identity:
               $ref: '#/components/schemas/microsoft.graph.identity'
@@ -29411,6 +27812,10 @@ components:
               description: 'The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
+            deviceCategory:
+              type: string
+              description: User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+              nullable: true
             deviceId:
               type: string
               description: 'Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).'
@@ -29418,6 +27823,10 @@ components:
             deviceMetadata:
               type: string
               description: For internal use only. Set to null.
+              nullable: true
+            deviceOwnership:
+              type: string
+              description: 'Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.'
               nullable: true
             deviceVersion:
               maximum: 2147483647
@@ -29429,6 +27838,10 @@ components:
             displayName:
               type: string
               description: 'The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
+              nullable: true
+            enrollmentProfileName:
+              type: string
+              description: 'Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.'
               nullable: true
             isCompliant:
               type: boolean
@@ -29468,6 +27881,12 @@ components:
             profileType:
               type: string
               description: 'The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.'
+              nullable: true
+            registrationDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: 'Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
+              format: date-time
               nullable: true
             systemLabels:
               type: array

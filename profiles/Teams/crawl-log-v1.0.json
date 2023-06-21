@@ -269,6 +269,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/groups/{group-id}/team/channels/{channel-id}/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/groups/{group-id}/team/channels/{channel-id}/tabs": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -406,6 +410,10 @@
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
     "/groups/{group-id}/team/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo-id}/allowedMembers/{conversationMember-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
+    "/groups/{group-id}/team/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
@@ -657,6 +665,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/teams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/teams/{team-id}/channels/{channel-id}/tabs": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -870,6 +882,10 @@
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
     "/teams/{team-id}/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo-id}/allowedMembers/{conversationMember-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
+    "/teams/{team-id}/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
@@ -1125,6 +1141,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/teamwork/deletedTeams/{deletedTeam-id}/channels/{channel-id}/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/teamwork/deletedTeams/{deletedTeam-id}/channels/{channel-id}/tabs": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -1353,6 +1373,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/users/{user-id}/joinedTeams/{team-id}/channels/{channel-id}/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/users/{user-id}/joinedTeams/{team-id}/channels/{channel-id}/tabs": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -1493,6 +1517,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/users/{user-id}/joinedTeams/{team-id}/primaryChannel/sharedWithTeams/{sharedWithChannelTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/users/{user-id}/joinedTeams/{team-id}/primaryChannel/tabs": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -1613,6 +1641,10 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
+    "/users/{user-id}/teamwork/associatedTeams/{associatedTeamInfo-id}/team": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
     "/users/{user-id}/teamwork/installedApps": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
@@ -1622,6 +1654,14 @@
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     },
     "/users/{user-id}/teamwork/installedApps/{userScopeTeamsAppInstallation-id}/chat": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
+    "/users/{user-id}/teamwork/installedApps/{userScopeTeamsAppInstallation-id}/teamsApp": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Teams.yml"
+    },
+    "/users/{user-id}/teamwork/installedApps/{userScopeTeamsAppInstallation-id}/teamsAppDefinition": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Teams.yml"
     }

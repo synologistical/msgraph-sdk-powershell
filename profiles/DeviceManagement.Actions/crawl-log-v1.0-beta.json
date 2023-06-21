@@ -1041,6 +1041,14 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Actions.yml"
     },
+    "/deviceManagement/reports/microsoft.graph.getWindowsDriverUpdateAlertsPerPolicyPerDeviceReport": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/DeviceManagement.Actions.yml"
+    },
+    "/deviceManagement/reports/microsoft.graph.getWindowsDriverUpdateAlertSummaryReport": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/DeviceManagement.Actions.yml"
+    },
     "/deviceManagement/reports/microsoft.graph.getWindowsQualityUpdateAlertsPerPolicyPerDeviceReport": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Actions.yml"

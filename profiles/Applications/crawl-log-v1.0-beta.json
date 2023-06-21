@@ -169,10 +169,6 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Applications.yml"
     },
-    "/applications/{application-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.stop": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Applications.yml"
-    },
     "/applications/{application-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.validateCredentials": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Applications.yml"
@@ -742,10 +738,6 @@
       "originalLocation": "/openApiDocs/beta/Applications.yml"
     },
     "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.start": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/Applications.yml"
-    },
-    "/servicePrincipals/{servicePrincipal-id}/synchronization/jobs/{synchronizationJob-id}/microsoft.graph.stop": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Applications.yml"
     },

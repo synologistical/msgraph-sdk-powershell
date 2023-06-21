@@ -25,6 +25,10 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Compliance.yml"
     },
+    "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/lastIndexOperation": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Compliance.yml"
+    },
     "/compliance/ediscovery/cases/{case-id}/custodians/{custodian-id}/microsoft.graph.ediscovery.activate": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Compliance.yml"
@@ -142,6 +146,10 @@
       "originalLocation": "/openApiDocs/beta/Compliance.yml"
     },
     "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/dataSource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Compliance.yml"
+    },
+    "/compliance/ediscovery/cases/{case-id}/noncustodialDataSources/{noncustodialDataSource-id}/lastIndexOperation": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Compliance.yml"
     },

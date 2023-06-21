@@ -41,10 +41,6 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
     },
-    "/deviceManagement/comanagedDevices/{managedDevice-id}/microsoft.graph.getOemWarranty()": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
-    },
     "/deviceManagement/comanagedDevices/microsoft.graph.appDiagnostics(upn='{upn}')": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
@@ -110,10 +106,6 @@
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
     },
     "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.getNonCompliantSettings()": {
-      "apiVersion": "v1.0-beta",
-      "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
-    },
-    "/deviceManagement/managedDevices/{managedDevice-id}/microsoft.graph.getOemWarranty()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/DeviceManagement.Functions.yml"
     },
