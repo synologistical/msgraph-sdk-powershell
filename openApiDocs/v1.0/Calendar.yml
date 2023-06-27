@@ -66,8 +66,11 @@ paths:
     get:
       tags:
         - groups.calendar
-      summary: Get calendarPermission
-      description: Get the specified permissions object of a user or group calendar that has been shared.
+      summary: List calendarPermissions
+      description: 'Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0
       operationId: group.calendar_ListCalendarPermission
       parameters:
         - name: group-id
@@ -9019,7 +9022,7 @@ paths:
       tags:
         - places.place
       summary: Get the number of the resource
-      operationId: place.ListPlace_GetCountAsRoom
+      operationId: place_GetCountAsRoom
       parameters:
         - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
@@ -9126,8 +9129,11 @@ paths:
     get:
       tags:
         - users.calendar
-      summary: Get calendarPermission
-      description: Get the specified permissions object of a user or group calendar that has been shared.
+      summary: List calendarPermissions
+      description: 'Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0
       operationId: user.calendar_ListCalendarPermission
       parameters:
         - name: user-id
@@ -14199,8 +14205,11 @@ paths:
     get:
       tags:
         - users.calendarGroup
-      summary: Get calendarPermission
-      description: Get the specified permissions object of a user or group calendar that has been shared.
+      summary: List calendarPermissions
+      description: 'Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0
       operationId: user.calendarGroup.calendar_ListCalendarPermission
       parameters:
         - name: user-id
@@ -20152,8 +20161,11 @@ paths:
     get:
       tags:
         - users.calendar
-      summary: Get calendarPermission
-      description: Get the specified permissions object of a user or group calendar that has been shared.
+      summary: List calendarPermissions
+      description: 'Get a collection of calendarPermission resources that describe the identity and roles of users with whom the specified calendar has been shared or delegated. Here, the calendar can be a user calendar or group calendar.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/calendar-list-calendarpermissions?view=graph-rest-1.0
       operationId: user.calendar_ListCalendarPermission
       parameters:
         - name: user-id
@@ -30572,7 +30584,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
