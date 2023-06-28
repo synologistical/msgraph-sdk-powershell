@@ -10,8 +10,11 @@ paths:
     get:
       tags:
         - deviceManagement.onPremisesConditionalAccessSettings
-      summary: Get conditionalAccessSettings from deviceManagement
-      description: The Exchange on premises conditional access settings. On premises conditional access will require devices to be both enrolled and compliant for mail access
+      summary: Get onPremisesConditionalAccessSettings
+      description: Read properties and relationships of the onPremisesConditionalAccessSettings object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-get?view=graph-rest-1.0
       operationId: deviceManagement_GetConditionalAccessSettings
       parameters:
         - name: $select
@@ -55,7 +58,11 @@ paths:
     patch:
       tags:
         - deviceManagement.onPremisesConditionalAccessSettings
-      summary: Update the navigation property conditionalAccessSettings in deviceManagement
+      summary: Update onPremisesConditionalAccessSettings
+      description: Update the properties of a onPremisesConditionalAccessSettings object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-onpremisesconditionalaccesssettings-update?view=graph-rest-1.0
       operationId: deviceManagement_UpdateConditionalAccessSettings
       requestBody:
         description: New navigation property values
@@ -92,8 +99,11 @@ paths:
     get:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Get deviceEnrollmentConfigurations from deviceManagement
-      description: The list of device enrollment configurations
+      summary: List deviceEnrollmentLimitConfigurations
+      description: List properties and relationships of the deviceEnrollmentLimitConfiguration objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentlimitconfiguration-list?view=graph-rest-1.0
       operationId: deviceManagement_ListDeviceEnrollmentConfigurations
       parameters:
         - $ref: '#/components/parameters/top'
@@ -170,7 +180,11 @@ paths:
     post:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Create new navigation property to deviceEnrollmentConfigurations for deviceManagement
+      summary: Create deviceEnrollmentWindowsHelloForBusinessConfiguration
+      description: Create a new deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-create?view=graph-rest-1.0
       operationId: deviceManagement_CreateDeviceEnrollmentConfigurations
       requestBody:
         description: New navigation property
@@ -193,8 +207,11 @@ paths:
     get:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Get deviceEnrollmentConfigurations from deviceManagement
-      description: The list of device enrollment configurations
+      summary: Get deviceEnrollmentWindowsHelloForBusinessConfiguration
+      description: Read properties and relationships of the deviceEnrollmentWindowsHelloForBusinessConfiguration object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentwindowshelloforbusinessconfiguration-get?view=graph-rest-1.0
       operationId: deviceManagement_GetDeviceEnrollmentConfigurations
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -250,7 +267,11 @@ paths:
     patch:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Update the navigation property deviceEnrollmentConfigurations in deviceManagement
+      summary: Update deviceEnrollmentPlatformRestrictionsConfiguration
+      description: Update the properties of a deviceEnrollmentPlatformRestrictionsConfiguration object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-update?view=graph-rest-1.0
       operationId: deviceManagement_UpdateDeviceEnrollmentConfigurations
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -277,7 +298,11 @@ paths:
     delete:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Delete navigation property deviceEnrollmentConfigurations for deviceManagement
+      summary: Delete deviceEnrollmentPlatformRestrictionsConfiguration
+      description: Deletes a deviceEnrollmentPlatformRestrictionsConfiguration.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-deviceenrollmentplatformrestrictionsconfiguration-delete?view=graph-rest-1.0
       operationId: deviceManagement_DeleteDeviceEnrollmentConfigurations
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -304,8 +329,11 @@ paths:
     get:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Get assignments from deviceManagement
-      description: The list of group assignments for the device configuration profile
+      summary: List enrollmentConfigurationAssignments
+      description: List properties and relationships of the enrollmentConfigurationAssignment objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-list?view=graph-rest-1.0
       operationId: deviceManagement.deviceEnrollmentConfigurations_ListAssignments
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -373,7 +401,11 @@ paths:
     post:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Create new navigation property to assignments for deviceManagement
+      summary: Create enrollmentConfigurationAssignment
+      description: Create a new enrollmentConfigurationAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-create?view=graph-rest-1.0
       operationId: deviceManagement.deviceEnrollmentConfigurations_CreateAssignments
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -405,8 +437,11 @@ paths:
     get:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Get assignments from deviceManagement
-      description: The list of group assignments for the device configuration profile
+      summary: Get enrollmentConfigurationAssignment
+      description: Read properties and relationships of the enrollmentConfigurationAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-get?view=graph-rest-1.0
       operationId: deviceManagement.deviceEnrollmentConfigurations_GetAssignments
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -463,7 +498,11 @@ paths:
     patch:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Update the navigation property assignments in deviceManagement
+      summary: Update enrollmentConfigurationAssignment
+      description: Update the properties of a enrollmentConfigurationAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-update?view=graph-rest-1.0
       operationId: deviceManagement.deviceEnrollmentConfigurations_UpdateAssignments
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -498,7 +537,11 @@ paths:
     delete:
       tags:
         - deviceManagement.deviceEnrollmentConfiguration
-      summary: Delete navigation property assignments for deviceManagement
+      summary: Delete enrollmentConfigurationAssignment
+      description: Deletes a enrollmentConfigurationAssignment.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-enrollmentconfigurationassignment-delete?view=graph-rest-1.0
       operationId: deviceManagement.deviceEnrollmentConfigurations_DeleteAssignments
       parameters:
         - name: deviceEnrollmentConfiguration-id
@@ -533,8 +576,11 @@ paths:
     get:
       tags:
         - deviceManagement.importedWindowsAutopilotDeviceIdentity
-      summary: Get importedWindowsAutopilotDeviceIdentities from deviceManagement
-      description: Collection of imported Windows autopilot devices.
+      summary: List importedWindowsAutopilotDeviceIdentities
+      description: List properties and relationships of the importedWindowsAutopilotDeviceIdentity objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-list?view=graph-rest-1.0
       operationId: deviceManagement_ListImportedWindowsAutopilotDeviceIdentities
       parameters:
         - $ref: '#/components/parameters/top'
@@ -612,7 +658,11 @@ paths:
     post:
       tags:
         - deviceManagement.importedWindowsAutopilotDeviceIdentity
-      summary: Create new navigation property to importedWindowsAutopilotDeviceIdentities for deviceManagement
+      summary: Create importedWindowsAutopilotDeviceIdentity
+      description: Create a new importedWindowsAutopilotDeviceIdentity object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-create?view=graph-rest-1.0
       operationId: deviceManagement_CreateImportedWindowsAutopilotDeviceIdentities
       requestBody:
         description: New navigation property
@@ -635,8 +685,11 @@ paths:
     get:
       tags:
         - deviceManagement.importedWindowsAutopilotDeviceIdentity
-      summary: Get importedWindowsAutopilotDeviceIdentities from deviceManagement
-      description: Collection of imported Windows autopilot devices.
+      summary: Get importedWindowsAutopilotDeviceIdentity
+      description: Read properties and relationships of the importedWindowsAutopilotDeviceIdentity object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-get?view=graph-rest-1.0
       operationId: deviceManagement_GetImportedWindowsAutopilotDeviceIdentities
       parameters:
         - name: importedWindowsAutopilotDeviceIdentity-id
@@ -718,7 +771,11 @@ paths:
     delete:
       tags:
         - deviceManagement.importedWindowsAutopilotDeviceIdentity
-      summary: Delete navigation property importedWindowsAutopilotDeviceIdentities for deviceManagement
+      summary: Delete importedWindowsAutopilotDeviceIdentity
+      description: Deletes a importedWindowsAutopilotDeviceIdentity.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-importedwindowsautopilotdeviceidentity-delete?view=graph-rest-1.0
       operationId: deviceManagement_DeleteImportedWindowsAutopilotDeviceIdentities
       parameters:
         - name: importedWindowsAutopilotDeviceIdentity-id
@@ -745,8 +802,11 @@ paths:
     get:
       tags:
         - deviceManagement.windowsAutopilotDeviceIdentity
-      summary: Get windowsAutopilotDeviceIdentities from deviceManagement
-      description: The Windows autopilot device identities contained collection.
+      summary: List windowsAutopilotDeviceIdentities
+      description: List properties and relationships of the windowsAutopilotDeviceIdentity objects.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-list?view=graph-rest-1.0
       operationId: deviceManagement_ListWindowsAutopilotDeviceIdentities
       parameters:
         - $ref: '#/components/parameters/top'
@@ -851,7 +911,11 @@ paths:
     post:
       tags:
         - deviceManagement.windowsAutopilotDeviceIdentity
-      summary: Create new navigation property to windowsAutopilotDeviceIdentities for deviceManagement
+      summary: Create windowsAutopilotDeviceIdentity
+      description: Create a new windowsAutopilotDeviceIdentity object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-create?view=graph-rest-1.0
       operationId: deviceManagement_CreateWindowsAutopilotDeviceIdentities
       requestBody:
         description: New navigation property
@@ -874,8 +938,11 @@ paths:
     get:
       tags:
         - deviceManagement.windowsAutopilotDeviceIdentity
-      summary: Get windowsAutopilotDeviceIdentities from deviceManagement
-      description: The Windows autopilot device identities contained collection.
+      summary: Get windowsAutopilotDeviceIdentity
+      description: Read properties and relationships of the windowsAutopilotDeviceIdentity object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-get?view=graph-rest-1.0
       operationId: deviceManagement_GetWindowsAutopilotDeviceIdentities
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
@@ -966,7 +1033,11 @@ paths:
     delete:
       tags:
         - deviceManagement.windowsAutopilotDeviceIdentity
-      summary: Delete navigation property windowsAutopilotDeviceIdentities for deviceManagement
+      summary: Delete windowsAutopilotDeviceIdentity
+      description: Deletes a windowsAutopilotDeviceIdentity.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/intune-enrollment-windowsautopilotdeviceidentity-delete?view=graph-rest-1.0
       operationId: deviceManagement_DeleteWindowsAutopilotDeviceIdentities
       parameters:
         - name: windowsAutopilotDeviceIdentity-id
@@ -1587,8 +1658,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignments from roleManagement
-      description: Resource to grant access to users or groups.
+      summary: List unifiedRoleAssignments
+      description: "Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:\n- directory (Azure AD)\n- entitlement management (Azure AD)"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleAssignments
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1668,7 +1742,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleAssignments for roleManagement
+      summary: Create unifiedRoleAssignment
+      description: Create a new unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0
       operationId: roleManagement.directory_CreateRoleAssignments
       requestBody:
         description: New navigation property
@@ -1691,8 +1769,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignments from roleManagement
-      description: Resource to grant access to users or groups.
+      summary: Get unifiedRoleAssignment
+      description: Retrieve the properties and relationships of a unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleAssignments
       parameters:
         - name: unifiedRoleAssignment-id
@@ -1780,7 +1861,11 @@ paths:
     delete:
       tags:
         - roleManagement.rbacApplication
-      summary: Delete navigation property roleAssignments for roleManagement
+      summary: Delete unifiedRoleAssignment
+      description: Delete a unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0
       operationId: roleManagement.directory_DeleteRoleAssignments
       parameters:
         - name: unifiedRoleAssignment-id
@@ -2074,8 +2159,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleInstances from roleManagement
-      description: Instances for active role assignments.
+      summary: List roleAssignmentScheduleInstances
+      description: 'Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleAssignmentScheduleInstances
       parameters:
         - $ref: '#/components/parameters/top'
@@ -2195,8 +2283,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleInstances from roleManagement
-      description: Instances for active role assignments.
+      summary: Get unifiedRoleAssignmentScheduleInstance
+      description: Get the instance of an active role assignment.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleAssignmentScheduleInstances
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
@@ -2380,6 +2471,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetAppScope
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the assignment or role eligibility. Read-only.
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or role eligibility through the request.
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetPrincipal
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.directory.roleAssignmentScheduleInstances_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/directory/roleAssignmentScheduleInstances/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -2487,8 +2792,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleRequests from roleManagement
-      description: Requests for active role assignments to principals through PIM.
+      summary: List roleAssignmentScheduleRequests
+      description: 'Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleAssignmentScheduleRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -2605,7 +2913,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleAssignmentScheduleRequests for roleManagement
+      summary: Create roleAssignmentScheduleRequests
+      description: "In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object:\n+ Request active and persistent role assignments for a principal, with or without expiry dates.\n+ Activate, deactivate, extend, or renew an eligible role assignment for a principal. To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignmentschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.directory_CreateRoleAssignmentScheduleRequests
       requestBody:
         description: New navigation property
@@ -2628,8 +2940,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleRequests from roleManagement
-      description: Requests for active role assignments to principals through PIM.
+      summary: Get unifiedRoleAssignmentScheduleRequest
+      description: 'In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleAssignmentScheduleRequests
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
@@ -2931,6 +3246,10 @@ paths:
       tags:
         - roleManagement.Actions
       summary: Invoke action cancel
+      description: 'Immediately cancel a unifiedRoleAssignmentScheduleRequest object that is in a `Granted` status, and have the system automatically delete the canceled request after 30 days. After calling this action, the **status** of the canceled **unifiedRoleAssignmentScheduleRequest** changes to `Canceled`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-cancel?view=graph-rest-1.0
       operationId: roleManagement.directory.roleAssignmentScheduleRequests_cancel
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
@@ -3255,8 +3574,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentSchedules from roleManagement
-      description: Schedules for active role assignment operations.
+      summary: List roleAssignmentSchedules
+      description: Get the schedules for active role assignment operations.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleAssignmentSchedules
       parameters:
         - $ref: '#/components/parameters/top'
@@ -3379,8 +3701,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentSchedules from roleManagement
-      description: Schedules for active role assignment operations.
+      summary: Get unifiedRoleAssignmentSchedule
+      description: Retrieve the schedule for an active role assignment operation.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleAssignmentSchedules
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
@@ -3567,6 +3892,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetAppScope
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the role eligibility or assignment. Read-only.
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or that's eligible for a role through the request.
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetPrincipal
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.directory.roleAssignmentSchedules_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/directory/roleAssignmentSchedules/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -3677,8 +4216,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleDefinitions from roleManagement
-      description: Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+      summary: List roleDefinitions
+      description: "Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:\n- directory (Azure AD)\n- entitlement management (Azure AD)"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleDefinitions
       parameters:
         - $ref: '#/components/parameters/top'
@@ -3761,7 +4303,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleDefinitions for roleManagement
+      summary: Create roleDefinitions
+      description: Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0
       operationId: roleManagement.directory_CreateRoleDefinitions
       requestBody:
         description: New navigation property
@@ -3784,8 +4330,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleDefinitions from roleManagement
-      description: Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+      summary: Get unifiedRoleDefinition
+      description: 'Read the properties and relationships of a unifiedRoleDefinition object. The following role-based access control (RBAC) providers are currently supported:'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -3843,7 +4392,11 @@ paths:
     patch:
       tags:
         - roleManagement.rbacApplication
-      summary: Update the navigation property roleDefinitions in roleManagement
+      summary: Update unifiedRoleDefinition
+      description: Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-update?view=graph-rest-1.0
       operationId: roleManagement.directory_UpdateRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -3870,7 +4423,11 @@ paths:
     delete:
       tags:
         - roleManagement.rbacApplication
-      summary: Delete navigation property roleDefinitions for roleManagement
+      summary: Delete unifiedRoleDefinition
+      description: Delete a unifiedRoleDefinition object. You cannot delete built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-1.0
       operationId: roleManagement.directory_DeleteRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -4158,8 +4715,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleInstances from roleManagement
-      description: Instances for role eligibility requests.
+      summary: List roleEligibilityScheduleInstances
+      description: Get the instances of role eligibilities.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleEligibilityScheduleInstances
       parameters:
         - $ref: '#/components/parameters/top'
@@ -4271,8 +4831,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleInstances from roleManagement
-      description: Instances for role eligibility requests.
+      summary: Get unifiedRoleEligibilityScheduleInstance
+      description: Get the instance of a role eligibility.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleEligibilityScheduleInstances
       parameters:
         - name: unifiedRoleEligibilityScheduleInstance-id
@@ -4386,6 +4949,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
+      operationId: roleManagement.directory.roleEligibilityScheduleInstances_GetAppScope
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the assignment or role eligibility. Read-only.
+      operationId: roleManagement.directory.roleEligibilityScheduleInstances_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or role eligibility through the request.
+      operationId: roleManagement.directory.roleEligibilityScheduleInstances_GetPrincipal
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.directory.roleEligibilityScheduleInstances_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/directory/roleEligibilityScheduleInstances/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -4486,8 +5263,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleRequests from roleManagement
-      description: Requests for role eligibilities for principals through PIM.
+      summary: List roleEligibilityScheduleRequests
+      description: 'In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleEligibilityScheduleRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -4602,7 +5382,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+      summary: Create roleEligibilityScheduleRequest
+      description: 'In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.directory_CreateRoleEligibilityScheduleRequests
       requestBody:
         description: New navigation property
@@ -4625,8 +5409,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleRequests from roleManagement
-      description: Requests for role eligibilities for principals through PIM.
+      summary: Get unifiedRoleEligibilityScheduleRequest
+      description: 'In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleEligibilityScheduleRequests
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
@@ -4858,6 +5645,10 @@ paths:
       tags:
         - roleManagement.Actions
       summary: Invoke action cancel
+      description: 'Immediately cancel a unifiedRoleEligibilityScheduleRequest object whose status is `Granted` and have the system automatically delete the cancelled request after 30 days. After calling this action, the **status** of the cancelled **unifiedRoleEligibilityScheduleRequest** changes to `Revoked`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-cancel?view=graph-rest-1.0
       operationId: roleManagement.directory.roleEligibilityScheduleRequests_cancel
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
@@ -5178,8 +5969,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilitySchedules from roleManagement
-      description: Schedules for role eligibility operations.
+      summary: List roleEligibilitySchedules
+      description: Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0
       operationId: roleManagement.directory_ListRoleEligibilitySchedules
       parameters:
         - $ref: '#/components/parameters/top'
@@ -5297,8 +6091,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilitySchedules from roleManagement
-      description: Schedules for role eligibility operations.
+      summary: Get unifiedRoleEligibilitySchedule
+      description: Retrieve the schedule for a role eligibility operation.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0
       operationId: roleManagement.directory_GetRoleEligibilitySchedules
       parameters:
         - name: unifiedRoleEligibilitySchedule-id
@@ -5411,6 +6208,220 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
+      operationId: roleManagement.directory.roleEligibilitySchedules_GetAppScope
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the role eligibility or assignment. Read-only.
+      operationId: roleManagement.directory.roleEligibilitySchedules_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or that's eligible for a role through the request.
+      operationId: roleManagement.directory.roleEligibilitySchedules_GetPrincipal
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/directory/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.directory.roleEligibilitySchedules_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6053,8 +7064,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignments from roleManagement
-      description: Resource to grant access to users or groups.
+      summary: List unifiedRoleAssignments
+      description: "Get a list of unifiedRoleAssignment objects for the RBAC provider. The following RBAC providers are currently supported:\n- directory (Azure AD)\n- entitlement management (Azure AD)"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignments?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleAssignments
       parameters:
         - $ref: '#/components/parameters/top'
@@ -6134,7 +7148,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleAssignments for roleManagement
+      summary: Create unifiedRoleAssignment
+      description: Create a new unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignments?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_CreateRoleAssignments
       requestBody:
         description: New navigation property
@@ -6157,8 +7175,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignments from roleManagement
-      description: Resource to grant access to users or groups.
+      summary: Get unifiedRoleAssignment
+      description: Retrieve the properties and relationships of a unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignment-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleAssignments
       parameters:
         - name: unifiedRoleAssignment-id
@@ -6246,7 +7267,11 @@ paths:
     delete:
       tags:
         - roleManagement.rbacApplication
-      summary: Delete navigation property roleAssignments for roleManagement
+      summary: Delete unifiedRoleAssignment
+      description: Delete a unifiedRoleAssignment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignment-delete?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_DeleteRoleAssignments
       parameters:
         - name: unifiedRoleAssignment-id
@@ -6540,8 +7565,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleInstances from roleManagement
-      description: Instances for active role assignments.
+      summary: List roleAssignmentScheduleInstances
+      description: 'Get the instances of active role assignments in your tenant. The active assignments include those made through assignments and activation requests, and directly through the role assignments API.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentscheduleinstances?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleAssignmentScheduleInstances
       parameters:
         - $ref: '#/components/parameters/top'
@@ -6661,8 +7689,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleInstances from roleManagement
-      description: Instances for active role assignments.
+      summary: Get unifiedRoleAssignmentScheduleInstance
+      description: Get the instance of an active role assignment.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentscheduleinstance-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleAssignmentScheduleInstances
       parameters:
         - name: unifiedRoleAssignmentScheduleInstance-id
@@ -6846,6 +7877,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetAppScope
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the assignment or role eligibility. Read-only.
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or role eligibility through the request.
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetPrincipal
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/{unifiedRoleAssignmentScheduleInstance-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.entitlementManagement.roleAssignmentScheduleInstances_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleAssignmentScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/entitlementManagement/roleAssignmentScheduleInstances/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -6953,8 +8198,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleRequests from roleManagement
-      description: Requests for active role assignments to principals through PIM.
+      summary: List roleAssignmentScheduleRequests
+      description: 'Retrieve the requests for active role assignments to principals. The active assignments include those made through assignments and activation requests, and directly through the role assignments API. The role assignments can be permanently active with or without an expiry date, or temporarily active after user activation of eligible assignments.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleAssignmentScheduleRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -7071,7 +8319,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleAssignmentScheduleRequests for roleManagement
+      summary: Create roleAssignmentScheduleRequests
+      description: "In PIM, carry out the following operations through the unifiedRoleAssignmentScheduleRequest object:\n+ Request active and persistent role assignments for a principal, with or without expiry dates.\n+ Activate, deactivate, extend, or renew an eligible role assignment for a principal. To call this API to update, renew, and extend assignments for yourself, you must have multi-factor authentication (MFA) enforced, and running the query in a session in which they were challenged for MFA. See Enable per-user Azure AD Multi-Factor Authentication to secure sign-in events."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleassignmentschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_CreateRoleAssignmentScheduleRequests
       requestBody:
         description: New navigation property
@@ -7094,8 +8346,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentScheduleRequests from roleManagement
-      description: Requests for active role assignments to principals through PIM.
+      summary: Get unifiedRoleAssignmentScheduleRequest
+      description: 'In PIM, read the details of a request for an active and persistent role assignment made through the unifiedRoleAssignmentScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleAssignmentScheduleRequests
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
@@ -7397,6 +8652,10 @@ paths:
       tags:
         - roleManagement.Actions
       summary: Invoke action cancel
+      description: 'Immediately cancel a unifiedRoleAssignmentScheduleRequest object that is in a `Granted` status, and have the system automatically delete the canceled request after 30 days. After calling this action, the **status** of the canceled **unifiedRoleAssignmentScheduleRequest** changes to `Canceled`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedulerequest-cancel?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests_cancel
       parameters:
         - name: unifiedRoleAssignmentScheduleRequest-id
@@ -7721,8 +8980,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentSchedules from roleManagement
-      description: Schedules for active role assignment operations.
+      summary: List roleAssignmentSchedules
+      description: Get the schedules for active role assignment operations.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleassignmentschedules?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleAssignmentSchedules
       parameters:
         - $ref: '#/components/parameters/top'
@@ -7845,8 +9107,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleAssignmentSchedules from roleManagement
-      description: Schedules for active role assignment operations.
+      summary: Get unifiedRoleAssignmentSchedule
+      description: Retrieve the schedule for an active role assignment operation.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleassignmentschedule-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleAssignmentSchedules
       parameters:
         - name: unifiedRoleAssignmentSchedule-id
@@ -8033,6 +9298,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetAppScope
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the role eligibility or assignment. Read-only.
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or that's eligible for a role through the request.
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetPrincipal
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleAssignmentSchedules/{unifiedRoleAssignmentSchedule-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.entitlementManagement.roleAssignmentSchedules_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleAssignmentSchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleAssignmentSchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleAssignmentSchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/entitlementManagement/roleAssignmentSchedules/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -8143,8 +9622,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleDefinitions from roleManagement
-      description: Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+      summary: List roleDefinitions
+      description: "Get a list of unifiedRoleDefinition objects for the provider. The following RBAC providers are currently supported:\n- directory (Azure AD)\n- entitlement management (Azure AD)"
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roledefinitions?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleDefinitions
       parameters:
         - $ref: '#/components/parameters/top'
@@ -8227,7 +9709,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleDefinitions for roleManagement
+      summary: Create roleDefinitions
+      description: Create a new custom unifiedRoleDefinition object. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roledefinitions?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_CreateRoleDefinitions
       requestBody:
         description: New navigation property
@@ -8250,8 +9736,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleDefinitions from roleManagement
-      description: Resource representing the roles allowed by RBAC providers and the permissions assigned to the roles.
+      summary: Get unifiedRoleDefinition
+      description: 'Read the properties and relationships of a unifiedRoleDefinition object. The following role-based access control (RBAC) providers are currently supported:'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -8309,7 +9798,11 @@ paths:
     patch:
       tags:
         - roleManagement.rbacApplication
-      summary: Update the navigation property roleDefinitions in roleManagement
+      summary: Update unifiedRoleDefinition
+      description: Update the properties of a unifiedRoleDefinition object. You cannot update built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-update?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_UpdateRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -8336,7 +9829,11 @@ paths:
     delete:
       tags:
         - roleManagement.rbacApplication
-      summary: Delete navigation property roleDefinitions for roleManagement
+      summary: Delete unifiedRoleDefinition
+      description: Delete a unifiedRoleDefinition object. You cannot delete built-in roles. This feature requires an Azure AD Premium P1 or P2 license.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroledefinition-delete?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_DeleteRoleDefinitions
       parameters:
         - name: unifiedRoleDefinition-id
@@ -8624,8 +10121,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleInstances from roleManagement
-      description: Instances for role eligibility requests.
+      summary: List roleEligibilityScheduleInstances
+      description: Get the instances of role eligibilities.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityscheduleinstances?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleEligibilityScheduleInstances
       parameters:
         - $ref: '#/components/parameters/top'
@@ -8737,8 +10237,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleInstances from roleManagement
-      description: Instances for role eligibility requests.
+      summary: Get unifiedRoleEligibilityScheduleInstance
+      description: Get the instance of a role eligibility.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityscheduleinstance-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleEligibilityScheduleInstances
       parameters:
         - name: unifiedRoleEligibilityScheduleInstance-id
@@ -8852,6 +10355,220 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the assignment or role eligibility is scoped to an app. Nullable.
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleInstances_GetAppScope
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the assignment or role eligibility. Read-only.
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleInstances_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or role eligibility through the request.
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleInstances_GetPrincipal
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/{unifiedRoleEligibilityScheduleInstance-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.entitlementManagement.roleEligibilityScheduleInstances_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleEligibilityScheduleInstance-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilityScheduleInstance
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilityScheduleInstance
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/roleManagement/entitlementManagement/roleEligibilityScheduleInstances/microsoft.graph.filterByCurrentUser(on=''{on}'')':
     get:
       tags:
@@ -8952,8 +10669,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleRequests from roleManagement
-      description: Requests for role eligibilities for principals through PIM.
+      summary: List roleEligibilityScheduleRequests
+      description: 'In PIM, retrieve the requests for role eligibilities for principals made through the unifiedRoleEligibilityScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleEligibilityScheduleRequests
       parameters:
         - $ref: '#/components/parameters/top'
@@ -9068,7 +10788,11 @@ paths:
     post:
       tags:
         - roleManagement.rbacApplication
-      summary: Create new navigation property to roleEligibilityScheduleRequests for roleManagement
+      summary: Create roleEligibilityScheduleRequest
+      description: 'In PIM, request for a role eligibility for a principal through the unifiedRoleEligibilityScheduleRequest object. This operation allows both admins and eligible users to add, revoke, or extend eligible assignments.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-post-roleeligibilityschedulerequests?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_CreateRoleEligibilityScheduleRequests
       requestBody:
         description: New navigation property
@@ -9091,8 +10815,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilityScheduleRequests from roleManagement
-      description: Requests for role eligibilities for principals through PIM.
+      summary: Get unifiedRoleEligibilityScheduleRequest
+      description: 'In PIM, read the details of a request for for a role eligibility request made through the unifiedRoleEligibilityScheduleRequest object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleEligibilityScheduleRequests
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
@@ -9324,6 +11051,10 @@ paths:
       tags:
         - roleManagement.Actions
       summary: Invoke action cancel
+      description: 'Immediately cancel a unifiedRoleEligibilityScheduleRequest object whose status is `Granted` and have the system automatically delete the cancelled request after 30 days. After calling this action, the **status** of the cancelled **unifiedRoleEligibilityScheduleRequest** changes to `Revoked`.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedulerequest-cancel?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests_cancel
       parameters:
         - name: unifiedRoleEligibilityScheduleRequest-id
@@ -9644,8 +11375,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilitySchedules from roleManagement
-      description: Schedules for role eligibility operations.
+      summary: List roleEligibilitySchedules
+      description: Get the unifiedRoleEligibilitySchedule resources from the roleEligibilitySchedules navigation property.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/rbacapplication-list-roleeligibilityschedules?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_ListRoleEligibilitySchedules
       parameters:
         - $ref: '#/components/parameters/top'
@@ -9763,8 +11497,11 @@ paths:
     get:
       tags:
         - roleManagement.rbacApplication
-      summary: Get roleEligibilitySchedules from roleManagement
-      description: Schedules for role eligibility operations.
+      summary: Get unifiedRoleEligibilitySchedule
+      description: Retrieve the schedule for a role eligibility operation.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/unifiedroleeligibilityschedule-get?view=graph-rest-1.0
       operationId: roleManagement.entitlementManagement_GetRoleEligibilitySchedules
       parameters:
         - name: unifiedRoleEligibilitySchedule-id
@@ -9877,6 +11614,220 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/appScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get appScope from roleManagement
+      description: Read-only property with details of the app-specific scope when the role eligibility or assignment is scoped to an app. Nullable.
+      operationId: roleManagement.entitlementManagement.roleEligibilitySchedules_GetAppScope
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - displayName
+                - type
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.appScope'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/directoryScope':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get directoryScope from roleManagement
+      description: The directory object that is the scope of the role eligibility or assignment. Read-only.
+      operationId: roleManagement.entitlementManagement.roleEligibilitySchedules_GetDirectoryScope
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/principal':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get principal from roleManagement
+      description: The principal that's getting a role assignment or that's eligible for a role through the request.
+      operationId: roleManagement.entitlementManagement.roleEligibilitySchedules_GetPrincipal
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/roleManagement/entitlementManagement/roleEligibilitySchedules/{unifiedRoleEligibilitySchedule-id}/roleDefinition':
+    get:
+      tags:
+        - roleManagement.rbacApplication
+      summary: Get roleDefinition from roleManagement
+      description: Detailed information for the roleDefinition object that is referenced through the roleDefinitionId property.
+      operationId: roleManagement.entitlementManagement.roleEligibilitySchedules_GetRoleDefinition
+      parameters:
+        - name: unifiedRoleEligibilitySchedule-id
+          in: path
+          description: The unique identifier of unifiedRoleEligibilitySchedule
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: unifiedRoleEligibilitySchedule
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - description
+                - displayName
+                - isBuiltIn
+                - isEnabled
+                - resourceScopes
+                - rolePermissions
+                - templateId
+                - version
+                - inheritsPermissionsFrom
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+                - inheritsPermissionsFrom
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.unifiedRoleDefinition'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11172,7 +13123,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object

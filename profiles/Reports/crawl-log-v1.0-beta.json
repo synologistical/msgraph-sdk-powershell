@@ -69,6 +69,14 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Reports.yml"
     },
+    "/reports/appCredentialSignInActivities": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Reports.yml"
+    },
+    "/reports/appCredentialSignInActivities/{appCredentialSignInActivity-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Reports.yml"
+    },
     "/reports/applicationSignInDetailedSummary": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Reports.yml"
@@ -698,6 +706,14 @@
       "originalLocation": "/openApiDocs/beta/Reports.yml"
     },
     "/reports/security/microsoft.graph.getAttackSimulationTrainingUserCoverage()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Reports.yml"
+    },
+    "/reports/servicePrincipalSignInActivities": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Reports.yml"
+    },
+    "/reports/servicePrincipalSignInActivities/{servicePrincipalSignInActivity-id}": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Reports.yml"
     },

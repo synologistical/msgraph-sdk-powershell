@@ -11,10 +11,10 @@ paths:
       tags:
         - users.user
       summary: List users
-      description: Retrieve a list of user objects.
+      description: List properties and relationships of the user objects.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-list?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/intune-mam-user-list?view=graph-rest-1.0
       operationId: users.user_ListUser
       parameters:
         - name: ConsistencyLevel
@@ -173,6 +173,8 @@ paths:
                 - mailboxSettings desc
                 - deviceEnrollmentLimit
                 - deviceEnrollmentLimit desc
+                - print
+                - print desc
                 - aboutMe
                 - aboutMe desc
                 - birthday
@@ -270,6 +272,7 @@ paths:
                 - userType
                 - mailboxSettings
                 - deviceEnrollmentLimit
+                - print
                 - aboutMe
                 - birthday
                 - hireDate
@@ -397,11 +400,11 @@ paths:
     post:
       tags:
         - users.user
-      summary: Create User
-      description: "Create a new user.\nThe request body contains the user to create. At a minimum, you must specify the required properties for the user. You can optionally specify any other writable properties."
+      summary: Create user
+      description: Create a new user object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-post-users?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-user-create?view=graph-rest-1.0
       operationId: users.user_CreateUser
       requestBody:
         description: New entity
@@ -424,11 +427,11 @@ paths:
     get:
       tags:
         - users.user
-      summary: Get a user
-      description: Retrieve the properties and relationships of user object.
+      summary: Get user
+      description: Read properties and relationships of the user object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-get?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-user-get?view=graph-rest-1.0
       operationId: users.user_GetUser
       parameters:
         - name: user-id
@@ -515,6 +518,7 @@ paths:
                 - userType
                 - mailboxSettings
                 - deviceEnrollmentLimit
+                - print
                 - aboutMe
                 - birthday
                 - hireDate
@@ -644,10 +648,10 @@ paths:
       tags:
         - users.user
       summary: Update user
-      description: Update the properties of a user object. Not all properties can be updated by Member or Guest users with their default permissions without Administrator roles. Compare member and guest default permissions to see properties they can manage.
+      description: Update the properties of a user object.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-update?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-user-update?view=graph-rest-1.0
       operationId: users.user_UpdateUser
       parameters:
         - name: user-id
@@ -674,11 +678,11 @@ paths:
     delete:
       tags:
         - users.user
-      summary: Delete a user
-      description: 'Delete user.   When deleted, user resources are moved to a temporary container and can be restored within 30 days.  After that time, they are permanently deleted.  To learn more, see deletedItems.'
+      summary: Delete user
+      description: Deletes a user.
       externalDocs:
         description: Find more info here
-        url: https://docs.microsoft.com/graph/api/user-delete?view=graph-rest-1.0
+        url: https://docs.microsoft.com/graph/api/intune-onboarding-user-delete?view=graph-rest-1.0
       operationId: users.user_DeleteUser
       parameters:
         - name: user-id
@@ -705,8 +709,11 @@ paths:
     get:
       tags:
         - users.directoryObject
-      summary: Get createdObjects from users
-      description: Directory objects that were created by the user. Read-only. Nullable.
+      summary: List createdObjects
+      description: 'Get a list of directory objects that were created by the user. This API returns only those directory objects that were created by a user who isn''t in any administrator role; otherwise, it returns an empty object.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-createdobjects?view=graph-rest-1.0
       operationId: users_ListCreatedObjects
       parameters:
         - name: user-id
@@ -961,6 +968,9 @@ paths:
         - users.directoryObject
       summary: Get directReports from users
       description: The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-directreports?view=graph-rest-1.0
       operationId: users_ListDirectReports
       parameters:
         - name: user-id
@@ -1623,8 +1633,11 @@ paths:
     get:
       tags:
         - users.licenseDetails
-      summary: Get licenseDetails from users
-      description: A collection of this user's license details. Read-only.
+      summary: List licenseDetails
+      description: Retrieve a list of licenseDetails objects for enterprise users. This API returns details for licenses that are directly assigned and those transitively assigned through memberships in licensed groups.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-licensedetails?view=graph-rest-1.0
       operationId: users_ListLicenseDetails
       parameters:
         - name: user-id
@@ -1860,8 +1873,11 @@ paths:
     get:
       tags:
         - users.directoryObject
-      summary: Get manager from users
-      description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
+      summary: List manager
+      description: 'Returns the user or organizational contact assigned as the user''s manager. Optionally, you can expand the manager''s chain up to the root node.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0
       operationId: users_GetManager
       parameters:
         - name: user-id
@@ -1907,12 +1923,45 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - users.directoryObject
+      summary: Remove manager
+      description: Remove a user's manager.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0
+      operationId: users_DeleteManager
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
   '/users/{user-id}/manager/$ref':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of manager from users
-      description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
+      summary: List manager
+      description: 'Returns the user or organizational contact assigned as the user''s manager. Optionally, you can expand the manager''s chain up to the root node.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-manager?view=graph-rest-1.0
       operationId: users_GetManagerGraphBPreRef
       parameters:
         - name: user-id
@@ -1936,7 +1985,11 @@ paths:
     put:
       tags:
         - users.directoryObject
-      summary: Update the ref of navigation property manager in users
+      summary: Assign manager
+      description: Assign a user's manager.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-post-manager?view=graph-rest-1.0
       operationId: users_SetManagerGraphBPreRef
       parameters:
         - name: user-id
@@ -1958,7 +2011,11 @@ paths:
     delete:
       tags:
         - users.directoryObject
-      summary: Delete ref of navigation property manager for users
+      summary: Remove manager
+      description: Remove a user's manager.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-delete-manager?view=graph-rest-1.0
       operationId: users_DeleteManagerGraphBPreRef
       parameters:
         - name: user-id
@@ -1987,6 +2044,9 @@ paths:
         - users.directoryObject
       summary: Get memberOf from users
       description: The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-memberof?view=graph-rest-1.0
       operationId: users_ListMemberGraphOPre
       parameters:
         - name: user-id
@@ -2424,7 +2484,11 @@ paths:
     get:
       tags:
         - users.oAuth2PermissionGrant
-      summary: Get oauth2PermissionGrants from users
+      summary: List oauth2PermissionGrants
+      description: 'Retrieve a list of oAuth2PermissionGrant entities, which represent delegated permissions granted to enable a client application to access an API on behalf of the user.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-oauth2permissiongrants?view=graph-rest-1.0
       operationId: users_ListOauth2PermissionGrants
       parameters:
         - name: user-id
@@ -2605,8 +2669,11 @@ paths:
     get:
       tags:
         - users.outlookUser
-      summary: Get masterCategories from users
-      description: A list of categories defined for the user.
+      summary: List Outlook categories
+      description: Get all the categories that have been defined for the user.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookuser-list-mastercategories?view=graph-rest-1.0
       operationId: users.outlook_ListMasterCategories
       parameters:
         - name: user-id
@@ -2664,7 +2731,11 @@ paths:
     post:
       tags:
         - users.outlookUser
-      summary: Create new navigation property to masterCategories for users
+      summary: Create Outlook category
+      description: Create an outlookCategory object in the user's master list of categories.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookuser-post-mastercategories?view=graph-rest-1.0
       operationId: users.outlook_CreateMasterCategories
       parameters:
         - name: user-id
@@ -2696,8 +2767,11 @@ paths:
     get:
       tags:
         - users.outlookUser
-      summary: Get masterCategories from users
-      description: A list of categories defined for the user.
+      summary: Get Outlook category
+      description: Get the properties and relationships of the specified outlookCategory object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookcategory-get?view=graph-rest-1.0
       operationId: users.outlook_GetMasterCategories
       parameters:
         - name: user-id
@@ -2743,7 +2817,11 @@ paths:
     patch:
       tags:
         - users.outlookUser
-      summary: Update the navigation property masterCategories in users
+      summary: Update Outlook category
+      description: "Update the writable property, **color**, of the specified outlookCategory object. You cannot modify the **displayName** property \nonce you have created the category."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookcategory-update?view=graph-rest-1.0
       operationId: users.outlook_UpdateMasterCategories
       parameters:
         - name: user-id
@@ -2778,7 +2856,11 @@ paths:
     delete:
       tags:
         - users.outlookUser
-      summary: Delete navigation property masterCategories for users
+      summary: Delete Outlook category
+      description: Delete the specified outlookCategory object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/outlookcategory-delete?view=graph-rest-1.0
       operationId: users.outlook_DeleteMasterCategories
       parameters:
         - name: user-id
@@ -2815,6 +2897,9 @@ paths:
         - users.directoryObject
       summary: Get ownedDevices from users
       description: 'Devices that are owned by the user. Read-only. Nullable. Supports $expand and $filter (/$count eq 0, /$count ne 0, /$count eq 1, /$count ne 1).'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-owneddevices?view=graph-rest-1.0
       operationId: users_ListOwnedDevices
       parameters:
         - name: user-id
@@ -3399,6 +3484,9 @@ paths:
         - users.directoryObject
       summary: Get ownedObjects from users
       description: Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-ownedobjects?view=graph-rest-1.0
       operationId: users_ListOwnedObjects
       parameters:
         - name: user-id
@@ -4306,6 +4394,9 @@ paths:
         - users.directoryObject
       summary: Get registeredDevices from users
       description: Devices that are registered for the user. Read-only. Nullable. Supports $expand.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-registereddevices?view=graph-rest-1.0
       operationId: users_ListRegisteredDevices
       parameters:
         - name: user-id
@@ -4888,7 +4979,11 @@ paths:
     get:
       tags:
         - users.userSettings
-      summary: Get settings from users
+      summary: Get settings
+      description: "Read the user and organization userSettings object.\nTo learn how to update the properties of the userSettings object, see update user settings."
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/usersettings-get?view=graph-rest-1.0
       operationId: users_GetSettings
       parameters:
         - name: user-id
@@ -4940,7 +5035,11 @@ paths:
     patch:
       tags:
         - users.userSettings
-      summary: Update the navigation property settings in users
+      summary: Update userSettings
+      description: "Update the properties of the userSettings object. \nUsers in the same organization can have different settings based on their preference or on the organization policies. \nTo get the user current settings, see current user settings. "
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/usersettings-update?view=graph-rest-1.0
       operationId: users_UpdateSettings
       parameters:
         - name: user-id
@@ -4994,7 +5093,11 @@ paths:
     get:
       tags:
         - users.userSettings
-      summary: Get shiftPreferences from users
+      summary: Get shiftPreferences
+      description: Retrieve the properties and relationships of a shiftPreferences object by ID.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/shiftpreferences-get?view=graph-rest-1.0
       operationId: users.settings_GetShiftPreferences
       parameters:
         - name: user-id
@@ -5046,7 +5149,11 @@ paths:
     patch:
       tags:
         - users.userSettings
-      summary: Update the navigation property shiftPreferences in users
+      summary: Update shiftPreferences
+      description: Update the properties and relationships of a shiftPreferences object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/shiftpreferences-put?view=graph-rest-1.0
       operationId: users.settings_UpdateShiftPreferences
       parameters:
         - name: user-id
@@ -5205,8 +5312,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get lists from users
-      description: The task lists in the users mailbox.
+      summary: List lists
+      description: Get a list of the todoTaskList objects and their properties.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todo-list-lists?view=graph-rest-1.0
       operationId: users.todo_ListLists
       parameters:
         - name: user-id
@@ -5287,7 +5397,11 @@ paths:
     post:
       tags:
         - users.todo
-      summary: Create new navigation property to lists for users
+      summary: Create todoTaskList
+      description: Create a new lists object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todo-post-lists?view=graph-rest-1.0
       operationId: users.todo_CreateLists
       parameters:
         - name: user-id
@@ -5319,8 +5433,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get lists from users
-      description: The task lists in the users mailbox.
+      summary: Get todoTaskList
+      description: Read the properties and relationships of a todoTaskList object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotasklist-get?view=graph-rest-1.0
       operationId: users.todo_GetLists
       parameters:
         - name: user-id
@@ -5384,7 +5501,11 @@ paths:
     patch:
       tags:
         - users.todo
-      summary: Update the navigation property lists in users
+      summary: Update todoTaskList
+      description: Update the properties of a todoTaskList object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotasklist-update?view=graph-rest-1.0
       operationId: users.todo_UpdateLists
       parameters:
         - name: user-id
@@ -5419,7 +5540,11 @@ paths:
     delete:
       tags:
         - users.todo
-      summary: Delete navigation property lists for users
+      summary: Delete todoTaskList
+      description: Deletes a todoTaskList object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotasklist-delete?view=graph-rest-1.0
       operationId: users.todo_DeleteLists
       parameters:
         - name: user-id
@@ -5719,8 +5844,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get tasks from users
-      description: The tasks in this task list. Read-only. Nullable.
+      summary: List tasks
+      description: Get the **todoTask** resources from the **tasks** navigation property of a specified todoTaskList.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotasklist-list-tasks?view=graph-rest-1.0
       operationId: users.todo.lists_ListTasks
       parameters:
         - name: user-id
@@ -5848,7 +5976,11 @@ paths:
     post:
       tags:
         - users.todo
-      summary: Create new navigation property to tasks for users
+      summary: Create todoTask
+      description: Create a new task object in a specified todoTaskList.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotasklist-post-tasks?view=graph-rest-1.0
       operationId: users.todo.lists_CreateTasks
       parameters:
         - name: user-id
@@ -5888,8 +6020,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get tasks from users
-      description: The tasks in this task list. Read-only. Nullable.
+      summary: Get todoTask
+      description: Read the properties and relationships of a todoTask object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-get?view=graph-rest-1.0
       operationId: users.todo.lists_GetTasks
       parameters:
         - name: user-id
@@ -5978,7 +6113,11 @@ paths:
     patch:
       tags:
         - users.todo
-      summary: Update the navigation property tasks in users
+      summary: Update todoTask
+      description: Update the properties of a todoTask object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-update?view=graph-rest-1.0
       operationId: users.todo.lists_UpdateTasks
       parameters:
         - name: user-id
@@ -6021,7 +6160,11 @@ paths:
     delete:
       tags:
         - users.todo
-      summary: Delete navigation property tasks for users
+      summary: Delete todoTask
+      description: Deletes a todoTask object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-delete?view=graph-rest-1.0
       operationId: users.todo.lists_DeleteTasks
       parameters:
         - name: user-id
@@ -6064,8 +6207,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get attachments from users
-      description: A collection of file attachments for the task.
+      summary: List taskFileAttachments
+      description: Get a list of the taskFileAttachment objects and their properties. The **contentBytes** property will not be returned in the response. Use the Get attachment API to view the **contentBytes**.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_ListAttachments
       parameters:
         - name: user-id
@@ -6145,7 +6291,11 @@ paths:
     post:
       tags:
         - users.todo
-      summary: Create new navigation property to attachments for users
+      summary: Create taskFileAttachment
+      description: 'Add a new taskFileAttachment object to a todoTask. This operation limits the size of the attachment you can add to under 3 MB. If the size of the file attachments is more than 3 MB, create an upload session to upload the attachments.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-post-attachments?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_CreateAttachments
       parameters:
         - name: user-id
@@ -6193,8 +6343,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get attachments from users
-      description: A collection of file attachments for the task.
+      summary: Get taskFileAttachment
+      description: Read the properties and relationships of a taskFileAttachment object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/taskfileattachment-get?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_GetAttachments
       parameters:
         - name: user-id
@@ -6258,7 +6411,11 @@ paths:
     delete:
       tags:
         - users.todo
-      summary: Delete navigation property attachments for users
+      summary: Delete taskFileAttachment
+      description: Delete a taskFileAttachment object from a todoTask resource.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/taskfileattachment-delete?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_DeleteAttachments
       parameters:
         - name: user-id
@@ -6310,6 +6467,9 @@ paths:
       tags:
         - users.todo
       summary: Get media content for the navigation property attachments from users
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-list-attachments?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_GetAttachmentsContent
       parameters:
         - name: user-id
@@ -6758,8 +6918,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get checklistItems from users
-      description: A collection of checklistItems linked to a task.
+      summary: List checklistItems
+      description: Get the checklistItem resources associated to a todoTask from the checklistItems navigation property.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-list-checklistitems?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_ListChecklistItems
       parameters:
         - name: user-id
@@ -6852,7 +7015,11 @@ paths:
     post:
       tags:
         - users.todo
-      summary: Create new navigation property to checklistItems for users
+      summary: Create checklistItem
+      description: Create a new checklistItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-post-checklistitems?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_CreateChecklistItems
       parameters:
         - name: user-id
@@ -6900,8 +7067,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get checklistItems from users
-      description: A collection of checklistItems linked to a task.
+      summary: Get checklistItem
+      description: Read the properties and relationships of a checklistItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/checklistitem-get?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_GetChecklistItems
       parameters:
         - name: user-id
@@ -6977,7 +7147,11 @@ paths:
     patch:
       tags:
         - users.todo
-      summary: Update the navigation property checklistItems in users
+      summary: Update checklistItem
+      description: Update the properties of a checklistItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/checklistitem-update?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_UpdateChecklistItems
       parameters:
         - name: user-id
@@ -7028,7 +7202,11 @@ paths:
     delete:
       tags:
         - users.todo
-      summary: Delete navigation property checklistItems for users
+      summary: Delete checklistItem
+      description: Delete a checklistItem object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/checklistitem-delete?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_DeleteChecklistItems
       parameters:
         - name: user-id
@@ -7384,8 +7562,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get linkedResources from users
-      description: A collection of resources linked to the task.
+      summary: List linkedResources
+      description: 'Get information of one or more items in a partner application, based on which a specified task was created. The information is represented in a linkedResource object for each item. It includes an external ID for the item in the partner application, and if applicable, a deep link to that item in the application.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-list-linkedresources?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_ListLinkedResources
       parameters:
         - name: user-id
@@ -7478,7 +7659,11 @@ paths:
     post:
       tags:
         - users.todo
-      summary: Create new navigation property to linkedResources for users
+      summary: Create linkedResource
+      description: 'Create a linkedResource object to associate a specified task with an item in a partner application. For example, you can associate a task with an email item in Outlook that spurred the task, and you can create a **linkedResource** object to track its association. You can also create a **linkedResource** object while creating a task.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/todotask-post-linkedresources?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_CreateLinkedResources
       parameters:
         - name: user-id
@@ -7526,8 +7711,11 @@ paths:
     get:
       tags:
         - users.todo
-      summary: Get linkedResources from users
-      description: A collection of resources linked to the task.
+      summary: Get linkedResource
+      description: Read the properties and relationships of a linkedResource object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/linkedresource-get?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_GetLinkedResources
       parameters:
         - name: user-id
@@ -7603,7 +7791,11 @@ paths:
     patch:
       tags:
         - users.todo
-      summary: Update the navigation property linkedResources in users
+      summary: Update linkedResource
+      description: Update the properties of a linkedResource object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/linkedresource-update?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_UpdateLinkedResources
       parameters:
         - name: user-id
@@ -7654,7 +7846,11 @@ paths:
     delete:
       tags:
         - users.todo
-      summary: Delete navigation property linkedResources for users
+      summary: Delete linkedResource
+      description: Deletes a linkedResource object.
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/linkedresource-delete?view=graph-rest-1.0
       operationId: users.todo.lists.tasks_DeleteLinkedResources
       parameters:
         - name: user-id
@@ -7707,6 +7903,9 @@ paths:
         - users.directoryObject
       summary: Get transitiveMemberOf from users
       description: 'The groups, including nested groups, and directory roles that a user is a member of. Nullable.'
+      externalDocs:
+        description: Find more info here
+        url: https://docs.microsoft.com/graph/api/user-list-transitivememberof?view=graph-rest-1.0
       operationId: users_ListTransitiveMemberGraphOPre
       parameters:
         - name: user-id
@@ -8293,7 +8492,7 @@ components:
               nullable: true
             mobilePhone:
               type: string
-              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
+              description: 'The primary cellular telephone number for the user. Read-only for users synced from on-premises directory. Maximum length is 64 characters. Returned by default. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values) and $search.'
               nullable: true
             officeLocation:
               type: string
@@ -8419,6 +8618,8 @@ components:
               type: integer
               description: The limit on the maximum number of devices that the user is permitted to enroll. Allowed values are 5 or 1000.
               format: int32
+            print:
+              $ref: '#/components/schemas/microsoft.graph.userPrint'
             aboutMe:
               type: string
               description: A freeform text entry field for the user to describe themselves. Returned only on $select.
@@ -8665,6 +8866,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onlineMeeting'
+              description: 'Information about a meeting, including the URL used to join a meeting, the attendees'' list, and the description.'
               x-ms-navigationProperty: true
             presence:
               $ref: '#/components/schemas/microsoft.graph.presence'
@@ -8939,6 +9141,8 @@ components:
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
               x-ms-navigationProperty: true
+            synchronization:
+              $ref: '#/components/schemas/microsoft.graph.synchronization'
           additionalProperties:
             type: object
     microsoft.graph.orgContact:
@@ -8951,54 +9155,69 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.physicalOfficeAddress'
+              description: Postal addresses for this organizational contact. For now a contact can only have one physical address.
             companyName:
               type: string
+              description: 'Name of the company that this organizational contact belongs to.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             department:
               type: string
+              description: 'The name for the department in which the contact works.  Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             displayName:
               type: string
+              description: 'Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values), $search, and $orderBy.'
               nullable: true
             givenName:
               type: string
+              description: 'First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             jobTitle:
               type: string
+              description: 'Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             mail:
               type: string
+              description: 'The SMTP address for the contact, for example, ''jeff@contoso.onmicrosoft.com''. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             mailNickname:
               type: string
+              description: 'Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             onPremisesLastSyncDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
+              description: 'Date and time when this organizational contact was last synchronized from on-premises AD. This date and time information uses ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).'
               format: date-time
               nullable: true
             onPremisesProvisioningErrors:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesProvisioningError'
+              description: 'List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not for category and propertyCausingError), /$count eq 0, /$count ne 0.'
             onPremisesSyncEnabled:
               type: boolean
+              description: 'true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).   Supports $filter (eq, ne, not, in, and eq for null values).'
               nullable: true
             phones:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.phone'
+              description: 'List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection.'
             proxyAddresses:
               type: array
               items:
                 type: string
+              description: 'For example: ''SMTP: bob@contoso.com'', ''smtp: bob@sales.contoso.com''. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith, /$count eq 0, /$count ne 0).'
             surname:
               type: string
+              description: 'Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq for null values).'
               nullable: true
             directReports:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
+              description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.)  Read-only. Nullable. Supports $expand.
               x-ms-navigationProperty: true
             manager:
               $ref: '#/components/schemas/microsoft.graph.directoryObject'
@@ -9006,11 +9225,13 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
+              description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
               x-ms-navigationProperty: true
             transitiveMemberOf:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
+              description: 'Groups that this contact is a member of, including groups that the contact is nested under. Read-only. Nullable.'
               x-ms-navigationProperty: true
           additionalProperties:
             type: object
@@ -9119,7 +9340,7 @@ components:
             expirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Timestamp of when the group is set to expire. The value cannot be modified and is automatically populated when the group is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
+              description: 'Timestamp of when the group is set to expire. Is null for security groups but for Microsoft 365 groups, it represents when the group is set to expire as defined in the groupLifecyclePolicy. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Returned by default. Supports $filter (eq, ne, not, ge, le, in). Read-only.'
               format: date-time
               nullable: true
             groupTypes:
@@ -9512,6 +9733,10 @@ components:
               description: 'The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
+            deviceCategory:
+              type: string
+              description: User-defined property set by Intune to automatically add devices to groups and simplify managing devices.
+              nullable: true
             deviceId:
               type: string
               description: 'Unique identifier set by Azure Device Registration Service at the time of registration. This is an alternate key that can be used to reference the device object. Supports $filter (eq, ne, not, startsWith).'
@@ -9519,6 +9744,10 @@ components:
             deviceMetadata:
               type: string
               description: For internal use only. Set to null.
+              nullable: true
+            deviceOwnership:
+              type: string
+              description: 'Ownership of the device. This property is set by Intune. Possible values are: unknown, company, personal.'
               nullable: true
             deviceVersion:
               maximum: 2147483647
@@ -9530,6 +9759,10 @@ components:
             displayName:
               type: string
               description: 'The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
+              nullable: true
+            enrollmentProfileName:
+              type: string
+              description: 'Enrollment profile applied to the device. For example, Apple Device Enrollment Profile, Device enrollment - Corporate device identifiers, or Windows Autopilot profile name. This property is set by Intune.'
               nullable: true
             isCompliant:
               type: boolean
@@ -9569,6 +9802,12 @@ components:
             profileType:
               type: string
               description: 'The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.'
+              nullable: true
+            registrationDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: 'Date and time of when the device was registered. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
+              format: date-time
               nullable: true
             systemLabels:
               type: array
@@ -9807,6 +10046,8 @@ components:
               items:
                 $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicy'
               x-ms-navigationProperty: true
+            synchronization:
+              $ref: '#/components/schemas/microsoft.graph.synchronization'
           additionalProperties:
             type: object
     microsoft.graph.profilePhoto:
@@ -9839,8 +10080,10 @@ components:
           properties:
             contributionToContentDiscoveryAsOrganizationDisabled:
               type: boolean
+              description: 'Reflects the organization level setting controlling delegate access to the trending API. When set to true, the organization doesn''t have access to Office Delve. The relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected for the whole organization. This setting is read-only and can only be changed by administrators in the SharePoint admin center.'
             contributionToContentDiscoveryDisabled:
               type: boolean
+              description: 'When set to true, the delegate access to the user''s trending API is disabled. When set to true, documents in the user''s Office Delve are disabled. When set to true, the relevancy of the content displayed in Microsoft 365, for example in Suggested sites in SharePoint Home and the Discover view in OneDrive for Business is affected. Users can control this setting in Office Delve.'
             shiftPreferences:
               $ref: '#/components/schemas/microsoft.graph.shiftPreferences'
           additionalProperties:
@@ -10100,7 +10343,7 @@ components:
         lastNonInteractiveSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client signed in to the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last non-interactive sign-in date for a specific user. You can use this field to calculate the last time a client attempted to sign into the directory on behalf of a user. Because some users may use clients to access tenant resources rather than signing into your tenant directly, you can use the non-interactive sign-in date to along with lastSignInDateTime to identify inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains non-interactive sign-ins going back to May 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastNonInteractiveSignInRequestId:
@@ -10110,7 +10353,7 @@ components:
         lastSignInDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user signed in to the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
+          description: 'The last interactive sign-in date and time for a specific user. You can use this field to calculate the last time a user attempted to sign into the directory with an interactive authentication method. This field can be used to build reports, such as inactive users. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is: ''2014-01-01T00:00:00Z''. Azure AD maintains interactive sign-ins going back to April 2020. For more information about using the value of this property, see Manage inactive user accounts in Azure AD.'
           format: date-time
           nullable: true
         lastSignInRequestId:
@@ -10395,6 +10638,17 @@ components:
           $ref: '#/components/schemas/microsoft.graph.userPurpose'
         workingHours:
           $ref: '#/components/schemas/microsoft.graph.workingHours'
+      additionalProperties:
+        type: object
+    microsoft.graph.userPrint:
+      title: userPrint
+      type: object
+      properties:
+        recentPrinterShares:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printerShare'
+          x-ms-navigationProperty: true
       additionalProperties:
         type: object
     microsoft.graph.scopedRoleMembership:
@@ -11098,7 +11352,7 @@ components:
               nullable: true
             isFavorite:
               type: boolean
-              description: true if the user has flagged this person as a favorite.
+              description: True if the user has flagged this person as a favorite.
               nullable: true
             jobTitle:
               type: string
@@ -12348,7 +12602,7 @@ components:
           nullable: true
         key:
           type: string
-          description: 'The certificate''s raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.'
+          description: 'The certificate''s raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.  From a .cer certificate, you can read the key using the Convert.ToBase64String() method. For more information, see Get the certificate key.'
           format: base64url
           nullable: true
         keyId:
@@ -12600,6 +12854,28 @@ components:
         - $ref: '#/components/schemas/microsoft.graph.stsPolicy'
         - title: tokenLifetimePolicy
           type: object
+          additionalProperties:
+            type: object
+    microsoft.graph.synchronization:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: synchronization
+          type: object
+          properties:
+            secrets:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.synchronizationSecretKeyStringValuePair'
+            jobs:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.synchronizationJob'
+              x-ms-navigationProperty: true
+            templates:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.synchronizationTemplate'
+              x-ms-navigationProperty: true
           additionalProperties:
             type: object
     microsoft.graph.physicalOfficeAddress:
@@ -12897,18 +13173,18 @@ components:
       properties:
         identityProvider:
           type: string
-          description: For internal use only
+          description: For internal use only.
           nullable: true
         key:
           type: string
-          description: For internal use only
+          description: For internal use only.
           format: base64url
           nullable: true
         type:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: For internal use only
+          description: For internal use only.
           format: int32
           nullable: true
       additionalProperties:
@@ -13587,6 +13863,38 @@ components:
           $ref: '#/components/schemas/microsoft.graph.timeZoneBase'
       additionalProperties:
         type: object
+    microsoft.graph.printerShare:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.printerBase'
+        - title: printerShare
+          type: object
+          properties:
+            allowAllUsers:
+              type: boolean
+              description: 'If true, all users and groups will be granted access to this printer share. This supersedes the allow lists defined by the allowedUsers and allowedGroups navigation properties.'
+            createdDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: The DateTimeOffset when the printer share was created. Read-only.
+              format: date-time
+            viewPoint:
+              $ref: '#/components/schemas/microsoft.graph.printerShareViewpoint'
+            allowedGroups:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.group'
+              description: The groups whose users have access to print using the printer.
+              x-ms-navigationProperty: true
+            allowedUsers:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.user'
+              description: The users who have access to print using the printer.
+              x-ms-navigationProperty: true
+            printer:
+              $ref: '#/components/schemas/microsoft.graph.printer'
+          additionalProperties:
+            type: object
     microsoft.graph.identity:
       title: identity
       type: object
@@ -16366,7 +16674,7 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'The roles for that user. This property only contains additional qualifiers when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is a guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property.'
+              description: 'The roles for that user. This property contains additional qualifiers only when relevant - for example, if the member has owner privileges, the roles property contains owner as one of the values. Similarly, if the member is an in-tenant guest, the roles property contains guest as one of the values. A basic member should not have any values specified in the roles property. An Out-of-tenant external member is assigned the owner role.'
             visibleHistoryStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
@@ -16440,6 +16748,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.chatMessageHistoryItem'
+              description: 'List of activity history of a message item, including modification time and actions, such as reactionAdded, reactionRemoved, or reaction changes, on the message.'
             messageType:
               $ref: '#/components/schemas/microsoft.graph.chatMessageType'
             policyViolation:
@@ -16841,6 +17150,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.offerShiftRequest'
+              description: The offer requests for shifts in the schedule.
               x-ms-navigationProperty: true
             openShiftChangeRequests:
               type: array
@@ -16870,6 +17180,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.swapShiftsChangeRequest'
+              description: The swap requests for shifts in the schedule.
               x-ms-navigationProperty: true
             timeOffReasons:
               type: array
@@ -16881,6 +17192,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.timeOffRequest'
+              description: The time off requests in the schedule.
               x-ms-navigationProperty: true
             timesOff:
               type: array
@@ -16983,6 +17295,66 @@ components:
         - high
         - unknownFutureValue
       type: string
+    microsoft.graph.synchronizationSecretKeyStringValuePair:
+      title: synchronizationSecretKeyStringValuePair
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationSecret'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationJob:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: synchronizationJob
+          type: object
+          properties:
+            schedule:
+              $ref: '#/components/schemas/microsoft.graph.synchronizationSchedule'
+            status:
+              $ref: '#/components/schemas/microsoft.graph.synchronizationStatus'
+            synchronizationJobSettings:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.keyValuePair'
+            templateId:
+              type: string
+              nullable: true
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.synchronizationSchema'
+          additionalProperties:
+            type: object
+    microsoft.graph.synchronizationTemplate:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: synchronizationTemplate
+          type: object
+          properties:
+            applicationId:
+              pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+              type: string
+              format: uuid
+            default:
+              type: boolean
+            description:
+              type: string
+              nullable: true
+            discoverable:
+              type: boolean
+            factoryTag:
+              type: string
+              nullable: true
+            metadata:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.synchronizationMetadataEntry'
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.synchronizationSchema'
+          additionalProperties:
+            type: object
     microsoft.graph.phoneType:
       title: phoneType
       enum:
@@ -17265,7 +17637,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
-        innererror:
+        innerError:
           $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
@@ -17304,6 +17676,98 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.printerBase:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printerBase
+          type: object
+          properties:
+            capabilities:
+              $ref: '#/components/schemas/microsoft.graph.printerCapabilities'
+            defaults:
+              $ref: '#/components/schemas/microsoft.graph.printerDefaults'
+            displayName:
+              type: string
+              description: The name of the printer/printerShare.
+            isAcceptingJobs:
+              type: boolean
+              description: Whether the printer/printerShare is currently accepting new print jobs.
+              nullable: true
+            location:
+              $ref: '#/components/schemas/microsoft.graph.printerLocation'
+            manufacturer:
+              type: string
+              description: The manufacturer of the printer/printerShare.
+              nullable: true
+            model:
+              type: string
+              description: The model name of the printer/printerShare.
+              nullable: true
+            status:
+              $ref: '#/components/schemas/microsoft.graph.printerStatus'
+            jobs:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printJob'
+              description: The list of jobs that are queued for printing by the printer/printerShare.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
+    microsoft.graph.printerShareViewpoint:
+      title: printerShareViewpoint
+      type: object
+      properties:
+        lastUsedDateTime:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          description: 'Date and time when the printer was last used by the signed-in user. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
+          format: date-time
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printer:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.printerBase'
+        - title: printer
+          type: object
+          properties:
+            hasPhysicalDevice:
+              type: boolean
+              description: True if the printer has a physical device for printing. Read-only.
+            isShared:
+              type: boolean
+              description: True if the printer is shared; false otherwise. Read-only.
+            lastSeenDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: The most recent dateTimeOffset when a printer interacted with Universal Print. Read-only.
+              format: date-time
+              nullable: true
+            registeredDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: The DateTimeOffset when the printer was registered. Read-only.
+              format: date-time
+            connectors:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printConnector'
+              description: The connectors that are associated with the printer.
+              x-ms-navigationProperty: true
+            shares:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printerShare'
+              description: 'The list of printerShares that are associated with the printer. Currently, only one printerShare can be associated with the printer. Read-only. Nullable.'
+              x-ms-navigationProperty: true
+            taskTriggers:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printTaskTrigger'
+              description: A list of task triggers that are associated with the printer.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
     microsoft.graph.calendarRoleType:
       title: calendarRoleType
       enum:
@@ -18144,6 +18608,7 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.workbookComment'
+              description: Represents a collection of comments in a workbook.
               x-ms-navigationProperty: true
             functions:
               $ref: '#/components/schemas/microsoft.graph.workbookFunctions'
@@ -18411,7 +18876,7 @@ components:
       properties:
         format:
           type: string
-          description: 'For dateTime output types, the format of the value. Must be one of dateOnly or dateTime.'
+          description: 'For dateTime output types, the format of the value. Possible values are: dateOnly or dateTime.'
           nullable: true
         formula:
           type: string
@@ -18419,7 +18884,7 @@ components:
           nullable: true
         outputType:
           type: string
-          description: 'The output type used to format values in this column. Must be one of boolean, currency, dateTime, number, or text.'
+          description: 'The output type used to format values in this column. Possible values are: boolean, currency, dateTime, number, or text.'
           nullable: true
       additionalProperties:
         type: object
@@ -18478,11 +18943,11 @@ components:
       properties:
         formula:
           type: string
-          description: The formula used to compute the default value for this column.
+          description: The formula used to compute the default value for the column.
           nullable: true
         value:
           type: string
-          description: The direct value to use as the default value for this column.
+          description: The direct value to use as the default value for the column.
           nullable: true
       additionalProperties:
         type: object
@@ -18575,7 +19040,7 @@ components:
       properties:
         id:
           type: string
-          description: The id of the content type.
+          description: The ID of the content type.
           nullable: true
         name:
           type: string
@@ -18740,13 +19205,13 @@ components:
       properties:
         default:
           type: boolean
-          description: Whether this is the default Content Type
+          description: Indicates whether this is the default content type
           nullable: true
         position:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Specifies the position in which the Content Type appears in the selection UI.
+          description: Specifies the position in which the content type appears in the selection UI.
           format: int32
           nullable: true
       additionalProperties:
@@ -19539,7 +20004,7 @@ components:
               description: List of time periods between joining and leaving a meeting.
             emailAddress:
               type: string
-              description: Email address of the user associated with this atttendance record.
+              description: Email address of the user associated with this attendance record.
               nullable: true
             identity:
               $ref: '#/components/schemas/microsoft.graph.identity'
@@ -19776,6 +20241,7 @@ components:
         modifiedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
+          description: The date and time when the message was modified.
           format: date-time
         reaction:
           $ref: '#/components/schemas/microsoft.graph.chatMessageReaction'
@@ -20171,6 +20637,156 @@ components:
           $ref: '#/components/schemas/microsoft.graph.appCredentialRestrictionType'
       additionalProperties:
         type: object
+    microsoft.graph.synchronizationSecret:
+      title: synchronizationSecret
+      enum:
+        - None
+        - UserName
+        - Password
+        - SecretToken
+        - AppKey
+        - BaseAddress
+        - ClientIdentifier
+        - ClientSecret
+        - SingleSignOnType
+        - Sandbox
+        - Url
+        - Domain
+        - ConsumerKey
+        - ConsumerSecret
+        - TokenKey
+        - TokenExpiration
+        - Oauth2AccessToken
+        - Oauth2AccessTokenCreationTime
+        - Oauth2RefreshToken
+        - SyncAll
+        - InstanceName
+        - Oauth2ClientId
+        - Oauth2ClientSecret
+        - CompanyId
+        - UpdateKeyOnSoftDelete
+        - SynchronizationSchedule
+        - SystemOfRecord
+        - SandboxName
+        - EnforceDomain
+        - SyncNotificationSettings
+        - SkipOutOfScopeDeletions
+        - Oauth2AuthorizationCode
+        - Oauth2RedirectUri
+        - ApplicationTemplateIdentifier
+        - Oauth2TokenExchangeUri
+        - Oauth2AuthorizationUri
+        - AuthenticationType
+        - Server
+        - PerformInboundEntitlementGrants
+        - HardDeletesEnabled
+        - SyncAgentCompatibilityKey
+        - SyncAgentADContainer
+        - ValidateDomain
+        - TestReferences
+        - ConnectionString
+      type: string
+    microsoft.graph.synchronizationSchedule:
+      title: synchronizationSchedule
+      type: object
+      properties:
+        expiration:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+          nullable: true
+        interval:
+          pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
+          type: string
+          format: duration
+        state:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationScheduleState'
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationStatus:
+      title: synchronizationStatus
+      type: object
+      properties:
+        code:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationStatusCode'
+        countSuccessiveCompleteFailures:
+          type: integer
+          format: int64
+        escrowsPruned:
+          type: boolean
+        lastExecution:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationTaskExecution'
+        lastSuccessfulExecution:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationTaskExecution'
+        lastSuccessfulExecutionWithExports:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationTaskExecution'
+        progress:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.synchronizationProgress'
+        quarantine:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationQuarantine'
+        steadyStateFirstAchievedTime:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        steadyStateLastAchievedTime:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        synchronizedEntryCountByType:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.stringKeyLongValuePair'
+        troubleshootingUrl:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.keyValuePair:
+      title: keyValuePair
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name for this key-value pair
+        value:
+          type: string
+          description: Value for this key-value pair
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationSchema:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: synchronizationSchema
+          type: object
+          properties:
+            synchronizationRules:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.synchronizationRule'
+            version:
+              type: string
+              nullable: true
+            directories:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.directoryDefinition'
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
+    microsoft.graph.synchronizationMetadataEntry:
+      title: synchronizationMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.weekIndex:
       title: weekIndex
       enum:
@@ -20217,6 +20833,412 @@ components:
       additionalProperties:
         type: object
       description: The structure of this object is service-specific
+    microsoft.graph.printerCapabilities:
+      title: printerCapabilities
+      type: object
+      properties:
+        bottomMargins:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: A list of supported bottom margins(in microns) for the printer.
+        collation:
+          type: boolean
+          description: True if the printer supports collating when printing muliple copies of a multi-page document; false otherwise.
+          nullable: true
+        colorModes:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printColorMode'
+          description: The color modes supported by the printer. Valid values are described in the following table.
+        contentTypes:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: A list of supported content (MIME) types that the printer supports. It is not guaranteed that the Universal Print service supports printing all of these MIME types.
+        copiesPerJob:
+          $ref: '#/components/schemas/microsoft.graph.integerRange'
+        dpis:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: The list of print resolutions in DPI that are supported by the printer.
+        duplexModes:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printDuplexMode'
+          description: The list of duplex modes that are supported by the printer. Valid values are described in the following table.
+        feedOrientations:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printerFeedOrientation'
+          description: The list of feed orientations that are supported by the printer.
+        finishings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printFinishing'
+          description: Finishing processes the printer supports for a printed document.
+        inputBins:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: Supported input bins for the printer.
+        isColorPrintingSupported:
+          type: boolean
+          description: True if color printing is supported by the printer; false otherwise. Read-only.
+          nullable: true
+        isPageRangeSupported:
+          type: boolean
+          description: True if the printer supports printing by page ranges; false otherwise.
+          nullable: true
+        leftMargins:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: A list of supported left margins(in microns) for the printer.
+        mediaColors:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: 'The media (i.e., paper) colors supported by the printer.'
+        mediaSizes:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: The media sizes supported by the printer. Supports standard size names for ISO and ANSI media sizes. Valid values are in the following table.
+        mediaTypes:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: The media types supported by the printer.
+        multipageLayouts:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printMultipageLayout'
+          description: The presentation directions supported by the printer. Supported values are described in the following table.
+        orientations:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printOrientation'
+          description: The print orientations supported by the printer. Valid values are described in the following table.
+        outputBins:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: The printer's supported output bins (trays).
+        pagesPerSheet:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: Supported number of Input Pages to impose upon a single Impression.
+        qualities:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printQuality'
+          description: The print qualities supported by the printer.
+        rightMargins:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: A list of supported right margins(in microns) for the printer.
+        scalings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printScaling'
+          description: Supported print scalings.
+        supportsFitPdfToPage:
+          type: boolean
+          description: True if the printer supports scaling PDF pages to match the print media size; false otherwise.
+          nullable: true
+        topMargins:
+          type: array
+          items:
+            maximum: 2147483647
+            minimum: -2147483648
+            type: integer
+            format: int32
+            nullable: true
+          description: A list of supported top margins(in microns) for the printer.
+      additionalProperties:
+        type: object
+    microsoft.graph.printerDefaults:
+      title: printerDefaults
+      type: object
+      properties:
+        colorMode:
+          $ref: '#/components/schemas/microsoft.graph.printColorMode'
+        contentType:
+          type: string
+          description: The default content (MIME) type to use when processing documents.
+          nullable: true
+        copiesPerJob:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The default number of copies printed per job.
+          format: int32
+          nullable: true
+        dpi:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The default resolution in DPI to use when printing the job.
+          format: int32
+          nullable: true
+        duplexMode:
+          $ref: '#/components/schemas/microsoft.graph.printDuplexMode'
+        finishings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printFinishing'
+          description: The default set of finishings to apply to print jobs. Valid values are described in the following table.
+        fitPdfToPage:
+          type: boolean
+          description: The default fitPdfToPage setting. True to fit each page of a PDF document to a physical sheet of media; false to let the printer decide how to lay out impressions.
+          nullable: true
+        inputBin:
+          type: string
+          nullable: true
+        mediaColor:
+          type: string
+          description: The default media (such as paper) color to print the document on.
+          nullable: true
+        mediaSize:
+          type: string
+          description: The default media size to use. Supports standard size names for ISO and ANSI media sizes. Valid values are listed in the printerCapabilities topic.
+          nullable: true
+        mediaType:
+          type: string
+          description: The default media (such as paper) type to print the document on.
+          nullable: true
+        multipageLayout:
+          $ref: '#/components/schemas/microsoft.graph.printMultipageLayout'
+        orientation:
+          $ref: '#/components/schemas/microsoft.graph.printOrientation'
+        outputBin:
+          type: string
+          description: The default output bin to place completed prints into. See the printer's capabilities for a list of supported output bins.
+          nullable: true
+        pagesPerSheet:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The default number of document pages to print on each sheet.
+          format: int32
+          nullable: true
+        quality:
+          $ref: '#/components/schemas/microsoft.graph.printQuality'
+        scaling:
+          $ref: '#/components/schemas/microsoft.graph.printScaling'
+      additionalProperties:
+        type: object
+    microsoft.graph.printerLocation:
+      title: printerLocation
+      type: object
+      properties:
+        altitudeInMeters:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: 'The altitude, in meters, that the printer is located at.'
+          format: int32
+          nullable: true
+        building:
+          type: string
+          description: The building that the printer is located in.
+          nullable: true
+        city:
+          type: string
+          description: The city that the printer is located in.
+          nullable: true
+        countryOrRegion:
+          type: string
+          description: The country or region that the printer is located in.
+          nullable: true
+        floor:
+          type: string
+          description: The floor that the printer is located on. Only numerical values are supported right now.
+          nullable: true
+        floorDescription:
+          type: string
+          description: The description of the floor that the printer is located on.
+          nullable: true
+        latitude:
+          type: number
+          description: The latitude that the printer is located at.
+          format: double
+          nullable: true
+        longitude:
+          type: number
+          description: The longitude that the printer is located at.
+          format: double
+          nullable: true
+        organization:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: The organizational hierarchy that the printer belongs to. The elements should be in hierarchical order.
+        postalCode:
+          type: string
+          description: The postal code that the printer is located in.
+          nullable: true
+        roomDescription:
+          type: string
+          description: The description of the room that the printer is located in.
+          nullable: true
+        roomName:
+          type: string
+          description: The room that the printer is located in. Only numerical values are supported right now.
+          nullable: true
+        site:
+          type: string
+          description: The site that the printer is located in.
+          nullable: true
+        stateOrProvince:
+          type: string
+          description: The state or province that the printer is located in.
+          nullable: true
+        streetAddress:
+          type: string
+          description: The street address where the printer is located.
+          nullable: true
+        subdivision:
+          type: array
+          items:
+            type: string
+            nullable: true
+          description: The subdivision that the printer is located in. The elements should be in hierarchical order.
+        subunit:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printerStatus:
+      title: printerStatus
+      type: object
+      properties:
+        description:
+          type: string
+          description: A human-readable description of the printer's current processing state. Read-only.
+          nullable: true
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printerProcessingStateDetail'
+          description: The list of details describing why the printer is in the current state. Valid values are described in the following table. Read-only.
+        state:
+          $ref: '#/components/schemas/microsoft.graph.printerProcessingState'
+      additionalProperties:
+        type: object
+    microsoft.graph.printJob:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printJob
+          type: object
+          properties:
+            configuration:
+              $ref: '#/components/schemas/microsoft.graph.printJobConfiguration'
+            createdBy:
+              $ref: '#/components/schemas/microsoft.graph.userIdentity'
+            createdDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: The DateTimeOffset when the job was created. Read-only.
+              format: date-time
+            isFetchable:
+              type: boolean
+              description: 'If true, document can be fetched by printer.'
+            redirectedFrom:
+              type: string
+              description: 'Contains the source job URL, if the job has been redirected from another printer.'
+              nullable: true
+            redirectedTo:
+              type: string
+              description: 'Contains the destination job URL, if the job has been redirected to another printer.'
+              nullable: true
+            status:
+              $ref: '#/components/schemas/microsoft.graph.printJobStatus'
+            documents:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printDocument'
+              x-ms-navigationProperty: true
+            tasks:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printTask'
+              description: A list of printTasks that were triggered by this print job.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
+    microsoft.graph.printConnector:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printConnector
+          type: object
+          properties:
+            appVersion:
+              type: string
+              description: The connector's version.
+            displayName:
+              type: string
+              description: The name of the connector.
+            fullyQualifiedDomainName:
+              type: string
+              description: The connector machine's hostname.
+            location:
+              $ref: '#/components/schemas/microsoft.graph.printerLocation'
+            operatingSystem:
+              type: string
+              description: The connector machine's operating system version.
+            registeredDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              description: The DateTimeOffset when the connector was registered.
+              format: date-time
+          additionalProperties:
+            type: object
+    microsoft.graph.printTaskTrigger:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printTaskTrigger
+          type: object
+          properties:
+            event:
+              $ref: '#/components/schemas/microsoft.graph.printEvent'
+            definition:
+              $ref: '#/components/schemas/microsoft.graph.printTaskDefinition'
+          additionalProperties:
+            type: object
     microsoft.graph.attendeeType:
       title: attendeeType
       enum:
@@ -21234,6 +22256,1315 @@ components:
         - customPasswordAddition
         - unknownFutureValue
       type: string
+    microsoft.graph.synchronizationScheduleState:
+      title: synchronizationScheduleState
+      enum:
+        - Active
+        - Disabled
+        - Paused
+      type: string
+    microsoft.graph.synchronizationStatusCode:
+      title: synchronizationStatusCode
+      enum:
+        - NotConfigured
+        - NotRun
+        - Active
+        - Paused
+        - Quarantine
+      type: string
+    microsoft.graph.synchronizationTaskExecution:
+      title: synchronizationTaskExecution
+      type: object
+      properties:
+        activityIdentifier:
+          type: string
+          nullable: true
+        countEntitled:
+          type: integer
+          format: int64
+        countEntitledForProvisioning:
+          type: integer
+          format: int64
+        countEscrowed:
+          type: integer
+          format: int64
+        countEscrowedRaw:
+          type: integer
+          format: int64
+        countExported:
+          type: integer
+          format: int64
+        countExports:
+          type: integer
+          format: int64
+        countImported:
+          type: integer
+          format: int64
+        countImportedDeltas:
+          type: integer
+          format: int64
+        countImportedReferenceDeltas:
+          type: integer
+          format: int64
+        error:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationError'
+        state:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationTaskExecutionResult'
+        timeBegan:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        timeEnded:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationProgress:
+      title: synchronizationProgress
+      type: object
+      properties:
+        completedUnits:
+          type: integer
+          format: int64
+        progressObservationDateTime:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        totalUnits:
+          type: integer
+          format: int64
+        units:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationQuarantine:
+      title: synchronizationQuarantine
+      type: object
+      properties:
+        currentBegan:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        error:
+          $ref: '#/components/schemas/microsoft.graph.synchronizationError'
+        nextAttempt:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        reason:
+          $ref: '#/components/schemas/microsoft.graph.quarantineReason'
+        seriesBegan:
+          pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+          type: string
+          format: date-time
+        seriesCount:
+          type: integer
+          format: int64
+      additionalProperties:
+        type: object
+    microsoft.graph.stringKeyLongValuePair:
+      title: stringKeyLongValuePair
+      type: object
+      properties:
+        key:
+          type: string
+          nullable: true
+        value:
+          type: integer
+          format: int64
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationRule:
+      title: synchronizationRule
+      type: object
+      properties:
+        containerFilter:
+          $ref: '#/components/schemas/microsoft.graph.containerFilter'
+        editable:
+          type: boolean
+        groupFilter:
+          $ref: '#/components/schemas/microsoft.graph.groupFilter'
+        id:
+          type: string
+          nullable: true
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.stringKeyStringValuePair'
+        name:
+          type: string
+          nullable: true
+        objectMappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.objectMapping'
+        priority:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          format: int32
+        sourceDirectoryName:
+          type: string
+          nullable: true
+        targetDirectoryName:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.directoryDefinition:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: directoryDefinition
+          type: object
+          properties:
+            discoverabilities:
+              $ref: '#/components/schemas/microsoft.graph.directoryDefinitionDiscoverabilities'
+            discoveryDateTime:
+              pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+              type: string
+              format: date-time
+              nullable: true
+            name:
+              type: string
+              nullable: true
+            objects:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.objectDefinition'
+            readOnly:
+              type: boolean
+            version:
+              type: string
+              nullable: true
+          additionalProperties:
+            type: object
+    microsoft.graph.synchronizationMetadata:
+      title: synchronizationMetadata
+      enum:
+        - GalleryApplicationIdentifier
+        - GalleryApplicationKey
+        - IsOAuthEnabled
+        - IsSynchronizationAgentAssignmentRequired
+        - IsSynchronizationAgentRequired
+        - IsSynchronizationInPreview
+        - OAuthSettings
+        - SynchronizationLearnMoreIbizaFwLink
+        - ConfigurationFields
+      type: string
+    microsoft.graph.printColorMode:
+      title: printColorMode
+      enum:
+        - blackAndWhite
+        - grayscale
+        - color
+        - auto
+        - unknownFutureValue
+      type: string
+    microsoft.graph.integerRange:
+      title: integerRange
+      type: object
+      properties:
+        end:
+          type: integer
+          description: The inclusive upper bound of the integer range.
+          format: int64
+          nullable: true
+        start:
+          type: integer
+          description: The inclusive lower bound of the integer range.
+          format: int64
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printDuplexMode:
+      title: printDuplexMode
+      enum:
+        - flipOnLongEdge
+        - flipOnShortEdge
+        - oneSided
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printerFeedOrientation:
+      title: printerFeedOrientation
+      enum:
+        - longEdgeFirst
+        - shortEdgeFirst
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printFinishing:
+      title: printFinishing
+      enum:
+        - none
+        - staple
+        - punch
+        - cover
+        - bind
+        - saddleStitch
+        - stitchEdge
+        - stapleTopLeft
+        - stapleBottomLeft
+        - stapleTopRight
+        - stapleBottomRight
+        - stitchLeftEdge
+        - stitchTopEdge
+        - stitchRightEdge
+        - stitchBottomEdge
+        - stapleDualLeft
+        - stapleDualTop
+        - stapleDualRight
+        - stapleDualBottom
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printMultipageLayout:
+      title: printMultipageLayout
+      enum:
+        - clockwiseFromTopLeft
+        - counterclockwiseFromTopLeft
+        - counterclockwiseFromTopRight
+        - clockwiseFromTopRight
+        - counterclockwiseFromBottomLeft
+        - clockwiseFromBottomLeft
+        - counterclockwiseFromBottomRight
+        - clockwiseFromBottomRight
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printOrientation:
+      title: printOrientation
+      enum:
+        - portrait
+        - landscape
+        - reverseLandscape
+        - reversePortrait
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printQuality:
+      title: printQuality
+      enum:
+        - low
+        - medium
+        - high
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printScaling:
+      title: printScaling
+      enum:
+        - auto
+        - shrinkToFit
+        - fill
+        - fit
+        - none
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printerProcessingStateDetail:
+      title: printerProcessingStateDetail
+      enum:
+        - paused
+        - mediaJam
+        - mediaNeeded
+        - mediaLow
+        - mediaEmpty
+        - coverOpen
+        - interlockOpen
+        - outputTrayMissing
+        - outputAreaFull
+        - markerSupplyLow
+        - markerSupplyEmpty
+        - inputTrayMissing
+        - outputAreaAlmostFull
+        - markerWasteAlmostFull
+        - markerWasteFull
+        - fuserOverTemp
+        - fuserUnderTemp
+        - other
+        - none
+        - movingToPaused
+        - shutdown
+        - connectingToDevice
+        - timedOut
+        - stopping
+        - stoppedPartially
+        - tonerLow
+        - tonerEmpty
+        - spoolAreaFull
+        - doorOpen
+        - opticalPhotoConductorNearEndOfLife
+        - opticalPhotoConductorLifeOver
+        - developerLow
+        - developerEmpty
+        - interpreterResourceUnavailable
+        - unknownFutureValue
+        - alertRemovalOfBinaryChangeEntry
+        - banderAdded
+        - banderAlmostEmpty
+        - banderAlmostFull
+        - banderAtLimit
+        - banderClosed
+        - banderConfigurationChange
+        - banderCoverClosed
+        - banderCoverOpen
+        - banderEmpty
+        - banderFull
+        - banderInterlockClosed
+        - banderInterlockOpen
+        - banderJam
+        - banderLifeAlmostOver
+        - banderLifeOver
+        - banderMemoryExhausted
+        - banderMissing
+        - banderMotorFailure
+        - banderNearLimit
+        - banderOffline
+        - banderOpened
+        - banderOverTemperature
+        - banderPowerSaver
+        - banderRecoverableFailure
+        - banderRecoverableStorage
+        - banderRemoved
+        - banderResourceAdded
+        - banderResourceRemoved
+        - banderThermistorFailure
+        - banderTimingFailure
+        - banderTurnedOff
+        - banderTurnedOn
+        - banderUnderTemperature
+        - banderUnrecoverableFailure
+        - banderUnrecoverableStorageError
+        - banderWarmingUp
+        - binderAdded
+        - binderAlmostEmpty
+        - binderAlmostFull
+        - binderAtLimit
+        - binderClosed
+        - binderConfigurationChange
+        - binderCoverClosed
+        - binderCoverOpen
+        - binderEmpty
+        - binderFull
+        - binderInterlockClosed
+        - binderInterlockOpen
+        - binderJam
+        - binderLifeAlmostOver
+        - binderLifeOver
+        - binderMemoryExhausted
+        - binderMissing
+        - binderMotorFailure
+        - binderNearLimit
+        - binderOffline
+        - binderOpened
+        - binderOverTemperature
+        - binderPowerSaver
+        - binderRecoverableFailure
+        - binderRecoverableStorage
+        - binderRemoved
+        - binderResourceAdded
+        - binderResourceRemoved
+        - binderThermistorFailure
+        - binderTimingFailure
+        - binderTurnedOff
+        - binderTurnedOn
+        - binderUnderTemperature
+        - binderUnrecoverableFailure
+        - binderUnrecoverableStorageError
+        - binderWarmingUp
+        - cameraFailure
+        - chamberCooling
+        - chamberFailure
+        - chamberHeating
+        - chamberTemperatureHigh
+        - chamberTemperatureLow
+        - cleanerLifeAlmostOver
+        - cleanerLifeOver
+        - configurationChange
+        - deactivated
+        - deleted
+        - dieCutterAdded
+        - dieCutterAlmostEmpty
+        - dieCutterAlmostFull
+        - dieCutterAtLimit
+        - dieCutterClosed
+        - dieCutterConfigurationChange
+        - dieCutterCoverClosed
+        - dieCutterCoverOpen
+        - dieCutterEmpty
+        - dieCutterFull
+        - dieCutterInterlockClosed
+        - dieCutterInterlockOpen
+        - dieCutterJam
+        - dieCutterLifeAlmostOver
+        - dieCutterLifeOver
+        - dieCutterMemoryExhausted
+        - dieCutterMissing
+        - dieCutterMotorFailure
+        - dieCutterNearLimit
+        - dieCutterOffline
+        - dieCutterOpened
+        - dieCutterOverTemperature
+        - dieCutterPowerSaver
+        - dieCutterRecoverableFailure
+        - dieCutterRecoverableStorage
+        - dieCutterRemoved
+        - dieCutterResourceAdded
+        - dieCutterResourceRemoved
+        - dieCutterThermistorFailure
+        - dieCutterTimingFailure
+        - dieCutterTurnedOff
+        - dieCutterTurnedOn
+        - dieCutterUnderTemperature
+        - dieCutterUnrecoverableFailure
+        - dieCutterUnrecoverableStorageError
+        - dieCutterWarmingUp
+        - extruderCooling
+        - extruderFailure
+        - extruderHeating
+        - extruderJam
+        - extruderTemperatureHigh
+        - extruderTemperatureLow
+        - fanFailure
+        - faxModemLifeAlmostOver
+        - faxModemLifeOver
+        - faxModemMissing
+        - faxModemTurnedOff
+        - faxModemTurnedOn
+        - folderAdded
+        - folderAlmostEmpty
+        - folderAlmostFull
+        - folderAtLimit
+        - folderClosed
+        - folderConfigurationChange
+        - folderCoverClosed
+        - folderCoverOpen
+        - folderEmpty
+        - folderFull
+        - folderInterlockClosed
+        - folderInterlockOpen
+        - folderJam
+        - folderLifeAlmostOver
+        - folderLifeOver
+        - folderMemoryExhausted
+        - folderMissing
+        - folderMotorFailure
+        - folderNearLimit
+        - folderOffline
+        - folderOpened
+        - folderOverTemperature
+        - folderPowerSaver
+        - folderRecoverableFailure
+        - folderRecoverableStorage
+        - folderRemoved
+        - folderResourceAdded
+        - folderResourceRemoved
+        - folderThermistorFailure
+        - folderTimingFailure
+        - folderTurnedOff
+        - folderTurnedOn
+        - folderUnderTemperature
+        - folderUnrecoverableFailure
+        - folderUnrecoverableStorageError
+        - folderWarmingUp
+        - hibernate
+        - holdNewJobs
+        - identifyPrinterRequested
+        - imprinterAdded
+        - imprinterAlmostEmpty
+        - imprinterAlmostFull
+        - imprinterAtLimit
+        - imprinterClosed
+        - imprinterConfigurationChange
+        - imprinterCoverClosed
+        - imprinterCoverOpen
+        - imprinterEmpty
+        - imprinterFull
+        - imprinterInterlockClosed
+        - imprinterInterlockOpen
+        - imprinterJam
+        - imprinterLifeAlmostOver
+        - imprinterLifeOver
+        - imprinterMemoryExhausted
+        - imprinterMissing
+        - imprinterMotorFailure
+        - imprinterNearLimit
+        - imprinterOffline
+        - imprinterOpened
+        - imprinterOverTemperature
+        - imprinterPowerSaver
+        - imprinterRecoverableFailure
+        - imprinterRecoverableStorage
+        - imprinterRemoved
+        - imprinterResourceAdded
+        - imprinterResourceRemoved
+        - imprinterThermistorFailure
+        - imprinterTimingFailure
+        - imprinterTurnedOff
+        - imprinterTurnedOn
+        - imprinterUnderTemperature
+        - imprinterUnrecoverableFailure
+        - imprinterUnrecoverableStorageError
+        - imprinterWarmingUp
+        - inputCannotFeedSizeSelected
+        - inputManualInputRequest
+        - inputMediaColorChange
+        - inputMediaFormPartsChange
+        - inputMediaSizeChange
+        - inputMediaTrayFailure
+        - inputMediaTrayFeedError
+        - inputMediaTrayJam
+        - inputMediaTypeChange
+        - inputMediaWeightChange
+        - inputPickRollerFailure
+        - inputPickRollerLifeOver
+        - inputPickRollerLifeWarn
+        - inputPickRollerMissing
+        - inputTrayElevationFailure
+        - inputTrayPositionFailure
+        - inserterAdded
+        - inserterAlmostEmpty
+        - inserterAlmostFull
+        - inserterAtLimit
+        - inserterClosed
+        - inserterConfigurationChange
+        - inserterCoverClosed
+        - inserterCoverOpen
+        - inserterEmpty
+        - inserterFull
+        - inserterInterlockClosed
+        - inserterInterlockOpen
+        - inserterJam
+        - inserterLifeAlmostOver
+        - inserterLifeOver
+        - inserterMemoryExhausted
+        - inserterMissing
+        - inserterMotorFailure
+        - inserterNearLimit
+        - inserterOffline
+        - inserterOpened
+        - inserterOverTemperature
+        - inserterPowerSaver
+        - inserterRecoverableFailure
+        - inserterRecoverableStorage
+        - inserterRemoved
+        - inserterResourceAdded
+        - inserterResourceRemoved
+        - inserterThermistorFailure
+        - inserterTimingFailure
+        - inserterTurnedOff
+        - inserterTurnedOn
+        - inserterUnderTemperature
+        - inserterUnrecoverableFailure
+        - inserterUnrecoverableStorageError
+        - inserterWarmingUp
+        - interlockClosed
+        - interpreterCartridgeAdded
+        - interpreterCartridgeDeleted
+        - interpreterComplexPageEncountered
+        - interpreterMemoryDecrease
+        - interpreterMemoryIncrease
+        - interpreterResourceAdded
+        - interpreterResourceDeleted
+        - lampAtEol
+        - lampFailure
+        - lampNearEol
+        - laserAtEol
+        - laserFailure
+        - laserNearEol
+        - makeEnvelopeAdded
+        - makeEnvelopeAlmostEmpty
+        - makeEnvelopeAlmostFull
+        - makeEnvelopeAtLimit
+        - makeEnvelopeClosed
+        - makeEnvelopeConfigurationChange
+        - makeEnvelopeCoverClosed
+        - makeEnvelopeCoverOpen
+        - makeEnvelopeEmpty
+        - makeEnvelopeFull
+        - makeEnvelopeInterlockClosed
+        - makeEnvelopeInterlockOpen
+        - makeEnvelopeJam
+        - makeEnvelopeLifeAlmostOver
+        - makeEnvelopeLifeOver
+        - makeEnvelopeMemoryExhausted
+        - makeEnvelopeMissing
+        - makeEnvelopeMotorFailure
+        - makeEnvelopeNearLimit
+        - makeEnvelopeOffline
+        - makeEnvelopeOpened
+        - makeEnvelopeOverTemperature
+        - makeEnvelopePowerSaver
+        - makeEnvelopeRecoverableFailure
+        - makeEnvelopeRecoverableStorage
+        - makeEnvelopeRemoved
+        - makeEnvelopeResourceAdded
+        - makeEnvelopeResourceRemoved
+        - makeEnvelopeThermistorFailure
+        - makeEnvelopeTimingFailure
+        - makeEnvelopeTurnedOff
+        - makeEnvelopeTurnedOn
+        - makeEnvelopeUnderTemperature
+        - makeEnvelopeUnrecoverableFailure
+        - makeEnvelopeUnrecoverableStorageError
+        - makeEnvelopeWarmingUp
+        - markerAdjustingPrintQuality
+        - markerCleanerMissing
+        - markerDeveloperAlmostEmpty
+        - markerDeveloperEmpty
+        - markerDeveloperMissing
+        - markerFuserMissing
+        - markerFuserThermistorFailure
+        - markerFuserTimingFailure
+        - markerInkAlmostEmpty
+        - markerInkEmpty
+        - markerInkMissing
+        - markerOpcMissing
+        - markerPrintRibbonAlmostEmpty
+        - markerPrintRibbonEmpty
+        - markerPrintRibbonMissing
+        - markerSupplyAlmostEmpty
+        - markerSupplyMissing
+        - markerTonerCartridgeMissing
+        - markerTonerMissing
+        - markerWasteInkReceptacleAlmostFull
+        - markerWasteInkReceptacleFull
+        - markerWasteInkReceptacleMissing
+        - markerWasteMissing
+        - markerWasteTonerReceptacleAlmostFull
+        - markerWasteTonerReceptacleFull
+        - markerWasteTonerReceptacleMissing
+        - materialEmpty
+        - materialLow
+        - materialNeeded
+        - mediaDrying
+        - mediaPathCannotDuplexMediaSelected
+        - mediaPathFailure
+        - mediaPathInputEmpty
+        - mediaPathInputFeedError
+        - mediaPathInputJam
+        - mediaPathInputRequest
+        - mediaPathJam
+        - mediaPathMediaTrayAlmostFull
+        - mediaPathMediaTrayFull
+        - mediaPathMediaTrayMissing
+        - mediaPathOutputFeedError
+        - mediaPathOutputFull
+        - mediaPathOutputJam
+        - mediaPathPickRollerFailure
+        - mediaPathPickRollerLifeOver
+        - mediaPathPickRollerLifeWarn
+        - mediaPathPickRollerMissing
+        - motorFailure
+        - outputMailboxSelectFailure
+        - outputMediaTrayFailure
+        - outputMediaTrayFeedError
+        - outputMediaTrayJam
+        - perforaterAdded
+        - perforaterAlmostEmpty
+        - perforaterAlmostFull
+        - perforaterAtLimit
+        - perforaterClosed
+        - perforaterConfigurationChange
+        - perforaterCoverClosed
+        - perforaterCoverOpen
+        - perforaterEmpty
+        - perforaterFull
+        - perforaterInterlockClosed
+        - perforaterInterlockOpen
+        - perforaterJam
+        - perforaterLifeAlmostOver
+        - perforaterLifeOver
+        - perforaterMemoryExhausted
+        - perforaterMissing
+        - perforaterMotorFailure
+        - perforaterNearLimit
+        - perforaterOffline
+        - perforaterOpened
+        - perforaterOverTemperature
+        - perforaterPowerSaver
+        - perforaterRecoverableFailure
+        - perforaterRecoverableStorage
+        - perforaterRemoved
+        - perforaterResourceAdded
+        - perforaterResourceRemoved
+        - perforaterThermistorFailure
+        - perforaterTimingFailure
+        - perforaterTurnedOff
+        - perforaterTurnedOn
+        - perforaterUnderTemperature
+        - perforaterUnrecoverableFailure
+        - perforaterUnrecoverableStorageError
+        - perforaterWarmingUp
+        - platformCooling
+        - platformFailure
+        - platformHeating
+        - platformTemperatureHigh
+        - platformTemperatureLow
+        - powerDown
+        - powerUp
+        - printerManualReset
+        - printerNmsReset
+        - printerReadyToPrint
+        - puncherAdded
+        - puncherAlmostEmpty
+        - puncherAlmostFull
+        - puncherAtLimit
+        - puncherClosed
+        - puncherConfigurationChange
+        - puncherCoverClosed
+        - puncherCoverOpen
+        - puncherEmpty
+        - puncherFull
+        - puncherInterlockClosed
+        - puncherInterlockOpen
+        - puncherJam
+        - puncherLifeAlmostOver
+        - puncherLifeOver
+        - puncherMemoryExhausted
+        - puncherMissing
+        - puncherMotorFailure
+        - puncherNearLimit
+        - puncherOffline
+        - puncherOpened
+        - puncherOverTemperature
+        - puncherPowerSaver
+        - puncherRecoverableFailure
+        - puncherRecoverableStorage
+        - puncherRemoved
+        - puncherResourceAdded
+        - puncherResourceRemoved
+        - puncherThermistorFailure
+        - puncherTimingFailure
+        - puncherTurnedOff
+        - puncherTurnedOn
+        - puncherUnderTemperature
+        - puncherUnrecoverableFailure
+        - puncherUnrecoverableStorageError
+        - puncherWarmingUp
+        - resuming
+        - scanMediaPathFailure
+        - scanMediaPathInputEmpty
+        - scanMediaPathInputFeedError
+        - scanMediaPathInputJam
+        - scanMediaPathInputRequest
+        - scanMediaPathJam
+        - scanMediaPathOutputFeedError
+        - scanMediaPathOutputFull
+        - scanMediaPathOutputJam
+        - scanMediaPathPickRollerFailure
+        - scanMediaPathPickRollerLifeOver
+        - scanMediaPathPickRollerLifeWarn
+        - scanMediaPathPickRollerMissing
+        - scanMediaPathTrayAlmostFull
+        - scanMediaPathTrayFull
+        - scanMediaPathTrayMissing
+        - scannerLightFailure
+        - scannerLightLifeAlmostOver
+        - scannerLightLifeOver
+        - scannerLightMissing
+        - scannerSensorFailure
+        - scannerSensorLifeAlmostOver
+        - scannerSensorLifeOver
+        - scannerSensorMissing
+        - separationCutterAdded
+        - separationCutterAlmostEmpty
+        - separationCutterAlmostFull
+        - separationCutterAtLimit
+        - separationCutterClosed
+        - separationCutterConfigurationChange
+        - separationCutterCoverClosed
+        - separationCutterCoverOpen
+        - separationCutterEmpty
+        - separationCutterFull
+        - separationCutterInterlockClosed
+        - separationCutterInterlockOpen
+        - separationCutterJam
+        - separationCutterLifeAlmostOver
+        - separationCutterLifeOver
+        - separationCutterMemoryExhausted
+        - separationCutterMissing
+        - separationCutterMotorFailure
+        - separationCutterNearLimit
+        - separationCutterOffline
+        - separationCutterOpened
+        - separationCutterOverTemperature
+        - separationCutterPowerSaver
+        - separationCutterRecoverableFailure
+        - separationCutterRecoverableStorage
+        - separationCutterRemoved
+        - separationCutterResourceAdded
+        - separationCutterResourceRemoved
+        - separationCutterThermistorFailure
+        - separationCutterTimingFailure
+        - separationCutterTurnedOff
+        - separationCutterTurnedOn
+        - separationCutterUnderTemperature
+        - separationCutterUnrecoverableFailure
+        - separationCutterUnrecoverableStorageError
+        - separationCutterWarmingUp
+        - sheetRotatorAdded
+        - sheetRotatorAlmostEmpty
+        - sheetRotatorAlmostFull
+        - sheetRotatorAtLimit
+        - sheetRotatorClosed
+        - sheetRotatorConfigurationChange
+        - sheetRotatorCoverClosed
+        - sheetRotatorCoverOpen
+        - sheetRotatorEmpty
+        - sheetRotatorFull
+        - sheetRotatorInterlockClosed
+        - sheetRotatorInterlockOpen
+        - sheetRotatorJam
+        - sheetRotatorLifeAlmostOver
+        - sheetRotatorLifeOver
+        - sheetRotatorMemoryExhausted
+        - sheetRotatorMissing
+        - sheetRotatorMotorFailure
+        - sheetRotatorNearLimit
+        - sheetRotatorOffline
+        - sheetRotatorOpened
+        - sheetRotatorOverTemperature
+        - sheetRotatorPowerSaver
+        - sheetRotatorRecoverableFailure
+        - sheetRotatorRecoverableStorage
+        - sheetRotatorRemoved
+        - sheetRotatorResourceAdded
+        - sheetRotatorResourceRemoved
+        - sheetRotatorThermistorFailure
+        - sheetRotatorTimingFailure
+        - sheetRotatorTurnedOff
+        - sheetRotatorTurnedOn
+        - sheetRotatorUnderTemperature
+        - sheetRotatorUnrecoverableFailure
+        - sheetRotatorUnrecoverableStorageError
+        - sheetRotatorWarmingUp
+        - slitterAdded
+        - slitterAlmostEmpty
+        - slitterAlmostFull
+        - slitterAtLimit
+        - slitterClosed
+        - slitterConfigurationChange
+        - slitterCoverClosed
+        - slitterCoverOpen
+        - slitterEmpty
+        - slitterFull
+        - slitterInterlockClosed
+        - slitterInterlockOpen
+        - slitterJam
+        - slitterLifeAlmostOver
+        - slitterLifeOver
+        - slitterMemoryExhausted
+        - slitterMissing
+        - slitterMotorFailure
+        - slitterNearLimit
+        - slitterOffline
+        - slitterOpened
+        - slitterOverTemperature
+        - slitterPowerSaver
+        - slitterRecoverableFailure
+        - slitterRecoverableStorage
+        - slitterRemoved
+        - slitterResourceAdded
+        - slitterResourceRemoved
+        - slitterThermistorFailure
+        - slitterTimingFailure
+        - slitterTurnedOff
+        - slitterTurnedOn
+        - slitterUnderTemperature
+        - slitterUnrecoverableFailure
+        - slitterUnrecoverableStorageError
+        - slitterWarmingUp
+        - stackerAdded
+        - stackerAlmostEmpty
+        - stackerAlmostFull
+        - stackerAtLimit
+        - stackerClosed
+        - stackerConfigurationChange
+        - stackerCoverClosed
+        - stackerCoverOpen
+        - stackerEmpty
+        - stackerFull
+        - stackerInterlockClosed
+        - stackerInterlockOpen
+        - stackerJam
+        - stackerLifeAlmostOver
+        - stackerLifeOver
+        - stackerMemoryExhausted
+        - stackerMissing
+        - stackerMotorFailure
+        - stackerNearLimit
+        - stackerOffline
+        - stackerOpened
+        - stackerOverTemperature
+        - stackerPowerSaver
+        - stackerRecoverableFailure
+        - stackerRecoverableStorage
+        - stackerRemoved
+        - stackerResourceAdded
+        - stackerResourceRemoved
+        - stackerThermistorFailure
+        - stackerTimingFailure
+        - stackerTurnedOff
+        - stackerTurnedOn
+        - stackerUnderTemperature
+        - stackerUnrecoverableFailure
+        - stackerUnrecoverableStorageError
+        - stackerWarmingUp
+        - standby
+        - staplerAdded
+        - staplerAlmostEmpty
+        - staplerAlmostFull
+        - staplerAtLimit
+        - staplerClosed
+        - staplerConfigurationChange
+        - staplerCoverClosed
+        - staplerCoverOpen
+        - staplerEmpty
+        - staplerFull
+        - staplerInterlockClosed
+        - staplerInterlockOpen
+        - staplerJam
+        - staplerLifeAlmostOver
+        - staplerLifeOver
+        - staplerMemoryExhausted
+        - staplerMissing
+        - staplerMotorFailure
+        - staplerNearLimit
+        - staplerOffline
+        - staplerOpened
+        - staplerOverTemperature
+        - staplerPowerSaver
+        - staplerRecoverableFailure
+        - staplerRecoverableStorage
+        - staplerRemoved
+        - staplerResourceAdded
+        - staplerResourceRemoved
+        - staplerThermistorFailure
+        - staplerTimingFailure
+        - staplerTurnedOff
+        - staplerTurnedOn
+        - staplerUnderTemperature
+        - staplerUnrecoverableFailure
+        - staplerUnrecoverableStorageError
+        - staplerWarmingUp
+        - stitcherAdded
+        - stitcherAlmostEmpty
+        - stitcherAlmostFull
+        - stitcherAtLimit
+        - stitcherClosed
+        - stitcherConfigurationChange
+        - stitcherCoverClosed
+        - stitcherCoverOpen
+        - stitcherEmpty
+        - stitcherFull
+        - stitcherInterlockClosed
+        - stitcherInterlockOpen
+        - stitcherJam
+        - stitcherLifeAlmostOver
+        - stitcherLifeOver
+        - stitcherMemoryExhausted
+        - stitcherMissing
+        - stitcherMotorFailure
+        - stitcherNearLimit
+        - stitcherOffline
+        - stitcherOpened
+        - stitcherOverTemperature
+        - stitcherPowerSaver
+        - stitcherRecoverableFailure
+        - stitcherRecoverableStorage
+        - stitcherRemoved
+        - stitcherResourceAdded
+        - stitcherResourceRemoved
+        - stitcherThermistorFailure
+        - stitcherTimingFailure
+        - stitcherTurnedOff
+        - stitcherTurnedOn
+        - stitcherUnderTemperature
+        - stitcherUnrecoverableFailure
+        - stitcherUnrecoverableStorageError
+        - stitcherWarmingUp
+        - subunitAdded
+        - subunitAlmostEmpty
+        - subunitAlmostFull
+        - subunitAtLimit
+        - subunitClosed
+        - subunitCoolingDown
+        - subunitEmpty
+        - subunitFull
+        - subunitLifeAlmostOver
+        - subunitLifeOver
+        - subunitMemoryExhausted
+        - subunitMissing
+        - subunitMotorFailure
+        - subunitNearLimit
+        - subunitOffline
+        - subunitOpened
+        - subunitOverTemperature
+        - subunitPowerSaver
+        - subunitRecoverableFailure
+        - subunitRecoverableStorage
+        - subunitRemoved
+        - subunitResourceAdded
+        - subunitResourceRemoved
+        - subunitThermistorFailure
+        - subunitTimingFailure
+        - subunitTurnedOff
+        - subunitTurnedOn
+        - subunitUnderTemperature
+        - subunitUnrecoverableFailure
+        - subunitUnrecoverableStorage
+        - subunitWarmingUp
+        - suspend
+        - testing
+        - trimmerAdded
+        - trimmerAlmostEmpty
+        - trimmerAlmostFull
+        - trimmerAtLimit
+        - trimmerClosed
+        - trimmerConfigurationChange
+        - trimmerCoverClosed
+        - trimmerCoverOpen
+        - trimmerEmpty
+        - trimmerFull
+        - trimmerInterlockClosed
+        - trimmerInterlockOpen
+        - trimmerJam
+        - trimmerLifeAlmostOver
+        - trimmerLifeOver
+        - trimmerMemoryExhausted
+        - trimmerMissing
+        - trimmerMotorFailure
+        - trimmerNearLimit
+        - trimmerOffline
+        - trimmerOpened
+        - trimmerOverTemperature
+        - trimmerPowerSaver
+        - trimmerRecoverableFailure
+        - trimmerRecoverableStorage
+        - trimmerRemoved
+        - trimmerResourceAdded
+        - trimmerResourceRemoved
+        - trimmerThermistorFailure
+        - trimmerTimingFailure
+        - trimmerTurnedOff
+        - trimmerTurnedOn
+        - trimmerUnderTemperature
+        - trimmerUnrecoverableFailure
+        - trimmerUnrecoverableStorageError
+        - trimmerWarmingUp
+        - unknown
+        - wrapperAdded
+        - wrapperAlmostEmpty
+        - wrapperAlmostFull
+        - wrapperAtLimit
+        - wrapperClosed
+        - wrapperConfigurationChange
+        - wrapperCoverClosed
+        - wrapperCoverOpen
+        - wrapperEmpty
+        - wrapperFull
+        - wrapperInterlockClosed
+        - wrapperInterlockOpen
+        - wrapperJam
+        - wrapperLifeAlmostOver
+        - wrapperLifeOver
+        - wrapperMemoryExhausted
+        - wrapperMissing
+        - wrapperMotorFailure
+        - wrapperNearLimit
+        - wrapperOffline
+        - wrapperOpened
+        - wrapperOverTemperature
+        - wrapperPowerSaver
+        - wrapperRecoverableFailure
+        - wrapperRecoverableStorage
+        - wrapperRemoved
+        - wrapperResourceAdded
+        - wrapperResourceRemoved
+        - wrapperThermistorFailure
+        - wrapperTimingFailure
+        - wrapperTurnedOff
+        - wrapperTurnedOn
+        - wrapperUnderTemperature
+        - wrapperUnrecoverableFailure
+        - wrapperUnrecoverableStorageError
+        - wrapperWarmingUp
+      type: string
+    microsoft.graph.printerProcessingState:
+      title: printerProcessingState
+      enum:
+        - unknown
+        - idle
+        - processing
+        - stopped
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printJobConfiguration:
+      title: printJobConfiguration
+      type: object
+      properties:
+        collate:
+          type: boolean
+          description: Whether the printer should collate pages wehen printing multiple copies of a multi-page document.
+          nullable: true
+        colorMode:
+          $ref: '#/components/schemas/microsoft.graph.printColorMode'
+        copies:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The number of copies that should be printed. Read-only.
+          format: int32
+          nullable: true
+        dpi:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: 'The resolution to use when printing the job, expressed in dots per inch (DPI). Read-only.'
+          format: int32
+          nullable: true
+        duplexMode:
+          $ref: '#/components/schemas/microsoft.graph.printDuplexMode'
+        feedOrientation:
+          $ref: '#/components/schemas/microsoft.graph.printerFeedOrientation'
+        finishings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printFinishing'
+          description: Finishing processes to use when printing.
+        fitPdfToPage:
+          type: boolean
+          nullable: true
+        inputBin:
+          type: string
+          description: The input bin (tray) to use when printing. See the printer's capabilities for a list of supported input bins.
+          nullable: true
+        margin:
+          $ref: '#/components/schemas/microsoft.graph.printMargin'
+        mediaSize:
+          type: string
+          description: The media size to use when printing. Supports standard size names for ISO and ANSI media sizes.
+          nullable: true
+        mediaType:
+          type: string
+          nullable: true
+        multipageLayout:
+          $ref: '#/components/schemas/microsoft.graph.printMultipageLayout'
+        orientation:
+          $ref: '#/components/schemas/microsoft.graph.printOrientation'
+        outputBin:
+          type: string
+          nullable: true
+        pageRanges:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.integerRange'
+        pagesPerSheet:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          format: int32
+          nullable: true
+        quality:
+          $ref: '#/components/schemas/microsoft.graph.printQuality'
+        scaling:
+          $ref: '#/components/schemas/microsoft.graph.printScaling'
+      additionalProperties:
+        type: object
+    microsoft.graph.userIdentity:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.identity'
+        - title: userIdentity
+          type: object
+          properties:
+            ipAddress:
+              type: string
+              description: Indicates the client IP address used by user performing the activity (audit log only).
+              nullable: true
+            userPrincipalName:
+              type: string
+              description: The userPrincipalName attribute of the user.
+              nullable: true
+          additionalProperties:
+            type: object
+    microsoft.graph.printJobStatus:
+      title: printJobStatus
+      type: object
+      properties:
+        description:
+          type: string
+          description: A human-readable description of the print job's current processing state. Read-only.
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.printJobStateDetail'
+          description: Additional details for print job state. Valid values are described in the following table. Read-only.
+        isAcquiredByPrinter:
+          type: boolean
+          description: True if the job was acknowledged by a printer; false otherwise. Read-only.
+        state:
+          $ref: '#/components/schemas/microsoft.graph.printJobProcessingState'
+      additionalProperties:
+        type: object
+    microsoft.graph.printDocument:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printDocument
+          type: object
+          properties:
+            contentType:
+              type: string
+              description: The document's content (MIME) type. Read-only.
+              nullable: true
+            displayName:
+              type: string
+              description: The document's name. Read-only.
+              nullable: true
+            size:
+              type: integer
+              description: The document's size in bytes. Read-only.
+              format: int64
+          additionalProperties:
+            type: object
+    microsoft.graph.printTask:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printTask
+          type: object
+          properties:
+            parentUrl:
+              type: string
+              description: 'The URL for the print entity that triggered this task. For example, https://graph.microsoft.com/v1.0/print/printers/{printerId}/jobs/{jobId}. Read-only.'
+            status:
+              $ref: '#/components/schemas/microsoft.graph.printTaskStatus'
+            definition:
+              $ref: '#/components/schemas/microsoft.graph.printTaskDefinition'
+            trigger:
+              $ref: '#/components/schemas/microsoft.graph.printTaskTrigger'
+          additionalProperties:
+            type: object
+    microsoft.graph.printEvent:
+      title: printEvent
+      enum:
+        - jobStarted
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printTaskDefinition:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: printTaskDefinition
+          type: object
+          properties:
+            createdBy:
+              $ref: '#/components/schemas/microsoft.graph.appIdentity'
+            displayName:
+              type: string
+              description: The name of the printTaskDefinition.
+            tasks:
+              type: array
+              items:
+                $ref: '#/components/schemas/microsoft.graph.printTask'
+              description: A list of tasks that have been created based on this definition. The list includes currently running tasks and recently completed tasks. Read-only.
+              x-ms-navigationProperty: true
+          additionalProperties:
+            type: object
     microsoft.graph.workbookCommentReply:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -21548,6 +23879,226 @@ components:
           $ref: '#/components/schemas/microsoft.graph.scheduleEntityTheme'
       additionalProperties:
         type: object
+    microsoft.graph.synchronizationError:
+      title: synchronizationError
+      type: object
+      properties:
+        code:
+          type: string
+          nullable: true
+        message:
+          type: string
+          nullable: true
+        tenantActionable:
+          type: boolean
+      additionalProperties:
+        type: object
+    microsoft.graph.synchronizationTaskExecutionResult:
+      title: synchronizationTaskExecutionResult
+      enum:
+        - Succeeded
+        - Failed
+        - EntryLevelErrors
+      type: string
+    microsoft.graph.quarantineReason:
+      title: quarantineReason
+      enum:
+        - EncounteredBaseEscrowThreshold
+        - EncounteredTotalEscrowThreshold
+        - EncounteredEscrowProportionThreshold
+        - EncounteredQuarantineException
+        - Unknown
+        - QuarantinedOnDemand
+        - TooManyDeletes
+        - IngestionInterrupted
+      type: string
+    microsoft.graph.containerFilter:
+      title: containerFilter
+      type: object
+      properties:
+        includedContainers:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.groupFilter:
+      title: groupFilter
+      type: object
+      properties:
+        includedGroups:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.stringKeyStringValuePair:
+      title: stringKeyStringValuePair
+      type: object
+      properties:
+        key:
+          type: string
+          nullable: true
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.objectMapping:
+      title: objectMapping
+      type: object
+      properties:
+        attributeMappings:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.attributeMapping'
+        enabled:
+          type: boolean
+        flowTypes:
+          $ref: '#/components/schemas/microsoft.graph.objectFlowTypes'
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.objectMappingMetadataEntry'
+        name:
+          type: string
+          nullable: true
+        scope:
+          $ref: '#/components/schemas/microsoft.graph.filter'
+        sourceObjectName:
+          type: string
+          nullable: true
+        targetObjectName:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.directoryDefinitionDiscoverabilities:
+      title: directoryDefinitionDiscoverabilities
+      enum:
+        - None
+        - AttributeNames
+        - AttributeDataTypes
+        - AttributeReadOnly
+        - ReferenceAttributes
+        - UnknownFutureValue
+      type: string
+    microsoft.graph.objectDefinition:
+      title: objectDefinition
+      type: object
+      properties:
+        attributes:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.attributeDefinition'
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.objectDefinitionMetadataEntry'
+        name:
+          type: string
+          nullable: true
+        supportedApis:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printMargin:
+      title: printMargin
+      type: object
+      properties:
+        bottom:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The margin in microns from the bottom edge.
+          format: int32
+          nullable: true
+        left:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The margin in microns from the left edge.
+          format: int32
+          nullable: true
+        right:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The margin in microns from the right edge.
+          format: int32
+          nullable: true
+        top:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          description: The margin in microns from the top edge.
+          format: int32
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printJobStateDetail:
+      title: printJobStateDetail
+      enum:
+        - uploadPending
+        - transforming
+        - completedSuccessfully
+        - completedWithWarnings
+        - completedWithErrors
+        - releaseWait
+        - interpreting
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printJobProcessingState:
+      title: printJobProcessingState
+      enum:
+        - unknown
+        - pending
+        - processing
+        - paused
+        - stopped
+        - completed
+        - canceled
+        - aborted
+        - unknownFutureValue
+      type: string
+    microsoft.graph.printTaskStatus:
+      title: printTaskStatus
+      type: object
+      properties:
+        description:
+          type: string
+          description: A human-readable description of the current processing state of the printTask.
+        state:
+          $ref: '#/components/schemas/microsoft.graph.printTaskProcessingState'
+      additionalProperties:
+        type: object
+    microsoft.graph.appIdentity:
+      title: appIdentity
+      type: object
+      properties:
+        appId:
+          type: string
+          description: Refers to the Unique GUID representing Application Id in the Azure Active Directory.
+          nullable: true
+        displayName:
+          type: string
+          description: Refers to the Application Name displayed in the Azure Portal.
+          nullable: true
+        servicePrincipalId:
+          type: string
+          description: Refers to the Unique GUID indicating Service Principal Id in Azure Active Directory for the corresponding App.
+          nullable: true
+        servicePrincipalName:
+          type: string
+          description: Refers to the Service Principal Name is the Application name in the tenant.
+          nullable: true
+      additionalProperties:
+        type: object
     microsoft.graph.workbookFilter:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -21779,6 +24330,126 @@ components:
         - darkYellow
         - unknownFutureValue
       type: string
+    microsoft.graph.attributeMapping:
+      title: attributeMapping
+      type: object
+      properties:
+        defaultValue:
+          type: string
+          nullable: true
+        exportMissingReferences:
+          type: boolean
+        flowBehavior:
+          $ref: '#/components/schemas/microsoft.graph.attributeFlowBehavior'
+        flowType:
+          $ref: '#/components/schemas/microsoft.graph.attributeFlowType'
+        matchingPriority:
+          maximum: 2147483647
+          minimum: -2147483648
+          type: integer
+          format: int32
+        source:
+          $ref: '#/components/schemas/microsoft.graph.attributeMappingSource'
+        targetAttributeName:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.objectFlowTypes:
+      title: objectFlowTypes
+      enum:
+        - None
+        - Add
+        - Update
+        - Delete
+      type: string
+    microsoft.graph.objectMappingMetadataEntry:
+      title: objectMappingMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.objectMappingMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.filter:
+      title: filter
+      type: object
+      properties:
+        categoryFilterGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.filterGroup'
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.filterGroup'
+        inputFilterGroups:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.filterGroup'
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeDefinition:
+      title: attributeDefinition
+      type: object
+      properties:
+        anchor:
+          type: boolean
+        apiExpressions:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.stringKeyStringValuePair'
+        caseExact:
+          type: boolean
+        defaultValue:
+          type: string
+          nullable: true
+        flowNullValues:
+          type: boolean
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.attributeDefinitionMetadataEntry'
+        multivalued:
+          type: boolean
+        mutability:
+          $ref: '#/components/schemas/microsoft.graph.mutability'
+        name:
+          type: string
+          nullable: true
+        referencedObjects:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.referencedObject'
+        required:
+          type: boolean
+        type:
+          $ref: '#/components/schemas/microsoft.graph.attributeType'
+      additionalProperties:
+        type: object
+    microsoft.graph.objectDefinitionMetadataEntry:
+      title: objectDefinitionMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.objectDefinitionMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.printTaskProcessingState:
+      title: printTaskProcessingState
+      enum:
+        - pending
+        - processing
+        - completed
+        - aborted
+        - unknownFutureValue
+      type: string
     microsoft.graph.workbookFilterCriteria:
       title: workbookFilterCriteria
       type: object
@@ -21943,6 +24614,115 @@ components:
               $ref: '#/components/schemas/microsoft.graph.workbookChartFont'
           additionalProperties:
             type: object
+    microsoft.graph.attributeFlowBehavior:
+      title: attributeFlowBehavior
+      enum:
+        - FlowWhenChanged
+        - FlowAlways
+      type: string
+    microsoft.graph.attributeFlowType:
+      title: attributeFlowType
+      enum:
+        - Always
+        - ObjectAddOnly
+        - MultiValueAddOnly
+        - ValueAddOnly
+        - AttributeAddOnly
+      type: string
+    microsoft.graph.attributeMappingSource:
+      title: attributeMappingSource
+      type: object
+      properties:
+        expression:
+          type: string
+          nullable: true
+        name:
+          type: string
+          nullable: true
+        parameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.stringKeyAttributeMappingSourceValuePair'
+        type:
+          $ref: '#/components/schemas/microsoft.graph.attributeMappingSourceType'
+      additionalProperties:
+        type: object
+    microsoft.graph.objectMappingMetadata:
+      title: objectMappingMetadata
+      enum:
+        - EscrowBehavior
+        - DisableMonitoringForChanges
+        - OriginalJoiningProperty
+        - Disposition
+        - IsCustomerDefined
+        - ExcludeFromReporting
+        - Unsynchronized
+      type: string
+    microsoft.graph.filterGroup:
+      title: filterGroup
+      type: object
+      properties:
+        clauses:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.filterClause'
+        name:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeDefinitionMetadataEntry:
+      title: attributeDefinitionMetadataEntry
+      type: object
+      properties:
+        key:
+          $ref: '#/components/schemas/microsoft.graph.attributeDefinitionMetadata'
+        value:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.mutability:
+      title: mutability
+      enum:
+        - ReadWrite
+        - ReadOnly
+        - Immutable
+        - WriteOnly
+      type: string
+    microsoft.graph.referencedObject:
+      title: referencedObject
+      type: object
+      properties:
+        referencedObjectName:
+          type: string
+          nullable: true
+        referencedProperty:
+          type: string
+          nullable: true
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeType:
+      title: attributeType
+      enum:
+        - String
+        - Integer
+        - Reference
+        - Binary
+        - Boolean
+        - DateTime
+      type: string
+    microsoft.graph.objectDefinitionMetadata:
+      title: objectDefinitionMetadata
+      enum:
+        - PropertyNameAccountEnabled
+        - PropertyNameSoftDeleted
+        - IsSoftDeletionSupported
+        - IsSynchronizeAllSupported
+        - ConnectorDataStorageRequired
+        - Extensions
+        - BaseObjectName
+      type: string
     microsoft.graph.workbookChartAxisFormat:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -22007,6 +24787,51 @@ components:
               $ref: '#/components/schemas/microsoft.graph.workbookChartFill'
           additionalProperties:
             type: object
+    microsoft.graph.stringKeyAttributeMappingSourceValuePair:
+      title: stringKeyAttributeMappingSourceValuePair
+      type: object
+      properties:
+        key:
+          type: string
+          nullable: true
+        value:
+          $ref: '#/components/schemas/microsoft.graph.attributeMappingSource'
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeMappingSourceType:
+      title: attributeMappingSourceType
+      enum:
+        - Attribute
+        - Constant
+        - Function
+      type: string
+    microsoft.graph.filterClause:
+      title: filterClause
+      type: object
+      properties:
+        operatorName:
+          type: string
+          nullable: true
+        sourceOperandName:
+          type: string
+          nullable: true
+        targetOperand:
+          $ref: '#/components/schemas/microsoft.graph.filterOperand'
+      additionalProperties:
+        type: object
+    microsoft.graph.attributeDefinitionMetadata:
+      title: attributeDefinitionMetadata
+      enum:
+        - BaseAttributeName
+        - ComplexObjectDefinition
+        - IsContainer
+        - IsCustomerDefined
+        - IsDomainQualified
+        - LinkPropertyNames
+        - LinkTypeName
+        - MaximumLength
+        - ReferencedProperty
+      type: string
     microsoft.graph.workbookChartGridlinesFormat:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -22027,6 +24852,17 @@ components:
               $ref: '#/components/schemas/microsoft.graph.workbookChartFont'
           additionalProperties:
             type: object
+    microsoft.graph.filterOperand:
+      title: filterOperand
+      type: object
+      properties:
+        values:
+          type: array
+          items:
+            type: string
+            nullable: true
+      additionalProperties:
+        type: object
   responses:
     microsoft.graph.userCollectionResponse:
       description: Retrieved collection

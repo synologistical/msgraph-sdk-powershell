@@ -21,6 +21,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/following": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -93,6 +101,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/items/{driveItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/items/{driveItem-id}/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -101,11 +125,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -122,6 +158,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/items/{driveItem-id}/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -146,6 +190,10 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/items/{driveItem-id}/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/microsoft.graph.assignSensitivityLabel": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -174,6 +222,10 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/items/{driveItem-id}/microsoft.graph.delta(token='{token}')": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/items/{driveItem-id}/microsoft.graph.extractSensitivityLabels": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -258,6 +310,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/items/{driveItem-id}/versions/{driveItemVersion-id}/microsoft.graph.restoreVersion": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -357,6 +417,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/list/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/list/drive": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -373,11 +441,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/list/items/{listItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/items/{listItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -394,6 +474,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/list/items/{listItem-id}/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -418,6 +506,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/list/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -509,6 +605,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/root/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/root/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -517,11 +629,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/drives/{drive-id}/root/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/drives/{drive-id}/root/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -538,6 +662,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/root/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -562,6 +694,10 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/root/listItem/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/microsoft.graph.assignSensitivityLabel": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -590,6 +726,10 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/drives/{drive-id}/root/microsoft.graph.delta(token='{token}')": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/drives/{drive-id}/root/microsoft.graph.extractSensitivityLabels": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -713,6 +853,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/following": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -785,6 +933,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -793,11 +957,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -810,6 +986,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -858,6 +1042,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/items/{driveItem-id}/versions/{driveItemVersion-id}/content": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -925,6 +1117,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/list/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/list/drive": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -941,11 +1141,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -961,6 +1173,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/versions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -970,6 +1190,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/list/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1045,6 +1273,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/root/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/root/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1053,11 +1297,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/groups/{group-id}/drives/{drive-id}/root/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/groups/{group-id}/drives/{drive-id}/root/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1070,6 +1326,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/groups/{group-id}/drives/{drive-id}/root/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/groups/{group-id}/drives/{drive-id}/root/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1141,6 +1405,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/shares/{sharedDriveItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/shares/{sharedDriveItem-id}/driveItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1158,6 +1430,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/items/{driveItem-id}/content": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1257,6 +1537,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/shares/{sharedDriveItem-id}/list/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/shares/{sharedDriveItem-id}/list/drive": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1273,11 +1561,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1294,6 +1594,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1318,6 +1626,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/microsoft.graph.restoreVersion": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/list/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1349,11 +1665,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/shares/{sharedDriveItem-id}/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/shares/{sharedDriveItem-id}/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1370,6 +1698,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/shares/{sharedDriveItem-id}/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/shares/{sharedDriveItem-id}/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1438,6 +1774,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/bundles/{driveItem-id}/content": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/createdByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1513,6 +1857,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1521,11 +1881,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1538,6 +1910,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1586,6 +1966,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/versions/{driveItemVersion-id}/content": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1653,6 +2041,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/list/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/list/drive": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1669,11 +2065,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1689,6 +2097,14 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/versions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1698,6 +2114,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/list/items/{listItem-id}/versions/{listItemVersion-id}/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/list/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1773,6 +2197,22 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/root/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/lastModifiedByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/root/listItem": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
@@ -1781,11 +2221,23 @@
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
+    "/users/{user-id}/drives/{drive-id}/root/listItem/createdByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/listItem/createdByUser/mailboxSettings": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/root/listItem/documentSetVersions": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/listItem/documentSetVersions/{documentSetVersion-id}/fields": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
@@ -1798,6 +2250,14 @@
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
     "/users/{user-id}/drives/{drive-id}/root/listItem/fields": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/listItem/lastModifiedByUser": {
+      "apiVersion": "v1.0",
+      "originalLocation": "/openApiDocs/v1.0/Files.yml"
+    },
+    "/users/{user-id}/drives/{drive-id}/root/listItem/lastModifiedByUser/mailboxSettings": {
       "apiVersion": "v1.0",
       "originalLocation": "/openApiDocs/v1.0/Files.yml"
     },
