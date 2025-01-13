@@ -24,6 +24,7 @@ paths:
           x-ms-docs-key-type: user
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -61,6 +62,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.contactFolderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -95,6 +101,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}':
     get:
@@ -149,6 +160,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -188,6 +204,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -222,6 +243,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders':
     get:
@@ -249,6 +275,7 @@ paths:
           x-ms-docs-key-type: contactFolder
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -286,6 +313,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.contactFolderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -328,6 +360,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}':
     get:
@@ -390,6 +427,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -437,6 +479,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contactFolder'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -479,6 +526,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts':
     get:
@@ -514,6 +566,7 @@ paths:
           x-ms-docs-key-type: contactFolder
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -551,6 +604,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.contactCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -601,6 +659,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}':
     get:
@@ -671,6 +734,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -726,6 +794,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -776,6 +849,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}/extensions':
     get:
@@ -819,6 +897,7 @@ paths:
           x-ms-docs-key-type: contact
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -856,6 +935,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -914,6 +998,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}/extensions/{extension-id}':
     get:
@@ -992,6 +1081,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -1055,6 +1149,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -1113,6 +1212,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}/extensions/$count':
     get:
@@ -1153,12 +1257,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contact
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}/photo':
     get:
       tags:
@@ -1209,6 +1319,16 @@ paths:
             type: array
             items:
               type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              type: string
       responses:
         2XX:
           description: Retrieved navigation property
@@ -1218,6 +1338,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -1273,12 +1398,18 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/{contact-id}/photo/$value':
     get:
       tags:
         - users.contactFolder
       summary: Get media content for the navigation property photo from users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contactFolder.childFolder.contact_GetPhotoContent
       parameters:
         - name: user-id
@@ -1323,11 +1454,16 @@ paths:
                 format: binary
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
     put:
       tags:
         - users.contactFolder
       summary: Update media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contactFolder.childFolder.contact_SetPhotoContent
       parameters:
         - name: user-id
@@ -1375,7 +1511,66 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
+    delete:
+      tags:
+        - users.contactFolder
+      summary: Delete media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
+      operationId: user.contactFolder.childFolder.contact_DeletePhotoContent
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: contactFolder-id
+          in: path
+          description: The unique identifier of contactFolder
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contactFolder
+        - name: contactFolder-id1
+          in: path
+          description: The unique identifier of contactFolder
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contactFolder
+        - name: contact-id
+          in: path
+          description: The unique identifier of contact
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contact
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/{contactFolder-id1}/contacts/$count':
     get:
       tags:
@@ -1407,12 +1602,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contactFolder
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/childFolders/$count':
     get:
       tags:
@@ -1436,12 +1637,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contactFolder
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts':
     get:
       tags:
@@ -1468,6 +1675,7 @@ paths:
           x-ms-docs-key-type: contactFolder
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -1505,6 +1713,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.contactCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -1547,6 +1760,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}':
     get:
@@ -1609,6 +1827,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -1656,6 +1879,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -1698,6 +1926,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/extensions':
     get:
@@ -1733,6 +1966,7 @@ paths:
           x-ms-docs-key-type: contact
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -1770,6 +2004,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -1820,6 +2059,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/extensions/{extension-id}':
     get:
@@ -1890,6 +2134,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -1945,6 +2194,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -1995,6 +2249,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/extensions/$count':
     get:
@@ -2027,12 +2286,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contact
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/photo':
     get:
       tags:
@@ -2075,6 +2340,16 @@ paths:
             type: array
             items:
               type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              type: string
       responses:
         2XX:
           description: Retrieved navigation property
@@ -2084,6 +2359,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -2131,12 +2411,18 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/{contact-id}/photo/$value':
     get:
       tags:
         - users.contactFolder
       summary: Get media content for the navigation property photo from users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contactFolder.contact_GetPhotoContent
       parameters:
         - name: user-id
@@ -2173,11 +2459,16 @@ paths:
                 format: binary
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
     put:
       tags:
         - users.contactFolder
       summary: Update media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contactFolder.contact_SetPhotoContent
       parameters:
         - name: user-id
@@ -2217,7 +2508,58 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
+    delete:
+      tags:
+        - users.contactFolder
+      summary: Delete media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
+      operationId: user.contactFolder.contact_DeletePhotoContent
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: contactFolder-id
+          in: path
+          description: The unique identifier of contactFolder
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contactFolder
+        - name: contact-id
+          in: path
+          description: The unique identifier of contact
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contact
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/{contactFolder-id}/contacts/$count':
     get:
       tags:
@@ -2241,12 +2583,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contactFolder
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contactFolders/$count':
     get:
       tags:
@@ -2262,12 +2610,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contacts':
     get:
       tags:
@@ -2324,6 +2678,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.contactCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -2358,6 +2717,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contacts/{contact-id}':
     get:
@@ -2412,6 +2776,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -2451,6 +2820,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.contact'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -2485,6 +2859,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contacts/{contact-id}/extensions':
     get:
@@ -2512,6 +2891,7 @@ paths:
           x-ms-docs-key-type: contact
         - $ref: '#/components/parameters/top'
         - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
         - $ref: '#/components/parameters/count'
         - name: $orderby
@@ -2549,6 +2929,11 @@ paths:
           $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -2591,6 +2976,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contacts/{contact-id}/extensions/{extension-id}':
     get:
@@ -2653,6 +3043,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -2700,6 +3095,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.extension'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -2742,6 +3142,11 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contacts/{contact-id}/extensions/$count':
     get:
@@ -2766,12 +3171,18 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: contact
+        - $ref: '#/components/parameters/search'
         - $ref: '#/components/parameters/filter'
       responses:
         2XX:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contacts/{contact-id}/photo':
     get:
       tags:
@@ -2806,6 +3217,16 @@ paths:
             type: array
             items:
               type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              type: string
       responses:
         2XX:
           description: Retrieved navigation property
@@ -2815,6 +3236,11 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -2854,12 +3280,18 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.profilePhoto'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
       x-ms-docs-operation-type: operation
   '/users/{user-id}/contacts/{contact-id}/photo/$value':
     get:
       tags:
         - users.contact
       summary: Get media content for the navigation property photo from users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contact_GetPhotoContent
       parameters:
         - name: user-id
@@ -2888,11 +3320,16 @@ paths:
                 format: binary
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
     put:
       tags:
         - users.contact
       summary: Update media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
       operationId: user.contact_SetPhotoContent
       parameters:
         - name: user-id
@@ -2924,7 +3361,50 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
+    delete:
+      tags:
+        - users.contact
+      summary: Delete media content for the navigation property photo in users
+      description: Optional contact picture. You can get or set a photo for a contact.
+      operationId: user.contact_DeletePhotoContent
+      parameters:
+        - name: user-id
+          in: path
+          description: The unique identifier of user
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: contact-id
+          in: path
+          description: The unique identifier of contact
+          required: true
+          style: simple
+          schema:
+            type: string
+          x-ms-docs-key-type: contact
+        - name: If-Match
+          in: header
+          description: ETag
+          style: simple
+          schema:
+            type: string
+      responses:
+        2XX:
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
   '/users/{user-id}/contacts/$count':
     get:
       tags:
@@ -2947,6 +3427,11 @@ paths:
           $ref: '#/components/responses/ODataCountResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2025-07-02'
+        date: '2024-07-02'
+        version: 2024-07/PrivatePreview:copilotExportAPI
 components:
   schemas:
     microsoft.graph.contactFolder:
@@ -3025,7 +3510,7 @@ components:
               nullable: true
             displayName:
               type: string
-              description: 'The contact''s display name. You can specify the display name in a create or update operation. Note that later updates to other properties may cause an automatically generated value to overwrite the displayName value you have specified. To preserve a pre-existing value, always include it as displayName in an update operation.'
+              description: 'The contact''s display name. You can specify the display name in a create or update operation. Later updates to other properties might cause an automatically generated value to overwrite the displayName value you specified. To preserve a pre-existing value, always include it as displayName in an update operation.'
               nullable: true
             emailAddresses:
               type: array
@@ -3044,7 +3529,7 @@ components:
               nullable: true
             generation:
               type: string
-              description: The contact's generation.
+              description: The contact's suffix.
               nullable: true
             givenName:
               type: string
@@ -3237,8 +3722,10 @@ components:
               items:
                 type: string
                 nullable: true
+              description: The categories associated with the item.
             changeKey:
               type: string
+              description: 'Identifies the version of the item. Every time the item is changed, changeKey changes as well. This allows Exchange to apply changes to the correct version of the object. Read-only.'
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
@@ -3560,6 +4047,14 @@ components:
       schema:
         minimum: 0
         type: integer
+    search:
+      name: $search
+      in: query
+      description: Search items by search phrases
+      style: form
+      explode: false
+      schema:
+        type: string
     filter:
       name: $filter
       in: query
@@ -3576,14 +4071,6 @@ components:
       explode: false
       schema:
         type: boolean
-    search:
-      name: $search
-      in: query
-      description: Search items by search phrases
-      style: form
-      explode: false
-      schema:
-        type: string
   securitySchemes:
     azureaadv2:
       type: oauth2
